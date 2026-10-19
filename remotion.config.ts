@@ -11,3 +11,11 @@ Config.setRspack(true);
 Config.setVideoImageFormat("jpeg");
 Config.setOverwriteOutput(true);
 Config.setDefaultPremountInSeconds(2);
+Config.setBrowserExecutable(
+  "C:/Program Files/Google/Chrome/Application/chrome.exe",
+);
+Config.setCodec("h264");
+Config.setAudioCodec("aac");
+Config.setPixelFormat("yuv420p");
+Config.setColorSpace("bt709");
+Config.setConcurrency(2);

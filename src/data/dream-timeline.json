@@ -1,0 +1,66 @@
+[
+  {
+    "id": "StarPond",
+    "name": "星滴与月海",
+    "startFrame": 0,
+    "endFrame": 106,
+    "transitionOutFrames": 18,
+    "action": "星光水滴与莲花信件建立月海世界"
+  },
+  {
+    "id": "MoonPost",
+    "name": "鲸背邮局",
+    "startFrame": 106,
+    "endFrame": 191,
+    "transitionOutFrames": 18,
+    "action": "鲸背邮局携带信件穿行月色"
+  },
+  {
+    "id": "AcrossWorlds",
+    "name": "万水千山",
+    "startFrame": 191,
+    "endFrame": 318,
+    "transitionOutFrames": 18,
+    "action": "两人乘舟穿过浮岛与桥，预示冒险与相连"
+  },
+  {
+    "id": "ThousandWorlds",
+    "name": "一瓢三千世界",
+    "startFrame": 318,
+    "endFrame": 445,
+    "transitionOutFrames": 18,
+    "action": "金色水瓢托起含有世界的水滴"
+  },
+  {
+    "id": "GoldenPromise",
+    "name": "金色契约",
+    "startFrame": 445,
+    "endFrame": 551,
+    "transitionOutFrames": 18,
+    "action": "星盘岁月、金色契约与牵手的两人"
+  },
+  {
+    "id": "DreamTitle",
+    "name": "勾指起誓",
+    "startFrame": 551,
+    "endFrame": 649,
+    "transitionOutFrames": 18,
+    "action": "艺术字逐字弹出，星芒和牵线呼应字形"
+  },
+  {
+    "id": "PoetryGate",
+    "name": "信与诗",
+    "startFrame": 649,
+    "endFrame": 757,
+    "transitionOutFrames": 10,
+    "action": "信封打开，信纸与诗行逐字出现"
+  },
+  {
+    "id": "FairytaleBloom",
+    "name": "童话里的奇迹",
+    "startFrame": 757,
+    "endFrame": 900,
+    "transitionOutFrames": 0,
+    "action": "童话书化作奇迹的舞台，花园与鲸升起"
+  }
+]

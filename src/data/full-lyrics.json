@@ -1,0 +1,699 @@
+[
+  {
+    "id": "lyric-01",
+    "text": "你是信的开头诗的内容",
+    "startMs": 22220,
+    "endMs": 25500,
+    "timestampMs": 23860,
+    "confidence": null,
+    "sourceStartMs": 22067,
+    "timingStatus": "calibrated",
+    "act": "recognition",
+    "keywords": [
+      "信",
+      "诗"
+    ],
+    "visualMotif": "信与诗",
+    "layout": "left",
+    "style": "verse",
+    "accent": "pink"
+  },
+  {
+    "id": "lyric-02",
+    "text": "童话的结尾",
+    "startMs": 25540,
+    "endMs": 27000,
+    "timestampMs": 26270,
+    "confidence": null,
+    "sourceStartMs": 25001,
+    "timingStatus": "calibrated",
+    "act": "recognition",
+    "keywords": [
+      "童话"
+    ],
+    "visualMotif": "童话结尾",
+    "layout": "center",
+    "style": "verse",
+    "accent": "mint"
+  },
+  {
+    "id": "lyric-03",
+    "text": "你是理所当然的奇迹",
+    "startMs": 27980,
+    "endMs": 30800,
+    "timestampMs": 29390,
+    "confidence": null,
+    "sourceStartMs": 27190,
+    "timingStatus": "calibrated",
+    "act": "recognition",
+    "keywords": [
+      "奇迹"
+    ],
+    "visualMotif": "奇迹",
+    "layout": "right",
+    "style": "verse",
+    "accent": "gold"
+  },
+  {
+    "id": "lyric-04",
+    "text": "你是月色真美",
+    "startMs": 30565,
+    "endMs": 32709,
+    "timestampMs": 31637,
+    "confidence": 0.99,
+    "sourceStartMs": 30390,
+    "timingStatus": "asr-aligned",
+    "act": "recognition",
+    "keywords": [
+      "月色"
+    ],
+    "visualMotif": "月色",
+    "layout": "left",
+    "style": "verse",
+    "accent": "coral"
+  },
+  {
+    "id": "lyric-05",
+    "text": "你是圣诞老人送给我",
+    "startMs": 32904,
+    "endMs": 36210,
+    "timestampMs": 34557,
+    "confidence": 0.99,
+    "sourceStartMs": 32729,
+    "timingStatus": "asr-aligned",
+    "act": "recognition",
+    "keywords": [
+      "圣诞老人"
+    ],
+    "visualMotif": "星星礼物",
+    "layout": "center",
+    "style": "verse",
+    "accent": "violet"
+  },
+  {
+    "id": "lyric-06",
+    "text": "好孩子的礼物",
+    "startMs": 36405,
+    "endMs": 38000,
+    "timestampMs": 37203,
+    "confidence": 0.99,
+    "sourceStartMs": 36230,
+    "timingStatus": "asr-aligned",
+    "act": "recognition",
+    "keywords": [
+      "礼物"
+    ],
+    "visualMotif": "礼物花园",
+    "layout": "right",
+    "style": "verse",
+    "accent": "pink"
+  },
+  {
+    "id": "lyric-07",
+    "text": "你是三千美丽世界里",
+    "startMs": 38763,
+    "endMs": 41691,
+    "timestampMs": 40227,
+    "confidence": 0.99,
+    "sourceStartMs": 38588,
+    "timingStatus": "asr-aligned",
+    "act": "recognition",
+    "keywords": [
+      "三千美丽世界"
+    ],
+    "visualMotif": "三千世界",
+    "layout": "left",
+    "style": "verse",
+    "accent": "mint"
+  },
+  {
+    "id": "lyric-08",
+    "text": "我的一瓢水",
+    "startMs": 41886,
+    "endMs": 43711,
+    "timestampMs": 42799,
+    "confidence": 0.8,
+    "sourceStartMs": 41711,
+    "timingStatus": "asr-aligned",
+    "act": "recognition",
+    "keywords": [],
+    "visualMotif": "一瓢水",
+    "layout": "center",
+    "style": "verse",
+    "accent": "gold"
+  },
+  {
+    "id": "lyric-09",
+    "text": "所以让我再靠近一点点",
+    "startMs": 43906,
+    "endMs": 47258,
+    "timestampMs": 45582,
+    "confidence": 0.99,
+    "sourceStartMs": 43731,
+    "timingStatus": "asr-aligned",
+    "act": "promise",
+    "keywords": [
+      "靠近一点点"
+    ],
+    "visualMotif": "靠近",
+    "layout": "right",
+    "style": "chorus",
+    "accent": "coral"
+  },
+  {
+    "id": "lyric-10",
+    "text": "因为你太温暖",
+    "startMs": 47453,
+    "endMs": 49691,
+    "timestampMs": 48572,
+    "confidence": 0.6666666666666666,
+    "sourceStartMs": 47278,
+    "timingStatus": "asr-aligned",
+    "act": "promise",
+    "keywords": [
+      "温暖"
+    ],
+    "visualMotif": "温暖",
+    "layout": "left",
+    "style": "chorus",
+    "accent": "violet"
+  },
+  {
+    "id": "lyric-11",
+    "text": "我会再变得坚强一点点",
+    "startMs": 49886,
+    "endMs": 52985,
+    "timestampMs": 51436,
+    "confidence": 0.8,
+    "sourceStartMs": 49711,
+    "timingStatus": "asr-aligned",
+    "act": "promise",
+    "keywords": [
+      "坚强一点点"
+    ],
+    "visualMotif": "坚强",
+    "layout": "center",
+    "style": "chorus",
+    "accent": "pink"
+  },
+  {
+    "id": "lyric-12",
+    "text": "因为你太柔软",
+    "startMs": 53180,
+    "endMs": 55306,
+    "timestampMs": 54243,
+    "confidence": 0.99,
+    "sourceStartMs": 53005,
+    "timingStatus": "asr-aligned",
+    "act": "promise",
+    "keywords": [],
+    "visualMotif": "柔软",
+    "layout": "right",
+    "style": "chorus",
+    "accent": "mint"
+  },
+  {
+    "id": "lyric-13",
+    "text": "交换无名指金色的契约",
+    "startMs": 55501,
+    "endMs": 58562,
+    "timestampMs": 57032,
+    "confidence": 0.4,
+    "sourceStartMs": 55326,
+    "timingStatus": "asr-aligned",
+    "act": "promise",
+    "keywords": [],
+    "visualMotif": "金色契约",
+    "layout": "left",
+    "style": "chorus",
+    "accent": "gold"
+  },
+  {
+    "id": "lyric-14",
+    "text": "给彼此岁月",
+    "startMs": 58757,
+    "endMs": 61000,
+    "timestampMs": 59879,
+    "confidence": 0.99,
+    "sourceStartMs": 58582,
+    "timingStatus": "asr-aligned",
+    "act": "promise",
+    "keywords": [
+      "岁月"
+    ],
+    "visualMotif": "岁月星盘",
+    "layout": "center",
+    "style": "chorus",
+    "accent": "coral"
+  },
+  {
+    "id": "lyric-15",
+    "text": "说好从今以后都牵着手",
+    "startMs": 61293,
+    "endMs": 63000,
+    "timestampMs": 62147,
+    "confidence": 0.6,
+    "sourceStartMs": 61127,
+    "timingStatus": "asr-aligned",
+    "act": "promise",
+    "keywords": [],
+    "visualMotif": "牵手",
+    "layout": "right",
+    "style": "chorus",
+    "accent": "violet"
+  },
+  {
+    "id": "lyric-16",
+    "text": "因为要走很远",
+    "startMs": 64339,
+    "endMs": 67939,
+    "timestampMs": 66139,
+    "confidence": 0.6666666666666666,
+    "sourceStartMs": 64164,
+    "timingStatus": "asr-aligned",
+    "act": "interlude-one",
+    "keywords": [
+      "远"
+    ],
+    "visualMotif": "远行",
+    "layout": "left",
+    "style": "chorus",
+    "accent": "pink"
+  },
+  {
+    "id": "lyric-17",
+    "text": "你是我万水千山的冒险",
+    "startMs": 90061,
+    "endMs": 92997,
+    "timestampMs": 91529,
+    "confidence": 0.7,
+    "sourceStartMs": 90083,
+    "timingStatus": "asr-aligned",
+    "act": "adventure",
+    "keywords": [
+      "万水千山"
+    ],
+    "visualMotif": "万水千山",
+    "layout": "center",
+    "style": "verse",
+    "accent": "mint"
+  },
+  {
+    "id": "lyric-18",
+    "text": "要找的标记点",
+    "startMs": 93151,
+    "endMs": 95000,
+    "timestampMs": 94076,
+    "confidence": 0.4,
+    "sourceStartMs": 93017,
+    "timingStatus": "asr-aligned",
+    "act": "adventure",
+    "keywords": [
+      "标记点"
+    ],
+    "visualMotif": "标记塔",
+    "layout": "right",
+    "style": "verse",
+    "accent": "gold"
+  },
+  {
+    "id": "lyric-19",
+    "text": "你是分割我人生的线",
+    "startMs": 95296,
+    "endMs": 98000,
+    "timestampMs": 96648,
+    "confidence": 0.8888888888888888,
+    "sourceStartMs": 95121,
+    "timingStatus": "asr-aligned",
+    "act": "adventure",
+    "keywords": [
+      "分割"
+    ],
+    "visualMotif": "人生之线",
+    "layout": "left",
+    "style": "verse",
+    "accent": "coral"
+  },
+  {
+    "id": "lyric-20",
+    "text": "又将它们相连",
+    "startMs": 98514,
+    "endMs": 100657,
+    "timestampMs": 99586,
+    "confidence": 0.4,
+    "sourceStartMs": 98393,
+    "timingStatus": "asr-aligned",
+    "act": "adventure",
+    "keywords": [
+      "相连"
+    ],
+    "visualMotif": "相连",
+    "layout": "center",
+    "style": "verse",
+    "accent": "violet"
+  },
+  {
+    "id": "lyric-21",
+    "text": "你是前世千次的回眸",
+    "startMs": 100852,
+    "endMs": 104000,
+    "timestampMs": 102426,
+    "confidence": 0.7777777777777778,
+    "sourceStartMs": 100677,
+    "timingStatus": "asr-aligned",
+    "act": "adventure",
+    "keywords": [],
+    "visualMotif": "前世回眸",
+    "layout": "right",
+    "style": "verse",
+    "accent": "pink"
+  },
+  {
+    "id": "lyric-22",
+    "text": "虔诚牵的手",
+    "startMs": 104083,
+    "endMs": 106053,
+    "timestampMs": 105068,
+    "confidence": null,
+    "sourceStartMs": 104083,
+    "timingStatus": "source-reference",
+    "act": "adventure",
+    "keywords": [],
+    "visualMotif": "虔诚牵手",
+    "layout": "left",
+    "style": "verse",
+    "accent": "mint"
+  },
+  {
+    "id": "lyric-23",
+    "text": "你是其余所有的一切",
+    "startMs": 106278,
+    "endMs": 109000,
+    "timestampMs": 107639,
+    "confidence": 0.8888888888888888,
+    "sourceStartMs": 106103,
+    "timingStatus": "asr-aligned",
+    "act": "adventure",
+    "keywords": [
+      "其余所有"
+    ],
+    "visualMotif": "世界之心",
+    "layout": "center",
+    "style": "verse",
+    "accent": "gold"
+  },
+  {
+    "id": "lyric-24",
+    "text": "是我的世界",
+    "startMs": 109539,
+    "endMs": 111818,
+    "timestampMs": 110679,
+    "confidence": 0.99,
+    "sourceStartMs": 109364,
+    "timingStatus": "asr-aligned",
+    "act": "adventure",
+    "keywords": [],
+    "visualMotif": "我的世界",
+    "layout": "right",
+    "style": "verse",
+    "accent": "coral"
+  },
+  {
+    "id": "lyric-25",
+    "text": "所以请你再闪亮一点点",
+    "startMs": 112013,
+    "endMs": 115000,
+    "timestampMs": 113507,
+    "confidence": 0.5,
+    "sourceStartMs": 111838,
+    "timingStatus": "asr-aligned",
+    "act": "shine",
+    "keywords": [
+      "闪亮一点点"
+    ],
+    "visualMotif": "闪亮",
+    "layout": "left",
+    "style": "chorus",
+    "accent": "violet"
+  },
+  {
+    "id": "lyric-26",
+    "text": "尽管我太平凡",
+    "startMs": 115306,
+    "endMs": 117000,
+    "timestampMs": 116153,
+    "confidence": 0.8333333333333334,
+    "sourceStartMs": 115131,
+    "timingStatus": "asr-aligned",
+    "act": "shine",
+    "keywords": [
+      "平凡"
+    ],
+    "visualMotif": "平凡星尘",
+    "layout": "center",
+    "style": "chorus",
+    "accent": "pink"
+  },
+  {
+    "id": "lyric-27",
+    "text": "我会再变得柔软一点点",
+    "startMs": 117571,
+    "endMs": 121000,
+    "timestampMs": 119286,
+    "confidence": 0.6,
+    "sourceStartMs": 117396,
+    "timingStatus": "asr-aligned",
+    "act": "shine",
+    "keywords": [
+      "柔软一点点"
+    ],
+    "visualMotif": "柔软花园",
+    "layout": "right",
+    "style": "chorus",
+    "accent": "mint"
+  },
+  {
+    "id": "lyric-28",
+    "text": "因为你太敏感",
+    "startMs": 121391,
+    "endMs": 123000,
+    "timestampMs": 122196,
+    "confidence": 0.8333333333333334,
+    "sourceStartMs": 121216,
+    "timingStatus": "asr-aligned",
+    "act": "shine",
+    "keywords": [
+      "敏感"
+    ],
+    "visualMotif": "敏感星光",
+    "layout": "left",
+    "style": "chorus",
+    "accent": "gold"
+  },
+  {
+    "id": "lyric-29",
+    "text": "交换无名指金色的契约",
+    "startMs": 123298,
+    "endMs": 126338,
+    "timestampMs": 124818,
+    "confidence": 0.4,
+    "sourceStartMs": 123123,
+    "timingStatus": "asr-aligned",
+    "act": "shine",
+    "keywords": [],
+    "visualMotif": "金色契约",
+    "layout": "center",
+    "style": "chorus",
+    "accent": "coral"
+  },
+  {
+    "id": "lyric-30",
+    "text": "给彼此岁月",
+    "startMs": 126533,
+    "endMs": 128734,
+    "timestampMs": 127634,
+    "confidence": 0.99,
+    "sourceStartMs": 126358,
+    "timingStatus": "asr-aligned",
+    "act": "shine",
+    "keywords": [
+      "岁月"
+    ],
+    "visualMotif": "岁月星盘",
+    "layout": "right",
+    "style": "chorus",
+    "accent": "violet"
+  },
+  {
+    "id": "lyric-31",
+    "text": "说好从今以后都牵着手",
+    "startMs": 128903,
+    "endMs": 131040,
+    "timestampMs": 129972,
+    "confidence": 0.6,
+    "sourceStartMs": 128754,
+    "timingStatus": "asr-aligned",
+    "act": "shine",
+    "keywords": [],
+    "visualMotif": "牵手远行",
+    "layout": "left",
+    "style": "chorus",
+    "accent": "pink"
+  },
+  {
+    "id": "lyric-32",
+    "text": "不管要走多远",
+    "startMs": 132201,
+    "endMs": 135801,
+    "timestampMs": 134001,
+    "confidence": 0.8333333333333334,
+    "sourceStartMs": 132026,
+    "timingStatus": "asr-aligned",
+    "act": "interlude-two",
+    "keywords": [
+      "远"
+    ],
+    "visualMotif": "远方",
+    "layout": "center",
+    "style": "chorus",
+    "accent": "mint"
+  },
+  {
+    "id": "lyric-33",
+    "text": "让我再靠近一点点",
+    "startMs": 157735,
+    "endMs": 160293,
+    "timestampMs": 159014,
+    "confidence": 0.625,
+    "sourceStartMs": 157560,
+    "timingStatus": "asr-aligned",
+    "act": "return",
+    "keywords": [
+      "靠近一点点"
+    ],
+    "visualMotif": "靠近",
+    "layout": "right",
+    "style": "reprise",
+    "accent": "gold"
+  },
+  {
+    "id": "lyric-34",
+    "text": "因为你太温暖",
+    "startMs": 160488,
+    "endMs": 162499,
+    "timestampMs": 161494,
+    "confidence": 0.5,
+    "sourceStartMs": 160313,
+    "timingStatus": "asr-aligned",
+    "act": "return",
+    "keywords": [
+      "温暖"
+    ],
+    "visualMotif": "温暖",
+    "layout": "left",
+    "style": "reprise",
+    "accent": "coral"
+  },
+  {
+    "id": "lyric-35",
+    "text": "我会再变得坚强一点点",
+    "startMs": 162694,
+    "endMs": 165966,
+    "timestampMs": 164330,
+    "confidence": 0.8,
+    "sourceStartMs": 162519,
+    "timingStatus": "asr-aligned",
+    "act": "return",
+    "keywords": [
+      "坚强一点点"
+    ],
+    "visualMotif": "坚强",
+    "layout": "center",
+    "style": "reprise",
+    "accent": "violet"
+  },
+  {
+    "id": "lyric-36",
+    "text": "因为你太柔软",
+    "startMs": 166161,
+    "endMs": 168000,
+    "timestampMs": 167081,
+    "confidence": 0.99,
+    "sourceStartMs": 165986,
+    "timingStatus": "asr-aligned",
+    "act": "return",
+    "keywords": [],
+    "visualMotif": "柔软",
+    "layout": "right",
+    "style": "reprise",
+    "accent": "pink"
+  },
+  {
+    "id": "lyric-37",
+    "text": "交换无名指金色的契约",
+    "startMs": 168550,
+    "endMs": 171498,
+    "timestampMs": 170024,
+    "confidence": 0.5,
+    "sourceStartMs": 168375,
+    "timingStatus": "asr-aligned",
+    "act": "return",
+    "keywords": [],
+    "visualMotif": "金色契约",
+    "layout": "left",
+    "style": "reprise",
+    "accent": "mint"
+  },
+  {
+    "id": "lyric-38",
+    "text": "给彼此岁月",
+    "startMs": 171693,
+    "endMs": 174000,
+    "timestampMs": 172847,
+    "confidence": 0.99,
+    "sourceStartMs": 171518,
+    "timingStatus": "asr-aligned",
+    "act": "return",
+    "keywords": [
+      "岁月"
+    ],
+    "visualMotif": "岁月星盘",
+    "layout": "center",
+    "style": "reprise",
+    "accent": "gold"
+  },
+  {
+    "id": "lyric-39",
+    "text": "说好从今以后都牵着手",
+    "startMs": 174224,
+    "endMs": 176000,
+    "timestampMs": 175112,
+    "confidence": 0.6,
+    "sourceStartMs": 174054,
+    "timingStatus": "asr-aligned",
+    "act": "return",
+    "keywords": [],
+    "visualMotif": "牵手",
+    "layout": "right",
+    "style": "reprise",
+    "accent": "coral"
+  },
+  {
+    "id": "lyric-40",
+    "text": "因为要走很远",
+    "startMs": 177453,
+    "endMs": 180000,
+    "timestampMs": 178727,
+    "confidence": 0.6666666666666666,
+    "sourceStartMs": 177278,
+    "timingStatus": "asr-aligned",
+    "act": "return",
+    "keywords": [
+      "远"
+    ],
+    "visualMotif": "远行",
+    "layout": "left",
+    "style": "reprise",
+    "accent": "violet"
+  }
+]

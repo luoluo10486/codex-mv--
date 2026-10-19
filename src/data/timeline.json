@@ -1,0 +1,66 @@
+[
+  {
+    "id": "FirstMark",
+    "name": "纸上的第一笔",
+    "startFrame": 0,
+    "endFrame": 106,
+    "transitionOutFrames": 18,
+    "action": "笔尖沿粉色细线前进，纸面微距拉开"
+  },
+  {
+    "id": "Unfolding",
+    "name": "世界展开",
+    "startFrame": 106,
+    "endFrame": 191,
+    "transitionOutFrames": 18,
+    "action": "纸山从折页上展开，显露信件与微型植物"
+  },
+  {
+    "id": "PaperFlight",
+    "name": "轻盈出发",
+    "startFrame": 191,
+    "endFrame": 318,
+    "transitionOutFrames": 18,
+    "action": "折纸飞鸟沿弧线穿过分层纸山，前景与远景差速移动"
+  },
+  {
+    "id": "BookGarden",
+    "name": "书页花园",
+    "startFrame": 318,
+    "endFrame": 445,
+    "transitionOutFrames": 18,
+    "action": "镜头靠近立体书，书页上的植物展开"
+  },
+  {
+    "id": "LittleUniverse",
+    "name": "小宇宙形成",
+    "startFrame": 445,
+    "endFrame": 551,
+    "transitionOutFrames": 18,
+    "action": "纸景收成球形，鸟与邮票沿纸环绕行"
+  },
+  {
+    "id": "PromiseTitle",
+    "name": "歌名揭示",
+    "startFrame": 551,
+    "endFrame": 649,
+    "transitionOutFrames": 18,
+    "action": "折叠信纸上分组显出歌名，植物与折纸飞鸟呼应"
+  },
+  {
+    "id": "LetterOpening",
+    "name": "信件开启",
+    "startFrame": 649,
+    "endFrame": 757,
+    "transitionOutFrames": 10,
+    "action": "提前打开信件，转场在首句唱词出现前完成"
+  },
+  {
+    "id": "GrowingVerse",
+    "name": "诗行生长",
+    "startFrame": 757,
+    "endFrame": 900,
+    "transitionOutFrames": 0,
+    "action": "诗行进入信纸，小花园生长，第三句出现时花朵展开"
+  }
+]

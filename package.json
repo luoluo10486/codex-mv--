@@ -1,7 +1,7 @@
 {
-  "name": "film",
+  "name": "gou-zhi-qi-shi-mv",
   "version": "1.0.0",
-  "description": "My Remotion video",
+  "description": "勾指起誓 · 月海来信 · 梦幻插画MV",
   "repository": {},
   "license": "UNLICENSED",
   "engines": {
@@ -9,7 +9,17 @@
   },
   "private": true,
   "dependencies": {
+    "@huggingface/transformers": "4.2.0",
+    "@mediabunny/server": "1.61.3",
+    "@remotion/bundler": "4.0.536",
+    "@remotion/captions": "4.0.536",
     "@remotion/cli": "4.0.536",
+    "@remotion/fonts": "4.0.536",
+    "@remotion/media": "4.0.536",
+    "@remotion/renderer": "4.0.536",
+    "@remotion/transitions": "4.0.536",
+    "@remotion/whisper-webgpu": "4.0.536",
+    "mediabunny": "1.61.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remotion": "4.0.536"
@@ -19,12 +29,23 @@
     "@types/react": "19.2.7",
     "@types/web": "0.0.166",
     "eslint": "10.12.0",
+    "opentype.js": "^2.0.0",
     "prettier": "3.8.1",
     "typescript": "5.9.3"
   },
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
+    "render": "remotion render src/index.ts GouZhiQiShi out/gou-zhi-qi-shi-dream-30s.mp4 --crf=17 --audio-bitrate=320k --jpeg-quality=95",
+    "render:full": "remotion render src/index.ts GouZhiQiShiFull out/gou-zhi-qi-shi-full.mp4 --crf=17 --audio-bitrate=320k --jpeg-quality=95",
+    "render:preview": "remotion render src/index.ts GouZhiQiShi out/dream-review/draft.mp4 --scale=0.5 --crf=23",
+    "render:full-preview": "remotion render src/index.ts GouZhiQiShiFull out/dream-review/full-preview.mp4 --scale=0.5 --crf=23",
+    "type:prepare": "node scripts/prepare-dream-type.mjs",
+    "full:data": "node scripts/prepare-full-data.mjs",
+    "review:frames": "node scripts/render-review.mjs",
+    "review:full": "node scripts/render-full-review.mjs",
+    "verify:full": "node scripts/verify-full-export.mjs",
+    "lyrics:calibrate": "node scripts/calibrate-lyrics.mjs",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc"
   },

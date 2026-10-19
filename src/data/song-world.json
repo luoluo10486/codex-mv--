@@ -1,0 +1,217 @@
+{
+  "title": "勾指起誓 · 月海来信",
+  "sourceLyrics": "https://music.163.com/api/song/lyric?id=1345872140&lv=-1&kv=-1&tv=-1",
+  "timingStatus": "Full-song source LRC is a narrative reference. Only the first sample phrases have local ASR calibration.",
+  "lyrics": [
+    {
+      "sourceStartMs": 22067,
+      "text": "你是信的开头诗的内容"
+    },
+    {
+      "sourceStartMs": 25001,
+      "text": "童话的结尾"
+    },
+    {
+      "sourceStartMs": 27190,
+      "text": "你是理所当然的奇迹"
+    },
+    {
+      "sourceStartMs": 30390,
+      "text": "你是月色真美"
+    },
+    {
+      "sourceStartMs": 32729,
+      "text": "你是圣诞老人送给我"
+    },
+    {
+      "sourceStartMs": 36230,
+      "text": "好孩子的礼物"
+    },
+    {
+      "sourceStartMs": 38588,
+      "text": "你是三千美丽世界里"
+    },
+    {
+      "sourceStartMs": 41711,
+      "text": "我的一瓢水"
+    },
+    {
+      "sourceStartMs": 43731,
+      "text": "所以让我再靠近一点点"
+    },
+    {
+      "sourceStartMs": 47278,
+      "text": "因为你太温暖"
+    },
+    {
+      "sourceStartMs": 49711,
+      "text": "我会再变得坚强一点点"
+    },
+    {
+      "sourceStartMs": 53005,
+      "text": "因为你太柔软"
+    },
+    {
+      "sourceStartMs": 55326,
+      "text": "交换无名指金色的契约"
+    },
+    {
+      "sourceStartMs": 58582,
+      "text": "给彼此岁月"
+    },
+    {
+      "sourceStartMs": 61127,
+      "text": "说好从今以后都牵着手"
+    },
+    {
+      "sourceStartMs": 64164,
+      "text": "因为要走很远"
+    },
+    {
+      "sourceStartMs": 90083,
+      "text": "你是我万水千山的冒险"
+    },
+    {
+      "sourceStartMs": 93017,
+      "text": "要找的标记点"
+    },
+    {
+      "sourceStartMs": 95121,
+      "text": "你是分割我人生的线"
+    },
+    {
+      "sourceStartMs": 98393,
+      "text": "又将它们相连"
+    },
+    {
+      "sourceStartMs": 100677,
+      "text": "你是前世千次的回眸"
+    },
+    {
+      "sourceStartMs": 104083,
+      "text": "虔诚牵的手"
+    },
+    {
+      "sourceStartMs": 106103,
+      "text": "你是其余所有的一切"
+    },
+    {
+      "sourceStartMs": 109364,
+      "text": "是我的世界"
+    },
+    {
+      "sourceStartMs": 111838,
+      "text": "所以请你再闪亮一点点"
+    },
+    {
+      "sourceStartMs": 115131,
+      "text": "尽管我太平凡"
+    },
+    {
+      "sourceStartMs": 117396,
+      "text": "我会再变得柔软一点点"
+    },
+    {
+      "sourceStartMs": 121216,
+      "text": "因为你太敏感"
+    },
+    {
+      "sourceStartMs": 123123,
+      "text": "交换无名指金色的契约"
+    },
+    {
+      "sourceStartMs": 126358,
+      "text": "给彼此岁月"
+    },
+    {
+      "sourceStartMs": 128754,
+      "text": "说好从今以后都牵着手"
+    },
+    {
+      "sourceStartMs": 132026,
+      "text": "不管要走多远"
+    },
+    {
+      "sourceStartMs": 157560,
+      "text": "让我再靠近一点点"
+    },
+    {
+      "sourceStartMs": 160313,
+      "text": "因为你太温暖"
+    },
+    {
+      "sourceStartMs": 162519,
+      "text": "我会再变得坚强一点点"
+    },
+    {
+      "sourceStartMs": 165986,
+      "text": "因为你太柔软"
+    },
+    {
+      "sourceStartMs": 168375,
+      "text": "交换无名指金色的契约"
+    },
+    {
+      "sourceStartMs": 171518,
+      "text": "给彼此岁月"
+    },
+    {
+      "sourceStartMs": 174054,
+      "text": "说好从今以后都牵着手"
+    },
+    {
+      "sourceStartMs": 177278,
+      "text": "因为要走很远"
+    }
+  ],
+  "acts": [
+    {
+      "range": "00:00—00:43",
+      "theme": "在三千世界中认出你",
+      "motifs": [
+        "月海邮局",
+        "信件化成诗",
+        "童话城堡",
+        "月色",
+        "星星礼物",
+        "一瓢水中的岛屿"
+      ]
+    },
+    {
+      "range": "00:43—01:05",
+      "theme": "靠近与约定",
+      "motifs": ["温暖的灯", "柔软的云", "金色契约", "岁月星盘", "牵手的桥"]
+    },
+    {
+      "range": "01:30—01:51",
+      "theme": "万水千山的相连",
+      "motifs": [
+        "浮岛山海",
+        "冒险航道",
+        "星星标记点",
+        "红线跨越世界",
+        "两人的回眸"
+      ]
+    },
+    {
+      "range": "01:51—02:13",
+      "theme": "让彼此闪亮",
+      "motifs": ["从海中升起的星", "心形花园", "金色轨道", "并肩远行"]
+    },
+    {
+      "range": "02:37—03:00",
+      "theme": "带着约定继续出发",
+      "motifs": ["重访月海邮局", "信件变成星光", "两人沿着红线驶向远方"]
+    }
+  ],
+  "sampleVisualForeshadowing": [
+    "星滴与月海",
+    "鲸背邮局",
+    "万水千山",
+    "一瓢三千世界",
+    "岁月与金色契约",
+    "歌名星花",
+    "信与诗",
+    "童话里的奇迹"
+  ]
+}

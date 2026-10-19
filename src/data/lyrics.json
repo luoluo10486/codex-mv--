@@ -1,0 +1,23 @@
+[
+  {
+    "text": "你是信的开头诗的内容",
+    "startMs": 22220,
+    "endMs": 25500,
+    "timestampMs": 23860,
+    "confidence": null
+  },
+  {
+    "text": "童话的结尾",
+    "startMs": 25540,
+    "endMs": 27000,
+    "timestampMs": 26270,
+    "confidence": null
+  },
+  {
+    "text": "你是理所当然的奇迹",
+    "startMs": 27980,
+    "endMs": 30800,
+    "timestampMs": 29390,
+    "confidence": null
+  }
+]
