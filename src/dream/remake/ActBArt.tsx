@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { useCurrentFrame } from "remotion";
 import { WarmStage, WarmStar, useSharedDefinitions } from "../WarmArt";
-import { StoryPerson } from "../StoryCharacters";
+import { StoryPerson, STORY_OUTFIT } from "../StoryCharacters";
 
 export const ActBDefs = () => <defs>
       <linearGradient id="b-water" x2="0" y2="1"><stop stopColor="#e8f5f7"/><stop offset=".55" stopColor="#d6edf2"/><stop offset="1" stopColor="#bcdde8"/></linearGradient>
@@ -57,13 +57,13 @@ export const BFlower = ({ x, y, s = 1, rotation = 0, pale = false }: { x: number
 
 export const BHands = ({ x = 960, y = 650, s = 1, gap = 0, ring = false }: { x?: number; y?: number; s?: number; gap?: number; ring?: boolean }) => <g transform={`translate(${x} ${y}) scale(${s})`} filter="url(#warm-shadow)">
   <g transform={`translate(${-gap} 0) rotate(-8)`}>
-    <path d="M-630 76L-344-84L-224 52L-498 241Z" fill="url(#b-cloth)"/>
+    <path d="M-630 76L-344-84L-224 52L-498 241Z" fill={STORY_OUTFIT.blouse}/>
     <path d="M-346-84L-286-120L-164 24L-224 65Z" fill="#f6f2ec"/>
     <path d="M-286-120L-196-165Q-162-181-139-154L-62-86L58-56Q84-49 73-27Q67-10 40-12L-47-28L44 10Q69 20 55 40Q44 56 22 46L-62 17L18 59Q40 70 25 88Q13 99-5 91L-86 53L-28 94Q-9 110-25 126Q-40 136-57 121L-164 70Q-195 61-223 23Z" fill="url(#b-skin)"/>
     <path d="M-191-136Q-169-103-128-83L-75-54" stroke="#f5f1ea" strokeWidth="8" fill="none" strokeLinecap="round"/>
   </g>
   <g transform={`translate(${gap} 0) rotate(7)`}>
-    <path d="M631-104L336-169L266 28L606 124Z" fill="#ebdee1"/>
+    <path d="M631-104L336-169L266 28L606 124Z" fill={STORY_OUTFIT.cardigan}/>
     <path d="M337-169L274-186L210 13L276 34Z" fill="#f7f4ee"/>
     <path d="M273-181L159-204Q127-209 107-181L42-118L-52-88Q-77-78-63-57Q-55-43-28-50L45-67L-47-16Q-67-3-51 15Q-38 28-17 17L73-27L-14 31Q-31 46-14 62Q0 72 19 59L102 7L39 58Q20 73 37 90Q50 103 69 88L168 30Q194 18 215-24Z" fill="url(#b-skin)"/>
     <path d="M155-177Q117-136 91-117" stroke="#f6f2ec" strokeWidth="8" fill="none" strokeLinecap="round"/>

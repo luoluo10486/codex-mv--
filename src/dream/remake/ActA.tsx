@@ -1,3 +1,4 @@
+import { STORY_OUTFIT } from "../StoryCharacters";
 import type { ComponentType } from "react";
 import {
   WarmCloud,
@@ -917,7 +918,7 @@ export const Contract = ({ durationInFrames }: SceneProps) => {
         />
       </g>
       <g transform="translate(960 670)">
-        <path d="M-900-32L-253-43L-180 86L-900 183Z" fill="#c9dfc7" />
+        <path d="M-900-32L-253-43L-180 86L-900 183Z" fill={STORY_OUTFIT.blouse} />
         <path d="M-330-49L-250-52L-174 93L-269 112Z" fill="#f2eadb" />
         <path
           d="M-246-31L-164-58Q-118-91-75-69L66-42Q91-35 91-15Q82 9 58 1L-49-16L-2 24L85 45Q107 55 94 75Q84 85 65 81L-34 59L54 87Q75 99 61 117Q49 129 28 120L-62 87L-2 115Q20 133 3 148Q-11 156-29 145L-127 104L-212 83Z"
@@ -929,7 +930,7 @@ export const Contract = ({ durationInFrames }: SceneProps) => {
           stroke="#e0cfca"
           strokeWidth="5"
         />
-        <path d="M900-22L263-37L196 97L900 198Z" fill="#bed8b7" />
+        <path d="M900-22L263-37L196 97L900 198Z" fill={STORY_OUTFIT.cardigan} />
         <path d="M329-42L263-45L184 105L266 120Z" fill="#eadfd1" />
       </g>
       <g transform={`translate(${ringX} 656)`}>
@@ -1071,7 +1072,7 @@ export const Hands = ({ durationInFrames }: SceneProps) => {
       <WarmGlow x={960} y={655} r={500} />
       <path d="M0 939Q960 832 1920 939V1080H0Z" fill="#e7dad2" />
       <g transform={`translate(${960 - (1 - e) * 100} 733)`}>
-        <path d="M-1100-25L-264-38L-199 117L-1100 302Z" fill="#c9dfc7" />
+        <path d="M-1100-25L-264-38L-199 117L-1100 302Z" fill={STORY_OUTFIT.blouse} />
         <path d="M-362-33L-272-39L-196 125L-294 145Z" fill="#efe5d9" />
         {Array.from({ length: 7 }, (_, i) => (
           <path
@@ -1093,7 +1094,7 @@ export const Hands = ({ durationInFrames }: SceneProps) => {
         />
       </g>
       <g transform={`translate(${960 + (1 - e) * 100} 733)`}>
-        <path d="M1100 4L264-29L194 125L1100 302Z" fill="#bed8b7" />
+        <path d="M1100 4L264-29L194 125L1100 302Z" fill={STORY_OUTFIT.cardigan} />
         <path d="M364-25L275-31L193 133L294 150Z" fill="#e7dcd0" />
         {Array.from({ length: 7 }, (_, i) => (
           <path

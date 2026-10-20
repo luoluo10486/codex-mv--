@@ -1,0 +1,16 @@
+{
+  "revision": 3,
+  "scope": "character-wardrobe",
+  "status": "in_progress",
+  "outputRoot": "out/remake-v3",
+  "design": {
+    "boy": "Cream cardigan, peach T-shirt, light khaki trousers",
+    "girl": "Ivory collared blouse, dusty rose pinafore, cream shoes",
+    "details": "Matching heart accents; supplied faces preserved"
+  },
+  "implementation": "verified",
+  "visualReview": "in_progress",
+  "exports": "in_progress",
+  "blockers": [],
+  "updatedAt": "2026-10-20T08:45:10.7199624Z"
+}
