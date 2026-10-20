@@ -22,6 +22,17 @@ const Journey = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
+const Marker = ({ durationInFrames }: SceneProps) => {
+  const { p, t } = useBeat(durationInFrames);
+  return <BStage><WarmGlow x={1380} y={500} r={500}/><BMountains y={720} shift={-p*6}/>
+    <path d="M1000 1080L1310 590L1470 620L1810 1080Z" fill="#a66564"/><path d="M1310 590L1379 716L1470 620L1810 1080H1360Z" fill="#dd9c7d"/>
+    <g transform={`translate(1380 ${600-p*9})`} filter="url(#warm-shadow)"><path d="M-70 20L-46-187H46L70 20Z" fill="#f7d6a1"/><path d="M-46-187L-36-266H36L46-187Z" fill="#b86362"/><path d="M-70-263L0-326L70-263Z" fill="#8d4f57"/><path d="M-55-266H55V-189H-55Z" fill="#f4be75" stroke="#ffebba" strokeWidth="9"/><path d="M-19-264V-194M19-264V-194" stroke="#af6c59" strokeWidth="7"/><path d="M0-323V-378L85-353L0-333" fill="#cf5f65"/><WarmGlow x={0} y={-229} r={140}/><path d="M-44-228L-315-314L-315-146ZM44-228L324-313L324-143Z" fill="#ffe8ab" opacity={.17+.07*Math.sin(t*2)}/></g>
+    <g transform={`translate(${500+p*25} 770) rotate(-8)`} filter="url(#warm-shadow)"><path d="M-360-185L-106-219L118-163L340-205V193L112 232L-101 181L-360 222Z" fill="#f6dfb0"/><path d="M-106-219V181M118-163V232" stroke="#d3ae82" strokeWidth="7"/><path d="M-331 92Q-195-118-99 5T117-9Q200-144 301-106" stroke="#cc7270" strokeWidth="12" strokeDasharray="18 14" fill="none" pathLength="1" strokeDashoffset={1-p}/><path d="M-302-66L-252-130L-210-67M-32 112L29 29L86 114M183 91L241 12L295 88" fill="#d6a27d"/><circle cx="298" cy="-105" r="22" fill="#c95f67"/><circle cx="298" cy="-105" r="9" fill="#ffe6b4"/></g>
+    <g transform={`translate(775 889) rotate(${p*18-10})`} filter="url(#warm-shadow)"><circle r="104" fill="url(#warm-gold)"/><circle r="86" fill="#fff0cb"/><path d="M0-75L22 0L0 75L-22 0Z" fill="#c35d63"/><path d="M0 75L-22 0H22Z" fill="#b98866"/><circle r="13" fill="#f8cf86"/></g>
+  </BStage>;
+};
+
 export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-17": Journey,
+  "lyric-18": Marker,
 };
