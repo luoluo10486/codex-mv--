@@ -1,6 +1,6 @@
 {
   "revision": 2,
-  "status": "in_progress",
+  "status": "complete",
   "outputRoot": "out/remake-v2",
   "characters": "verified",
   "agent-a": "committed",
@@ -8,10 +8,10 @@
   "agent-c": "committed",
   "integration": "verified",
   "visualReview": "verified",
-  "exports": "rendering",
+  "exports": "verified",
   "blockers": [],
   "sourceCommit": "09c9464",
-  "updatedAt": "2026-10-20T03:37:53.388Z",
+  "updatedAt": "2026-10-20T03:46:13.858Z",
   "commits": {
     "shared": "50986b8",
     "agent-a": "7dc2194",
@@ -364,8 +364,17 @@
   ],
   "exportTasks": {
     "full": {
-      "status": "rendering",
-      "output": "out/remake-v2/gou-zhi-qi-shi-warm-full.partial.mp4"
+      "status": "verified",
+      "output": "out/remake-v2/gou-zhi-qi-shi-warm-full.mp4",
+      "sourceCommit": "09c9464",
+      "browserPlayback": {
+        "ended": true,
+        "currentTime": 183.616,
+        "duration": 183.616,
+        "rate": 1,
+        "error": null,
+        "screenshot": "out/remake-v2/review/browser-playback-ended.png"
+      }
     },
     "preview": {
       "status": "verified",
@@ -375,8 +384,17 @@
         "currentTime": 30.016,
         "error": null,
         "rate": 1
-      }
+      },
+      "sourceCommit": "09c9464"
+    },
+    "full-preview": {
+      "status": "verified",
+      "output": "out/remake-v2/gou-zhi-qi-shi-warm-full-preview.mp4",
+      "sourceCommit": "09c9464"
     }
   },
-  "visualNote": "Glass drop f3670 has a subtle edge at small display sizes; visible at full resolution."
+  "visualNote": "Glass drop f3670 has a subtle edge at small display sizes; visible at full resolution.",
+  "verificationReport": "docs/MV_REVISION_02_VERIFICATION.json",
+  "report": "docs/MV_REVISION_02_REPORT.md",
+  "playerUrl": "http://127.0.0.1:3002"
 }
