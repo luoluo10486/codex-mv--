@@ -91,6 +91,22 @@ const WorldHeart = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
+const SharedHome = ({ durationInFrames }: SceneProps) => {
+  const { p, t } = useBeat(durationInFrames);
+  return <BStage><WarmGlow x={960} y={650} r={650}/><BStars count={28}/>
+    <g transform={`translate(960 ${683-Math.sin(t)*8}) scale(${.96+p*.04})`}>
+      <circle r="334" fill="url(#b-glass)" stroke="#fff0cb" strokeWidth="7"/><ellipse cy="179" rx="270" ry="92" fill="#ad736c"/><ellipse cy="151" rx="274" ry="81" fill="#edbd8c"/>
+      <path d="M-64 198Q3 134 118 167" stroke="#ffdfac" strokeWidth="29" fill="none"/>
+      <BHome x={-55} y={38} s={.98}/><BPerson x={98} y={131} s={.45} red/><BPerson x={148} y={132} s={.45}/>
+      <BFlower x={-214} y={90} s={.36} rotation={-13}/><BFlower x={217} y={136} s={.32} pale/>
+      <path d="M-287-59Q-282-239-128-294" fill="none" stroke="#fff8dd" strokeWidth="17" strokeLinecap="round" opacity=".65"/>
+      <path d="M184 264Q266 213 292 117" fill="none" stroke="#fff3d4" strokeWidth="6" strokeLinecap="round" opacity=".6"/>
+    </g>
+    <path d="M320 1080Q384 903 683 935L838 987Q872 1003 849 1030L772 1062H1133L1059 1030Q1036 1001 1067 987L1222 935Q1521 903 1600 1080Z" fill="url(#b-skin)"/>
+    <path d="M438 1042Q563 966 682 977M1482 1042Q1357 966 1238 977" stroke="#ffdfb6" strokeWidth="12" fill="none" strokeLinecap="round"/>
+  </BStage>;
+};
+
 export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-17": Journey,
   "lyric-18": Marker,
@@ -99,4 +115,5 @@ export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-21": Memories,
   "lyric-22": Devotion,
   "lyric-23": WorldHeart,
+  "lyric-24": SharedHome,
 };
