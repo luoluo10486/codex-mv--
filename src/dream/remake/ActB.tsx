@@ -173,6 +173,24 @@ const RingExchange = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
+const SeasonClock = ({ durationInFrames }: SceneProps) => {
+  const { p, t } = useBeat(durationInFrames);
+  return <BStage><WarmGlow x={960} y={645} r={650}/>
+    {[0,1,2,3].map((season)=><g key={season} transform={`translate(${[355,1565,355,1565][season]} ${season<2?515:873})`} opacity={.7+.3*Math.sin(p*Math.PI+season)} filter="url(#warm-shadow)">
+      <path d="M-217 131V-106Q0-215 217-106V131Z" fill="#bd7c68"/><path d="M-196 110V-94Q0-188 196-94V110Z" fill={["#f7cba4","#edbd7e","#d49a79","#dfc4b0"][season]}/>
+      <circle cx="115" cy="-60" r="38" fill="#fff0bc"/>
+      <path d="M-195 76Q0-7 195 76V110H-195Z" fill={["#c99a80","#c08a66","#b97c63","#fff0cd"][season]}/>
+      <path d="M-81 93V-85M-81-24L-128-60M-81 15L-27-42" stroke="#965f55" strokeWidth="10" strokeLinecap="round"/>
+      {season===0 ? Array.from({length:8},(_,i)=><BFlower key={i} x={-144+(i*37)%165} y={-70+(i%3)*30} s={.19} pale={i%2===0}/>) : null}
+      {season===1 ? <><ellipse cx="-107" cy="-77" rx="70" ry="41" fill="#d5a572"/><ellipse cx="-48" cy="-46" rx="68" ry="45" fill="#d2a077"/></> : null}
+      {season===2 ? Array.from({length:9},(_,i)=><ellipse key={i} cx={-150+(i*51)%280} cy={-84+(i*31)%170} rx="12" ry="24" fill={i%2?"#bd665d":"#eda96d"} transform={`rotate(${i*27})`}/>) : null}
+      {season===3 ? Array.from({length:16},(_,i)=><circle key={i} cx={-177+(i*61)%350} cy={-109+(i*43)%195} r={3+i%3} fill="#fff6de"/>) : null}
+      <path d="M0-155V111M-196 17H196" stroke="#f7d1a1" strokeWidth="11"/>
+    </g>)}
+    <g transform="translate(960 680)" filter="url(#warm-shadow)"><circle r="240" fill="#d39368"/><circle r="220" fill="#fff0ca"/><WarmClock r={201} t={t*5}/><circle r="223" fill="none" stroke="#ffe4a5" strokeWidth="8"/><path d="M-138 250H138L106 291H-104Z" fill="#c18764"/><WarmStar x={0} y={-270} r={20} color="#f6d394"/></g>
+  </BStage>;
+};
+
 export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-17": Journey,
   "lyric-18": Marker,
@@ -187,4 +205,5 @@ export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-27": SoftGarden,
   "lyric-28": Sensitive,
   "lyric-29": RingExchange,
+  "lyric-30": SeasonClock,
 };
