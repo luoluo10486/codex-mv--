@@ -1,6 +1,6 @@
 import type { ComponentType } from "react";
 import { interpolate, useCurrentFrame } from "remotion";
-import { WarmGift, WarmGlow, WarmMoon, WarmSanta, WarmSleigh, WarmStage, WarmStar, WarmWorld } from "../WarmArt";
+import { WarmGift, WarmGlow, WarmLetter, WarmMoon, WarmSanta, WarmSleigh, WarmStage, WarmStar, WarmWorld } from "../WarmArt";
 import type { SceneProps } from "./types";
 import { House, Hillscape } from "./ActCArt";
 
@@ -31,7 +31,29 @@ const GiftWorlds = ({ durationInFrames }: SceneProps) => {
   </WarmStage>;
 };
 
+const MapFold = ({ durationInFrames }: SceneProps) => {
+  const { f, p } = useTime(durationInFrames);
+  const fold = ease(p / 0.72);
+  const close = ease((p - 0.5) / 0.5);
+  const spread = 1 - fold * 0.92;
+  return <WarmStage><WarmGlow x={960} y={530} r={470} opacity={0.4} />
+    <path d="M0 1050Q300 780 600 1020T1230 980T1920 1000V1080H0Z" fill="#e5b28a" />
+    <g transform={`translate(960 ${555 - close * 60}) rotate(${Math.sin(f / 22) * 2 + close * 4}) scale(${1 - close * 0.35} ${1 - close * 0.65})`}>
+      <g transform={`scale(${spread} 1)`}>
+      {[0,1,2].map(i => <path key={i} d={`M${-650 + i * 430} -270Q${-470 + i * 420} ${-400 + fold * 240} ${-220 + i * 430} -270V270Q${-450 + i * 410} ${390 - fold * 260} ${-650 + i * 430} 270Z`} fill={["#efb47d","#f4c78e","#eab184"][i]} stroke="#c47764" strokeWidth="8" />)}
+      <path d="M-575 50Q-250-220 40 45T590-45" fill="none" stroke="#c94e5b" strokeWidth="14" strokeDasharray="22 18" />
+      <path d="M-460 180L-250-80L-20 180L200-140L480 180" fill="none" stroke="#bc7776" strokeWidth="38" />
+      <WarmStar x={320} y={-70} r={18} color="#ffe4a1" />
+      </g>
+      <path d={`M-${215 + (1 - fold) * 430} -270L-215 -270V270L-${215 + (1 - fold) * 430} 270Z`} fill="#f5ca92" opacity={fold * 0.65} />
+      <path d={`M${215 + (1 - fold) * 430} -270L215 -270V270L${215 + (1 - fold) * 430} 270Z`} fill="#efba82" opacity={fold * 0.65} />
+    </g>
+    <g transform={`translate(960 ${555 + (1 - close) * 180}) rotate(${close * 4}) scale(${0.15 + close * 0.95})`}><WarmLetter open={1 - close} /></g>
+  </WarmStage>;
+};
+
 export const actCScenes: Record<string, ComponentType<SceneProps>> = {
   "bridge-santa-route": SantaRoute,
   "bridge-santa-worlds": GiftWorlds,
+  "bridge-map-fold": MapFold,
 };

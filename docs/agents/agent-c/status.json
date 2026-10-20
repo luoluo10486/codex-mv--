@@ -20,12 +20,18 @@
       "sceneId": "bridge-santa-worlds",
       "durationInFrames": 352,
       "state": "committed",
+      "commit": "64865c9e49df7529d0b26020a051fb2fea595c28"
+    },
+    {
+      "sceneId": "bridge-map-fold",
+      "durationInFrames": 316,
+      "state": "committed",
       "commit": "HEAD at this scene checkpoint"
     }
   ],
-  "renderedSceneCount": 2,
-  "verifiedSceneCount": 2,
-  "motionSampleCount": 8,
+  "renderedSceneCount": 3,
+  "verifiedSceneCount": 3,
+  "motionSampleCount": 12,
   "lintAndTypeScript": "passed",
   "outputDirectory": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-c",
   "evidence": [
