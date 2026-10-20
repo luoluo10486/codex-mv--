@@ -107,6 +107,17 @@ const SharedHome = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
+const Shine = ({ durationInFrames }: SceneProps) => {
+  const { p, t } = useBeat(durationInFrames);
+  return <BStage night><WarmGlow x={960} y={590} r={430+p*500} opacity={.8}/><BStars count={55}/>
+    {Array.from({length:16},(_,i)=>{const a=i*Math.PI/8;return <path key={i} d={`M960 590L${960+Math.cos(a)*1700} ${590+Math.sin(a)*1700}`} stroke="#ffdda0" strokeWidth={i%2?2:18} opacity={.07+p*.08} pathLength="1" strokeDasharray="1" strokeDashoffset={1-p}/>;})}
+    <g transform={`translate(960 590) rotate(${t*5})`}><WarmStar r={69+p*12} color="#fff1bb"/><WarmStar r={47} color="#ffe9a7" rotate={45}/></g>
+    <path d="M0 1080V919Q200 794 405 906Q630 710 845 914Q1110 770 1332 903Q1650 752 1920 929V1080Z" fill="#99606a"/>
+    {Array.from({length:12},(_,i)=><g key={i} transform={`translate(${i*177-15} ${940+(i%3)*28})`}><path d="M-48 0H48V96H-48Z" fill={i%2?"#d89a7d":"#c07a72"}/><path d="M-60 0L0-54L60 0" fill="#8b4d57"/><path d="M-26 24H-5V52H-26ZM10 24H31V52H10Z" fill="#ffe8ac" opacity={.25+p*.75}/></g>)}
+    <path d="M960 685Q960 829 1850 940M960 685Q960 829 70 940" stroke="#ffe6ad" strokeWidth="5" fill="none" opacity=".65" pathLength="1" strokeDasharray="1" strokeDashoffset={1-p}/>
+  </BStage>;
+};
+
 export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-17": Journey,
   "lyric-18": Marker,
@@ -116,4 +127,5 @@ export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-22": Devotion,
   "lyric-23": WorldHeart,
   "lyric-24": SharedHome,
+  "lyric-25": Shine,
 };
