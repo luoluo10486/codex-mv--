@@ -43,8 +43,20 @@ const LifeLine = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
+const SewWorlds = ({ durationInFrames }: SceneProps) => {
+  const { p } = useBeat(durationInFrames);
+  const gap = 85 * (1-p);
+  return <BStage><WarmGlow x={960} y={620} r={600}/><BStars count={30}/>
+    <g transform={`translate(${-gap} 0)`}><path d="M80 430Q460 280 885 435L920 923Q503 1056 100 943Z" fill="#edba91" filter="url(#warm-shadow)"/><path d="M100 855Q330 590 570 799T912 818L920 923Q503 1056 100 943Z" fill="#cb8274"/><BHome x={446} y={661} s={.55}/><BPerson x={780} y={746} s={.7} red/></g>
+    <g transform={`translate(${gap} 0)`}><path d="M1035 435Q1460 280 1840 430L1820 943Q1417 1056 1000 923Z" fill="#d99681" filter="url(#warm-shadow)"/><path d="M1010 800L1220 460L1430 753L1650 489L1840 840L1820 943Q1417 1056 1000 923Z" fill="#a66a66"/><BPerson x={1145} y={746} s={.7}/></g>
+    {Array.from({ length: 9 }, (_, i) => <g key={i} opacity={p > i/12 ? 1 : .12}><ellipse cx={900-gap} cy={450+i*52} rx="9" ry="12" fill="#a55f59"/><ellipse cx={1020+gap} cy={450+i*52} rx="9" ry="12" fill="#a55f59"/><path d={`M${900-gap} ${450+i*52}L${1020+gap} ${502+i*52}`} stroke="#ca4d5c" strokeWidth="9" fill="none"/><path d={`M${1020+gap} ${450+i*52}L${900-gap} ${502+i*52}`} stroke="#ef947d" strokeWidth="7" fill="none"/></g>)}
+    <g transform={`translate(${1100-p*120} ${540+p*360}) rotate(-32)`}><path d="M0-110V110Q18 137 25 110V-110Q13-143 0-110Z" fill="#fff2cd" stroke="#ba8e64" strokeWidth="3"/><ellipse cx="12" cy="-92" rx="5" ry="15" fill="#a76461"/><path d="M12-90Q180-118 146-15T262 107" fill="none" stroke="#c94e5b" strokeWidth="9"/></g>
+  </BStage>;
+};
+
 export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-17": Journey,
   "lyric-18": Marker,
   "lyric-19": LifeLine,
+  "lyric-20": SewWorlds,
 };
