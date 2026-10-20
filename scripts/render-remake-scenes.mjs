@@ -2,7 +2,7 @@ import { bundle } from "@remotion/bundler";
 import { openBrowser, renderStill, selectComposition } from "@remotion/renderer";
 import { mkdir, readFile, writeFile, rename } from "node:fs/promises";
 import path from "node:path";
-import { spawnSync } from "node:child_process";
+import sharp from "sharp";
 
 const [owner, entry, outputArg] = process.argv.slice(2);
 if (!owner || !entry) throw new Error("Usage: node scripts/render-remake-scenes.mjs OWNER ENTRY [OUTPUT]");
@@ -25,11 +25,9 @@ try {
     console.log("Rendered", shot.sceneId);
   }
 } finally { await browser.close({silent: true}); }
-const bin = path.resolve("node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe");
-const args = evidence.flatMap(e => ["-i", e.output]);
-const filters = evidence.map((_,i)=>`[${i}:v]scale=480:270,drawtext=fontfile='C\\:/Windows/Fonts/arial.ttf':text='${shots[i].sceneId}':fontsize=18:fontcolor=white:box=1:boxcolor=black@0.5:x=10:y=10[v${i}]`);
-const layout = evidence.map((_,i)=>`${(i%4)*480}_${Math.floor(i/4)*270}`).join("|");
-filters.push(`${evidence.map((_,i)=>`[v${i}]`).join("")}xstack=inputs=${evidence.length}:layout=${layout}:fill=0xfff1dc[out]`);
-const result = spawnSync(bin, ["-v","error","-y",...args,"-filter_complex",filters.join(";"),"-map","[out]","-frames:v","1",path.join(out,"contact-sheet.jpg")], {encoding:"utf8", windowsHide:true});
-if(result.status!==0) throw new Error(result.stderr);
+const tiles = await Promise.all(evidence.map(async(e,i)=>({
+  input: await sharp(e.output).resize(480,270).extend({top:30,bottom:0,left:0,right:0,background:"#fff1dc"}).composite([{input:Buffer.from(`<svg width="480" height="30"><text x="10" y="22" font-family="Arial" font-size="17" fill="#4d3030">${shots[i].sceneId}</text></svg>`),top:0,left:0}]).png().toBuffer(),
+  left:(i%4)*480,top:Math.floor(i/4)*300,
+})));
+await sharp({create:{width:1920,height:Math.ceil(evidence.length/4)*300,channels:3,background:"#fff1dc"}}).composite(tiles).jpeg({quality:90}).toFile(path.join(out,"contact-sheet.jpg"));
 console.log("Contact sheet", path.join(out,"contact-sheet.jpg"));

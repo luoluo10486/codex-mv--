@@ -111,7 +111,15 @@ const bridges = [
 
 const all = [...scenes, ...bridges].sort((a, b) => a.startFrame - b.startFrame);
 const output = path.join(root, "src/data/remake-storyboard.json");
-fs.writeFileSync(output, `${JSON.stringify(all, null, 2)}\n`);
+const atomicJson = (file, value) => {
+  fs.writeFileSync(`${file}.partial`, `${JSON.stringify(value, null, 2)}\n`);
+  fs.renameSync(`${file}.partial`, file);
+};
+atomicJson(output, all);
+const progressPath = path.join(root, "docs/MV_PROGRESS.json");
+const previous = fs.existsSync(progressPath)
+  ? JSON.parse(fs.readFileSync(progressPath, "utf8"))
+  : { scenes: [] };
 
 const progress = {
   schemaVersion: 1,
@@ -119,7 +127,7 @@ const progress = {
   totalFrames,
   totalScenes: all.length,
   updatedAt: new Date().toISOString(),
-  scenes: all.map((scene) => ({
+  scenes: all.map((scene) => previous.scenes.find(saved => saved.sceneId === scene.sceneId) ?? ({
     sceneId: scene.sceneId,
     owner: scene.owner,
     status: "planned",
@@ -132,6 +140,6 @@ const progress = {
     updatedAt: null,
   })),
 };
-fs.writeFileSync(path.join(root, "docs/MV_PROGRESS.json"), `${JSON.stringify(progress, null, 2)}\n`);
+atomicJson(progressPath, progress);
 
 console.log(`Prepared ${all.length} scenes (${scenes.length} lyric + ${bridges.length} bridge)`);

@@ -23,3 +23,10 @@
 - `remake/types.ts` 冻结 `SceneProps = { durationInFrames: number }`，每个场景使用局部帧；总时间轴负责绝对入点和音轨。
 - 子代理可在独占模块内添加专属插画；共享接口不得由子代理改写。
 - 待检查：共享资产接触表和完整关键帧。未验收的状态保持 planned/in_progress。
+
+## 2026-10-20 · 开场与恢复工具检查
+
+- 根代理两个开场镜头完成，`npm run lint` 通过；实际渲染并查看 `out/remake/root/contact-sheet.jpg`。
+- 修复关键帧接触表生成：当前随 Remotion 提供的 FFmpeg 缺少 drawtext/xstack，改用本地 sharp 合成，已实际运行成功。
+- 分镜初始化脚本改为保留已有场景状态，JSON 通过临时文件原子替换，重复初始化不会清空已提交进度。
+- 三组独立工作区仍保留，待逐组读取提交、交接报告和抽帧后合并；全局状态暂不冒充 merged。
