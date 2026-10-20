@@ -203,6 +203,18 @@ const HeldWide = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
+const DawnRoad = ({ durationInFrames }: SceneProps) => {
+  const { p, t } = useBeat(durationInFrames);
+  return <BStage><rect width="1920" height="1080" fill="url(#warm-sunset)"/><WarmGlow x={1500} y={465} r={560}/><circle cx={1500} cy={465} r={105+p*14} fill="#fff0b3"/>
+    <BMountains y={735} shift={-p*38}/><path d="M0 839Q480 734 960 837T1920 831V1080H0Z" fill="#c87e71"/>
+    <path d="M960 1080L845 1080Q869 946 928 873Q951 826 960 748Q969 826 992 873Q1051 946 1075 1080Z" fill="#f4cd9b"/><path d="M960 1080L931 1080Q947 958 958 899Q968 964 989 1080Z" fill="#fff0c3" opacity=".68"/>
+    <g transform={`translate(${960-p*390} ${848-p*68})`}><BPerson x={-57} y={0} s={.66} red back/><BPerson x={57} y={0} s={.66} back/><path d="M-4-32Q0-1 5-32" stroke="#f5c39e" strokeWidth="13" fill="none" strokeLinecap="round"/><WarmStar x={0} y={-28} r={8} color="#ffe5a7"/></g>
+    <path d="M0 1035Q700 942 960 1004T1920 1030" stroke="#efb27f" strokeWidth="8" fill="none" opacity=".6"/>
+    {Array.from({length:20},(_,i)=><WarmStar key={i} x={(i*233+80)%1920} y={270+(i*89)%380} r={2+i%3} color="#fff1be" rotate={t*4+i*17}/>)}
+    <path d="M1500 478Q1590 420 1661 478" stroke="#fff1bd" strokeWidth="5" fill="none" opacity=".55"/>
+  </BStage>;
+};
+
 export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-17": Journey,
   "lyric-18": Marker,
@@ -219,4 +231,5 @@ export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-29": RingExchange,
   "lyric-30": SeasonClock,
   "lyric-31": HeldWide,
+  "lyric-32": DawnRoad,
 };
