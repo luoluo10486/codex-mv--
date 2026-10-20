@@ -118,6 +118,19 @@ const Shine = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
+const Ordinary = ({ durationInFrames }: SceneProps) => {
+  const { p, t } = useBeat(durationInFrames);
+  return <BStage night><WarmGlow x={1150} y={580} r={800} opacity={.45}/><BStars count={130} y={280} height={660}/>
+    <g transform={`translate(1070 560) rotate(-17)`}>{Array.from({length:6},(_,i)=><ellipse key={i} rx={330+i*117} ry={66+i*38} fill="none" stroke="#f6c28b" strokeWidth={i===3?35:3} opacity={i===3?.1:.18} transform={`rotate(${p*3})`}/>)}</g>
+    {Array.from({length:21},(_,i)=><WarmStar key={i} x={100+(i*431)%1730} y={345+(i*157)%440} r={5+i%4*3} color="#f5d79d" rotate={t+i*3}/>)}
+    <path d="M0 1080V1013Q520 883 960 970Q1400 883 1920 1013V1080Z" fill="#70434e"/>
+    <path d="M0 1054Q500 948 958 1019T1920 1052" fill="none" stroke="#bd8975" strokeWidth="3"/>
+    <BPerson x={960} y={934} s={.43} red back/>
+    <path d="M977 908L1004 921L1000 948H980Z" fill="#dbb483"/><path d="M984 908Q995 896 1001 917" fill="none" stroke="#edca9a" strokeWidth="3"/>
+    <WarmStar x={974} y={728-p*10} r={8} color="#fff1bf"/>
+  </BStage>;
+};
+
 export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-17": Journey,
   "lyric-18": Marker,
@@ -128,4 +141,5 @@ export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-23": WorldHeart,
   "lyric-24": SharedHome,
   "lyric-25": Shine,
+  "lyric-26": Ordinary,
 };
