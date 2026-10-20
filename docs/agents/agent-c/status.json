@@ -68,12 +68,18 @@
       "sceneId": "lyric-38",
       "durationInFrames": 76,
       "state": "committed",
+      "commit": "4950fe6b69946b41617abafc0a16c4ba3879688a"
+    },
+    {
+      "sceneId": "lyric-39",
+      "durationInFrames": 97,
+      "state": "committed",
       "commit": "HEAD at this scene checkpoint"
     }
   ],
-  "renderedSceneCount": 10,
-  "verifiedSceneCount": 10,
-  "motionSampleCount": 40,
+  "renderedSceneCount": 11,
+  "verifiedSceneCount": 11,
+  "motionSampleCount": 44,
   "lintAndTypeScript": "passed",
   "outputDirectory": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-c",
   "evidence": [

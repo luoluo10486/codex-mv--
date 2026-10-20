@@ -81,6 +81,27 @@ const FourSeasons = ({ durationInFrames }: SceneProps) => {
   </WarmStage>;
 };
 
+const HandsPullback = ({ durationInFrames }: SceneProps) => {
+  const { p } = useTime(durationInFrames);
+  const wide = ease(p);
+  const scale = interpolate(wide, [0, 1], [3.5, 1.16]);
+  return <WarmStage theme="dawn"><WarmGlow x={960} y={580} r={440} opacity={0.55} />
+    <defs><clipPath id="c-hands-safe"><rect x="0" y="270" width="1920" height="810" /></clipPath></defs>
+    <path d="M0 900Q430 720 960 910T1920 840V1080H0Z" fill="#e7aa84" />
+    <g clipPath="url(#c-hands-safe)"><g transform={`translate(960 ${650 + wide * 75}) scale(${scale})`}>
+      <Couple x={0} y={0} gap={95} embrace={0.1} />
+      <path d="M-40-40Q-47 0-24 18L-5 26" stroke="#f7c19b" strokeWidth="20" strokeLinecap="round" fill="none" />
+      <path d="M40-40Q47 0 24 18L5 26" stroke="#f7c19b" strokeWidth="20" strokeLinecap="round" fill="none" />
+      <path d="M-20 15Q-8 4 3 12L21 23Q28 31 20 37Q12 43 3 33L-10 27Z" fill="#f7c19b" />
+      <path d="M13 15L-5 28M18 23L2 35M-14 17L1 26" stroke="#d99479" strokeWidth="2.8" strokeLinecap="round" />
+      <ellipse cx="-6" cy="13" rx="7" ry="4" fill="none" stroke="#ddaa58" strokeWidth="3" />
+    </g></g>
+    <SprigC x={160} y={1080} />
+  </WarmStage>;
+};
+
+const SprigC = ({x,y}:{x:number;y:number}) => <g transform={`translate(${x} ${y})`}><path d="M0 0Q-40-120 15-220Q25-110 50-80Q45-190 105-210Q85-70 120 0Z" fill="#b57065" /><path d="M0 0Q-100-60-160-180Q-65-164-40-70Z" fill="#d38972" /></g>;
+
 const SantaRoute = ({ durationInFrames }: SceneProps) => {
   const { f, p } = useTime(durationInFrames);
   const route = ease(p);
@@ -152,4 +173,5 @@ export const actCScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-36": SoftEmbrace,
   "lyric-37": HaloContract,
   "lyric-38": FourSeasons,
+  "lyric-39": HandsPullback,
 };
