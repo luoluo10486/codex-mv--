@@ -69,10 +69,24 @@ const Memories = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
+const Devotion = ({ durationInFrames }: SceneProps) => {
+  const { p, t } = useBeat(durationInFrames);
+  return <BStage><WarmGlow x={960} y={630} r={650}/>
+    <path d="M0 839Q480 683 960 835T1920 819V1080H0Z" fill="#edc5a3"/>
+    <path d="M0 966Q621 795 1920 978V1080H0Z" fill="#dba68b"/>
+    <g transform={`translate(0 ${Math.sin(t)*3})`}><BHands y={670} s={1.22} gap={30*(1-p)}/></g>
+    <path d="M803 756Q956 839 1097 707" fill="none" stroke="#c94e5b" strokeWidth="7"/>
+    <WarmGlow x={966} y={658} r={130} opacity={.5+p*.3}/>
+    {Array.from({length:9},(_,i)=><g key={i} transform={`translate(${200+i*193} ${950+Math.sin(i)*23}) rotate(${i*33})`}><ellipse rx="24" ry="12" fill="#ffe3b8"/><path d="M-15 0H15" stroke="#e7b89b" strokeWidth="2"/></g>)}
+    <BFlower x={146} y={674} s={.6} rotation={-28} pale/><BFlower x={1776} y={796} s={.75} rotation={23}/>
+  </BStage>;
+};
+
 export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-17": Journey,
   "lyric-18": Marker,
   "lyric-19": LifeLine,
   "lyric-20": SewWorlds,
   "lyric-21": Memories,
+  "lyric-22": Devotion,
 };
