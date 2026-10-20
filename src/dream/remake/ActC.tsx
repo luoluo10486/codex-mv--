@@ -28,6 +28,17 @@ const FireplaceWarmth = ({ durationInFrames }: SceneProps) => {
   </WarmStage>;
 };
 
+const LastSnow = ({ durationInFrames }: SceneProps) => {
+  const { f, p } = useTime(durationInFrames);
+  const shelter = ease(p);
+  return <WarmStage theme="night"><Hillscape shift={Math.sin(f / 30) * 22} snow /><WarmMoon x={1570} y={190} r={102} />
+    {Array.from({ length: 34 }, (_, i) => <circle key={i} cx={(i * 271 + f * (2 + i % 3)) % 2040 - 50} cy={(i * 83 + f * 5) % 760 + 90} r={3 + i % 4} fill="#fff1d3" opacity={0.44} />)}
+    <path d="M420 740Q820 636 1190 747" fill="none" stroke="#f7c69d" strokeWidth="30" opacity="0.55" />
+    <Couple x={900 + shelter * 25} y={720} s={0.96} gap={interpolate(shelter, [0, 1], [155, 90])} embrace={shelter} walk={Math.sin(f / 6) * 0.35} />
+    <path d={`M795 668Q730 576 805 552Q920 ${460 - shelter * 60} 1070 552Q1130 580 1060 668`} fill="none" stroke="#f7c19b" strokeWidth={22 + shelter * 8} strokeLinecap="round" />
+  </WarmStage>;
+};
+
 const SantaRoute = ({ durationInFrames }: SceneProps) => {
   const { f, p } = useTime(durationInFrames);
   const route = ease(p);
@@ -95,4 +106,5 @@ export const actCScenes: Record<string, ComponentType<SceneProps>> = {
   "bridge-map-return": MapReturn,
   "lyric-33": ReturnRoom,
   "lyric-34": FireplaceWarmth,
+  "lyric-35": LastSnow,
 };
