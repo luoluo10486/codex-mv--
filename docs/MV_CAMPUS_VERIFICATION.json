@@ -1,0 +1,792 @@
+{
+  "checks": {
+    "width": true,
+    "height": true,
+    "frameRate": true,
+    "frameCount": true,
+    "videoDuration": true,
+    "containerDuration": true,
+    "h264": true,
+    "aac": true,
+    "audioDuration": true,
+    "pixelFormat": true,
+    "colorSpace": true,
+    "colorPrimaries": true,
+    "colorTransfer": true,
+    "colorRange": true
+  },
+  "allProbeChecksPassed": true,
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "unknown",
+        "profile": "100",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1080,
+        "closed_captions": 0,
+        "film_grain": 0,
+        "has_b_frames": 2,
+        "pix_fmt": "yuv420p",
+        "level": 40,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "refs": 1,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/90000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 16524000,
+        "duration": "183.600000",
+        "bit_rate": "1046024",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "5508",
+        "extradata_size": 50,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "vendor_id": "[0][0][0][0]"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "unknown",
+        "profile": "1",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 0,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 8813568,
+        "duration": "183.616000",
+        "bit_rate": "317375",
+        "nb_frames": "8609",
+        "extradata_size": 2,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "SoundHandler",
+          "vendor_id": "[0][0][0][0]"
+        }
+      }
+    ],
+    "format": {
+      "filename": "out/remake-v4/gou-zhi-qi-shi-warm-full.partial.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "start_time": "0.000000",
+      "duration": "183.616000",
+      "size": "31495628",
+      "bit_rate": "1372238",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf61.7.100",
+        "comment": "Made with Remotion 4.0.536"
+      }
+    }
+  },
+  "exportFrames": [
+    0,
+    160,
+    493,
+    716,
+    802,
+    878,
+    952,
+    1039,
+    1127,
+    1210,
+    1287,
+    1370,
+    1460,
+    1546,
+    1630,
+    1714,
+    1801,
+    1884,
+    1984,
+    2194,
+    2526,
+    2748,
+    2827,
+    2907,
+    2990,
+    3074,
+    3155,
+    3237,
+    3323,
+    3409,
+    3493,
+    3584,
+    3670,
+    3747,
+    3831,
+    3916,
+    4020,
+    4232,
+    4561,
+    4773,
+    4848,
+    4933,
+    5021,
+    5104,
+    5189,
+    5275,
+    5362,
+    5427,
+    5481,
+    5507
+  ],
+  "fullVideoDecode": {
+    "decodedFrameCount": 5508,
+    "expectedFrameCount": 5508,
+    "minMeanRGB": 216.90972222222223,
+    "maxMeanRGB": 239.55555555555554,
+    "blackFrames": [],
+    "uniformBlankFrames": [],
+    "minSpatialContrast": 4.440716408451425,
+    "passed": true
+  },
+  "encodedAudioAgainstOriginal": {
+    "sourceSamples": 2936588,
+    "encodedSamples": 2937216,
+    "coveredSourceSamples": 2936588,
+    "complete": true,
+    "extraEncodedTailMs": 16.25,
+    "measuredOffsetSamples": 368,
+    "sampleRate": 16000,
+    "measuredOffsetMs": 23.0,
+    "correlationAfterAlignment": 0.9894112341246991,
+    "passed": true
+  },
+  "exportParity": [
+    {
+      "frame": 0,
+      "meanAbsoluteChannelDifference": 1.5488242669753087
+    },
+    {
+      "frame": 160,
+      "meanAbsoluteChannelDifference": 1.5565139531893004
+    },
+    {
+      "frame": 493,
+      "meanAbsoluteChannelDifference": 1.1869042566872428
+    },
+    {
+      "frame": 716,
+      "meanAbsoluteChannelDifference": 1.3294921875
+    },
+    {
+      "frame": 802,
+      "meanAbsoluteChannelDifference": 1.2175834297839505
+    },
+    {
+      "frame": 878,
+      "meanAbsoluteChannelDifference": 1.2572103266460906
+    },
+    {
+      "frame": 952,
+      "meanAbsoluteChannelDifference": 1.267415927211934
+    },
+    {
+      "frame": 1039,
+      "meanAbsoluteChannelDifference": 1.3105957433127573
+    },
+    {
+      "frame": 1127,
+      "meanAbsoluteChannelDifference": 1.2970987654320987
+    },
+    {
+      "frame": 1210,
+      "meanAbsoluteChannelDifference": 1.189700681584362
+    },
+    {
+      "frame": 1287,
+      "meanAbsoluteChannelDifference": 1.3366947980967079
+    },
+    {
+      "frame": 1370,
+      "meanAbsoluteChannelDifference": 1.2639075360082304
+    },
+    {
+      "frame": 1460,
+      "meanAbsoluteChannelDifference": 1.1819370498971193
+    },
+    {
+      "frame": 1546,
+      "meanAbsoluteChannelDifference": 1.1238286072530863
+    },
+    {
+      "frame": 1630,
+      "meanAbsoluteChannelDifference": 1.205088091563786
+    },
+    {
+      "frame": 1714,
+      "meanAbsoluteChannelDifference": 1.2261641589506174
+    },
+    {
+      "frame": 1801,
+      "meanAbsoluteChannelDifference": 1.3478592785493828
+    },
+    {
+      "frame": 1884,
+      "meanAbsoluteChannelDifference": 1.1144867219650205
+    },
+    {
+      "frame": 1984,
+      "meanAbsoluteChannelDifference": 1.1064240933641976
+    },
+    {
+      "frame": 2194,
+      "meanAbsoluteChannelDifference": 1.2247093621399177
+    },
+    {
+      "frame": 2526,
+      "meanAbsoluteChannelDifference": 1.30405574845679
+    },
+    {
+      "frame": 2748,
+      "meanAbsoluteChannelDifference": 1.261840117026749
+    },
+    {
+      "frame": 2827,
+      "meanAbsoluteChannelDifference": 1.2206161586934157
+    },
+    {
+      "frame": 2907,
+      "meanAbsoluteChannelDifference": 1.350858571244856
+    },
+    {
+      "frame": 2990,
+      "meanAbsoluteChannelDifference": 1.297800122170782
+    },
+    {
+      "frame": 3074,
+      "meanAbsoluteChannelDifference": 1.2626813271604937
+    },
+    {
+      "frame": 3155,
+      "meanAbsoluteChannelDifference": 1.1927469135802469
+    },
+    {
+      "frame": 3237,
+      "meanAbsoluteChannelDifference": 1.2895082626028807
+    },
+    {
+      "frame": 3323,
+      "meanAbsoluteChannelDifference": 1.2712763631687243
+    },
+    {
+      "frame": 3409,
+      "meanAbsoluteChannelDifference": 1.2790940072016461
+    },
+    {
+      "frame": 3493,
+      "meanAbsoluteChannelDifference": 1.2055793467078189
+    },
+    {
+      "frame": 3584,
+      "meanAbsoluteChannelDifference": 1.2803268068415639
+    },
+    {
+      "frame": 3670,
+      "meanAbsoluteChannelDifference": 1.318939525462963
+    },
+    {
+      "frame": 3747,
+      "meanAbsoluteChannelDifference": 1.215167181069959
+    },
+    {
+      "frame": 3831,
+      "meanAbsoluteChannelDifference": 1.3921931262860083
+    },
+    {
+      "frame": 3916,
+      "meanAbsoluteChannelDifference": 1.2916341949588477
+    },
+    {
+      "frame": 4020,
+      "meanAbsoluteChannelDifference": 1.2064739261831277
+    },
+    {
+      "frame": 4232,
+      "meanAbsoluteChannelDifference": 1.2612860082304527
+    },
+    {
+      "frame": 4561,
+      "meanAbsoluteChannelDifference": 1.2251490162037038
+    },
+    {
+      "frame": 4773,
+      "meanAbsoluteChannelDifference": 1.5295748135288065
+    },
+    {
+      "frame": 4848,
+      "meanAbsoluteChannelDifference": 1.5402433770576132
+    },
+    {
+      "frame": 4933,
+      "meanAbsoluteChannelDifference": 1.3059894225823045
+    },
+    {
+      "frame": 5021,
+      "meanAbsoluteChannelDifference": 1.310906796553498
+    },
+    {
+      "frame": 5104,
+      "meanAbsoluteChannelDifference": 1.272472672325103
+    },
+    {
+      "frame": 5189,
+      "meanAbsoluteChannelDifference": 1.3957503858024691
+    },
+    {
+      "frame": 5275,
+      "meanAbsoluteChannelDifference": 1.2564305234053499
+    },
+    {
+      "frame": 5362,
+      "meanAbsoluteChannelDifference": 1.4005475180041151
+    },
+    {
+      "frame": 5427,
+      "meanAbsoluteChannelDifference": 1.263250546553498
+    },
+    {
+      "frame": 5481,
+      "meanAbsoluteChannelDifference": 1.20353314686214
+    },
+    {
+      "frame": 5507,
+      "meanAbsoluteChannelDifference": 1.1991100823045266
+    }
+  ],
+  "exportParityPassed": true,
+  "warmRepresentativeFrames": [
+    {
+      "frame": 160,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 878,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 1210,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 1546,
+      "redAtLeastBlueFraction": 0.9989723186728395
+    },
+    {
+      "frame": 1884,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 2748,
+      "redAtLeastBlueFraction": 0.776244212962963
+    },
+    {
+      "frame": 3074,
+      "redAtLeastBlueFraction": 0.9997723765432098
+    },
+    {
+      "frame": 3409,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 3747,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 4232,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 4933,
+      "redAtLeastBlueFraction": 0.9990364583333333
+    },
+    {
+      "frame": 5275,
+      "redAtLeastBlueFraction": 1.0
+    }
+  ],
+  "warmPalettePassed": true,
+  "pastelFrameChecks": [
+    {
+      "frame": 0,
+      "lightPixelFraction": 0.9815224729938271,
+      "darkPixelFraction": 0.006646412037037037,
+      "softColorFraction": 0.982842399691358
+    },
+    {
+      "frame": 160,
+      "lightPixelFraction": 0.9815769675925926,
+      "darkPixelFraction": 0.006669077932098765,
+      "softColorFraction": 0.9826355131172839
+    },
+    {
+      "frame": 493,
+      "lightPixelFraction": 0.9905338541666666,
+      "darkPixelFraction": 2.4112654320987654e-06,
+      "softColorFraction": 0.9652970679012346
+    },
+    {
+      "frame": 716,
+      "lightPixelFraction": 0.9822844328703704,
+      "darkPixelFraction": 0.006850405092592593,
+      "softColorFraction": 0.9832918595679012
+    },
+    {
+      "frame": 802,
+      "lightPixelFraction": 0.9876668595679012,
+      "darkPixelFraction": 0.0035440779320987654,
+      "softColorFraction": 0.9940928819444445
+    },
+    {
+      "frame": 878,
+      "lightPixelFraction": 0.9772868441358025,
+      "darkPixelFraction": 0.006519097222222222,
+      "softColorFraction": 0.9905946180555556
+    },
+    {
+      "frame": 952,
+      "lightPixelFraction": 0.9689573688271605,
+      "darkPixelFraction": 0.0038990162037037036,
+      "softColorFraction": 0.969119888117284
+    },
+    {
+      "frame": 1039,
+      "lightPixelFraction": 0.9656621334876543,
+      "darkPixelFraction": 0.006350308641975309,
+      "softColorFraction": 0.9750226658950617
+    },
+    {
+      "frame": 1127,
+      "lightPixelFraction": 0.985721450617284,
+      "darkPixelFraction": 0.0038450038580246913,
+      "softColorFraction": 0.9947482638888889
+    },
+    {
+      "frame": 1210,
+      "lightPixelFraction": 0.9915080054012345,
+      "darkPixelFraction": 0.0058270640432098765,
+      "softColorFraction": 0.9880772569444445
+    },
+    {
+      "frame": 1287,
+      "lightPixelFraction": 0.9885001929012346,
+      "darkPixelFraction": 0.0027068865740740742,
+      "softColorFraction": 0.997881462191358
+    },
+    {
+      "frame": 1370,
+      "lightPixelFraction": 0.9777753665123456,
+      "darkPixelFraction": 0.013417245370370371,
+      "softColorFraction": 0.9869873649691357
+    },
+    {
+      "frame": 1460,
+      "lightPixelFraction": 0.9859355709876543,
+      "darkPixelFraction": 0.010395929783950618,
+      "softColorFraction": 0.9859235146604939
+    },
+    {
+      "frame": 1546,
+      "lightPixelFraction": 0.9825226658950618,
+      "darkPixelFraction": 0.012976948302469135,
+      "softColorFraction": 0.9748027584876543
+    },
+    {
+      "frame": 1630,
+      "lightPixelFraction": 0.9889790702160494,
+      "darkPixelFraction": 0.00865113811728395,
+      "softColorFraction": 0.995
+    },
+    {
+      "frame": 1714,
+      "lightPixelFraction": 0.9899045138888889,
+      "darkPixelFraction": 0.006918885030864197,
+      "softColorFraction": 0.9946127507716049
+    },
+    {
+      "frame": 1801,
+      "lightPixelFraction": 0.9854706790123456,
+      "darkPixelFraction": 0.004211998456790124,
+      "softColorFraction": 0.9846894290123457
+    },
+    {
+      "frame": 1884,
+      "lightPixelFraction": 0.9914385609567902,
+      "darkPixelFraction": 0.006336805555555556,
+      "softColorFraction": 0.9950993441358025
+    },
+    {
+      "frame": 1984,
+      "lightPixelFraction": 0.9905174575617284,
+      "darkPixelFraction": 0.007077064043209877,
+      "softColorFraction": 0.9774078896604939
+    },
+    {
+      "frame": 2194,
+      "lightPixelFraction": 0.9909809027777777,
+      "darkPixelFraction": 3.7615740740740744e-05,
+      "softColorFraction": 0.9804726080246914
+    },
+    {
+      "frame": 2526,
+      "lightPixelFraction": 0.9961733217592592,
+      "darkPixelFraction": 0.0,
+      "softColorFraction": 0.9949430941358025
+    },
+    {
+      "frame": 2748,
+      "lightPixelFraction": 0.9792944637345679,
+      "darkPixelFraction": 0.007302758487654321,
+      "softColorFraction": 0.9910570987654321
+    },
+    {
+      "frame": 2827,
+      "lightPixelFraction": 0.9921619405864197,
+      "darkPixelFraction": 0.004221161265432098,
+      "softColorFraction": 0.9929740547839506
+    },
+    {
+      "frame": 2907,
+      "lightPixelFraction": 0.9833849344135802,
+      "darkPixelFraction": 0.007768614969135802,
+      "softColorFraction": 0.9920871913580247
+    },
+    {
+      "frame": 2990,
+      "lightPixelFraction": 0.9867173032407407,
+      "darkPixelFraction": 0.005242573302469136,
+      "softColorFraction": 0.9935325038580247
+    },
+    {
+      "frame": 3074,
+      "lightPixelFraction": 0.981105324074074,
+      "darkPixelFraction": 0.009370177469135802,
+      "softColorFraction": 0.9946349344135802
+    },
+    {
+      "frame": 3155,
+      "lightPixelFraction": 0.9941902970679012,
+      "darkPixelFraction": 0.003484760802469136,
+      "softColorFraction": 0.9971812307098765
+    },
+    {
+      "frame": 3237,
+      "lightPixelFraction": 0.9907764274691359,
+      "darkPixelFraction": 0.006727912808641975,
+      "softColorFraction": 0.9901075424382716
+    },
+    {
+      "frame": 3323,
+      "lightPixelFraction": 0.9928091242283951,
+      "darkPixelFraction": 0.003892746913580247,
+      "softColorFraction": 0.9971397569444445
+    },
+    {
+      "frame": 3409,
+      "lightPixelFraction": 0.9913088348765432,
+      "darkPixelFraction": 0.006116898148148148,
+      "softColorFraction": 0.9900824652777778
+    },
+    {
+      "frame": 3493,
+      "lightPixelFraction": 0.9945240162037037,
+      "darkPixelFraction": 0.00398341049382716,
+      "softColorFraction": 0.9954301697530864
+    },
+    {
+      "frame": 3584,
+      "lightPixelFraction": 0.9891956018518518,
+      "darkPixelFraction": 0.00794753086419753,
+      "softColorFraction": 0.9888676697530864
+    },
+    {
+      "frame": 3670,
+      "lightPixelFraction": 0.9944429976851852,
+      "darkPixelFraction": 0.0041044560185185186,
+      "softColorFraction": 0.9936882716049382
+    },
+    {
+      "frame": 3747,
+      "lightPixelFraction": 0.9906925154320988,
+      "darkPixelFraction": 0.006915509259259259,
+      "softColorFraction": 0.9947627314814815
+    },
+    {
+      "frame": 3831,
+      "lightPixelFraction": 0.9871918402777777,
+      "darkPixelFraction": 0.004038869598765432,
+      "softColorFraction": 0.9864766589506173
+    },
+    {
+      "frame": 3916,
+      "lightPixelFraction": 0.9892158564814815,
+      "darkPixelFraction": 0.00802565586419753,
+      "softColorFraction": 0.994239486882716
+    },
+    {
+      "frame": 4020,
+      "lightPixelFraction": 0.9932638888888888,
+      "darkPixelFraction": 0.005044849537037037,
+      "softColorFraction": 0.9953023726851852
+    },
+    {
+      "frame": 4232,
+      "lightPixelFraction": 0.9995211226851852,
+      "darkPixelFraction": 0.0,
+      "softColorFraction": 0.9998336226851852
+    },
+    {
+      "frame": 4561,
+      "lightPixelFraction": 0.9989081790123456,
+      "darkPixelFraction": 0.0,
+      "softColorFraction": 0.9874392361111111
+    },
+    {
+      "frame": 4773,
+      "lightPixelFraction": 0.9720741705246914,
+      "darkPixelFraction": 0.013308256172839506,
+      "softColorFraction": 0.9777020640432099
+    },
+    {
+      "frame": 4848,
+      "lightPixelFraction": 0.9707773919753087,
+      "darkPixelFraction": 0.012114679783950618,
+      "softColorFraction": 0.9720891203703703
+    },
+    {
+      "frame": 4933,
+      "lightPixelFraction": 0.9827372685185185,
+      "darkPixelFraction": 0.012434413580246913,
+      "softColorFraction": 0.9739506172839506
+    },
+    {
+      "frame": 5021,
+      "lightPixelFraction": 0.9838647762345679,
+      "darkPixelFraction": 0.012689525462962963,
+      "softColorFraction": 0.9937717013888889
+    },
+    {
+      "frame": 5104,
+      "lightPixelFraction": 0.9811641589506173,
+      "darkPixelFraction": 0.014267939814814815,
+      "softColorFraction": 0.991544174382716
+    },
+    {
+      "frame": 5189,
+      "lightPixelFraction": 0.9726017554012346,
+      "darkPixelFraction": 0.011332947530864198,
+      "softColorFraction": 0.992235725308642
+    },
+    {
+      "frame": 5275,
+      "lightPixelFraction": 0.9914771412037037,
+      "darkPixelFraction": 0.006344521604938272,
+      "softColorFraction": 0.9948852237654321
+    },
+    {
+      "frame": 5362,
+      "lightPixelFraction": 0.9872419945987654,
+      "darkPixelFraction": 0.009673032407407408,
+      "softColorFraction": 0.9929764660493827
+    },
+    {
+      "frame": 5427,
+      "lightPixelFraction": 0.9958931327160494,
+      "darkPixelFraction": 0.001123167438271605,
+      "softColorFraction": 0.99828125
+    },
+    {
+      "frame": 5481,
+      "lightPixelFraction": 0.9995114776234568,
+      "darkPixelFraction": 3.858024691358025e-06,
+      "softColorFraction": 0.9902671682098766
+    },
+    {
+      "frame": 5507,
+      "lightPixelFraction": 0.999994212962963,
+      "darkPixelFraction": 0.0,
+      "softColorFraction": 0.9907576195987654
+    }
+  ],
+  "pastelPaletteRequired": true,
+  "pastelPalettePassed": true,
+  "allMeasuredTechnicalChecksPassed": true
+}
