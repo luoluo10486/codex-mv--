@@ -74,7 +74,7 @@ for frame in data["exportFrames"]:
     luma = rgb @ np.array([.2126, .7152, .0722])
     saturation = (rgb.max(axis=2) - rgb.min(axis=2)) / np.maximum(1, rgb.max(axis=2))
     pastel_frames.append({"frame": frame, "lightPixelFraction": float((luma > 180).mean()), "darkPixelFraction": float((luma < 100).mean()), "softColorFraction": float((saturation < .35).mean())})
-pastel_revision = "remake-v2" in str(REVIEW)
+pastel_revision = os.environ.get("MV_REQUIRE_PASTEL") == "1" or "remake-v2" in str(REVIEW)
 pastel_passed = all(item["lightPixelFraction"] > .55 and item["darkPixelFraction"] < .15 and item["softColorFraction"] > .65 for item in pastel_frames)
 # Natural blue water and sage foliage are intentional local environment colors.
 warm_passed = len(warm_frames) == 12 and (float(np.mean([item["redAtLeastBlueFraction"] for item in warm_frames])) > .65 if pastel_revision else all(item["redAtLeastBlueFraction"] > .75 for item in warm_frames))

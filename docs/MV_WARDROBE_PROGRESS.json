@@ -9,8 +9,28 @@
     "details": "Matching heart accents; supplied faces preserved"
   },
   "implementation": "verified",
-  "visualReview": "in_progress",
+  "visualReview": "verified",
   "exports": "in_progress",
   "blockers": [],
-  "updatedAt": "2026-10-20T08:45:10.7199624Z"
+  "updatedAt": "2026-10-20T08:54:38.4638178Z",
+  "sourceCommit": "8a70450",
+  "review": {
+    "characterSheet": "out/remake-v3/characters.png",
+    "manifest": "out/remake-v3/review/frame-manifest.json",
+    "frameCount": 231,
+    "ringCloseupFix": "8a70450",
+    "checks": [
+      "npm run lint",
+      "npm run build",
+      "npm run verify:storyboard"
+    ],
+    "preview": "verified"
+  },
+  "resume": [
+    "$env:MV_OUTPUT_ROOT = 'out/remake-v3'",
+    "$env:MV_REQUIRE_PASTEL = '1'",
+    "node scripts/render-remake.mjs full --verify-only (only after the complete partial file exists)",
+    "node scripts/render-remake.mjs full (if interrupted during rendering)",
+    "node scripts/render-remake.mjs full-preview --from-full"
+  ]
 }
