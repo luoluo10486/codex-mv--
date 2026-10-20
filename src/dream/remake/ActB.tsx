@@ -32,7 +32,19 @@ const Marker = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
+const LifeLine = ({ durationInFrames }: SceneProps) => {
+  const { p } = useBeat(durationInFrames);
+  return <BStage><WarmGlow x={960} y={630} r={650}/>
+    <g transform={`translate(${-p*26} 0)`}><path d="M0 330H930L877 1080H0Z" fill="#e8bd91"/><circle cx="400" cy="569" r="195" fill="#ffeac2"/><BHome x={348} y={760} s={.92}/><BPerson x={590} y={823} s={.85} red/><path d="M0 945Q330 853 875 970V1080H0Z" fill="#c18b79"/><BFlower x={160} y={900} s={.6}/></g>
+    <g transform={`translate(${p*26} 0)`}><path d="M990 330H1920V1080H1043Z" fill="#925a62"/><circle cx="1540" cy="525" r="130" fill="#edbc88"/><path d="M1050 867L1260 501L1435 766L1640 438L1920 861V1080H1050Z" fill="#ba7a71"/><path d="M1230 1080Q1260 889 1570 874T1920 818" stroke="#e8b383" strokeWidth="48" fill="none"/><BPerson x={1400} y={833} s={.8}/></g>
+    <path d="M960 300C860 470 1050 520 948 684S1037 892 960 1110" fill="none" stroke="#682e44" strokeWidth="40" opacity=".2"/>
+    <path d="M960 300C860 470 1050 520 948 684S1037 892 960 1110" fill="none" stroke="#cb4e60" strokeWidth="16" pathLength="1" strokeDasharray="1" strokeDashoffset={1-p}/>
+    <path d="M960 300C860 470 1050 520 948 684S1037 892 960 1110" fill="none" stroke="#ffb896" strokeWidth="4" opacity=".8" pathLength="1" strokeDasharray="1" strokeDashoffset={1-p}/>
+  </BStage>;
+};
+
 export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-17": Journey,
   "lyric-18": Marker,
+  "lyric-19": LifeLine,
 };
