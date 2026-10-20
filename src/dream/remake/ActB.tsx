@@ -131,6 +131,18 @@ const Ordinary = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
+const SoftGarden = ({ durationInFrames }: SceneProps) => {
+  const { p, t } = useBeat(durationInFrames);
+  return <BStage><WarmGlow x={970} y={620} r={690}/><path d="M0 894Q473 755 963 876T1920 873V1080H0Z" fill="#d7937c"/>
+    <path d="M0 1024Q482 870 960 1018T1920 1003V1080H0Z" fill="#c48273"/>
+    <g transform={`translate(960 ${665+Math.sin(t)*4})`}><path d="M-540 290Q-650 20-382-80Q-239-210-54-109Q0-330 175-178Q432-221 481-40Q732 36 596 286Q389 412 0 342Q-405 424-540 290Z" fill="#f8caa8" opacity=".88" filter="url(#warm-shadow)"/><path d="M-484 229Q-296 77-123 226T264 221Q416 146 565 249" fill="none" stroke="#fff0cf" strokeWidth="28" opacity=".42"/>
+      <BPerson x={-52} y={160} s={.72} red/><BPerson x={65} y={160} s={.72}/><path d="M-15 90Q0 78 15 90" stroke="#d57e76" strokeWidth="20" strokeLinecap="round"/>
+    </g>
+    {[{x:130,y:919,s:.53,r:-17},{x:370,y:850,s:.45,r:16},{x:1525,y:890,s:.63,r:-7},{x:1798,y:847,s:.48,r:21}].map((v,i)=><BFlower key={i} x={v.x} y={v.y} s={v.s} rotation={v.r} pale={i%2===0}/>)}
+    <path d="M163 1023Q310 920 475 1020M1438 1025Q1615 904 1798 1007" fill="none" stroke="#f3c29f" strokeWidth="18" strokeLinecap="round"/>
+  </BStage>;
+};
+
 export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-17": Journey,
   "lyric-18": Marker,
@@ -142,4 +154,5 @@ export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-24": SharedHome,
   "lyric-25": Shine,
   "lyric-26": Ordinary,
+  "lyric-27": SoftGarden,
 };
