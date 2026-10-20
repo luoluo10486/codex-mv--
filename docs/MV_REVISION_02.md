@@ -28,3 +28,13 @@
 4. 更新阶段日志、修订状态、报告与 Git；未验证阶段不得标为完成。恢复时先读本文件、`docs/MV_REVISION_02_PROGRESS.json` 和代理交接。
 
 审片口径：50 张导出代表帧分别检查亮像素（亮度>180）占比>55%、暗像素（亮度<100）占比<15%、低饱和像素（HSV S<0.35）占比>65%。12 张色温代表帧平均暖色像素占比>65%，允许单个水域画面以自然浅蓝为主；同时人工查看全景、字幕及转场接触表。颜色统计只验证整体明暗与柔和程度，主体辨识度以实际画面复核为准。
+
+## 重启入口
+
+先读取本修订状态和 `git status`。本轮画面检查点为 `09c9464`，三组均已提交，不需要重新生成已完成镜头。
+
+```powershell
+$env:MV_OUTPUT_ROOT='out/remake-v2'
+```
+
+设置后，`npm run review:full`、`npm run render:preview`、`npm run render:full`、`npm run verify:full` 均指向本修订目录。若正式 MP4 已存在则导出工具会保留它并退出，不覆盖文件。若只存在 partial，先执行 `node scripts/render-remake.mjs full --verify-only` 验证已有输出，失败才检查是否需要重新渲染。最终低清命令为 `node scripts/render-remake.mjs full-preview --from-full`，播放器为 `node scripts/serve-remake.mjs`。

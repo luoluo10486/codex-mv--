@@ -11,7 +11,7 @@
   "exports": "rendering",
   "blockers": [],
   "sourceCommit": "09c9464",
-  "updatedAt": "2026-10-20T03:30:34.385Z",
+  "updatedAt": "2026-10-20T03:37:53.388Z",
   "commits": {
     "shared": "50986b8",
     "agent-a": "7dc2194",
@@ -22,290 +22,338 @@
     {
       "sceneId": "bridge-opening-room",
       "owner": "root",
-      "status": "verified",
-      "commit": "50986b8"
+      "status": "merged",
+      "commit": "50986b8",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "bridge-opening-letter",
       "owner": "root",
-      "status": "verified",
-      "commit": "50986b8"
+      "status": "merged",
+      "commit": "50986b8",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-01",
       "owner": "agent-a",
-      "status": "verified",
-      "commit": "7dc2194"
+      "status": "merged",
+      "commit": "7dc2194",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-02",
       "owner": "agent-a",
-      "status": "verified",
-      "commit": "7dc2194"
+      "status": "merged",
+      "commit": "7dc2194",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-03",
       "owner": "agent-a",
-      "status": "verified",
-      "commit": "7dc2194"
+      "status": "merged",
+      "commit": "7dc2194",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-04",
       "owner": "agent-a",
-      "status": "verified",
-      "commit": "7dc2194"
+      "status": "merged",
+      "commit": "7dc2194",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-05",
       "owner": "agent-a",
-      "status": "verified",
-      "commit": "7dc2194"
+      "status": "merged",
+      "commit": "7dc2194",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-06",
       "owner": "agent-a",
-      "status": "verified",
-      "commit": "7dc2194"
+      "status": "merged",
+      "commit": "7dc2194",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-07",
       "owner": "agent-a",
-      "status": "verified",
-      "commit": "7dc2194"
+      "status": "merged",
+      "commit": "7dc2194",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-08",
       "owner": "agent-a",
-      "status": "verified",
-      "commit": "7dc2194"
+      "status": "merged",
+      "commit": "7dc2194",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-09",
       "owner": "agent-a",
-      "status": "verified",
-      "commit": "7dc2194"
+      "status": "merged",
+      "commit": "7dc2194",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-10",
       "owner": "agent-a",
-      "status": "verified",
-      "commit": "7dc2194"
+      "status": "merged",
+      "commit": "7dc2194",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-11",
       "owner": "agent-a",
-      "status": "verified",
-      "commit": "7dc2194"
+      "status": "merged",
+      "commit": "7dc2194",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-12",
       "owner": "agent-a",
-      "status": "verified",
-      "commit": "7dc2194"
+      "status": "merged",
+      "commit": "7dc2194",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-13",
       "owner": "agent-a",
-      "status": "verified",
-      "commit": "7dc2194"
+      "status": "merged",
+      "commit": "7dc2194",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-14",
       "owner": "agent-a",
-      "status": "verified",
-      "commit": "7dc2194"
+      "status": "merged",
+      "commit": "7dc2194",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-15",
       "owner": "agent-a",
-      "status": "verified",
-      "commit": "7dc2194"
+      "status": "merged",
+      "commit": "7dc2194",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-16",
       "owner": "agent-a",
-      "status": "verified",
-      "commit": "7dc2194"
+      "status": "merged",
+      "commit": "7dc2194",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "bridge-santa-route",
       "owner": "agent-c",
-      "status": "verified",
-      "commit": "09c9464"
+      "status": "merged",
+      "commit": "09c9464",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "bridge-santa-worlds",
       "owner": "agent-c",
-      "status": "verified",
-      "commit": "09c9464"
+      "status": "merged",
+      "commit": "09c9464",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-17",
       "owner": "agent-b",
-      "status": "verified",
-      "commit": "296e1b1"
+      "status": "merged",
+      "commit": "296e1b1",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-18",
       "owner": "agent-b",
-      "status": "verified",
-      "commit": "296e1b1"
+      "status": "merged",
+      "commit": "296e1b1",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-19",
       "owner": "agent-b",
-      "status": "verified",
-      "commit": "296e1b1"
+      "status": "merged",
+      "commit": "296e1b1",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-20",
       "owner": "agent-b",
-      "status": "verified",
-      "commit": "296e1b1"
+      "status": "merged",
+      "commit": "296e1b1",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-21",
       "owner": "agent-b",
-      "status": "verified",
-      "commit": "296e1b1"
+      "status": "merged",
+      "commit": "296e1b1",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-22",
       "owner": "agent-b",
-      "status": "verified",
-      "commit": "296e1b1"
+      "status": "merged",
+      "commit": "296e1b1",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-23",
       "owner": "agent-b",
-      "status": "verified",
-      "commit": "296e1b1"
+      "status": "merged",
+      "commit": "296e1b1",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-24",
       "owner": "agent-b",
-      "status": "verified",
-      "commit": "296e1b1"
+      "status": "merged",
+      "commit": "296e1b1",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-25",
       "owner": "agent-b",
-      "status": "verified",
-      "commit": "296e1b1"
+      "status": "merged",
+      "commit": "296e1b1",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-26",
       "owner": "agent-b",
-      "status": "verified",
-      "commit": "296e1b1"
+      "status": "merged",
+      "commit": "296e1b1",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-27",
       "owner": "agent-b",
-      "status": "verified",
-      "commit": "296e1b1"
+      "status": "merged",
+      "commit": "296e1b1",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-28",
       "owner": "agent-b",
-      "status": "verified",
-      "commit": "296e1b1"
+      "status": "merged",
+      "commit": "296e1b1",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-29",
       "owner": "agent-b",
-      "status": "verified",
-      "commit": "296e1b1"
+      "status": "merged",
+      "commit": "296e1b1",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-30",
       "owner": "agent-b",
-      "status": "verified",
-      "commit": "296e1b1"
+      "status": "merged",
+      "commit": "296e1b1",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-31",
       "owner": "agent-b",
-      "status": "verified",
-      "commit": "296e1b1"
+      "status": "merged",
+      "commit": "296e1b1",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-32",
       "owner": "agent-b",
-      "status": "verified",
-      "commit": "296e1b1"
+      "status": "merged",
+      "commit": "296e1b1",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "bridge-map-fold",
       "owner": "agent-c",
-      "status": "verified",
-      "commit": "09c9464"
+      "status": "merged",
+      "commit": "09c9464",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "bridge-map-return",
       "owner": "agent-c",
-      "status": "verified",
-      "commit": "09c9464"
+      "status": "merged",
+      "commit": "09c9464",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-33",
       "owner": "agent-c",
-      "status": "verified",
-      "commit": "09c9464"
+      "status": "merged",
+      "commit": "09c9464",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-34",
       "owner": "agent-c",
-      "status": "verified",
-      "commit": "09c9464"
+      "status": "merged",
+      "commit": "09c9464",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-35",
       "owner": "agent-c",
-      "status": "verified",
-      "commit": "09c9464"
+      "status": "merged",
+      "commit": "09c9464",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-36",
       "owner": "agent-c",
-      "status": "verified",
-      "commit": "09c9464"
+      "status": "merged",
+      "commit": "09c9464",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-37",
       "owner": "agent-c",
-      "status": "verified",
-      "commit": "09c9464"
+      "status": "merged",
+      "commit": "09c9464",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-38",
       "owner": "agent-c",
-      "status": "verified",
-      "commit": "09c9464"
+      "status": "merged",
+      "commit": "09c9464",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-39",
       "owner": "agent-c",
-      "status": "verified",
-      "commit": "09c9464"
+      "status": "merged",
+      "commit": "09c9464",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "lyric-40",
       "owner": "agent-c",
-      "status": "verified",
-      "commit": "09c9464"
+      "status": "merged",
+      "commit": "09c9464",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "bridge-final-rise",
       "owner": "agent-c",
-      "status": "verified",
-      "commit": "09c9464"
+      "status": "merged",
+      "commit": "09c9464",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     },
     {
       "sceneId": "bridge-final-star",
       "owner": "agent-c",
-      "status": "verified",
-      "commit": "09c9464"
+      "status": "merged",
+      "commit": "09c9464",
+      "reviewEvidence": "out/remake-v2/review/frame-manifest.json"
     }
   ],
   "reviewFiles": [
@@ -320,8 +368,15 @@
       "output": "out/remake-v2/gou-zhi-qi-shi-warm-full.partial.mp4"
     },
     "preview": {
-      "status": "rendering",
-      "output": "out/remake-v2/gou-zhi-qi-shi-warm-preview.partial.mp4"
+      "status": "verified",
+      "output": "out/remake-v2/gou-zhi-qi-shi-warm-preview.mp4",
+      "browserPlayback": {
+        "ended": true,
+        "currentTime": 30.016,
+        "error": null,
+        "rate": 1
+      }
     }
-  }
+  },
+  "visualNote": "Glass drop f3670 has a subtle edge at small display sizes; visible at full resolution."
 }

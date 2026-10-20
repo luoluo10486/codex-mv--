@@ -1,5 +1,15 @@
 {
-  "version": 1,
+  "version": 2,
+  "revision": {
+    "plan": "docs/MV_REVISION_02.md",
+    "progress": "docs/MV_REVISION_02_PROGRESS.json",
+    "characters": ["public/characters/revision-02/boy-reference.svg", "public/characters/revision-02/girl-reference.svg"],
+    "sharedCharacterSource": "src/dream/StoryCharacters.tsx",
+    "vectorData": "src/dream/character-vectors.json",
+    "characterSheet": "out/remake-v2/characters.png",
+    "currentReviewRoot": "out/remake-v2/review",
+    "palette": {"paper": "#fffaf4", "paleYellow": "#fff4ce", "peach": "#fce2d8", "pink": "#f8dfe8", "rose": "#e9c5d2", "water": "#d6edf2", "foliage": "#c9d8bd"}
+  },
   "reviewAssets": ["out/remake/shared-assets.png", "out/remake/shared-landscape-assets.png"],
   "integratedContacts": ["out/remake/review/scenes-contact.jpg", "out/remake/review/captions-contact.jpg", "out/remake/review/transitions-contact.jpg"],
   "reference": {
