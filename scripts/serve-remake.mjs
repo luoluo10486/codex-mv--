@@ -2,7 +2,7 @@ import http from "node:http";
 import { createReadStream, statSync, existsSync } from "node:fs";
 import path from "node:path";
 
-const root=path.resolve("out/remake");
+const root=path.resolve(process.env.MV_OUTPUT_ROOT ?? "out/remake");
 const server=http.createServer((req,res)=>{
   const url=new URL(req.url,"http://localhost");
   if(url.pathname==="/"){

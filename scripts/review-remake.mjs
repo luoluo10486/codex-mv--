@@ -4,7 +4,7 @@ import { mkdir, readFile, writeFile, rename } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 
-const root = "out/remake/review";
+const root = `${process.env.MV_OUTPUT_ROOT ?? "out/remake"}/review`;
 const timeline = JSON.parse(await readFile("src/data/remake-storyboard.json", "utf8"));
 const lyrics = JSON.parse(await readFile("src/data/full-lyrics.json", "utf8"));
 const captionFrame = cue => Math.min(Math.ceil(cue.endMs * .03) - 1, Math.ceil(cue.startMs * .03) + Math.max(24, Array.from(cue.text).length * 3));

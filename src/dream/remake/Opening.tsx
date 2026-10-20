@@ -24,8 +24,8 @@ export const OpeningLetter = ({durationInFrames}:SceneProps) => {
   const p=Math.min(1,f/durationInFrames);
   return <WarmStage theme="sunset">
     <WarmMoon x={1530} y={230} r={130}/>
-    <path d="M-20 880Q300 620 660 820T1340 800T1950 740V1080H-20Z" fill="#d78a6b"/>
-    <path d="M-20 1010Q350 770 670 980T1400 920T1950 950V1080H-20Z" fill="#c94e5b" opacity=".7"/>
+    <path d="M-20 880Q300 620 660 820T1340 800T1950 740V1080H-20Z" fill="#f2d8cd"/>
+    <path d="M-20 1010Q350 770 670 980T1400 920T1950 950V1080H-20Z" fill="#edc9d5" opacity=".7"/>
     <g transform={`translate(${950+p*100} ${560-p*70}) rotate(${-8+p*12}) scale(${1+p*.2})`}>
       <WarmGlow x={0} y={0} r={420}/><WarmLetter s={1.25} open={p}/>
     </g>

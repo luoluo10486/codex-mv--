@@ -4,8 +4,9 @@ import path from "node:path";
 
 const root = process.cwd();
 const bin = path.join(root, "node_modules/@remotion/compositor-win32-x64-msvc");
-const video = process.argv[2] ?? "out/remake/gou-zhi-qi-shi-warm-full.mp4";
-const reviewRoot = process.argv[3] ?? "out/remake/review";
+const outputRoot = process.env.MV_OUTPUT_ROOT ?? "out/remake";
+const video = process.argv[2] ?? `${outputRoot}/gou-zhi-qi-shi-warm-full.mp4`;
+const reviewRoot = process.argv[3] ?? `${outputRoot}/review`;
 const run = (exe, args) => {
   const result = spawnSync(path.join(bin, exe), args, {
     encoding: "utf8",

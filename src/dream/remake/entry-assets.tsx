@@ -1,5 +1,14 @@
 import { Composition, registerRoot } from "remotion";
 import { WarmStage, WarmCouple, WarmSanta, WarmSleigh, WarmGift, WarmLetter, WarmMoon, WarmWorld, WarmMountain, WarmBridge, WarmLadle, WarmClock } from "../WarmArt";
+import { StoryPerson } from "../StoryCharacters";
+
+const Characters = () => <WarmStage>
+  <path d="M0 880Q960 800 1920 880V1080H0Z" fill="#f4dce5"/>
+  <StoryPerson x={280} y={630} s={1.7}/>
+  <StoryPerson x={660} y={630} s={1.7} girl/>
+  <StoryPerson x={1100} y={630} s={1.7} back/>
+  <StoryPerson x={1480} y={630} s={1.7} girl back/>
+</WarmStage>;
 
 const Assets = () => <WarmStage theme="paper">
   <WarmCouple x={230} y={380} s={.8} />
@@ -17,6 +26,7 @@ const Landscape = () => <WarmStage theme="sunset">
   <WarmLadle x={1550} y={600} s={1} />
 </WarmStage>;
 registerRoot(() => <>
+  <Composition id="StoryCharacters" component={Characters} durationInFrames={60} fps={30} width={1920} height={1080}/>
   <Composition id="WarmAssets" component={Assets} durationInFrames={60} fps={30} width={1920} height={1080}/>
   <Composition id="WarmLandscapeAssets" component={Landscape} durationInFrames={60} fps={30} width={1920} height={1080}/>
 </>);

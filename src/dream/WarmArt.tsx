@@ -1,6 +1,7 @@
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { createContext, useContext, type ReactNode } from "react";
 import { D } from "./palette";
+import { StoryPerson } from "./StoryCharacters";
 
 const clamp = (n: number) => Math.max(0, Math.min(1, n));
 const SharedDefinitions = createContext(false);
@@ -15,36 +16,36 @@ export const WarmDefinitions = ({children,extra}:{children:ReactNode;extra:React
 export const WarmDefs = () => (
   <defs>
     <linearGradient id="warm-paper" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stopColor="#fff7e8" />
-      <stop offset="0.56" stopColor="#f8d5a7" />
-      <stop offset="1" stopColor="#eea17d" />
+      <stop offset="0" stopColor="#fffdf7" />
+      <stop offset="0.56" stopColor="#fff6db" />
+      <stop offset="1" stopColor="#f8e1e7" />
     </linearGradient>
     <linearGradient id="warm-sunset" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stopColor="#f6b47f" />
-      <stop offset="0.52" stopColor="#ef8b78" />
-      <stop offset="1" stopColor="#8c4f5a" />
+      <stop offset="0" stopColor="#fff4d9" />
+      <stop offset="0.52" stopColor="#f7dce3" />
+      <stop offset="1" stopColor="#e9c4d1" />
     </linearGradient>
     <linearGradient id="warm-night" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stopColor="#6f3f48" />
-      <stop offset="0.62" stopColor="#8c4f5a" />
-      <stop offset="1" stopColor="#c56b67" />
+      <stop offset="0" stopColor="#e8c3d0" />
+      <stop offset="0.62" stopColor="#f3d8e1" />
+      <stop offset="1" stopColor="#fff2dc" />
     </linearGradient>
     <linearGradient id="warm-gold" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stopColor="#ffe9a9" />
-      <stop offset="0.52" stopColor="#ddaA58" />
-      <stop offset="1" stopColor="#c4774f" />
+      <stop offset="0.52" stopColor="#ecd49f" />
+      <stop offset="1" stopColor="#d5b58c" />
     </linearGradient>
     <linearGradient id="warm-red" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stopColor="#f28f7a" />
-      <stop offset="1" stopColor="#c94e5b" />
+      <stop offset="0" stopColor="#f3c5cf" />
+      <stop offset="1" stopColor="#dc98ac" />
     </linearGradient>
     <radialGradient id="warm-glow">
-      <stop offset="0" stopColor="#fff5c7" stopOpacity="0.95" />
-      <stop offset="0.5" stopColor="#f6c28b" stopOpacity="0.42" />
-      <stop offset="1" stopColor="#f6c28b" stopOpacity="0" />
+      <stop offset="0" stopColor="#fffbed" stopOpacity="0.8" />
+      <stop offset="0.5" stopColor="#fff0df" stopOpacity="0.28" />
+      <stop offset="1" stopColor="#fce5e9" stopOpacity="0" />
     </radialGradient>
     <filter id="warm-shadow" x="-30%" y="-30%" width="160%" height="170%">
-      <feDropShadow dx="0" dy="12" stdDeviation="15" floodColor="#6f3f48" floodOpacity="0.2" />
+      <feDropShadow dx="0" dy="8" stdDeviation="12" floodColor="#aa8292" floodOpacity="0.12" />
     </filter>
     <filter id="warm-soft" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="18" />
@@ -71,7 +72,7 @@ export const WarmStage = ({
       <svg width="1920" height="1080" viewBox="0 0 1920 1080">
         {!sharedDefinitions && <WarmDefs />}
         <rect width="1920" height="1080" fill={backgrounds[theme]} />
-        <rect width="1920" height="1080" fill="#fff1dc" opacity="0.07" />
+        <rect width="1920" height="1080" fill="#fffaf4" opacity="0.04" />
         {children}
       </svg>
     </AbsoluteFill>
@@ -206,21 +207,10 @@ export const WarmSanta = ({ x = 0, y = 0, s = 1 }: { x?: number; y?: number; s?:
 
 export const WarmCouple = ({ x = 0, y = 0, s = 1, t = 0, hold = 0 }: { x?: number; y?: number; s?: number; t?: number; hold?: number }) => (
   <g transform={`translate(${x} ${y}) scale(${s})`}>
-    <ellipse cy="170" rx="220" ry="25" fill="#6f3f48" opacity="0.15" />
-    <g transform={`translate(-75 ${Math.sin(t) * 2})`}>
-      <circle cy="-128" r="48" fill="#f7c19b" />
-      <path d="M-55-137Q-38-196 0-190Q47-198 59-135Q20-152-4-135Q-24-156-55-137Z" fill="#6f3f48" />
-      <path d="M-64-62Q0-92 64-62L48 99Q0 133-48 99Z" fill="#ef8b78" />
-      <path d="M-52 100L-80 176M50 100L78 176" stroke="#8c4f5a" strokeWidth="22" strokeLinecap="round" />
-    </g>
-    <g transform={`translate(75 ${Math.sin(t + 0.7) * 2})`}>
-      <circle cy="-128" r="48" fill="#f7c19b" />
-      <path d="M-58-130Q-35-201 8-190Q54-187 60-126Q20-153-2-135Q-32-155-58-130Z" fill="#4d3030" />
-      <path d="M-64-62Q0-91 64-62L48 99Q0 133-48 99Z" fill="#d6856f" />
-      <path d="M-52 100L-78 176M50 100L77 176" stroke="#8c4f5a" strokeWidth="22" strokeLinecap="round" />
-    </g>
-    <path d={`M-20-39Q${hold ? 0 : -12} ${hold ? -6 : -18} 20-39`} fill="none" stroke="#f7c19b" strokeWidth="18" strokeLinecap="round" />
-    {hold ? <circle cx="0" cy="-29" r="12" fill="#ddaA58" /> : null}
+    <StoryPerson x={-77} y={Math.sin(t)*2} girl walk={t}/>
+    <StoryPerson x={77} y={Math.sin(t+.7)*2} walk={-t}/>
+    <path d="M-7 30Q0 43 7 30" fill="none" stroke="#ffcdaa" strokeWidth="17" strokeLinecap="round"/>
+    {hold ? <circle cx="0" cy="32" r="7" fill="#e6c68b" /> : null}
   </g>
 );
 
@@ -235,10 +225,10 @@ export const WarmLadle = ({ x = 0, y = 0, s = 1, t = 0 }: { x?: number; y?: numb
 
 export const WarmWorld = ({ x = 0, y = 0, s = 1, t = 0 }: { x?: number; y?: number; s?: number; t?: number }) => (
   <g transform={`translate(${x} ${y}) scale(${s})`}>
-    <circle r="210" fill="#fff0c0" opacity="0.3" />
-    <circle r="180" fill="#f6c28b" stroke="#ddaA58" strokeWidth="12" />
-    <path d="M-148 29Q-85-29-15 12T122 5Q163 35 128 88Q43 127-50 101Q-126 82-148 29Z" fill="#ef8b78" />
-    <path d="M-110 42L-75-30L-28 42M-39 38L2-72L50 38M49 50L98-33L143 50" fill="#c94e5b" opacity="0.82" />
+    <circle r="210" fill="#fff6dd" opacity="0.3" />
+    <circle r="180" fill="#e0eef0" stroke="#b9d5dc" strokeWidth="12" />
+    <path d="M-148 29Q-85-29-15 12T122 5Q163 35 128 88Q43 127-50 101Q-126 82-148 29Z" fill="#d0debf" />
+    <path d="M-110 42L-75-30L-28 42M-39 38L2-72L50 38M49 50L98-33L143 50" fill="#e7bacb" opacity="0.82" />
     <WarmStar x={-75} y={-10} r={11} color="#fff3bf" />
     <WarmStar x={73} y={18} r={8} color="#fff3bf" />
     <path d="M-180 0Q0-180 180 0Q0 180-180 0Z" fill="none" stroke="#fff0bc" strokeWidth="5" opacity="0.7" transform={`rotate(${t * 8})`} />
@@ -247,7 +237,7 @@ export const WarmWorld = ({ x = 0, y = 0, s = 1, t = 0 }: { x?: number; y?: numb
 
 export const WarmMountain = ({ x = 0, y = 0, s = 1, warm = true }: { x?: number; y?: number; s?: number; warm?: boolean }) => (
   <g transform={`translate(${x} ${y}) scale(${s})`}>
-    <path d="M-620 260L-360-170L-75 260L170-270L570 260Z" fill={warm ? "#c47764" : "#8c4f5a"} />
+    <path d="M-620 260L-360-170L-75 260L170-270L570 260Z" fill={warm ? "#edcfc2" : "#dfc5d3"} />
     <path d="M-360-170L-305-76L-255-105L-205-24L-75 260H-620Z" fill="#f6c28b" opacity="0.82" />
     <path d="M170-270L239-155L298-195L365-105L570 260H-75Z" fill="#ef9b78" opacity="0.9" />
     <path d="M-620 260Q-360 180-75 260T570 260V390H-620Z" fill="#c94e5b" opacity="0.56" />
@@ -283,7 +273,7 @@ export const WarmAtmosphere = () => {
   const f = useCurrentFrame();
   return (
     <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
-      <rect width="1920" height="1080" fill="#fff1dc" opacity="0.045" />
+      <rect width="1920" height="1080" fill="#fffaf4" opacity="0.025" />
       {Array.from({ length: 30 }, (_, i) => {
         const x = ((i * 257 + f * 3) % 2020) - 50;
         const y = 90 + ((i * 137) % 850);
