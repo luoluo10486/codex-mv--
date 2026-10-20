@@ -143,6 +143,17 @@ const SoftGarden = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
+const Sensitive = ({ durationInFrames }: SceneProps) => {
+  const { p, t } = useBeat(durationInFrames);
+  const tremor = Math.sin(t*7) * (2+p*7);
+  return <BStage><WarmGlow x={960} y={590} r={640}/><path d="M0 930Q420 786 960 902T1920 918V1080H0Z" fill="#e6b58f"/>
+    <g transform={`translate(${960+tremor} ${563+tremor})`}><path d="M0-239C-105-125-153-45-132 63C-111 170-34 267 0 292C36 265 112 165 132 62C151-46 106-126 0-239Z" fill="url(#b-glass)" stroke="#fff0cd" strokeWidth="8"/><path d="M0-198C-65-117-94-44-84 42C-74 116-29 188 0 217C31 181 75 109 84 39C94-44 67-119 0-198Z" fill="#f3c6a8" opacity=".27"/><path d="M-34-87Q2-130 40-87L19 61Q3 95-16 61Z" fill="#fff6d9" opacity=".64"/><ellipse cx="-17" cy="-84" rx="8" ry="20" fill="#fffef0" opacity=".75"/></g>
+    <g transform={`translate(${670-tremor*2} ${810+tremor}) rotate(-12)`}><BFlower x={0} y={0} s={1.13} pale/><path d="M-3 121Q-77 71-119 5" stroke="#b87e76" strokeWidth="6" fill="none"/></g>
+    <g transform={`translate(${1270+tremor*2} ${815-tremor}) rotate(19)`}><BFlower x={0} y={0} s={.88} pale/><path d="M3 122Q75 69 127 1" stroke="#b87e76" strokeWidth="6" fill="none"/></g>
+    {Array.from({length:7},(_,i)=><path key={i} d={`M${790+i*56} ${340+(i%3)*33}q${24+tremor} ${-40+i*4} ${48} 0`} stroke="#fff4d0" strokeWidth="4" fill="none" opacity=".6"/>)}
+  </BStage>;
+};
+
 export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-17": Journey,
   "lyric-18": Marker,
@@ -155,4 +166,5 @@ export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-25": Shine,
   "lyric-26": Ordinary,
   "lyric-27": SoftGarden,
+  "lyric-28": Sensitive,
 };
