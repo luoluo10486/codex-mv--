@@ -63,7 +63,7 @@ export const BHands = ({ x = 960, y = 650, s = 1, gap = 0, ring = false }: { x?:
     <path d="M-191-136Q-169-103-128-83L-75-54" stroke="#f5f1ea" strokeWidth="8" fill="none" strokeLinecap="round"/>
   </g>
   <g transform={`translate(${gap} 0) rotate(7)`}>
-    <path d="M631-104L336-169L266 28L606 124Z" fill={STORY_OUTFIT.cardigan}/>
+    <path d="M631-104L336-169L266 28L606 124Z" fill={STORY_OUTFIT.blouse}/>
     <path d="M337-169L274-186L210 13L276 34Z" fill="#f7f4ee"/>
     <path d="M273-181L159-204Q127-209 107-181L42-118L-52-88Q-77-78-63-57Q-55-43-28-50L45-67L-47-16Q-67-3-51 15Q-38 28-17 17L73-27L-14 31Q-31 46-14 62Q0 72 19 59L102 7L39 58Q20 73 37 90Q50 103 69 88L168 30Q194 18 215-24Z" fill="url(#b-skin)"/>
     <path d="M155-177Q117-136 91-117" stroke="#f6f2ec" strokeWidth="8" fill="none" strokeLinecap="round"/>

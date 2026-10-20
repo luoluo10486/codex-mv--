@@ -930,7 +930,7 @@ export const Contract = ({ durationInFrames }: SceneProps) => {
           stroke="#e0cfca"
           strokeWidth="5"
         />
-        <path d="M900-22L263-37L196 97L900 198Z" fill={STORY_OUTFIT.cardigan} />
+        <path d="M900-22L263-37L196 97L900 198Z" fill={STORY_OUTFIT.blouse} />
         <path d="M329-42L263-45L184 105L266 120Z" fill="#eadfd1" />
       </g>
       <g transform={`translate(${ringX} 656)`}>
@@ -1094,7 +1094,7 @@ export const Hands = ({ durationInFrames }: SceneProps) => {
         />
       </g>
       <g transform={`translate(${960 + (1 - e) * 100} 733)`}>
-        <path d="M1100 4L264-29L194 125L1100 302Z" fill={STORY_OUTFIT.cardigan} />
+        <path d="M1100 4L264-29L194 125L1100 302Z" fill={STORY_OUTFIT.blouse} />
         <path d="M364-25L275-31L193 133L294 150Z" fill="#e7dcd0" />
         {Array.from({ length: 7 }, (_, i) => (
           <path

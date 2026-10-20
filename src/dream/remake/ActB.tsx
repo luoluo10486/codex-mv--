@@ -169,7 +169,7 @@ const RingExchange = ({ durationInFrames }: SceneProps) => {
         <path d="M-10-29L0-48L17-30L3-15Z" fill="#f7f5ed" stroke="#d4bc94" strokeWidth="4"/>
       </g>
       <path d={`M${711+(1-p)*70} -339L442-314L292-212Q267-194 257-153L213-74Q200-49 179-63Q167-72 174-94L199-163L160-113Q141-94 122-109Q109-123 125-144L210-255Q227-278 268-287L405-350L660-477Z`} fill="url(#b-skin)"/>
-      <path d="M441-314L405-350L660-477L711-339Z" fill={STORY_OUTFIT.cardigan}/><path d="M441-314L405-350L450-376L491-328Z" fill="#f5f1eb"/>
+      <path d="M441-314L405-350L660-477L711-339Z" fill={STORY_OUTFIT.blouse}/><path d="M441-314L405-350L450-376L491-328Z" fill="#f5f1eb"/>
     </g></g>
     <WarmStar x={1138} y={558} r={15+Math.sin(t*4)*3} color="#f5f3eb"/>
   </BStage>;

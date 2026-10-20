@@ -2,9 +2,8 @@ import vectors from "./character-vectors.json";
 
 export const STORY_OUTFIT = {
   blouse: "#fff8ef",
-  cardigan: "#f5e4cc",
+  vest: "#f5e4cc",
   knitEdge: "#d2b99e",
-  peach: "#f2c6b6",
   rose: "#e6b2c4",
   roseEdge: "#c48fa4",
   trousers: "#ddcbb9",
@@ -33,44 +32,40 @@ export const StoryPortrait = ({ girl = false, back = false }: { girl?: boolean; 
 export const StoryPerson = ({ x = 0, y = 0, s = 1, girl = false, walk = 0, lean = 0, arm = 0, face = 1, back = false, turn = 0 }: StoryPersonProps) => {
   const stride = Math.sin(walk) * 14;
   const handY = 30 - arm * 95;
-  const sleeve = girl ? STORY_OUTFIT.blouse : STORY_OUTFIT.cardigan;
-  const edge = girl ? "#dbc9bf" : STORY_OUTFIT.knitEdge;
+  const sleeve = STORY_OUTFIT.blouse;
+  const edge = "#dbc9bf";
   return <g data-story-character={girl ? "girl" : "boy"} transform={`translate(${x} ${y}) rotate(${lean}) scale(${s * face} ${s})`}>
     <ellipse cy="181" rx="62" ry="10" fill="#b6a1a2" opacity=".16"/>
     <path d={`M-24 74L${-26 + stride} 168M24 74L${26 - stride} 168`} stroke={girl ? "#f5dfd5" : STORY_OUTFIT.trousers} strokeWidth={girl ? 20 : 26} strokeLinecap="round"/>
     {!girl && <path d={`M${-37 + stride} 154l23 0M${14 - stride} 154h23`} stroke="#c7b29f" strokeWidth="5" fill="none"/>}
+    {girl && <>
+      <path d={`M${-26 + stride} 137V164M${26 - stride} 137V164`} stroke="#fff9f2" strokeWidth="21"/>
+      <path d={`M${-36 + stride} 138h20M${16 - stride} 138h20`} stroke="#e6c4cc" strokeWidth="3"/>
+    </>}
     <path d={`M${-26 + stride} 166q-28-1-27 12h43v-12ZM${26 - stride} 166q28-1 27 12H${10 - stride}v-12Z`} fill={STORY_OUTFIT.shoes} stroke={girl ? STORY_OUTFIT.roseEdge : "#bca38c"} strokeWidth="3"/>
     {girl && <path d={`M${-42 + stride} 167l19 2M${23 - stride} 169l19-2`} stroke={STORY_OUTFIT.roseEdge} strokeWidth="4" strokeLinecap="round"/>}
     <path d="M-15-94H15V-58H-15Z" fill="#ffcdaa"/>
     <path d="M-15-89Q0-80 15-88V-80Q0-72-15-80Z" fill="#efb893"/>
-    <path d={girl ? "M-47-62Q-27-77-18-70Q0-53 18-70Q30-77 47-62L44 25Q0 38-44 25Z" : "M-47-62Q-27-77-18-70Q0-53 18-70Q30-77 47-62L48 68Q0 83-48 68Z"} fill={sleeve} stroke={edge} strokeWidth="3" strokeLinejoin="round"/>
+    <path d="M-47-62Q-27-77-18-70Q0-53 18-70Q30-77 47-62L44 42Q0 52-44 42Z" fill={sleeve} stroke={edge} strokeWidth="3" strokeLinejoin="round"/>
+    {!girl && <path d="M-39 27H39L37 82H11L0 70L-11 82H-37Z" fill={STORY_OUTFIT.trousers}/>}
     {girl ? <>
-      {!back && <>
-        <path d="M-18-70L0-56L-13-40L-28-61ZM18-70L0-56L13-40L28-61Z" fill="#fffdf8" stroke="#dbc9bf" strokeWidth="2"/>
-        <path d="M0-54V-27" stroke="#e3d1c8" strokeWidth="2"/>
-      </>}
-      <path d="M-31-57L-24-58L-18-19H18L24-58L31-57L29 21L57 108Q0 128-57 108L-29 21Z" fill={STORY_OUTFIT.rose} stroke={STORY_OUTFIT.roseEdge} strokeWidth="2.5" strokeLinejoin="round"/>
-      <path d="M-28 18Q0 25 28 18M-45 101Q0 116 45 101" stroke="#ce97ad" strokeWidth="3" fill="none"/>
-      <path d="M-20 39L-26 99M0 43V106M20 39L26 99" stroke="#f3d0dc" strokeWidth="3" fill="none"/>
-      {!back ? <>
-        <circle cx="-23" cy="-19" r="3" fill="#fff8e9"/><circle cx="23" cy="-19" r="3" fill="#fff8e9"/>
-        <path d="M-14-6H14V10Q0 19-14 10Z" fill="#f1c8d6" stroke={STORY_OUTFIT.roseEdge} strokeWidth="1.5"/>
-        <path d="M0-1C-8-9-13 1 0 9C13 1 8-9 0-1Z" fill="#fff8ef"/>
-      </> : <path d="M-27-53L25-18M27-53L-25-18" stroke="#f1c8d6" strokeWidth="5" fill="none"/>}
+      <path d="M-34 24H34L56 103Q0 117-56 103Z" fill={STORY_OUTFIT.rose} stroke={STORY_OUTFIT.roseEdge} strokeWidth="2.5"/>
+      {[-24,-8,8,24].map(x=><path key={x} d={`M${x} 31L${x * 1.7} 104L${x * 1.7 + 10} 105L${x + 8} 31Z`} fill="#f1cbd7"/>)}
+      <path d="M-45 97Q0 109 45 97" stroke="#ce97ad" strokeWidth="2" fill="none"/>
     </> : <>
-      {!back ? <>
-        <path d="M-20-67Q0-52 20-67L18 68H-18Z" fill={STORY_OUTFIT.peach}/>
-        <path d="M-18-67Q0-51 18-67" stroke="#dfa896" strokeWidth="4" fill="none"/>
-        <path d="M-24-69L-5-17V71M24-69L5-17V71" stroke={STORY_OUTFIT.knitEdge} strokeWidth="4" fill="none" strokeLinejoin="round"/>
-        {[0, 23, 46].map(y=><circle key={y} cx="1" cy={y} r="3.3" fill="#c6a88b"/>)}
-        <path d="M-39 24H-18V49Q-28 55-39 49ZM20 24H40V49Q30 55 20 49Z" fill="#efdbbf" stroke={STORY_OUTFIT.knitEdge} strokeWidth="1.7"/>
-        <path d="M24-43C18-49 13-41 24-34C35-41 30-49 24-43Z" fill={STORY_OUTFIT.rose}/>
-      </> : <path d="M-22-65Q0-47 22-65M0-49V65" stroke="#e0c8ad" strokeWidth="3" fill="none"/>}
-      <path d="M-45 64Q0 76 45 64" stroke="#d8c0a2" strokeWidth="7" fill="none"/>
+      {!back && <path d="M0 46V72M-31 52H31" stroke="#bca38c" strokeWidth="2" fill="none"/>}
+    </>}
+    <path d={back ? "M-35-65L-19-72Q0-59 19-72L35-65Q27-37 41-22L40 36Q0 45-40 36L-41-22Q-27-37-35-65Z" : "M-35-65L-20-70L0-37L20-70L35-65Q27-37 41-22L40 36Q0 45-40 36L-41-22Q-27-37-35-65Z"} fill={girl ? STORY_OUTFIT.rose : STORY_OUTFIT.vest} stroke={girl ? STORY_OUTFIT.roseEdge : STORY_OUTFIT.knitEdge} strokeWidth="2.5" strokeLinejoin="round"/>
+    <path d={back ? "M-18-66Q0-53 18-66" : "M-20-65L0-32L20-65"} stroke={girl ? "#f6d8e2" : "#fff4df"} strokeWidth="3" fill="none"/>
+    <path d="M-38 31Q0 40 38 31M-37 36Q0 45 37 36" stroke={girl ? STORY_OUTFIT.roseEdge : STORY_OUTFIT.knitEdge} strokeWidth="2" fill="none"/>
+    {!back && <>
+      <path d="M-18-70L0-57L-12-43L-27-61ZM18-70L0-57L12-43L27-61Z" fill="#fffdf8" stroke="#dbc9bf" strokeWidth="2"/>
+      {girl ? <path d="M0-52L-15-59L-14-44L0-49L14-44L15-59ZM-3-48L-9-32L0-37L9-32L3-48Z" fill="#c98b9f"/> : <path d="M-5-55H5L8-47L3-43L7-18L0-10L-7-18L-3-43L-8-47Z" fill="#c98b9f"/>}
+      <path d="M22-20L30-20V-10Q26-5 22-10Z" fill={girl ? "#fff4df" : "#efd0d8"} stroke={girl ? STORY_OUTFIT.roseEdge : STORY_OUTFIT.knitEdge} strokeWidth="1"/>
     </>}
     <path d="M-44-48Q-55-21-61 12M44-48Q56-19 61 12" stroke={edge} strokeWidth="30" strokeLinecap="round" fill="none"/>
     <path d="M-44-48Q-55-21-61 12M44-48Q56-19 61 12" stroke={sleeve} strokeWidth="25" strokeLinecap="round" fill="none"/>
-    <path d="M-70 7L-52 12M52 12L70 7" stroke={girl ? "#ead9ce" : "#d8c0a2"} strokeWidth="8" strokeLinecap="round" fill="none"/>
+    <path d="M-70 7L-52 12M52 12L70 7" stroke="#ead9ce" strokeWidth="8" strokeLinecap="round" fill="none"/>
     <path d={`M-61 8Q-71 ${17-arm*30} -70 ${handY}M61 8Q71 ${17-arm*30} 70 ${handY}`} stroke="#ffcdaa" strokeWidth="18" strokeLinecap="round" fill="none"/>
     <circle cx="-70" cy={handY} r="11" fill="#ffcdaa"/>
     <circle cx="70" cy={handY} r="11" fill="#ffcdaa"/>

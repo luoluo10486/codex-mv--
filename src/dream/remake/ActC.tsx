@@ -94,7 +94,7 @@ const HandsPullback = ({ durationInFrames }: SceneProps) => {
       <g opacity={revealPeople}><Couple x={0} y={0} gap={95} embrace={0.1} /></g>
       <g opacity={1-revealPeople}>
         <path d="M-310 90L-61-29L-35 22L-284 161Z" fill={STORY_OUTFIT.blouse}/>
-        <path d="M310 90L61-29L35 22L284 161Z" fill={STORY_OUTFIT.cardigan}/>
+        <path d="M310 90L61-29L35 22L284 161Z" fill={STORY_OUTFIT.blouse}/>
         <path d="M-75-22L-42-39L-15 15L-48 32ZM75-22L42-39L15 15L48 32Z" fill="#fffaf4"/>
       </g>
       <path d="M-40-40Q-47 0-24 18L-5 26" stroke="#ffcdaa" strokeWidth="20" strokeLinecap="round" fill="none" />

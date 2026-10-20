@@ -1,0 +1,30 @@
+{
+  "revision": 4,
+  "scope": "campus-wardrobe",
+  "status": "in_progress",
+  "outputRoot": "out/remake-v4",
+  "design": {
+    "boy": "Ivory shirt, apricot V-neck vest, rose tie, khaki trousers",
+    "girl": "Ivory shirt, pink V-neck vest, ribbon, pleated skirt, white socks"
+  },
+  "implementation": "verified",
+  "visualReview": "in_progress",
+  "exports": "planned",
+  "sourceCommit": null,
+  "blockers": [],
+  "resume": [
+    "$env:MV_OUTPUT_ROOT = 'out/remake-v4'",
+    "$env:MV_REQUIRE_PASTEL = '1'",
+    "node scripts/review-remake.mjs",
+    "node scripts/render-remake.mjs full",
+    "node scripts/render-remake.mjs preview",
+    "node scripts/render-remake.mjs full-preview --from-full"
+  ],
+  "updatedAt": "2026-10-20T09:32:30.4565358Z",
+  "checks": [
+    "npm run lint",
+    "npm run build",
+    "npm run verify:storyboard",
+    "StoryCharacters front/back sheet rendered and visually reviewed"
+  ]
+}
