@@ -1094,4 +1094,5 @@ export const LongRoad = ({ durationInFrames }: SceneProps) => {
 
 export const actAScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-01": Letter,
+  "lyric-02": Storybook,
 };
