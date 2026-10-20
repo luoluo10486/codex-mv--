@@ -2,11 +2,22 @@ import type { ComponentType } from "react";
 import { interpolate, useCurrentFrame } from "remotion";
 import { WarmGift, WarmGlow, WarmLetter, WarmMoon, WarmSanta, WarmSleigh, WarmStage, WarmStar, WarmWorld } from "../WarmArt";
 import type { SceneProps } from "./types";
-import { House, Hillscape } from "./ActCArt";
+import { Couple, House, Hillscape, Room } from "./ActCArt";
 
 const ease = (p: number) => { const c = Math.max(0, Math.min(1, p)); return c * c * (3 - 2 * c); };
 const useTime = (duration: number) => { const f = useCurrentFrame(); return { f, p: f / Math.max(1, duration - 1) }; };
 const cubic = (p: number, a: number, b: number, c: number, d: number) => (1-p)**3*a + 3*(1-p)**2*p*b + 3*(1-p)*p*p*c + p**3*d;
+
+const ReturnRoom = ({ durationInFrames }: SceneProps) => {
+  const { f, p } = useTime(durationInFrames);
+  const close = ease(p / 0.78);
+  return <WarmStage>
+    <Room />
+    <WarmGlow x={940} y={670} r={350} opacity={0.35} />
+    <Couple x={980} y={727} s={1.06} gap={interpolate(close, [0, 1], [220, 75])} walk={Math.sin(f / 4) * (1 - close)} />
+    <path d="M0 1080V1015Q280 965 420 1080ZM1920 1080V1015Q1670 965 1540 1080Z" fill="#98505a" opacity="0.22" />
+  </WarmStage>;
+};
 
 const SantaRoute = ({ durationInFrames }: SceneProps) => {
   const { f, p } = useTime(durationInFrames);
@@ -73,4 +84,5 @@ export const actCScenes: Record<string, ComponentType<SceneProps>> = {
   "bridge-santa-worlds": GiftWorlds,
   "bridge-map-fold": MapFold,
   "bridge-map-return": MapReturn,
+  "lyric-33": ReturnRoom,
 };

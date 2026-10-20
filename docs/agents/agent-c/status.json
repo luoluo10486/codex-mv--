@@ -32,12 +32,18 @@
       "sceneId": "bridge-map-return",
       "durationInFrames": 342,
       "state": "committed",
+      "commit": "db95c106d6f40be9fcd607210f2da724e322b10d"
+    },
+    {
+      "sceneId": "lyric-33",
+      "durationInFrames": 83,
+      "state": "committed",
       "commit": "HEAD at this scene checkpoint"
     }
   ],
-  "renderedSceneCount": 4,
-  "verifiedSceneCount": 4,
-  "motionSampleCount": 16,
+  "renderedSceneCount": 5,
+  "verifiedSceneCount": 5,
+  "motionSampleCount": 20,
   "lintAndTypeScript": "passed",
   "outputDirectory": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-c",
   "evidence": [
