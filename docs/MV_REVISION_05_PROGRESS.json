@@ -13,6 +13,8 @@
   "visualReview": "verified_stills",
   "exports": "in_progress",
   "checkpoint": "revision-05 integrated source and still review",
+  "sourceCommit": "d51cef3",
+  "preview": {"status":"verified", "output":"out/remake-v5/gou-zhi-qi-shi-warm-preview.mp4", "browserPlayback":{"rate":1, "currentTime":30.016, "ended":true, "mediaError":null}},
   "checks": {"lint": "passed", "build": "passed", "storyboard": "48 scenes / 40 cues / 5508 frames", "interactionFrames": 95, "integratedFrames": 231},
   "evidence": ["out/remake-v5/interactions/manifest.json", "out/remake-v5/review/frame-manifest.json", "out/remake-v5/narrative/manifest.json", "docs/handoffs/revision-05-hands.md", "docs/handoffs/revision-05-santa.md", "docs/handoffs/revision-05-narrative.md"],
   "nightScenes": ["lyric-04", "lyric-05", "bridge-santa-route"],

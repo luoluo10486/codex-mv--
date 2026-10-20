@@ -2248,8 +2248,8 @@
       "updatedAt": "2026-10-20T03:08:42.667Z"
     }
   },
-  "currentRevision": 2,
-  "revisionProgressFile": "docs/MV_REVISION_02_PROGRESS.json",
+  "currentRevision": 5,
+  "revisionProgressFile": "docs/MV_REVISION_05_PROGRESS.json",
   "previousMediaRoot": "out/remake",
   "latestDeliveryReport": "docs/MV_REVISION_02_REPORT.md",
   "latestMediaRoot": "out/remake-v2"
