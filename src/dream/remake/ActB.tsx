@@ -154,6 +154,25 @@ const Sensitive = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
+const RingExchange = ({ durationInFrames }: SceneProps) => {
+  const { p, t } = useBeat(durationInFrames);
+  return <BStage night><WarmGlow x={1090} y={635} r={680}/><BStars count={28}/>
+    <path d="M0 1080L264 797L1770 1080Z" fill="#9f6565"/><path d="M170 1080L290 849L1665 1080Z" fill="#d8aa85"/>
+    <g transform="translate(990 640) rotate(-21)">
+      <path d="M-980 50L-421-62L-313 114L-864 359Z" fill="url(#b-cloth)"/><path d="M-421-62L-352-83L-251 88L-313 114Z" fill="#ffe9c8"/>
+      <path d="M-352-83L-220-137Q-188-149-153-129L-55-79L179-67Q218-60 207-35Q201-21 172-23L-8-30L191 6Q220 14 208 37Q201 52 177 45L-23 14L158 67Q187 77 175 100Q164 117 140 106L-53 54L78 104Q104 120 90 138Q75 152 49 140L-177 76Q-237 60-251 88Z" fill="url(#b-skin)"/>
+      <g transform={`translate(${99+(1-p)*125} ${-49-(1-p)*100})`}>
+        <ellipse rx="35" ry="28" fill="none" stroke="#a97043" strokeWidth="15"/>
+        <ellipse cy="-3" rx="35" ry="28" fill="none" stroke="#ffe5a1" strokeWidth="11"/>
+        <path d="M-10-29L0-48L17-30L3-15Z" fill="#fff4c7" stroke="#e7b263" strokeWidth="4"/>
+      </g>
+      <path d={`M${711+(1-p)*70} -339L442-314L292-212Q267-194 257-153L213-74Q200-49 179-63Q167-72 174-94L199-163L160-113Q141-94 122-109Q109-123 125-144L210-255Q227-278 268-287L405-350L660-477Z`} fill="url(#b-skin)"/>
+      <path d="M441-314L405-350L660-477L711-339Z" fill="#c38f75"/><path d="M441-314L405-350L450-376L491-328Z" fill="#ffe4b6"/>
+    </g>
+    <WarmStar x={1138} y={558} r={15+Math.sin(t*4)*3} color="#fff0b5"/>
+  </BStage>;
+};
+
 export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-17": Journey,
   "lyric-18": Marker,
@@ -167,4 +186,5 @@ export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-26": Ordinary,
   "lyric-27": SoftGarden,
   "lyric-28": Sensitive,
+  "lyric-29": RingExchange,
 };
