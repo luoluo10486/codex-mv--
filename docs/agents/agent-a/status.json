@@ -1,0 +1,253 @@
+{
+  "owner": "agent-a",
+  "branch": "codex/mv-agent-a",
+  "sourceCommit": "b5586e763d21d21b772637259f893cb694ef0d4d",
+  "scenes": {
+    "lyric-01": {
+      "status": "committed",
+      "completedStages": [
+        "planned",
+        "in_progress",
+        "rendered",
+        "verified",
+        "committed"
+      ],
+      "localFrame": 61,
+      "evidence": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/lyric-01.png",
+      "verifiedBy": "Visual inspection of the rendered 16-scene contact sheet; direct image inspection for Santa, ring exchange, and hands.",
+      "commit": "52c6dd64512c1193227ea15e5a4b834d4131ab84"
+    },
+    "lyric-02": {
+      "status": "committed",
+      "completedStages": [
+        "planned",
+        "in_progress",
+        "rendered",
+        "verified",
+        "committed"
+      ],
+      "localFrame": 45,
+      "evidence": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/lyric-02.png",
+      "verifiedBy": "Visual inspection of the rendered 16-scene contact sheet; direct image inspection for Santa, ring exchange, and hands.",
+      "commit": "5f26ebb0f54e29cabec727b90845da19346fef28"
+    },
+    "lyric-03": {
+      "status": "committed",
+      "completedStages": [
+        "planned",
+        "in_progress",
+        "rendered",
+        "verified",
+        "committed"
+      ],
+      "localFrame": 48,
+      "evidence": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/lyric-03.png",
+      "verifiedBy": "Visual inspection of the rendered 16-scene contact sheet; direct image inspection for Santa, ring exchange, and hands.",
+      "commit": "a068f1354b1aceb7a8722d83e2a06885dacf76e9"
+    },
+    "lyric-04": {
+      "status": "committed",
+      "completedStages": [
+        "planned",
+        "in_progress",
+        "rendered",
+        "verified",
+        "committed"
+      ],
+      "localFrame": 43,
+      "evidence": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/lyric-04.png",
+      "verifiedBy": "Visual inspection of the rendered 16-scene contact sheet; direct image inspection for Santa, ring exchange, and hands.",
+      "commit": "c3d829e132ea8cbafb9160d68e4daf0353f4ea9b"
+    },
+    "lyric-05": {
+      "status": "committed",
+      "completedStages": [
+        "planned",
+        "in_progress",
+        "rendered",
+        "verified",
+        "committed"
+      ],
+      "localFrame": 65,
+      "evidence": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/lyric-05.png",
+      "verifiedBy": "Visual inspection of the rendered 16-scene contact sheet; direct image inspection for Santa, ring exchange, and hands.",
+      "commit": "de2c1c33c2e2820ad7f508f74e48783120a38c76"
+    },
+    "lyric-06": {
+      "status": "committed",
+      "completedStages": [
+        "planned",
+        "in_progress",
+        "rendered",
+        "verified",
+        "committed"
+      ],
+      "localFrame": 44,
+      "evidence": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/lyric-06.png",
+      "verifiedBy": "Visual inspection of the rendered 16-scene contact sheet; direct image inspection for Santa, ring exchange, and hands.",
+      "commit": "b2944d53737cd88b85d482fd4a030c311ad9c613"
+    },
+    "lyric-07": {
+      "status": "committed",
+      "completedStages": [
+        "planned",
+        "in_progress",
+        "rendered",
+        "verified",
+        "committed"
+      ],
+      "localFrame": 58,
+      "evidence": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/lyric-07.png",
+      "verifiedBy": "Visual inspection of the rendered 16-scene contact sheet; direct image inspection for Santa, ring exchange, and hands.",
+      "commit": "d1c3354a2b244a34ebdcb8be658d680083ce2af4"
+    },
+    "lyric-08": {
+      "status": "committed",
+      "completedStages": [
+        "planned",
+        "in_progress",
+        "rendered",
+        "verified",
+        "committed"
+      ],
+      "localFrame": 37,
+      "evidence": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/lyric-08.png",
+      "verifiedBy": "Visual inspection of the rendered 16-scene contact sheet; direct image inspection for Santa, ring exchange, and hands.",
+      "commit": "18b7729af89aad536c077d05b546666b8bcf756d"
+    },
+    "lyric-09": {
+      "status": "committed",
+      "completedStages": [
+        "planned",
+        "in_progress",
+        "rendered",
+        "verified",
+        "committed"
+      ],
+      "localFrame": 66,
+      "evidence": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/lyric-09.png",
+      "verifiedBy": "Visual inspection of the rendered 16-scene contact sheet; direct image inspection for Santa, ring exchange, and hands.",
+      "commit": "3ca5c25649f32c2ff1b2d98951b84f4ca012a4a5"
+    },
+    "lyric-10": {
+      "status": "committed",
+      "completedStages": [
+        "planned",
+        "in_progress",
+        "rendered",
+        "verified",
+        "committed"
+      ],
+      "localFrame": 45,
+      "evidence": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/lyric-10.png",
+      "verifiedBy": "Visual inspection of the rendered 16-scene contact sheet; direct image inspection for Santa, ring exchange, and hands.",
+      "commit": "5a31a00a20e6bdc6c6d76f4935250a30123b4ad0"
+    },
+    "lyric-11": {
+      "status": "committed",
+      "completedStages": [
+        "planned",
+        "in_progress",
+        "rendered",
+        "verified",
+        "committed"
+      ],
+      "localFrame": 60,
+      "evidence": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/lyric-11.png",
+      "verifiedBy": "Visual inspection of the rendered 16-scene contact sheet; direct image inspection for Santa, ring exchange, and hands.",
+      "commit": "fc3d3ea3a87887a89a0c75d0ac1ce50ba76843a3"
+    },
+    "lyric-12": {
+      "status": "committed",
+      "completedStages": [
+        "planned",
+        "in_progress",
+        "rendered",
+        "verified",
+        "committed"
+      ],
+      "localFrame": 43,
+      "evidence": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/lyric-12.png",
+      "verifiedBy": "Visual inspection of the rendered 16-scene contact sheet; direct image inspection for Santa, ring exchange, and hands.",
+      "commit": "67268b10adbd4165386d94ef4768f68a3d4984a6"
+    },
+    "lyric-13": {
+      "status": "committed",
+      "completedStages": [
+        "planned",
+        "in_progress",
+        "rendered",
+        "verified",
+        "committed"
+      ],
+      "localFrame": 60,
+      "evidence": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/lyric-13.png",
+      "verifiedBy": "Visual inspection of the rendered 16-scene contact sheet; direct image inspection for Santa, ring exchange, and hands.",
+      "commit": "ce07ae0d3336533968fa320585d5f46c03724083"
+    },
+    "lyric-14": {
+      "status": "committed",
+      "completedStages": [
+        "planned",
+        "in_progress",
+        "rendered",
+        "verified",
+        "committed"
+      ],
+      "localFrame": 47,
+      "evidence": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/lyric-14.png",
+      "verifiedBy": "Visual inspection of the rendered 16-scene contact sheet; direct image inspection for Santa, ring exchange, and hands.",
+      "commit": "0b348b5a82278c65009d55c0233dde98e3d26e53"
+    },
+    "lyric-15": {
+      "status": "committed",
+      "completedStages": [
+        "planned",
+        "in_progress",
+        "rendered",
+        "verified",
+        "committed"
+      ],
+      "localFrame": 56,
+      "evidence": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/lyric-15.png",
+      "verifiedBy": "Visual inspection of the rendered 16-scene contact sheet; direct image inspection for Santa, ring exchange, and hands.",
+      "commit": "8102687ecf927746cca80861233c9cef61c41336"
+    },
+    "lyric-16": {
+      "status": "committed",
+      "completedStages": [
+        "planned",
+        "in_progress",
+        "rendered",
+        "verified",
+        "committed"
+      ],
+      "localFrame": 66,
+      "evidence": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/lyric-16.png",
+      "verifiedBy": "Visual inspection of the rendered 16-scene contact sheet; direct image inspection for Santa, ring exchange, and hands.",
+      "commit": "b5586e763d21d21b772637259f893cb694ef0d4d"
+    }
+  },
+  "motionEvidence": {
+    "directory": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-a/motion",
+    "scenes": [
+      "lyric-02",
+      "lyric-05",
+      "lyric-06",
+      "lyric-13",
+      "lyric-15"
+    ],
+    "sampleProgress": [
+      0,
+      0.28,
+      0.92
+    ],
+    "verifiedBy": "Visual inspection of motion contact sheet"
+  },
+  "checks": {
+    "npm run lint": "passed; eslint src and tsc",
+    "render": "16/16 stills and final contact sheet rendered successfully using root updated renderer",
+    "browserWarnings": "none in final 16-scene render"
+  },
+  "nextEntry": "root integration / full timeline registration"
+}
