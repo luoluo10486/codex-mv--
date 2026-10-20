@@ -2,7 +2,7 @@ import type { ComponentType } from "react";
 import { interpolate, useCurrentFrame } from "remotion";
 import { WarmGift, WarmGlow, WarmLetter, WarmMoon, WarmSanta, WarmSleigh, WarmStage, WarmStar, WarmWorld } from "../WarmArt";
 import type { SceneProps } from "./types";
-import { Couple, House, Hillscape, Room } from "./ActCArt";
+import { Couple, House, Hillscape, Room, SeasonGarden } from "./ActCArt";
 
 const ease = (p: number) => { const c = Math.max(0, Math.min(1, p)); return c * c * (3 - 2 * c); };
 const useTime = (duration: number) => { const f = useCurrentFrame(); return { f, p: f / Math.max(1, duration - 1) }; };
@@ -65,6 +65,19 @@ const HaloContract = ({ durationInFrames }: SceneProps) => {
     </g>
     <ellipse cx="960" cy="650" rx={260 + halo * 250} ry={95 + halo * 65} fill="none" stroke="#ffe9a9" strokeWidth={18 + halo * 18} opacity={halo} transform={`rotate(${Math.sin(f / 18) * 8} 960 650)`} />
     <Couple x={960} y={775} s={0.98} gap={interpolate(halo, [0, 1], [150, 80])} embrace={0.25 + halo * 0.5} />
+  </WarmStage>;
+};
+
+const FourSeasons = ({ durationInFrames }: SceneProps) => {
+  const { f, p } = useTime(durationInFrames);
+  const scroll = p * 170;
+  return <WarmStage><WarmGlow x={960} y={560} r={480} opacity={0.35} />
+    <path d="M0 760Q470 640 960 740T1920 700V1080H0Z" fill="#e0a382" />
+    {[0,1,2,3].map(season => <g key={season} transform={`translate(${340 + season * 470 - scroll} 670)`}><SeasonGarden season={season} f={f} /></g>)}
+    <path d="M0 935Q460 800 960 905T1920 865V1080H0Z" fill="#f3c18f" />
+    <Couple x={960} y={760} s={1.02} gap={78} embrace={0.55} />
+    <path d="M290 980Q620 830 950 960T1630 960" fill="none" stroke="#ddaa58" strokeWidth="8" strokeDasharray="12 24" opacity="0.65" />
+    <WarmStar x={960 + Math.cos(f / 13) * 260} y={290 + Math.sin(f / 17) * 25} r={13} color="#fff0b3" />
   </WarmStage>;
 };
 
@@ -138,4 +151,5 @@ export const actCScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-35": LastSnow,
   "lyric-36": SoftEmbrace,
   "lyric-37": HaloContract,
+  "lyric-38": FourSeasons,
 };
