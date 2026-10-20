@@ -4,8 +4,8 @@ import path from "node:path";
 
 const root = process.cwd();
 const bin = path.join(root, "node_modules/@remotion/compositor-win32-x64-msvc");
-const video = process.argv[2] ?? "out/gou-zhi-qi-shi-full.mp4";
-const reviewRoot = process.argv[3] ?? "out/dream-full-review";
+const video = process.argv[2] ?? "out/remake/gou-zhi-qi-shi-warm-full.mp4";
+const reviewRoot = process.argv[3] ?? "out/remake/review";
 const run = (exe, args) => {
   const result = spawnSync(path.join(bin, exe), args, {
     encoding: "utf8",
@@ -48,10 +48,8 @@ const checks = {
   colorRange: v.color_range === "tv",
 };
 await mkdir(`${reviewRoot}/export-frames`, { recursive: true });
-const exportFrames = [
-  0, 900, 1312, 1636, 1930, 2310, 2702, 3064, 3363, 3726, 3961, 4344, 4727,
-  5090, 5320, 5507,
-];
+const storyboard = JSON.parse(await readFile("src/data/remake-storyboard.json", "utf8"));
+const exportFrames = [0, ...storyboard.map(s => Math.floor((s.startFrame + s.endFrame) / 2)), 5507];
 for (const frame of exportFrames) {
   run("ffmpeg.exe", [
     "-v",

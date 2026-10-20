@@ -1,11 +1,12 @@
 from pathlib import Path
 import json
 import wave
+import sys
 import numpy as np
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-REVIEW = ROOT / "out/dream-full-review"
+REVIEW = ROOT / (sys.argv[1] if len(sys.argv) > 1 else "out/remake/review")
 data = json.loads((REVIEW / "technical-validation.json").read_text(encoding="utf-8"))
 pixels = np.fromfile(REVIEW / "frame-luma.rgb", dtype=np.uint8).reshape(-1, 9, 16, 3)
 means = pixels.astype(float).mean(axis=(1, 2, 3))
@@ -54,7 +55,13 @@ for frame in data["exportFrames"]:
     y = np.asarray(Image.open(encoded_frame).convert("RGB")).astype(np.int16)
     parity.append({"frame": frame, "meanAbsoluteChannelDifference": float(np.abs(x - y).mean())})
 parity_passed = len(parity) == len(data["exportFrames"]) and all(item["meanAbsoluteChannelDifference"] < 3 for item in parity)
-data.update({"fullVideoDecode": full_decode, "encodedAudioAgainstOriginal": audio, "exportParity": parity, "exportParityPassed": parity_passed, "allMeasuredTechnicalChecksPassed": bool(data["allProbeChecksPassed"] and full_decode["passed"] and audio["passed"] and parity_passed)})
+warm_frames = []
+for frame in data["exportFrames"][1:-1:4]:
+    rgb = np.asarray(Image.open(REVIEW / "export-frames" / f"frame-{frame:04d}.png").convert("RGB")).astype(float)
+    ratio = float((rgb[:, :, 0] >= rgb[:, :, 2]).mean())
+    warm_frames.append({"frame": frame, "redAtLeastBlueFraction": ratio})
+warm_passed = len(warm_frames) == 12 and all(item["redAtLeastBlueFraction"] > .75 for item in warm_frames)
+data.update({"fullVideoDecode": full_decode, "encodedAudioAgainstOriginal": audio, "exportParity": parity, "exportParityPassed": parity_passed, "warmRepresentativeFrames": warm_frames, "warmPalettePassed": warm_passed, "allMeasuredTechnicalChecksPassed": bool(data["allProbeChecksPassed"] and full_decode["passed"] and audio["passed"] and parity_passed and warm_passed)})
 (REVIEW / "technical-validation.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 print(json.dumps({"fullVideoDecode": full_decode, "audio": audio, "exportParity": parity}, indent=2))
 if data["allMeasuredTechnicalChecksPassed"]:

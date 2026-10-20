@@ -30,3 +30,10 @@
 - 修复关键帧接触表生成：当前随 Remotion 提供的 FFmpeg 缺少 drawtext/xstack，改用本地 sharp 合成，已实际运行成功。
 - 分镜初始化脚本改为保留已有场景状态，JSON 通过临时文件原子替换，重复初始化不会清空已提交进度。
 - 三组独立工作区仍保留，待逐组读取提交、交接报告和抽帧后合并；全局状态暂不冒充 merged。
+
+## 阶段 0、1 · 验收补齐
+
+- 48 镜头连续覆盖 0–5508 帧；40 句歌词各对应唯一镜头，圣诞与礼物对象锁定；`node scripts/verify-remake-storyboard.mjs` 通过。
+- 共享人物、圣诞老人、雪橇、礼物、信件、月亮、世界、钟表、山桥和水瓢已实际渲染。资产接触表为 `out/remake/shared-assets.png` 和 `shared-landscape-assets.png`，根代理已查看。
+- 资产检查入口 `src/dream/remake/entry-assets.tsx`，`npm run lint` 通过。阶段 0、1 完成。
+- 新导出脚本将成片先写 partial，元数据和解码验证后才改名；正式完整版另外执行逐帧亮度、源画面对照、原曲相关性和暖色代表帧检查。
