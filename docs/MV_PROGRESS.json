@@ -3,7 +3,7 @@
   "planRevision": 1,
   "totalFrames": 5508,
   "totalScenes": 48,
-  "updatedAt": "2026-10-20T03:08:42.667Z",
+  "updatedAt": "2026-10-20T03:30:34.391Z",
   "scenes": [
     {
       "sceneId": "bridge-opening-room",
@@ -2247,5 +2247,8 @@
       "sourceCommit": "38ebd93",
       "updatedAt": "2026-10-20T03:08:42.667Z"
     }
-  }
+  },
+  "currentRevision": 2,
+  "revisionProgressFile": "docs/MV_REVISION_02_PROGRESS.json",
+  "previousMediaRoot": "out/remake"
 }
