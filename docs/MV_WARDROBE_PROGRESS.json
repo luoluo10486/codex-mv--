@@ -1,7 +1,7 @@
 {
   "revision": 3,
   "scope": "character-wardrobe",
-  "status": "in_progress",
+  "status": "complete",
   "outputRoot": "out/remake-v3",
   "design": {
     "boy": "Cream cardigan, peach T-shirt, light khaki trousers",
@@ -10,9 +10,9 @@
   },
   "implementation": "verified",
   "visualReview": "verified",
-  "exports": "in_progress",
+  "exports": "verified",
   "blockers": [],
-  "updatedAt": "2026-10-20T08:54:38.4638178Z",
+  "updatedAt": "2026-10-20T09:12:47.3717232Z",
   "sourceCommit": "8a70450",
   "review": {
     "characterSheet": "out/remake-v3/characters.png",
@@ -32,5 +32,19 @@
     "node scripts/render-remake.mjs full --verify-only (only after the complete partial file exists)",
     "node scripts/render-remake.mjs full (if interrupted during rendering)",
     "node scripts/render-remake.mjs full-preview --from-full"
+  ],
+  "verificationReport": "docs/MV_WARDROBE_VERIFICATION.json",
+  "browserPlayback": {
+    "status": "verified",
+    "url": "http://127.0.0.1:3003/",
+    "mode": "Segmented playback: first section at 1x, remaining sections at 4x",
+    "ended": true,
+    "currentTime": 183.616,
+    "mediaError": null
+  },
+  "outputs": [
+    "out/remake-v3/gou-zhi-qi-shi-warm-full.mp4",
+    "out/remake-v3/gou-zhi-qi-shi-warm-preview.mp4",
+    "out/remake-v3/gou-zhi-qi-shi-warm-full-preview.mp4"
   ]
 }
