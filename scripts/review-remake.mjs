@@ -19,12 +19,14 @@ for (const shot of timeline) {
 }
 for (const cue of lyrics) frames.add(captionFrame(cue));
 const ordered = [...frames].sort((a,b) => a-b);
+const owner=process.argv.find(arg=>arg.startsWith("--owner="))?.split("=")[1];
+const renderFrames=owner?ordered.filter(frame=>timeline.some(s=>s.owner===owner&&frame>=s.startFrame&&frame<s.endFrame)):ordered;
 await mkdir(`${root}/frames`, {recursive:true});
 const serveUrl = await bundle({entryPoint:path.resolve("src/index.ts"),enableCaching:true});
 const browser = await openBrowser("chrome",{browserExecutable:"C:/Program Files/Google/Chrome/Application/chrome.exe",logLevel:"error"});
 try {
   const composition = await selectComposition({serveUrl,id:"GouZhiQiShiFull",puppeteerInstance:browser});
-  for (const frame of ordered) {
+  for (const frame of renderFrames) {
     await renderStill({serveUrl,composition,frame,output:`${root}/frames/frame-${String(frame).padStart(4,"0")}.png`,imageFormat:"png",puppeteerInstance:browser,logLevel:"error"});
   }
 } finally { await browser.close({silent:true}); }
@@ -43,4 +45,4 @@ for (const [name, items] of Object.entries(groups)) {
 const manifest = {composition:"GouZhiQiShiFull",fps:30,frameCount:5508,frames:ordered,groups};
 await writeFile(`${root}/frame-manifest.partial.json`,JSON.stringify(manifest,null,2));
 await rename(`${root}/frame-manifest.partial.json`,`${root}/frame-manifest.json`);
-console.log(`Rendered ${ordered.length} integrated frames and 3 contact sheets.`);
+console.log(`Rendered ${renderFrames.length} integrated frames; ${ordered.length} frames in manifest and 3 contact sheets.`);

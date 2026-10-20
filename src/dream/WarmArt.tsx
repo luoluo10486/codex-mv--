@@ -1,8 +1,16 @@
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
-import type { ReactNode } from "react";
+import { createContext, useContext, type ReactNode } from "react";
 import { D } from "./palette";
 
 const clamp = (n: number) => Math.max(0, Math.min(1, n));
+const SharedDefinitions = createContext(false);
+export const useSharedDefinitions = () => useContext(SharedDefinitions);
+
+// Studio keeps hidden sequences mounted; keep shared paint servers visible once.
+export const WarmDefinitions = ({children,extra}:{children:ReactNode;extra:ReactNode}) => <SharedDefinitions.Provider value>
+  <svg width="0" height="0" style={{position:"absolute"}}><WarmDefs/>{extra}</svg>
+  {children}
+</SharedDefinitions.Provider>;
 
 export const WarmDefs = () => (
   <defs>
@@ -51,6 +59,7 @@ export const WarmStage = ({
   children: ReactNode;
   theme?: "paper" | "sunset" | "night" | "dawn";
 }) => {
+  const sharedDefinitions = useSharedDefinitions();
   const backgrounds = {
     paper: "url(#warm-paper)",
     sunset: "url(#warm-sunset)",
@@ -60,7 +69,7 @@ export const WarmStage = ({
   return (
     <AbsoluteFill style={{ backgroundColor: D.paper }}>
       <svg width="1920" height="1080" viewBox="0 0 1920 1080">
-        <WarmDefs />
+        {!sharedDefinitions && <WarmDefs />}
         <rect width="1920" height="1080" fill={backgrounds[theme]} />
         <rect width="1920" height="1080" fill="#fff1dc" opacity="0.07" />
         {children}

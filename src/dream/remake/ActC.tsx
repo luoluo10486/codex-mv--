@@ -85,11 +85,17 @@ const HandsPullback = ({ durationInFrames }: SceneProps) => {
   const { p } = useTime(durationInFrames);
   const wide = ease(p);
   const scale = interpolate(wide, [0, 1], [3.5, 1.16]);
+  const revealPeople = interpolate(wide, [.58, .82], [0, 1], {extrapolateLeft:"clamp",extrapolateRight:"clamp"});
   return <WarmStage theme="dawn"><WarmGlow x={960} y={580} r={440} opacity={0.55} />
     <defs><clipPath id="c-hands-safe"><rect x="0" y="270" width="1920" height="810" /></clipPath></defs>
     <path d="M0 900Q430 720 960 910T1920 840V1080H0Z" fill="#e7aa84" />
     <g clipPath="url(#c-hands-safe)"><g transform={`translate(960 ${650 + wide * 75}) scale(${scale})`}>
-      <Couple x={0} y={0} gap={95} embrace={0.1} />
+      <g opacity={revealPeople}><Couple x={0} y={0} gap={95} embrace={0.1} /></g>
+      <g opacity={1-revealPeople}>
+        <path d="M-310 90L-61-29L-35 22L-284 161Z" fill="#ef8b78"/>
+        <path d="M310 90L61-29L35 22L284 161Z" fill="#dba57d"/>
+        <path d="M-75-22L-42-39L-15 15L-48 32ZM75-22L42-39L15 15L48 32Z" fill="#ffe1ad"/>
+      </g>
       <path d="M-40-40Q-47 0-24 18L-5 26" stroke="#f7c19b" strokeWidth="20" strokeLinecap="round" fill="none" />
       <path d="M40-40Q47 0 24 18L5 26" stroke="#f7c19b" strokeWidth="20" strokeLinecap="round" fill="none" />
       <path d="M-20 15Q-8 4 3 12L21 23Q28 31 20 37Q12 43 3 33L-10 27Z" fill="#f7c19b" />

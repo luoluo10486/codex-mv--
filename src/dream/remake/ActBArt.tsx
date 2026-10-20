@@ -1,20 +1,22 @@
 import type { ReactNode } from "react";
 import { useCurrentFrame } from "remotion";
-import { WarmStage, WarmStar } from "../WarmArt";
+import { WarmStage, WarmStar, useSharedDefinitions } from "../WarmArt";
 
-export const BStage = ({ children, night = false }: { children: ReactNode; night?: boolean }) => (
-  <WarmStage theme={night ? "night" : "paper"}>
-    <defs>
+export const ActBDefs = () => <defs>
       <linearGradient id="b-water" x2="0" y2="1"><stop stopColor="#f8d8a5"/><stop offset=".55" stopColor="#dc8b78"/><stop offset="1" stopColor="#9b5960"/></linearGradient>
       <linearGradient id="b-skin" x2=".8" y2="1"><stop stopColor="#ffe3bc"/><stop offset=".65" stopColor="#efb18d"/><stop offset="1" stopColor="#ce806b"/></linearGradient>
       <linearGradient id="b-cloth" x2=".9" y2="1"><stop stopColor="#ffbb9b"/><stop offset=".55" stopColor="#df776f"/><stop offset="1" stopColor="#a34757"/></linearGradient>
       <linearGradient id="b-glass" x2=".7" y2="1"><stop stopColor="#fff9df" stopOpacity=".8"/><stop offset=".45" stopColor="#f6ccaa" stopOpacity=".18"/><stop offset="1" stopColor="#b77076" stopOpacity=".6"/></linearGradient>
       <radialGradient id="b-sun"><stop stopColor="#fff8d9"/><stop offset=".52" stopColor="#ffe4a3"/><stop offset="1" stopColor="#e7a168"/></radialGradient>
       <filter id="b-light"><feGaussianBlur stdDeviation="4"/></filter>
-    </defs>
+    </defs>;
+export const BStage = ({ children, night = false }: { children: ReactNode; night?: boolean }) => {
+  const sharedDefinitions=useSharedDefinitions();
+  return <WarmStage theme={night ? "night" : "paper"}>
+    {!sharedDefinitions && <ActBDefs/>}
     {children}
   </WarmStage>
-);
+};
 
 export const BStars = ({ count = 55, y = 290, height = 650 }: { count?: number; y?: number; height?: number }) => {
   const f = useCurrentFrame();

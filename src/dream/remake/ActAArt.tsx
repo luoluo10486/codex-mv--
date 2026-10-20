@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { useCurrentFrame } from "remotion";
-import { WarmGlow, WarmStage, WarmStar } from "../WarmArt";
+import { WarmGlow, WarmStage, WarmStar, useSharedDefinitions } from "../WarmArt";
 import { D, smooth } from "../palette";
 
 export const useMoment = (duration: number) => {
@@ -9,15 +9,7 @@ export const useMoment = (duration: number) => {
   return { f, p, e: smooth(p * 1.7) };
 };
 
-export const Stage = ({
-  children,
-  night = false,
-}: {
-  children: ReactNode;
-  night?: boolean;
-}) => (
-  <WarmStage theme={night ? "night" : "paper"}>
-    <defs>
+export const ActADefs = () => <defs>
       <pattern
         id="a-fleck"
         width="79"
@@ -48,7 +40,12 @@ export const Stage = ({
         <stop offset="0.8" stopColor="#f8ce94" stopOpacity="0.45" />
         <stop offset="1" stopColor="#fff4d0" stopOpacity="0.85" />
       </radialGradient>
-    </defs>
+    </defs>;
+
+export const Stage = ({children,night=false}:{children:ReactNode;night?:boolean}) => {
+  const sharedDefinitions=useSharedDefinitions();
+  return <WarmStage theme={night ? "night" : "paper"}>
+    {!sharedDefinitions && <ActADefs/>}
     {children}
     <rect
       width="1920"
@@ -57,7 +54,7 @@ export const Stage = ({
       pointerEvents="none"
     />
   </WarmStage>
-);
+};
 
 export const Dust = ({
   f,

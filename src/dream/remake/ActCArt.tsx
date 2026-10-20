@@ -51,16 +51,16 @@ export const Room = ({ fire = 1 }: { fire?: number }) => {
 export const Person = ({ x, y, second = false, lean = 0, walk = 0, arm = 0 }: { x: number; y: number; second?: boolean; lean?: number; walk?: number; arm?: number }) => <g transform={`translate(${x} ${y}) rotate(${lean})`}>
   <path d={`M-29 87L${-34 + walk * 22} 170M27 87L${32 - walk * 22} 170`} stroke="#8c4f5a" strokeWidth="24" strokeLinecap="round" />
   <path d={`M${-34 + walk * 22} 170h-27M${32 - walk * 22} 170h27`} stroke="#4d3030" strokeWidth="18" strokeLinecap="round" />
-  <path d="M-55-65Q0-92 55-65L49 100Q0 128-49 100Z" fill={second ? "#d6856f" : "#ef8b78"} />
-  <path d="M-48-38L-65 44" stroke={second ? "#bf735f" : "#e67d72"} strokeWidth="28" strokeLinecap="round" />
+  <path d="M-55-65Q0-92 55-65L49 100Q0 128-49 100Z" fill={second ? "#dba57d" : "#ef8b78"} />
+  <path d="M-48-38L-65 44" stroke={second ? "#c4936e" : "#e67d72"} strokeWidth="28" strokeLinecap="round" />
   <circle cy="-128" r="46" fill="#f7c19b" />
   <path d="M-51-130Q-42-195 5-188Q54-191 54-129Q27-153 2-137Q-24-153-51-130Z" fill={second ? "#4d3030" : "#6f3f48"} />
   {!second && <path d="M-46-133Q-68-88-39-62L-31-126Z" fill="#6f3f48" />}
   <circle cx={second ? -14 : 15} cy="-122" r="3.5" fill="#4d3030" />
   <ellipse cx={second ? -28 : 29} cy="-108" rx="11" ry="6" fill="#eb9d87" />
-  <path d="M-40-65Q0-42 43-67L40-45Q0-24-43-46Z" fill={second ? "#f6c28b" : "#ffe1ad"} />
+  <path d="M-40-65Q0-42 43-67L40-45Q0-24-43-46Z" fill="#ffe1ad" />
   <path d={`M${second ? -40 : 40}-42Q${second ? -49 : 52} ${-10 - arm * 32} ${second ? -73 : 73} ${5 - arm * 70}`} fill="none" stroke="#f7c19b" strokeWidth="19" strokeLinecap="round" />
-  <path d="M-4-36V95" stroke={second ? "#b76c5d" : "#d87068"} strokeWidth="4" />
+  <path d="M-4-36V95" stroke={second ? "#bd895f" : "#d87068"} strokeWidth="4" />
   {[0, 1, 2].map(i => <circle key={i} cx="9" cy={-5 + i * 29} r="4" fill="#ffe4ad" />)}
 </g>;
 

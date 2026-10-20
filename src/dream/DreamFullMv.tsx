@@ -4,7 +4,9 @@ import { TransitionSeries, linearTiming, type TransitionPresentationComponentPro
 import timeline from "../data/full-timeline.json";
 import { remakeScenes } from "./remake/registry";
 import { WarmCaptions } from "./remake/WarmCaptions";
-import { WarmAtmosphere } from "./WarmArt";
+import { WarmAtmosphere, WarmDefinitions } from "./WarmArt";
+import { ActADefs } from "./remake/ActAArt";
+import { ActBDefs } from "./remake/ActBArt";
 
 const Reveal = ({children, presentationDirection, presentationProgress:p, passedProps:{kind}}:TransitionPresentationComponentProps<{kind:string}>) => {
   if(presentationDirection === "exiting") return <AbsoluteFill>{children}</AbsoluteFill>;
@@ -12,7 +14,7 @@ const Reveal = ({children, presentationDirection, presentationProgress:p, passed
   return <AbsoluteFill style={{clipPath,opacity:kind==="crossfade"?p:1}}>{children}</AbsoluteFill>;
 };
 
-export const DreamFullMv = () => <AbsoluteFill style={{backgroundColor:"#fff1dc"}}>
+export const DreamFullMv = () => <WarmDefinitions extra={<><ActADefs/><ActBDefs/></>}><AbsoluteFill style={{backgroundColor:"#fff1dc"}}>
   <TransitionSeries>
     {timeline.flatMap((shot,index)=>{
       const Scene=remakeScenes[shot.sceneId];
@@ -30,4 +32,4 @@ export const DreamFullMv = () => <AbsoluteFill style={{backgroundColor:"#fff1dc"
   <WarmAtmosphere/>
   <WarmCaptions/>
   <Audio src={staticFile("audio/song.mp3")} durationInFrames={5508}/>
-</AbsoluteFill>;
+</AbsoluteFill></WarmDefinitions>;

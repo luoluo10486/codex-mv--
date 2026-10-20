@@ -1,5 +1,7 @@
 {
   "version": 1,
+  "reviewAssets": ["out/remake/shared-assets.png", "out/remake/shared-landscape-assets.png"],
+  "integratedContacts": ["out/remake/review/scenes-contact.jpg", "out/remake/review/captions-contact.jpg", "out/remake/review/transitions-contact.jpg"],
   "reference": {
     "path": "D:/develop/github-repositity/codex-mv/三七 - 勾指起誓.mp4",
     "observed": [
