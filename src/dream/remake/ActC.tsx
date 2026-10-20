@@ -102,6 +102,19 @@ const HandsPullback = ({ durationInFrames }: SceneProps) => {
 
 const SprigC = ({x,y}:{x:number;y:number}) => <g transform={`translate(${x} ${y})`}><path d="M0 0Q-40-120 15-220Q25-110 50-80Q45-190 105-210Q85-70 120 0Z" fill="#b57065" /><path d="M0 0Q-100-60-160-180Q-65-164-40-70Z" fill="#d38972" /></g>;
 
+const SunriseWalk = ({ durationInFrames }: SceneProps) => {
+  const { f, p } = useTime(durationInFrames);
+  const walk = ease(p);
+  return <WarmStage theme="dawn"><path d="M0 0H1920V540Q1450 455 980 560T0 520Z" fill="#ffc88f" />
+    <WarmGlow x={1450} y={400} r={400} opacity={0.78} /><circle cx="1450" cy="400" r="132" fill="#ffeab0" />
+    <Hillscape shift={walk * 140} /><path d="M450 1080Q800 880 1260 610H1290Q1140 800 1470 1080Z" fill="#ffe0a6" opacity="0.74" />
+    <path d="M0 920Q520 805 990 895T1920 850" fill="none" stroke="#a95a60" strokeWidth="16" opacity="0.6" />
+    <Couple x={interpolate(walk, [0, 1], [680, 1010])} y={790 - walk * 44} s={0.9 - walk * 0.12} gap={76} walk={Math.sin(f / 5) * 0.9} />
+    <WarmStar x={1130 + walk * 190} y={260 - walk * 40} r={10} color="#fff1be" />
+    <House x={330 + walk * 50} y={755} s={0.8} />
+  </WarmStage>;
+};
+
 const SantaRoute = ({ durationInFrames }: SceneProps) => {
   const { f, p } = useTime(durationInFrames);
   const route = ease(p);
@@ -174,4 +187,5 @@ export const actCScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-37": HaloContract,
   "lyric-38": FourSeasons,
   "lyric-39": HandsPullback,
+  "lyric-40": SunriseWalk,
 };
