@@ -72,3 +72,9 @@
 - 首轮低清审片 MP4 已完成 5508 帧编码，元数据及全片解码通过，归档为 `out/remake/gou-zhi-qi-shi-warm-first-review.mp4`。
 - 低清验收曾遇到随包 FFmpeg 缺默认 wrapped_avframe 编码器，改为显式 rawvideo/PCM 解码检查后通过；新增 `--verify-only`，保留已渲染 partial 并继续验收，不重做镜头。
 - 正式 30 秒预览正在以修正后的源码导出。接下来执行正式 1080p 完整版和全量验收。
+
+## 阶段 5 · 正式渲染中
+
+- 30 秒预览 1920×1080、900 帧，H.264/AAC，元数据与完整解码通过；已在浏览器 1x 从头播放到结束，`ended=true`、无媒体错误。
+- 完整版正在以 `38ebd93` 的画面源码和导出配置渲染，先写 `gou-zhi-qi-shi-warm-full.partial.mp4`。
+- 导出任务及预览验收状态加入 `MV_PROGRESS.json.exports`。重启时执行恢复检查，未完成导出须先验证 partial，不直接当成正式文件。
