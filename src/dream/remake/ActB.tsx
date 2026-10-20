@@ -191,6 +191,18 @@ const SeasonClock = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
+const HeldWide = ({ durationInFrames }: SceneProps) => {
+  const { p, t } = useBeat(durationInFrames);
+  const zoom = 1.45 - p * .6;
+  return <BStage><WarmGlow x={960} y={490} r={650}/><BMountains y={725} shift={-p*20}/><circle cx={1500} cy={301} r={116} fill="#ffeab3" opacity=".7"/>
+    <path d="M0 822Q435 724 960 820T1920 806V1080H0Z" fill="#ba7a71"/><path d="M0 966Q465 848 960 947T1920 947V1080H0Z" fill="#8d555d"/>
+    <g transform={`translate(960 810) scale(${zoom})`}><BPerson x={-65} y={-12} s={.9} red/><BPerson x={65} y={-12} s={.9}/><path d="M-10-50Q0-13 10-50" fill="none" stroke="#f9caa4" strokeWidth="17" strokeLinecap="round"/><WarmStar x={0} y={-39} r={11} color="#ffe7aa"/></g>
+    {Array.from({length:8},(_,i)=><path key={i} d={`M${250+i*185} 910Q${318+i*185} ${826-(i%2)*20} ${386+i*185} 910`} fill="none" stroke="#f6c492" strokeWidth="7" opacity=".6"/>)}
+    <path d="M960 700Q930 760 961 834" fill="none" stroke="#fff0c1" strokeWidth="4" opacity=".7"/>
+    <BStars count={24} y={250} height={430}/>
+  </BStage>;
+};
+
 export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-17": Journey,
   "lyric-18": Marker,
@@ -206,4 +218,5 @@ export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-28": Sensitive,
   "lyric-29": RingExchange,
   "lyric-30": SeasonClock,
+  "lyric-31": HeldWide,
 };
