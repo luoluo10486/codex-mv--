@@ -1,0 +1,35 @@
+{
+  "owner": "agent-c",
+  "branch": "codex/mv-agent-c-scenes",
+  "state": "committed",
+  "mergeState": "pending_root_integration",
+  "codeCommit": "HEAD at this scene checkpoint",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "scenes": [
+    {
+      "sceneId": "bridge-santa-route",
+      "durationInFrames": 312,
+      "state": "committed",
+      "commit": "HEAD at this scene checkpoint"
+    }
+  ],
+  "renderedSceneCount": 1,
+  "verifiedSceneCount": 1,
+  "motionSampleCount": 4,
+  "lintAndTypeScript": "passed",
+  "outputDirectory": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-c",
+  "evidence": [
+    "frame-manifest.json",
+    "motion-samples.json",
+    "motion-contact-sheet.jpg",
+    "pixel-motion-check.json"
+  ],
+  "sharedRendererContactStep": "failed: bundled ffmpeg lacks drawtext and xstack; System.Drawing contact sheet inspected",
+  "fullVideoAndPlayback": "root integration pending",
+  "backupRef": "codex/mv-agent-c-backup-9389075",
+  "renderVerificationSource": "93890753b0ea98ce40b7d7d5eb3787adaaa13bf7"
+}
