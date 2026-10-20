@@ -18,6 +18,10 @@ const run = (exe,args) => {
   if(result.status!==0)throw new Error(result.stderr||result.stdout||String(result.error));
   return result.stdout;
 };
+if(mode==="full"){
+  try { await access("out/remake/review/frame-manifest.json"); }
+  catch { console.log(run(process.execPath,["scripts/review-remake.mjs"])); }
+}
 const serveUrl = await bundle({entryPoint:path.resolve("src/index.ts"),enableCaching:true});
 const browser = await openBrowser("chrome",{browserExecutable:"C:/Program Files/Google/Chrome/Application/chrome.exe",logLevel:"error"});
 try {

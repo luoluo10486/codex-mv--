@@ -1,100 +1,13 @@
 import { Composition, Folder } from "remotion";
 import { DreamMv } from "./dream/DreamMv";
 import { DreamFullMv } from "./dream/DreamFullMv";
-import {
-  StarPond,
-  MoonPost,
-  AcrossWorlds,
-  ThousandWorlds,
-  GoldenPromise,
-  DreamTitle,
-  PoetryGate,
-  FairytaleBloom,
-} from "./dream/DreamScenes";
+import storyboard from "./data/remake-storyboard.json";
+import { remakeScenes } from "./dream/remake/registry";
 
-export const RemotionRoot = () => (
-  <>
-    <Composition
-      id="GouZhiQiShi"
-      component={DreamMv}
-      durationInFrames={900}
-      fps={30}
-      width={1920}
-      height={1080}
-    />
-    <Composition
-      id="GouZhiQiShiFull"
-      component={DreamFullMv}
-      durationInFrames={5508}
-      fps={30}
-      width={1920}
-      height={1080}
-    />
-    <Folder name="Dream-Scenes">
-      <Composition
-        id="StarPond"
-        component={StarPond}
-        durationInFrames={124}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-      <Composition
-        id="MoonPost"
-        component={MoonPost}
-        durationInFrames={103}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-      <Composition
-        id="AcrossWorlds"
-        component={AcrossWorlds}
-        durationInFrames={145}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-      <Composition
-        id="ThousandWorlds"
-        component={ThousandWorlds}
-        durationInFrames={145}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-      <Composition
-        id="GoldenPromise"
-        component={GoldenPromise}
-        durationInFrames={124}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-      <Composition
-        id="DreamTitle"
-        component={DreamTitle}
-        durationInFrames={116}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-      <Composition
-        id="PoetryGate"
-        component={PoetryGate}
-        durationInFrames={118}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-      <Composition
-        id="FairytaleBloom"
-        component={FairytaleBloom}
-        durationInFrames={143}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-    </Folder>
-  </>
-);
+export const RemotionRoot = () => <>
+  <Composition id="GouZhiQiShi" component={DreamMv} durationInFrames={900} fps={30} width={1920} height={1080}/>
+  <Composition id="GouZhiQiShiFull" component={DreamFullMv} durationInFrames={5508} fps={30} width={1920} height={1080}/>
+  <Folder name="Warm-Storyboard">
+    {storyboard.map(shot=><Composition key={shot.sceneId} id={shot.sceneId} component={remakeScenes[shot.sceneId]} durationInFrames={shot.endFrame-shot.startFrame} defaultProps={{durationInFrames:shot.endFrame-shot.startFrame}} fps={30} width={1920} height={1080}/>)}
+  </Folder>
+</>;

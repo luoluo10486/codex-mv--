@@ -116,6 +116,12 @@ const atomicJson = (file, value) => {
   fs.renameSync(`${file}.partial`, file);
 };
 atomicJson(output, all);
+atomicJson(path.join(root, "src/data/full-timeline.json"), all.map((shot, index) => ({
+  ...shot,
+  id: shot.sceneId,
+  transition: ["crossfade", "page-fold", "star-burst"][index % 3],
+  transitionFrames: index === all.length - 1 ? 0 : 12,
+})));
 const progressPath = path.join(root, "docs/MV_PROGRESS.json");
 const previous = fs.existsSync(progressPath)
   ? JSON.parse(fs.readFileSync(progressPath, "utf8"))

@@ -3,583 +3,2079 @@
   "planRevision": 1,
   "totalFrames": 5508,
   "totalScenes": 48,
-  "updatedAt": "2026-10-19T15:41:24.850Z",
+  "updatedAt": "2026-10-20T02:33:58.315Z",
   "scenes": [
     {
       "sceneId": "bridge-opening-room",
       "owner": "root",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-remake",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/Opening.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/root/bridge-opening-room.png"
+      ],
+      "commit": "45b0bff",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.029Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.029Z",
+          "evidence": "src/dream/remake/Opening.tsx; out/remake/root/bridge-opening-room.png; 45b0bff"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.029Z",
+          "evidence": "src/dream/remake/Opening.tsx; out/remake/root/bridge-opening-room.png; 45b0bff"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.029Z",
+          "evidence": "src/dream/remake/Opening.tsx; out/remake/root/bridge-opening-room.png; 45b0bff"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.029Z",
+          "evidence": "src/dream/remake/Opening.tsx; out/remake/root/bridge-opening-room.png; 45b0bff"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.029Z",
+          "evidence": "src/dream/remake/Opening.tsx; out/remake/root/bridge-opening-room.png; 45b0bff"
+        }
+      ]
     },
     {
       "sceneId": "bridge-opening-letter",
       "owner": "root",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-remake",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/Opening.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/root/bridge-opening-letter.png"
+      ],
+      "commit": "45b0bff",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.029Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.029Z",
+          "evidence": "src/dream/remake/Opening.tsx; out/remake/root/bridge-opening-letter.png; 45b0bff"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.029Z",
+          "evidence": "src/dream/remake/Opening.tsx; out/remake/root/bridge-opening-letter.png; 45b0bff"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.029Z",
+          "evidence": "src/dream/remake/Opening.tsx; out/remake/root/bridge-opening-letter.png; 45b0bff"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.029Z",
+          "evidence": "src/dream/remake/Opening.tsx; out/remake/root/bridge-opening-letter.png; 45b0bff"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.029Z",
+          "evidence": "src/dream/remake/Opening.tsx; out/remake/root/bridge-opening-letter.png; 45b0bff"
+        }
+      ]
     },
     {
       "sceneId": "lyric-01",
       "owner": "agent-a",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-a",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-a/lyric-01.png"
+      ],
+      "commit": "52c6dd64512c1193227ea15e5a4b834d4131ab84",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.256Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-01.png; 52c6dd64512c1193227ea15e5a4b834d4131ab84"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-01.png; 52c6dd64512c1193227ea15e5a4b834d4131ab84"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-01.png; 52c6dd64512c1193227ea15e5a4b834d4131ab84"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-01.png; 52c6dd64512c1193227ea15e5a4b834d4131ab84"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-01.png; 52c6dd64512c1193227ea15e5a4b834d4131ab84"
+        }
+      ]
     },
     {
       "sceneId": "lyric-02",
       "owner": "agent-a",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-a",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-a/lyric-02.png"
+      ],
+      "commit": "5f26ebb0f54e29cabec727b90845da19346fef28",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.256Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-02.png; 5f26ebb0f54e29cabec727b90845da19346fef28"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-02.png; 5f26ebb0f54e29cabec727b90845da19346fef28"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-02.png; 5f26ebb0f54e29cabec727b90845da19346fef28"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-02.png; 5f26ebb0f54e29cabec727b90845da19346fef28"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-02.png; 5f26ebb0f54e29cabec727b90845da19346fef28"
+        }
+      ]
     },
     {
       "sceneId": "lyric-03",
       "owner": "agent-a",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-a",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-a/lyric-03.png"
+      ],
+      "commit": "a068f1354b1aceb7a8722d83e2a06885dacf76e9",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.256Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-03.png; a068f1354b1aceb7a8722d83e2a06885dacf76e9"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-03.png; a068f1354b1aceb7a8722d83e2a06885dacf76e9"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-03.png; a068f1354b1aceb7a8722d83e2a06885dacf76e9"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-03.png; a068f1354b1aceb7a8722d83e2a06885dacf76e9"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-03.png; a068f1354b1aceb7a8722d83e2a06885dacf76e9"
+        }
+      ]
     },
     {
       "sceneId": "lyric-04",
       "owner": "agent-a",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-a",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-a/lyric-04.png"
+      ],
+      "commit": "c3d829e132ea8cbafb9160d68e4daf0353f4ea9b",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.256Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-04.png; c3d829e132ea8cbafb9160d68e4daf0353f4ea9b"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-04.png; c3d829e132ea8cbafb9160d68e4daf0353f4ea9b"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-04.png; c3d829e132ea8cbafb9160d68e4daf0353f4ea9b"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-04.png; c3d829e132ea8cbafb9160d68e4daf0353f4ea9b"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-04.png; c3d829e132ea8cbafb9160d68e4daf0353f4ea9b"
+        }
+      ]
     },
     {
       "sceneId": "lyric-05",
       "owner": "agent-a",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-a",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-a/lyric-05.png"
+      ],
+      "commit": "de2c1c33c2e2820ad7f508f74e48783120a38c76",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.256Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-05.png; de2c1c33c2e2820ad7f508f74e48783120a38c76"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-05.png; de2c1c33c2e2820ad7f508f74e48783120a38c76"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-05.png; de2c1c33c2e2820ad7f508f74e48783120a38c76"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-05.png; de2c1c33c2e2820ad7f508f74e48783120a38c76"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-05.png; de2c1c33c2e2820ad7f508f74e48783120a38c76"
+        }
+      ]
     },
     {
       "sceneId": "lyric-06",
       "owner": "agent-a",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-a",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-a/lyric-06.png"
+      ],
+      "commit": "b2944d53737cd88b85d482fd4a030c311ad9c613",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.256Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-06.png; b2944d53737cd88b85d482fd4a030c311ad9c613"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-06.png; b2944d53737cd88b85d482fd4a030c311ad9c613"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-06.png; b2944d53737cd88b85d482fd4a030c311ad9c613"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-06.png; b2944d53737cd88b85d482fd4a030c311ad9c613"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-06.png; b2944d53737cd88b85d482fd4a030c311ad9c613"
+        }
+      ]
     },
     {
       "sceneId": "lyric-07",
       "owner": "agent-a",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-a",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-a/lyric-07.png"
+      ],
+      "commit": "d1c3354a2b244a34ebdcb8be658d680083ce2af4",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.256Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-07.png; d1c3354a2b244a34ebdcb8be658d680083ce2af4"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-07.png; d1c3354a2b244a34ebdcb8be658d680083ce2af4"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-07.png; d1c3354a2b244a34ebdcb8be658d680083ce2af4"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-07.png; d1c3354a2b244a34ebdcb8be658d680083ce2af4"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-07.png; d1c3354a2b244a34ebdcb8be658d680083ce2af4"
+        }
+      ]
     },
     {
       "sceneId": "lyric-08",
       "owner": "agent-a",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-a",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-a/lyric-08.png"
+      ],
+      "commit": "18b7729af89aad536c077d05b546666b8bcf756d",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.256Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-08.png; 18b7729af89aad536c077d05b546666b8bcf756d"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-08.png; 18b7729af89aad536c077d05b546666b8bcf756d"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-08.png; 18b7729af89aad536c077d05b546666b8bcf756d"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-08.png; 18b7729af89aad536c077d05b546666b8bcf756d"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-08.png; 18b7729af89aad536c077d05b546666b8bcf756d"
+        }
+      ]
     },
     {
       "sceneId": "lyric-09",
       "owner": "agent-a",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-a",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-a/lyric-09.png"
+      ],
+      "commit": "3ca5c25649f32c2ff1b2d98951b84f4ca012a4a5",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.256Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-09.png; 3ca5c25649f32c2ff1b2d98951b84f4ca012a4a5"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-09.png; 3ca5c25649f32c2ff1b2d98951b84f4ca012a4a5"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-09.png; 3ca5c25649f32c2ff1b2d98951b84f4ca012a4a5"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-09.png; 3ca5c25649f32c2ff1b2d98951b84f4ca012a4a5"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-09.png; 3ca5c25649f32c2ff1b2d98951b84f4ca012a4a5"
+        }
+      ]
     },
     {
       "sceneId": "lyric-10",
       "owner": "agent-a",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-a",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-a/lyric-10.png"
+      ],
+      "commit": "5a31a00a20e6bdc6c6d76f4935250a30123b4ad0",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.256Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-10.png; 5a31a00a20e6bdc6c6d76f4935250a30123b4ad0"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-10.png; 5a31a00a20e6bdc6c6d76f4935250a30123b4ad0"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-10.png; 5a31a00a20e6bdc6c6d76f4935250a30123b4ad0"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-10.png; 5a31a00a20e6bdc6c6d76f4935250a30123b4ad0"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-10.png; 5a31a00a20e6bdc6c6d76f4935250a30123b4ad0"
+        }
+      ]
     },
     {
       "sceneId": "lyric-11",
       "owner": "agent-a",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-a",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-a/lyric-11.png"
+      ],
+      "commit": "fc3d3ea3a87887a89a0c75d0ac1ce50ba76843a3",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.256Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-11.png; fc3d3ea3a87887a89a0c75d0ac1ce50ba76843a3"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-11.png; fc3d3ea3a87887a89a0c75d0ac1ce50ba76843a3"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-11.png; fc3d3ea3a87887a89a0c75d0ac1ce50ba76843a3"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-11.png; fc3d3ea3a87887a89a0c75d0ac1ce50ba76843a3"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-11.png; fc3d3ea3a87887a89a0c75d0ac1ce50ba76843a3"
+        }
+      ]
     },
     {
       "sceneId": "lyric-12",
       "owner": "agent-a",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-a",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-a/lyric-12.png"
+      ],
+      "commit": "67268b10adbd4165386d94ef4768f68a3d4984a6",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.256Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-12.png; 67268b10adbd4165386d94ef4768f68a3d4984a6"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-12.png; 67268b10adbd4165386d94ef4768f68a3d4984a6"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-12.png; 67268b10adbd4165386d94ef4768f68a3d4984a6"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-12.png; 67268b10adbd4165386d94ef4768f68a3d4984a6"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-12.png; 67268b10adbd4165386d94ef4768f68a3d4984a6"
+        }
+      ]
     },
     {
       "sceneId": "lyric-13",
       "owner": "agent-a",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-a",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-a/lyric-13.png"
+      ],
+      "commit": "ce07ae0d3336533968fa320585d5f46c03724083",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.256Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-13.png; ce07ae0d3336533968fa320585d5f46c03724083"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-13.png; ce07ae0d3336533968fa320585d5f46c03724083"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-13.png; ce07ae0d3336533968fa320585d5f46c03724083"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-13.png; ce07ae0d3336533968fa320585d5f46c03724083"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-13.png; ce07ae0d3336533968fa320585d5f46c03724083"
+        }
+      ]
     },
     {
       "sceneId": "lyric-14",
       "owner": "agent-a",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-a",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-a/lyric-14.png"
+      ],
+      "commit": "0b348b5a82278c65009d55c0233dde98e3d26e53",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.256Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-14.png; 0b348b5a82278c65009d55c0233dde98e3d26e53"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-14.png; 0b348b5a82278c65009d55c0233dde98e3d26e53"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-14.png; 0b348b5a82278c65009d55c0233dde98e3d26e53"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-14.png; 0b348b5a82278c65009d55c0233dde98e3d26e53"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-14.png; 0b348b5a82278c65009d55c0233dde98e3d26e53"
+        }
+      ]
     },
     {
       "sceneId": "lyric-15",
       "owner": "agent-a",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-a",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-a/lyric-15.png"
+      ],
+      "commit": "8102687ecf927746cca80861233c9cef61c41336",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.256Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-15.png; 8102687ecf927746cca80861233c9cef61c41336"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-15.png; 8102687ecf927746cca80861233c9cef61c41336"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-15.png; 8102687ecf927746cca80861233c9cef61c41336"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-15.png; 8102687ecf927746cca80861233c9cef61c41336"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-15.png; 8102687ecf927746cca80861233c9cef61c41336"
+        }
+      ]
     },
     {
       "sceneId": "lyric-16",
       "owner": "agent-a",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-a",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-a/lyric-16.png"
+      ],
+      "commit": "b5586e763d21d21b772637259f893cb694ef0d4d",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:32.256Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-16.png; b5586e763d21d21b772637259f893cb694ef0d4d"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-16.png; b5586e763d21d21b772637259f893cb694ef0d4d"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-16.png; b5586e763d21d21b772637259f893cb694ef0d4d"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-16.png; b5586e763d21d21b772637259f893cb694ef0d4d"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:32.256Z",
+          "evidence": "src/dream/remake/ActA.tsx; out/remake/agent-a/lyric-16.png; b5586e763d21d21b772637259f893cb694ef0d4d"
+        }
+      ]
     },
     {
       "sceneId": "bridge-santa-route",
       "owner": "agent-c",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-c",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-c/bridge-santa-route.png"
+      ],
+      "commit": "1a7c24c3853f8ddc7a5274b9ea3a1f3068a58798",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:33:58.315Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-santa-route.png; 1a7c24c3853f8ddc7a5274b9ea3a1f3068a58798"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-santa-route.png; 1a7c24c3853f8ddc7a5274b9ea3a1f3068a58798"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-santa-route.png; 1a7c24c3853f8ddc7a5274b9ea3a1f3068a58798"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-santa-route.png; 1a7c24c3853f8ddc7a5274b9ea3a1f3068a58798"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-santa-route.png; 1a7c24c3853f8ddc7a5274b9ea3a1f3068a58798"
+        }
+      ]
     },
     {
       "sceneId": "bridge-santa-worlds",
       "owner": "agent-c",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-c",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-c/bridge-santa-worlds.png"
+      ],
+      "commit": "64865c9e49df7529d0b26020a051fb2fea595c28",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:33:58.315Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-santa-worlds.png; 64865c9e49df7529d0b26020a051fb2fea595c28"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-santa-worlds.png; 64865c9e49df7529d0b26020a051fb2fea595c28"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-santa-worlds.png; 64865c9e49df7529d0b26020a051fb2fea595c28"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-santa-worlds.png; 64865c9e49df7529d0b26020a051fb2fea595c28"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-santa-worlds.png; 64865c9e49df7529d0b26020a051fb2fea595c28"
+        }
+      ]
     },
     {
       "sceneId": "lyric-17",
       "owner": "agent-b",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-b",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-b/lyric-17.png"
+      ],
+      "commit": "32cc163",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:33.597Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-17.png; 32cc163"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-17.png; 32cc163"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-17.png; 32cc163"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-17.png; 32cc163"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-17.png; 32cc163"
+        }
+      ]
     },
     {
       "sceneId": "lyric-18",
       "owner": "agent-b",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-b",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-b/lyric-18.png"
+      ],
+      "commit": "dfb91f1",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:33.597Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-18.png; dfb91f1"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-18.png; dfb91f1"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-18.png; dfb91f1"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-18.png; dfb91f1"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-18.png; dfb91f1"
+        }
+      ]
     },
     {
       "sceneId": "lyric-19",
       "owner": "agent-b",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-b",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-b/lyric-19.png"
+      ],
+      "commit": "ea474fb",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:33.597Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-19.png; ea474fb"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-19.png; ea474fb"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-19.png; ea474fb"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-19.png; ea474fb"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-19.png; ea474fb"
+        }
+      ]
     },
     {
       "sceneId": "lyric-20",
       "owner": "agent-b",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-b",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-b/lyric-20.png"
+      ],
+      "commit": "1c74f10",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:33.597Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-20.png; 1c74f10"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-20.png; 1c74f10"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-20.png; 1c74f10"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-20.png; 1c74f10"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-20.png; 1c74f10"
+        }
+      ]
     },
     {
       "sceneId": "lyric-21",
       "owner": "agent-b",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-b",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-b/lyric-21.png"
+      ],
+      "commit": "126e9f8",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:33.597Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-21.png; 126e9f8"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-21.png; 126e9f8"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-21.png; 126e9f8"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-21.png; 126e9f8"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-21.png; 126e9f8"
+        }
+      ]
     },
     {
       "sceneId": "lyric-22",
       "owner": "agent-b",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-b",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-b/lyric-22.png"
+      ],
+      "commit": "a7425c2",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:33.597Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-22.png; a7425c2"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-22.png; a7425c2"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-22.png; a7425c2"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-22.png; a7425c2"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-22.png; a7425c2"
+        }
+      ]
     },
     {
       "sceneId": "lyric-23",
       "owner": "agent-b",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-b",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-b/lyric-23.png"
+      ],
+      "commit": "a1b26ee",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:33.597Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-23.png; a1b26ee"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-23.png; a1b26ee"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-23.png; a1b26ee"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-23.png; a1b26ee"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-23.png; a1b26ee"
+        }
+      ]
     },
     {
       "sceneId": "lyric-24",
       "owner": "agent-b",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-b",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-b/lyric-24.png"
+      ],
+      "commit": "5cdac92",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:33.597Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-24.png; 5cdac92"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-24.png; 5cdac92"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-24.png; 5cdac92"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-24.png; 5cdac92"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-24.png; 5cdac92"
+        }
+      ]
     },
     {
       "sceneId": "lyric-25",
       "owner": "agent-b",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-b",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-b/lyric-25.png"
+      ],
+      "commit": "03e69c7",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:33.597Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-25.png; 03e69c7"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-25.png; 03e69c7"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-25.png; 03e69c7"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-25.png; 03e69c7"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-25.png; 03e69c7"
+        }
+      ]
     },
     {
       "sceneId": "lyric-26",
       "owner": "agent-b",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-b",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-b/lyric-26.png"
+      ],
+      "commit": "b2d12c2",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:33.597Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-26.png; b2d12c2"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-26.png; b2d12c2"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-26.png; b2d12c2"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-26.png; b2d12c2"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-26.png; b2d12c2"
+        }
+      ]
     },
     {
       "sceneId": "lyric-27",
       "owner": "agent-b",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-b",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-b/lyric-27.png"
+      ],
+      "commit": "ee6206e",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:33.597Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-27.png; ee6206e"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-27.png; ee6206e"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-27.png; ee6206e"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-27.png; ee6206e"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-27.png; ee6206e"
+        }
+      ]
     },
     {
       "sceneId": "lyric-28",
       "owner": "agent-b",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-b",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-b/lyric-28.png"
+      ],
+      "commit": "114937b",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:33.597Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-28.png; 114937b"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-28.png; 114937b"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-28.png; 114937b"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-28.png; 114937b"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-28.png; 114937b"
+        }
+      ]
     },
     {
       "sceneId": "lyric-29",
       "owner": "agent-b",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-b",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-b/lyric-29.png"
+      ],
+      "commit": "65c997e",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:33.597Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-29.png; 65c997e"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-29.png; 65c997e"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-29.png; 65c997e"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-29.png; 65c997e"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-29.png; 65c997e"
+        }
+      ]
     },
     {
       "sceneId": "lyric-30",
       "owner": "agent-b",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-b",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-b/lyric-30.png"
+      ],
+      "commit": "1751113",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:33.597Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-30.png; 1751113"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-30.png; 1751113"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-30.png; 1751113"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-30.png; 1751113"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-30.png; 1751113"
+        }
+      ]
     },
     {
       "sceneId": "lyric-31",
       "owner": "agent-b",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-b",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-b/lyric-31.png"
+      ],
+      "commit": "73a038e",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:33.597Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-31.png; 73a038e"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-31.png; 73a038e"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-31.png; 73a038e"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-31.png; 73a038e"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-31.png; 73a038e"
+        }
+      ]
     },
     {
       "sceneId": "lyric-32",
       "owner": "agent-b",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-b",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-b/lyric-32.png"
+      ],
+      "commit": "259997d",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:30:33.597Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-32.png; 259997d"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-32.png; 259997d"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-32.png; 259997d"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-32.png; 259997d"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:30:33.597Z",
+          "evidence": "src/dream/remake/ActB.tsx; out/remake/agent-b/lyric-32.png; 259997d"
+        }
+      ]
     },
     {
       "sceneId": "bridge-map-fold",
       "owner": "agent-c",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-c",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-c/bridge-map-fold.png"
+      ],
+      "commit": "c993f8f2ff367067f7dc1caf69f584fc4bae9a60",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:33:58.315Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-map-fold.png; c993f8f2ff367067f7dc1caf69f584fc4bae9a60"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-map-fold.png; c993f8f2ff367067f7dc1caf69f584fc4bae9a60"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-map-fold.png; c993f8f2ff367067f7dc1caf69f584fc4bae9a60"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-map-fold.png; c993f8f2ff367067f7dc1caf69f584fc4bae9a60"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-map-fold.png; c993f8f2ff367067f7dc1caf69f584fc4bae9a60"
+        }
+      ]
     },
     {
       "sceneId": "bridge-map-return",
       "owner": "agent-c",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-c",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-c/bridge-map-return.png"
+      ],
+      "commit": "db95c106d6f40be9fcd607210f2da724e322b10d",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:33:58.315Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-map-return.png; db95c106d6f40be9fcd607210f2da724e322b10d"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-map-return.png; db95c106d6f40be9fcd607210f2da724e322b10d"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-map-return.png; db95c106d6f40be9fcd607210f2da724e322b10d"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-map-return.png; db95c106d6f40be9fcd607210f2da724e322b10d"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-map-return.png; db95c106d6f40be9fcd607210f2da724e322b10d"
+        }
+      ]
     },
     {
       "sceneId": "lyric-33",
       "owner": "agent-c",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-c",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-c/lyric-33.png"
+      ],
+      "commit": "ea60031a1c2690416e9636e7bad79e357efbb423",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:33:58.315Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-33.png; ea60031a1c2690416e9636e7bad79e357efbb423"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-33.png; ea60031a1c2690416e9636e7bad79e357efbb423"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-33.png; ea60031a1c2690416e9636e7bad79e357efbb423"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-33.png; ea60031a1c2690416e9636e7bad79e357efbb423"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-33.png; ea60031a1c2690416e9636e7bad79e357efbb423"
+        }
+      ]
     },
     {
       "sceneId": "lyric-34",
       "owner": "agent-c",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-c",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-c/lyric-34.png"
+      ],
+      "commit": "bfd82cfedd83a56a6c599da7720f4dc89c0f66b1",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:33:58.315Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-34.png; bfd82cfedd83a56a6c599da7720f4dc89c0f66b1"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-34.png; bfd82cfedd83a56a6c599da7720f4dc89c0f66b1"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-34.png; bfd82cfedd83a56a6c599da7720f4dc89c0f66b1"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-34.png; bfd82cfedd83a56a6c599da7720f4dc89c0f66b1"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-34.png; bfd82cfedd83a56a6c599da7720f4dc89c0f66b1"
+        }
+      ]
     },
     {
       "sceneId": "lyric-35",
       "owner": "agent-c",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-c",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-c/lyric-35.png"
+      ],
+      "commit": "62b6fb462681a9f02ff4b1d02e1a47ee1d4b67d7",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:33:58.315Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-35.png; 62b6fb462681a9f02ff4b1d02e1a47ee1d4b67d7"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-35.png; 62b6fb462681a9f02ff4b1d02e1a47ee1d4b67d7"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-35.png; 62b6fb462681a9f02ff4b1d02e1a47ee1d4b67d7"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-35.png; 62b6fb462681a9f02ff4b1d02e1a47ee1d4b67d7"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-35.png; 62b6fb462681a9f02ff4b1d02e1a47ee1d4b67d7"
+        }
+      ]
     },
     {
       "sceneId": "lyric-36",
       "owner": "agent-c",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-c",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-c/lyric-36.png"
+      ],
+      "commit": "c10b24a8c6c887eca0aa8e7f5c15524dcdfb91c9",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:33:58.315Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-36.png; c10b24a8c6c887eca0aa8e7f5c15524dcdfb91c9"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-36.png; c10b24a8c6c887eca0aa8e7f5c15524dcdfb91c9"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-36.png; c10b24a8c6c887eca0aa8e7f5c15524dcdfb91c9"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-36.png; c10b24a8c6c887eca0aa8e7f5c15524dcdfb91c9"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-36.png; c10b24a8c6c887eca0aa8e7f5c15524dcdfb91c9"
+        }
+      ]
     },
     {
       "sceneId": "lyric-37",
       "owner": "agent-c",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-c",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-c/lyric-37.png"
+      ],
+      "commit": "c5e3e5517ef7008f191c8db86e4586c3bb5bd534",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:33:58.315Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-37.png; c5e3e5517ef7008f191c8db86e4586c3bb5bd534"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-37.png; c5e3e5517ef7008f191c8db86e4586c3bb5bd534"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-37.png; c5e3e5517ef7008f191c8db86e4586c3bb5bd534"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-37.png; c5e3e5517ef7008f191c8db86e4586c3bb5bd534"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-37.png; c5e3e5517ef7008f191c8db86e4586c3bb5bd534"
+        }
+      ]
     },
     {
       "sceneId": "lyric-38",
       "owner": "agent-c",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-c",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-c/lyric-38.png"
+      ],
+      "commit": "4950fe6b69946b41617abafc0a16c4ba3879688a",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:33:58.315Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-38.png; 4950fe6b69946b41617abafc0a16c4ba3879688a"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-38.png; 4950fe6b69946b41617abafc0a16c4ba3879688a"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-38.png; 4950fe6b69946b41617abafc0a16c4ba3879688a"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-38.png; 4950fe6b69946b41617abafc0a16c4ba3879688a"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-38.png; 4950fe6b69946b41617abafc0a16c4ba3879688a"
+        }
+      ]
     },
     {
       "sceneId": "lyric-39",
       "owner": "agent-c",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-c",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-c/lyric-39.png"
+      ],
+      "commit": "9c08a111924c07dd5d6dbd43825adbd09c7dc490",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:33:58.315Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-39.png; 9c08a111924c07dd5d6dbd43825adbd09c7dc490"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-39.png; 9c08a111924c07dd5d6dbd43825adbd09c7dc490"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-39.png; 9c08a111924c07dd5d6dbd43825adbd09c7dc490"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-39.png; 9c08a111924c07dd5d6dbd43825adbd09c7dc490"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-39.png; 9c08a111924c07dd5d6dbd43825adbd09c7dc490"
+        }
+      ]
     },
     {
       "sceneId": "lyric-40",
       "owner": "agent-c",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-c",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-c/lyric-40.png"
+      ],
+      "commit": "7baa45eb4fedf38980a3e823bc74d5d914481cab",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:33:58.315Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-40.png; 7baa45eb4fedf38980a3e823bc74d5d914481cab"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-40.png; 7baa45eb4fedf38980a3e823bc74d5d914481cab"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-40.png; 7baa45eb4fedf38980a3e823bc74d5d914481cab"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-40.png; 7baa45eb4fedf38980a3e823bc74d5d914481cab"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/lyric-40.png; 7baa45eb4fedf38980a3e823bc74d5d914481cab"
+        }
+      ]
     },
     {
       "sceneId": "bridge-final-rise",
       "owner": "agent-c",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-c",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-c/bridge-final-rise.png"
+      ],
+      "commit": "76157ce6e4dd9d5061116cdfb648f6083ef208b3",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:33:58.315Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-final-rise.png; 76157ce6e4dd9d5061116cdfb648f6083ef208b3"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-final-rise.png; 76157ce6e4dd9d5061116cdfb648f6083ef208b3"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-final-rise.png; 76157ce6e4dd9d5061116cdfb648f6083ef208b3"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-final-rise.png; 76157ce6e4dd9d5061116cdfb648f6083ef208b3"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-final-rise.png; 76157ce6e4dd9d5061116cdfb648f6083ef208b3"
+        }
+      ]
     },
     {
       "sceneId": "bridge-final-star",
       "owner": "agent-c",
-      "status": "planned",
+      "status": "merged",
       "branch": "codex/mv-agent-c",
-      "sourceFiles": [],
-      "previewFiles": [],
-      "commit": null,
-      "attempts": 0,
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx"
+      ],
+      "previewFiles": [
+        "out/remake/agent-c/bridge-final-star.png"
+      ],
+      "commit": "d4f8a61b464af254a82c7345629b905f47b69891",
+      "attempts": 1,
       "blocker": null,
-      "updatedAt": null
+      "updatedAt": "2026-10-20T02:33:58.315Z",
+      "history": [
+        {
+          "status": "in_progress",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-final-star.png; d4f8a61b464af254a82c7345629b905f47b69891"
+        },
+        {
+          "status": "rendered",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-final-star.png; d4f8a61b464af254a82c7345629b905f47b69891"
+        },
+        {
+          "status": "verified",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-final-star.png; d4f8a61b464af254a82c7345629b905f47b69891"
+        },
+        {
+          "status": "committed",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-final-star.png; d4f8a61b464af254a82c7345629b905f47b69891"
+        },
+        {
+          "status": "merged",
+          "recordedAt": "2026-10-20T02:33:58.315Z",
+          "evidence": "src/dream/remake/ActC.tsx; out/remake/agent-c/bridge-final-star.png; d4f8a61b464af254a82c7345629b905f47b69891"
+        }
+      ]
     }
-  ]
+  ],
+  "counts": {
+    "planned": 0,
+    "in_progress": 0,
+    "rendered": 0,
+    "verified": 0,
+    "committed": 0,
+    "merged": 48
+  }
 }

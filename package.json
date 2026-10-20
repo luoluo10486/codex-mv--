@@ -36,7 +36,7 @@
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
-    "render": "remotion render src/index.ts GouZhiQiShi out/gou-zhi-qi-shi-dream-30s.mp4 --crf=17 --audio-bitrate=320k --jpeg-quality=95",
+    "render": "npm run render:preview",
     "render:full": "node scripts/render-remake.mjs full",
     "render:preview": "node scripts/render-remake.mjs preview",
     "render:full-preview": "node scripts/render-remake.mjs full-preview",

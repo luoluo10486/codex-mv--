@@ -7,6 +7,7 @@ import sharp from "sharp";
 const root = "out/remake/review";
 const timeline = JSON.parse(await readFile("src/data/remake-storyboard.json", "utf8"));
 const lyrics = JSON.parse(await readFile("src/data/full-lyrics.json", "utf8"));
+const captionFrame = cue => Math.min(Math.ceil(cue.endMs * .03) - 1, Math.ceil(cue.startMs * .03) + Math.max(24, Array.from(cue.text).length * 3));
 const frames = new Set([0, 5507]);
 for (const shot of timeline) {
   frames.add(Math.floor((shot.startFrame + shot.endFrame) / 2));
@@ -16,7 +17,7 @@ for (const shot of timeline) {
     frames.add(shot.startFrame + 12);
   }
 }
-for (const cue of lyrics) frames.add(Math.min(5507, Math.ceil(cue.startMs * .03) + 24));
+for (const cue of lyrics) frames.add(captionFrame(cue));
 const ordered = [...frames].sort((a,b) => a-b);
 await mkdir(`${root}/frames`, {recursive:true});
 const serveUrl = await bundle({entryPoint:path.resolve("src/index.ts"),enableCaching:true});
@@ -29,7 +30,7 @@ try {
 } finally { await browser.close({silent:true}); }
 const groups = {
   scenes:timeline.map(s=>({frame:Math.floor((s.startFrame+s.endFrame)/2),label:s.sceneId})),
-  captions:lyrics.map(c=>({frame:Math.min(5507,Math.ceil(c.startMs*.03)+24),label:c.id})),
+  captions:lyrics.map(c=>({frame:captionFrame(c),label:c.id})),
   transitions:timeline.slice(1).map(s=>({frame:s.startFrame+6,label:s.sceneId})),
 };
 for (const [name, items] of Object.entries(groups)) {

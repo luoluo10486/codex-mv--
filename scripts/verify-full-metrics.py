@@ -10,13 +10,16 @@ REVIEW = ROOT / (sys.argv[1] if len(sys.argv) > 1 else "out/remake/review")
 data = json.loads((REVIEW / "technical-validation.json").read_text(encoding="utf-8"))
 pixels = np.fromfile(REVIEW / "frame-luma.rgb", dtype=np.uint8).reshape(-1, 9, 16, 3)
 means = pixels.astype(float).mean(axis=(1, 2, 3))
+spatial_contrast = pixels.astype(float).std(axis=(1, 2)).mean(axis=1)
 full_decode = {
     "decodedFrameCount": int(len(means)),
     "expectedFrameCount": 5508,
     "minMeanRGB": float(means.min()),
     "maxMeanRGB": float(means.max()),
     "blackFrames": np.where(means < 5)[0].tolist(),
-    "passed": bool(len(means) == 5508 and np.all(means >= 5)),
+    "uniformBlankFrames": np.where(spatial_contrast < 1)[0].tolist(),
+    "minSpatialContrast": float(spatial_contrast.min()),
+    "passed": bool(len(means) == 5508 and np.all(means >= 5) and np.all(spatial_contrast >= 1)),
 }
 
 def read_audio(name):
@@ -27,6 +30,7 @@ def read_audio(name):
 original = read_audio("source-audio.wav")
 encoded = read_audio("encoded-audio.wav")
 n = min(len(original), len(encoded))
+audio_lengths = {"sourceSamples": len(original), "encodedSamples": len(encoded), "complete": abs(len(original) - len(encoded)) <= 16000 / 30}
 original, encoded = original[:n], encoded[:n]
 size = 1 << (2 * n - 1).bit_length()
 corr = np.fft.irfft(np.fft.rfft(encoded, size) * np.conj(np.fft.rfft(original, size)), size)
@@ -38,12 +42,13 @@ if lag >= 0:
 else:
     left, right = original[-lag:], encoded[: n + lag]
 audio = {
+    **audio_lengths,
     "measuredOffsetSamples": lag,
     "sampleRate": 16000,
     "measuredOffsetMs": lag / 16,
     "correlationAfterAlignment": float(np.corrcoef(left, right)[0, 1]),
 }
-audio["passed"] = abs(lag / 16000) <= 1 / 30 and audio["correlationAfterAlignment"] > 0.98
+audio["passed"] = audio_lengths["complete"] and abs(lag / 16000) <= 1 / 30 and audio["correlationAfterAlignment"] > 0.98
 
 parity = []
 for frame in data["exportFrames"]:

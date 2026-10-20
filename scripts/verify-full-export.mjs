@@ -41,6 +41,7 @@ const checks = {
   containerDuration: Math.abs(Number(probe.format.duration) - 5508 / 30) < 0.08,
   h264: v.codec_name === "h264",
   aac: a.codec_name === "aac",
+  audioDuration: Number(a.duration) >= 183.576 - 1 / 30 && Number(a.duration) <= 183.7,
   pixelFormat: v.pix_fmt === "yuv420p",
   colorSpace: v.color_space === "bt709",
   colorPrimaries: v.color_primaries === "bt709",
