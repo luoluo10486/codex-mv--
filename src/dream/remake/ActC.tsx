@@ -175,6 +175,14 @@ const MapReturn = ({ durationInFrames }: SceneProps) => {
   </WarmStage>;
 };
 
+const FinalRise = ({ durationInFrames }: SceneProps) => {
+  const { f, p } = useTime(durationInFrames);
+  const rise = ease(p);
+  return <WarmStage theme="dawn"><Hillscape shift={140} /><path d="M450 1080Q800 880 1260 610H1290Q1140 800 1470 1080Z" fill="#ffe0a6" opacity="0.74" /><WarmGlow x={1450} y={330} r={500} opacity={0.5} /><circle cx="1450" cy="330" r="130" fill="#ffe9ad" /><Couple x={1010} y={746} s={0.78} gap={76} walk={Math.sin(f / 5) * 0.5} />
+    <g transform={`translate(${960 + Math.sin(f / 12) * 12} ${830 - rise * 500}) rotate(${rise * 12}) scale(${0.5 + rise * 0.28})`}><WarmLetter open={0.4} /><WarmGlow x={0} y={0} r={240} opacity={0.65} /></g>
+  </WarmStage>;
+};
+
 export const actCScenes: Record<string, ComponentType<SceneProps>> = {
   "bridge-santa-route": SantaRoute,
   "bridge-santa-worlds": GiftWorlds,
@@ -188,4 +196,5 @@ export const actCScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-38": FourSeasons,
   "lyric-39": HandsPullback,
   "lyric-40": SunriseWalk,
+  "bridge-final-rise": FinalRise,
 };
