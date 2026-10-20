@@ -183,11 +183,18 @@ const FinalRise = ({ durationInFrames }: SceneProps) => {
   </WarmStage>;
 };
 
+const FinalStar = ({ durationInFrames }: SceneProps) => {
+  const { f, p } = useTime(durationInFrames);
+  const star = ease(p);
+  return <WarmStage theme="night"><WarmGlow x={960} y={470} r={600} opacity={0.38 + star * 0.38} />
+    <path d="M0 830Q480 680 950 810T1920 730V1080H0Z" fill="#8d4f59" />
+    <WarmMoon x={1500} y={220} r={90} /><WarmStar x={960} y={450} r={interpolate(star, [0,1], [18, 86])} color="#ffe9a6" rotate={f * 0.4} />
+    <g transform={`translate(960 ${480 - star * 30}) rotate(${star * 20}) scale(${1 - star * 0.45} ${1 - star * 0.98})`}><WarmLetter s={0.56} open={0.5 * (1 - star)} /></g>
+    {Array.from({length: 18}, (_, i) => <WarmStar key={i} x={220 + ((i * 257) % 1500)} y={170 + ((i * 131) % 570)} r={3 + i % 3} color="#ffe8aa" rotate={i * 17} />)}
+  </WarmStage>;
+};
+
 export const actCScenes: Record<string, ComponentType<SceneProps>> = {
-  "bridge-santa-route": SantaRoute,
-  "bridge-santa-worlds": GiftWorlds,
-  "bridge-map-fold": MapFold,
-  "bridge-map-return": MapReturn,
   "lyric-33": ReturnRoom,
   "lyric-34": FireplaceWarmth,
   "lyric-35": LastSnow,
@@ -196,5 +203,10 @@ export const actCScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-38": FourSeasons,
   "lyric-39": HandsPullback,
   "lyric-40": SunriseWalk,
+  "bridge-santa-route": SantaRoute,
+  "bridge-santa-worlds": GiftWorlds,
+  "bridge-map-fold": MapFold,
+  "bridge-map-return": MapReturn,
   "bridge-final-rise": FinalRise,
+  "bridge-final-star": FinalStar,
 };

@@ -86,12 +86,18 @@
       "sceneId": "bridge-final-rise",
       "durationInFrames": 54,
       "state": "committed",
+      "commit": "76157ce6e4dd9d5061116cdfb648f6083ef208b3"
+    },
+    {
+      "sceneId": "bridge-final-star",
+      "durationInFrames": 54,
+      "state": "committed",
       "commit": "HEAD at this scene checkpoint"
     }
   ],
-  "renderedSceneCount": 13,
-  "verifiedSceneCount": 13,
-  "motionSampleCount": 52,
+  "renderedSceneCount": 14,
+  "verifiedSceneCount": 14,
+  "motionSampleCount": 56,
   "lintAndTypeScript": "passed",
   "outputDirectory": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-c",
   "evidence": [
