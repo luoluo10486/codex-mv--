@@ -82,6 +82,15 @@ const Devotion = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
+const WorldHeart = ({ durationInFrames }: SceneProps) => {
+  const { p, t } = useBeat(durationInFrames);
+  return <BStage night><WarmGlow x={960} y={650} r={630}/><BStars count={66}/>
+    {Array.from({length:10},(_,i)=>{const a=i*Math.PI/5; const r=600-p*190;const x=960+Math.cos(a)*r;const y=650+Math.sin(a)*r*.48;return <g key={i}><path d={`M${x} ${y}Q960 ${430+i*39} 960 670`} fill="none" stroke="#efc185" strokeWidth="3" opacity=".45"/><WarmWorld x={x} y={y} s={.2+i%3*.045} t={t}/></g>;})}
+    <g transform={`translate(960 650) scale(${.86+p*.14})`} filter="url(#warm-shadow)"><path d="M0 225C-95 156-300 7-224-133C-166-242-42-206 0-127C52-215 181-239 235-120C301 26 102 173 0 225Z" fill="url(#warm-gold)"/><path d="M-164-112C-123-177-57-142-28-84" fill="none" stroke="#fff4c9" strokeWidth="17" strokeLinecap="round" opacity=".65"/><path d="M-185 12Q-56-66 38 8T194-13M-108 123Q0 58 116 102" fill="none" stroke="#bd7e56" strokeWidth="6" opacity=".45"/><WarmStar x={40} y={-10} r={43} color="#fff3be" rotate={t*10}/></g>
+    <WarmCouple x={960} y={970} s={.38} hold={1} t={t}/>
+  </BStage>;
+};
+
 export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-17": Journey,
   "lyric-18": Marker,
@@ -89,4 +98,5 @@ export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-20": SewWorlds,
   "lyric-21": Memories,
   "lyric-22": Devotion,
+  "lyric-23": WorldHeart,
 };
