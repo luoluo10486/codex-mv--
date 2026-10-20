@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "reference": {
+    "path": "D:/develop/github-repositity/codex-mv/三七 - 勾指起誓.mp4",
+    "observed": [
+      "米白与暖色留白",
+      "少量红粉和紫色作为强调",
+      "重复使用牵手、月亮、道路和爱心建立记忆点"
+    ],
+    "boundary": "只借鉴色温、留白和节奏，不复制参考 MV 的具体画面或线稿画法。"
+  },
+  "palette": {
+    "paper": "#FFF1DC",
+    "apricot": "#F6C28B",
+    "coral": "#F28F7A",
+    "red": "#C94E5B",
+    "gold": "#DDAA58",
+    "plum": "#8C4F5A",
+    "ink": "#4D3030"
+  },
+  "families": [
+    {"id": "characters", "items": ["couple", "santa", "child"]},
+    {"id": "christmas", "items": ["sleigh", "gift", "bell", "snow"]},
+    {"id": "story", "items": ["letter", "storybook", "moon", "lantern"]},
+    {"id": "worlds", "items": ["ladle", "water-drop-world", "mountain", "marker-tower"]},
+    {"id": "promise", "items": ["gold-contract", "ring", "clock", "bridge", "red-thread"]},
+    {"id": "transition", "items": ["golden-route", "paper-fold", "star-burst"]}
+  ]
+}
