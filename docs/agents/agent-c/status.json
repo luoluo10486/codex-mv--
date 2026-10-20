@@ -26,12 +26,18 @@
       "sceneId": "bridge-map-fold",
       "durationInFrames": 316,
       "state": "committed",
+      "commit": "c993f8f2ff367067f7dc1caf69f584fc4bae9a60"
+    },
+    {
+      "sceneId": "bridge-map-return",
+      "durationInFrames": 342,
+      "state": "committed",
       "commit": "HEAD at this scene checkpoint"
     }
   ],
-  "renderedSceneCount": 3,
-  "verifiedSceneCount": 3,
-  "motionSampleCount": 12,
+  "renderedSceneCount": 4,
+  "verifiedSceneCount": 4,
+  "motionSampleCount": 16,
   "lintAndTypeScript": "passed",
   "outputDirectory": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-c",
   "evidence": [

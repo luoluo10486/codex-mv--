@@ -6,6 +6,7 @@ import { House, Hillscape } from "./ActCArt";
 
 const ease = (p: number) => { const c = Math.max(0, Math.min(1, p)); return c * c * (3 - 2 * c); };
 const useTime = (duration: number) => { const f = useCurrentFrame(); return { f, p: f / Math.max(1, duration - 1) }; };
+const cubic = (p: number, a: number, b: number, c: number, d: number) => (1-p)**3*a + 3*(1-p)**2*p*b + 3*(1-p)*p*p*c + p**3*d;
 
 const SantaRoute = ({ durationInFrames }: SceneProps) => {
   const { f, p } = useTime(durationInFrames);
@@ -52,8 +53,24 @@ const MapFold = ({ durationInFrames }: SceneProps) => {
   </WarmStage>;
 };
 
+const MapReturn = ({ durationInFrames }: SceneProps) => {
+  const { f, p } = useTime(durationInFrames);
+  const route = ease(p);
+  const part = route < 0.5 ? route * 2 : (route - 0.5) * 2;
+  const x = route < 0.5 ? cubic(part, 120,380,680,940) : cubic(part,940,1200,1450,1850);
+  const y = route < 0.5 ? cubic(part,760,230,900,530) : cubic(part,530,160,320,690);
+  return <WarmStage theme="night"><WarmMoon x={1550} y={195} r={100} /><WarmGlow x={420} y={430} r={330} opacity={0.45} />
+    <path d="M120 760C380 230 680 900 940 530S1450 320 1850 690" fill="none" stroke="#ffe5a2" strokeWidth="20" strokeDasharray="30 24" strokeDashoffset={-route * 900} />
+    <path d="M0 810Q410 610 830 800T1920 740V1080H0Z" fill="#ab6063" />
+    {[{x:210,y:710,s:0.52},{x:760,y:675,s:0.38},{x:1400,y:590,s:0.45}].map((h,i)=><House key={i} x={h.x} y={h.y} s={h.s}/>) }
+    <g transform={`translate(${x} ${y}) rotate(${Math.sin(f / 16) * 8})`}><WarmLetter s={0.56} open={0.25} /><WarmGlow x={0} y={0} r={190} opacity={0.52} /></g>
+    <WarmStar x={1820} y={300} r={12} color="#fff0b8" />
+  </WarmStage>;
+};
+
 export const actCScenes: Record<string, ComponentType<SceneProps>> = {
   "bridge-santa-route": SantaRoute,
   "bridge-santa-worlds": GiftWorlds,
   "bridge-map-fold": MapFold,
+  "bridge-map-return": MapReturn,
 };
