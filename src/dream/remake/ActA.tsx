@@ -1102,4 +1102,5 @@ export const actAScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-07": ManyWorlds,
   "lyric-08": LadleWorld,
   "lyric-09": Approach,
+  "lyric-10": Fireplace,
 };
