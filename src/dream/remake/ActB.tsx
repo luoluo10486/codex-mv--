@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import { STORY_OUTFIT } from "../StoryCharacters";
 import { useCurrentFrame } from "remotion";
 import { WarmCloud, WarmGlow, WarmStar, WarmWorld, WarmClock } from "../WarmArt";
 import { mix } from "../palette";
@@ -160,7 +161,7 @@ const RingExchange = ({ durationInFrames }: SceneProps) => {
     <path d="M0 1080L264 797L1770 1080Z" fill="#e3dadc"/><path d="M170 1080L290 849L1665 1080Z" fill="#eee6e0"/>
     <defs><clipPath id="b-ring-crop"><rect y="260" width="1920" height="820"/></clipPath></defs><g clipPath="url(#b-ring-crop)">
     <g transform="translate(990 640) rotate(10)">
-      <path d="M-980 50L-421-62L-313 114L-864 359Z" fill="url(#b-cloth)"/><path d="M-421-62L-352-83L-251 88L-313 114Z" fill="#f7f3ed"/>
+      <path d="M-980 50L-421-62L-313 114L-864 359Z" fill={STORY_OUTFIT.blouse}/><path d="M-421-62L-352-83L-251 88L-313 114Z" fill="#f7f3ed"/>
       <path d="M-352-83L-220-137Q-188-149-153-129L-55-79L179-67Q218-60 207-35Q201-21 172-23L-8-30L191 6Q220 14 208 37Q201 52 177 45L-23 14L158 67Q187 77 175 100Q164 117 140 106L-53 54L78 104Q104 120 90 138Q75 152 49 140L-177 76Q-237 60-251 88Z" fill="url(#b-skin)"/>
       <g transform={`translate(${99+(1-p)*125} ${-49-(1-p)*100})`}>
         <ellipse rx="35" ry="28" fill="none" stroke="#d4bb8b" strokeWidth="15"/>
@@ -168,7 +169,7 @@ const RingExchange = ({ durationInFrames }: SceneProps) => {
         <path d="M-10-29L0-48L17-30L3-15Z" fill="#f7f5ed" stroke="#d4bc94" strokeWidth="4"/>
       </g>
       <path d={`M${711+(1-p)*70} -339L442-314L292-212Q267-194 257-153L213-74Q200-49 179-63Q167-72 174-94L199-163L160-113Q141-94 122-109Q109-123 125-144L210-255Q227-278 268-287L405-350L660-477Z`} fill="url(#b-skin)"/>
-      <path d="M441-314L405-350L660-477L711-339Z" fill="#e9c5d2"/><path d="M441-314L405-350L450-376L491-328Z" fill="#f5f1eb"/>
+      <path d="M441-314L405-350L660-477L711-339Z" fill={STORY_OUTFIT.cardigan}/><path d="M441-314L405-350L450-376L491-328Z" fill="#f5f1eb"/>
     </g></g>
     <WarmStar x={1138} y={558} r={15+Math.sin(t*4)*3} color="#f5f3eb"/>
   </BStage>;
