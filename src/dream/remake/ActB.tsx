@@ -54,9 +54,25 @@ const SewWorlds = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
+const Memories = ({ durationInFrames }: SceneProps) => {
+  const { p, t } = useBeat(durationInFrames);
+  return <BStage night><WarmGlow x={960} y={680} r={700}/><BStars count={35}/>
+    <path d="M0 990Q960 862 1920 990V1080H0Z" fill="#75454e"/>
+    {[-2,-1,0,1,2].map((n,i) => <g key={n} transform={`translate(${960+n*337} ${610+Math.abs(n)*53}) rotate(${n*7}) scale(${1-Math.abs(n)*.11})`} opacity={.6+.4*(1-Math.abs(n)/3)} filter="url(#warm-shadow)">
+      <path d="M-159 228V-150Q0-328 159-150V228Z" fill="url(#warm-gold)"/><path d="M-140 208V-144Q0-301 140-144V208Z" fill={i%2 ? "#ba7f76" : "#e5b28d"}/>
+      <circle cy="-89" r="67" fill="#ffe2aa" opacity=".55"/><path d="M-140 108Q0 29 140 108V208H-140Z" fill="#a96b67"/>
+      <g transform={`rotate(${Math.sin(t+i)*2})`}><BPerson x={-56} y={90} s={.63} red turn={p}/><BPerson x={55} y={90} s={.63} turn={-p}/></g>
+      <path d="M-140-18Q0-57 140-18M-140 135Q0 116 140 135" stroke="#fff1c7" strokeWidth="3" opacity=".3"/>
+      <circle cy="-224" r="10" fill="#fff0b6"/>
+    </g>)}
+    <path d="M158 912Q960 1090 1760 915" fill="none" stroke="#e7b06e" strokeWidth="5" opacity=".6"/>
+  </BStage>;
+};
+
 export const actBScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-17": Journey,
   "lyric-18": Marker,
   "lyric-19": LifeLine,
   "lyric-20": SewWorlds,
+  "lyric-21": Memories,
 };
