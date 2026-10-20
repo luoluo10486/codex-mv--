@@ -19,6 +19,15 @@ const ReturnRoom = ({ durationInFrames }: SceneProps) => {
   </WarmStage>;
 };
 
+const FireplaceWarmth = ({ durationInFrames }: SceneProps) => {
+  const { f, p } = useTime(durationInFrames);
+  const open = ease(p);
+  return <WarmStage><Room fire={1 + Math.sin(f / 8) * 0.08} /><WarmGlow x={470} y={650} r={410} opacity={0.42} />
+    <Couple x={930} y={740} s={1.02} gap={interpolate(open, [0, 1], [170, 82])} embrace={open * 0.35} />
+    <WarmGift x={1160} y={830} s={0.65} open={open} />
+  </WarmStage>;
+};
+
 const SantaRoute = ({ durationInFrames }: SceneProps) => {
   const { f, p } = useTime(durationInFrames);
   const route = ease(p);
@@ -85,4 +94,5 @@ export const actCScenes: Record<string, ComponentType<SceneProps>> = {
   "bridge-map-fold": MapFold,
   "bridge-map-return": MapReturn,
   "lyric-33": ReturnRoom,
+  "lyric-34": FireplaceWarmth,
 };
