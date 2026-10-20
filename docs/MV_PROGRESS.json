@@ -2250,7 +2250,7 @@
   },
   "currentRevision": 5,
   "revisionProgressFile": "docs/MV_REVISION_05_PROGRESS.json",
-  "previousMediaRoot": "out/remake",
-  "latestDeliveryReport": "docs/MV_REVISION_02_REPORT.md",
-  "latestMediaRoot": "out/remake-v2"
+  "previousMediaRoot": "out/remake-v4",
+  "latestDeliveryReport": "docs/MV_REVISION_05_REPORT.md",
+  "latestMediaRoot": "out/remake-v5"
 }

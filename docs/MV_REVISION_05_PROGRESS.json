@@ -1,8 +1,15 @@
 {
   "revision": 5,
-  "status": "in_progress",
+  "status": "complete",
   "outputRoot": "out/remake-v5",
-  "scope": ["hand-anatomy", "moon-and-christmas-night", "gift-delivery", "shared-seasons", "tenderness-and-sensitivity", "reading-props"],
+  "scope": [
+    "hand-anatomy",
+    "moon-and-christmas-night",
+    "gift-delivery",
+    "shared-seasons",
+    "tenderness-and-sensitivity",
+    "reading-props"
+  ],
   "owners": {
     "root": "fullbody arms, book props, moonlight, integration and validation",
     "hand_closeups": "HeldHands and closeup sequences",
@@ -10,14 +17,62 @@
     "narrative_fix": "shared seasons and contextual tenderness"
   },
   "implementation": "verified",
-  "visualReview": "verified_stills",
-  "exports": "in_progress",
+  "visualReview": "verified",
+  "exports": "verified",
+  "verificationReport": "docs/MV_REVISION_05_VERIFICATION.json",
+  "deliveryReport": "docs/MV_REVISION_05_REPORT.md",
+  "outputs": [
+    "out/remake-v5/gou-zhi-qi-shi-warm-full.mp4",
+    "out/remake-v5/gou-zhi-qi-shi-warm-preview.mp4",
+    "out/remake-v5/gou-zhi-qi-shi-warm-full-preview.mp4"
+  ],
+  "browserPlayback": {
+    "url": "http://127.0.0.1:3005/",
+    "full": {
+      "rate": 4,
+      "currentTime": 183.616,
+      "ended": true,
+      "mediaError": null
+    },
+    "nightReview": {
+      "rate": 1,
+      "currentTime": 35.161929,
+      "mediaError": null
+    },
+    "screenshot": "out/remake-v5/review/browser-night.png"
+  },
   "checkpoint": "revision-05 integrated source and still review",
   "sourceCommit": "d51cef3",
-  "preview": {"status":"verified", "output":"out/remake-v5/gou-zhi-qi-shi-warm-preview.mp4", "browserPlayback":{"rate":1, "currentTime":30.016, "ended":true, "mediaError":null}},
-  "checks": {"lint": "passed", "build": "passed", "storyboard": "48 scenes / 40 cues / 5508 frames", "interactionFrames": 95, "integratedFrames": 231},
-  "evidence": ["out/remake-v5/interactions/manifest.json", "out/remake-v5/review/frame-manifest.json", "out/remake-v5/narrative/manifest.json", "docs/handoffs/revision-05-hands.md", "docs/handoffs/revision-05-santa.md", "docs/handoffs/revision-05-narrative.md"],
-  "nightScenes": ["lyric-04", "lyric-05", "bridge-santa-route"],
+  "preview": {
+    "status": "verified",
+    "output": "out/remake-v5/gou-zhi-qi-shi-warm-preview.mp4",
+    "browserPlayback": {
+      "rate": 1,
+      "currentTime": 30.016,
+      "ended": true,
+      "mediaError": null
+    }
+  },
+  "checks": {
+    "lint": "passed",
+    "build": "passed",
+    "storyboard": "48 scenes / 40 cues / 5508 frames",
+    "interactionFrames": 95,
+    "integratedFrames": 231
+  },
+  "evidence": [
+    "out/remake-v5/interactions/manifest.json",
+    "out/remake-v5/review/frame-manifest.json",
+    "out/remake-v5/narrative/manifest.json",
+    "docs/handoffs/revision-05-hands.md",
+    "docs/handoffs/revision-05-santa.md",
+    "docs/handoffs/revision-05-narrative.md"
+  ],
+  "nightScenes": [
+    "lyric-04",
+    "lyric-05",
+    "bridge-santa-route"
+  ],
   "blockers": [],
   "resume": [
     "$env:MV_OUTPUT_ROOT = 'out/remake-v5'",
@@ -28,5 +83,880 @@
     "node scripts/render-remake.mjs full",
     "node scripts/render-remake.mjs preview",
     "node scripts/render-remake.mjs full-preview --from-full"
-  ]
+  ],
+  "updatedAt": "2026-10-20T12:56:41.200Z",
+  "scenes": [
+    {
+      "sceneId": "bridge-opening-room",
+      "owner": "root",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/Opening.tsx",
+        "src/dream/remake/ActCArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-0160.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "bridge-opening-letter",
+      "owner": "root",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/Opening.tsx",
+        "src/dream/remake/ActCArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-0493.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-01",
+      "owner": "agent-a",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx",
+        "src/dream/remake/ActAArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-0716.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-02",
+      "owner": "agent-a",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx",
+        "src/dream/remake/ActAArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-0802.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-03",
+      "owner": "agent-a",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx",
+        "src/dream/remake/ActAArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-0878.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-04",
+      "owner": "agent-a",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx",
+        "src/dream/remake/ActAArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-0952.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-05",
+      "owner": "agent-a",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx",
+        "src/dream/remake/ActAArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-1039.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-06",
+      "owner": "agent-a",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx",
+        "src/dream/remake/ActAArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-1127.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-07",
+      "owner": "agent-a",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx",
+        "src/dream/remake/ActAArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-1210.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-08",
+      "owner": "agent-a",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx",
+        "src/dream/remake/ActAArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-1287.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-09",
+      "owner": "agent-a",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx",
+        "src/dream/remake/ActAArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-1370.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-10",
+      "owner": "agent-a",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx",
+        "src/dream/remake/ActAArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-1460.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-11",
+      "owner": "agent-a",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx",
+        "src/dream/remake/ActAArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-1546.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-12",
+      "owner": "agent-a",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx",
+        "src/dream/remake/ActAArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-1630.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-13",
+      "owner": "agent-a",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx",
+        "src/dream/remake/ActAArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-1714.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-14",
+      "owner": "agent-a",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx",
+        "src/dream/remake/ActAArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-1801.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-15",
+      "owner": "agent-a",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx",
+        "src/dream/remake/ActAArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-1884.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-16",
+      "owner": "agent-a",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActA.tsx",
+        "src/dream/remake/ActAArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-1984.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "bridge-santa-route",
+      "owner": "agent-c",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx",
+        "src/dream/remake/ActCArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-2194.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "bridge-santa-worlds",
+      "owner": "agent-c",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx",
+        "src/dream/remake/ActCArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-2526.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-17",
+      "owner": "agent-b",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx",
+        "src/dream/remake/ActBArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-2748.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-18",
+      "owner": "agent-b",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx",
+        "src/dream/remake/ActBArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-2827.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-19",
+      "owner": "agent-b",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx",
+        "src/dream/remake/ActBArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-2907.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-20",
+      "owner": "agent-b",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx",
+        "src/dream/remake/ActBArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-2990.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-21",
+      "owner": "agent-b",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx",
+        "src/dream/remake/ActBArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-3074.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-22",
+      "owner": "agent-b",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx",
+        "src/dream/remake/ActBArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-3155.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-23",
+      "owner": "agent-b",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx",
+        "src/dream/remake/ActBArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-3237.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-24",
+      "owner": "agent-b",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx",
+        "src/dream/remake/ActBArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-3323.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-25",
+      "owner": "agent-b",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx",
+        "src/dream/remake/ActBArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-3409.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-26",
+      "owner": "agent-b",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx",
+        "src/dream/remake/ActBArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-3493.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-27",
+      "owner": "agent-b",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx",
+        "src/dream/remake/ActBArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-3584.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-28",
+      "owner": "agent-b",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx",
+        "src/dream/remake/ActBArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-3670.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-29",
+      "owner": "agent-b",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx",
+        "src/dream/remake/ActBArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-3747.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-30",
+      "owner": "agent-b",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx",
+        "src/dream/remake/ActBArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-3831.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-31",
+      "owner": "agent-b",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx",
+        "src/dream/remake/ActBArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-3916.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-32",
+      "owner": "agent-b",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActB.tsx",
+        "src/dream/remake/ActBArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-4020.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "bridge-map-fold",
+      "owner": "agent-c",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx",
+        "src/dream/remake/ActCArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-4232.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "bridge-map-return",
+      "owner": "agent-c",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx",
+        "src/dream/remake/ActCArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-4561.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-33",
+      "owner": "agent-c",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx",
+        "src/dream/remake/ActCArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-4773.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-34",
+      "owner": "agent-c",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx",
+        "src/dream/remake/ActCArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-4848.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-35",
+      "owner": "agent-c",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx",
+        "src/dream/remake/ActCArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-4933.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-36",
+      "owner": "agent-c",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx",
+        "src/dream/remake/ActCArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-5021.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-37",
+      "owner": "agent-c",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx",
+        "src/dream/remake/ActCArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-5104.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-38",
+      "owner": "agent-c",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx",
+        "src/dream/remake/ActCArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-5189.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-39",
+      "owner": "agent-c",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx",
+        "src/dream/remake/ActCArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-5275.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "lyric-40",
+      "owner": "agent-c",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx",
+        "src/dream/remake/ActCArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-5362.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "bridge-final-rise",
+      "owner": "agent-c",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx",
+        "src/dream/remake/ActCArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-5427.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    },
+    {
+      "sceneId": "bridge-final-star",
+      "owner": "agent-c",
+      "status": "merged",
+      "branch": "codex/mv-remake",
+      "sourceFiles": [
+        "src/dream/remake/ActC.tsx",
+        "src/dream/remake/ActCArt.tsx",
+        "src/dream/WarmArt.tsx"
+      ],
+      "previewFiles": [
+        "out/remake-v5/review/frames/frame-5481.png"
+      ],
+      "commit": "d51cef3",
+      "attempts": 1,
+      "blocker": null,
+      "updatedAt": "2026-10-20T12:56:41.200Z"
+    }
+  ],
+  "counts": {
+    "planned": 0,
+    "in_progress": 0,
+    "rendered": 0,
+    "verified": 0,
+    "committed": 0,
+    "merged": 48
+  }
 }

@@ -19,7 +19,7 @@
 - `out/remake-v5/hands/contact.png`: 12 full-timeline frames, three moments for each scene.
 - `out/remake-v5/hands/clasp-detail.png`: enlarged lyric-15 palm and finger detail.
 - `out/remake-v5/hands/frames.json`: exact frame numbers.
-- `out/remake-v5/hands/render.mjs`: scoped review entry point; may be removed after integrated review.
+- Scoped temporary renderer was removed after root integration; use `scripts/review-interactions.mjs` to reproduce the retained review frames.
 
 ## Executed Checks
 
