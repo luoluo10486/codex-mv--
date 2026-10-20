@@ -3,7 +3,7 @@
   "planRevision": 1,
   "totalFrames": 5508,
   "totalScenes": 48,
-  "updatedAt": "2026-10-20T02:54:24.343Z",
+  "updatedAt": "2026-10-20T03:08:42.667Z",
   "scenes": [
     {
       "sceneId": "bridge-opening-room",
@@ -2236,10 +2236,16 @@
       "updatedAt": "2026-10-20T02:52:56.246Z"
     },
     "full": {
-      "status": "rendering",
-      "output": "out/remake/gou-zhi-qi-shi-warm-full.partial.mp4",
+      "status": "verified",
+      "output": "out/remake/gou-zhi-qi-shi-warm-full.mp4",
       "sourceCommit": "38ebd93",
-      "updatedAt": "2026-10-20T02:52:56.330Z"
+      "updatedAt": "2026-10-20T03:08:42.074Z"
+    },
+    "full-preview": {
+      "status": "verified",
+      "output": "out/remake/gou-zhi-qi-shi-warm-full-preview.mp4",
+      "sourceCommit": "38ebd93",
+      "updatedAt": "2026-10-20T03:08:42.667Z"
     }
   }
 }

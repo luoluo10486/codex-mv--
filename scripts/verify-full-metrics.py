@@ -29,18 +29,20 @@ def read_audio(name):
 
 original = read_audio("source-audio.wav")
 encoded = read_audio("encoded-audio.wav")
-n = min(len(original), len(encoded))
-audio_lengths = {"sourceSamples": len(original), "encodedSamples": len(encoded), "complete": abs(len(original) - len(encoded)) <= 16000 / 30}
-original, encoded = original[:n], encoded[:n]
-size = 1 << (2 * n - 1).bit_length()
+audio_lengths = {"sourceSamples": len(original), "encodedSamples": len(encoded)}
+size = 1 << (len(original) + len(encoded) - 1).bit_length()
 corr = np.fft.irfft(np.fft.rfft(encoded, size) * np.conj(np.fft.rfft(original, size)), size)
 lags = np.arange(-1600, 1601)
 values = corr[lags % size]
 lag = int(lags[np.argmax(values)])
 if lag >= 0:
-    left, right = original[: n - lag], encoded[lag:]
+    covered = min(len(original), len(encoded) - lag)
+    left, right = original[:covered], encoded[lag:lag + covered]
 else:
-    left, right = original[-lag:], encoded[: n + lag]
+    covered = min(len(original) + lag, len(encoded))
+    left, right = original[-lag:-lag + covered], encoded[:covered]
+# Codec padding may extend the encoded tail; verify source coverage after alignment.
+audio_lengths.update({"coveredSourceSamples": covered, "complete": len(original) - covered <= 16000 / 30, "extraEncodedTailMs": max(0, len(encoded) - max(0, lag) - len(original)) / 16})
 audio = {
     **audio_lengths,
     "measuredOffsetSamples": lag,

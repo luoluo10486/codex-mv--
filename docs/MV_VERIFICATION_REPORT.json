@@ -1,0 +1,488 @@
+{
+  "checks": {
+    "width": true,
+    "height": true,
+    "frameRate": true,
+    "frameCount": true,
+    "videoDuration": true,
+    "containerDuration": true,
+    "h264": true,
+    "aac": true,
+    "audioDuration": true,
+    "pixelFormat": true,
+    "colorSpace": true,
+    "colorPrimaries": true,
+    "colorTransfer": true,
+    "colorRange": true
+  },
+  "allProbeChecksPassed": true,
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "unknown",
+        "profile": "100",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1080,
+        "closed_captions": 0,
+        "film_grain": 0,
+        "has_b_frames": 2,
+        "pix_fmt": "yuv420p",
+        "level": 40,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "refs": 1,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/90000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 16524000,
+        "duration": "183.600000",
+        "bit_rate": "1230293",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "5508",
+        "extradata_size": 50,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "vendor_id": "[0][0][0][0]"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "unknown",
+        "profile": "1",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 0,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 8813568,
+        "duration": "183.616000",
+        "bit_rate": "317375",
+        "nb_frames": "8609",
+        "extradata_size": 2,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "SoundHandler",
+          "vendor_id": "[0][0][0][0]"
+        }
+      }
+    ],
+    "format": {
+      "filename": "out/remake/gou-zhi-qi-shi-warm-full.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "start_time": "0.000000",
+      "duration": "183.616000",
+      "size": "35724469",
+      "bit_rate": "1556486",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf61.7.100",
+        "comment": "Made with Remotion 4.0.536"
+      }
+    }
+  },
+  "exportFrames": [
+    0,
+    160,
+    493,
+    716,
+    802,
+    878,
+    952,
+    1039,
+    1127,
+    1210,
+    1287,
+    1370,
+    1460,
+    1546,
+    1630,
+    1714,
+    1801,
+    1884,
+    1984,
+    2194,
+    2526,
+    2748,
+    2827,
+    2907,
+    2990,
+    3074,
+    3155,
+    3237,
+    3323,
+    3409,
+    3493,
+    3584,
+    3670,
+    3747,
+    3831,
+    3916,
+    4020,
+    4232,
+    4561,
+    4773,
+    4848,
+    4933,
+    5021,
+    5104,
+    5189,
+    5275,
+    5362,
+    5427,
+    5481,
+    5507
+  ],
+  "fullVideoDecode": {
+    "decodedFrameCount": 5508,
+    "expectedFrameCount": 5508,
+    "minMeanRGB": 117.77546296296296,
+    "maxMeanRGB": 212.42824074074073,
+    "blackFrames": [],
+    "uniformBlankFrames": [],
+    "minSpatialContrast": 10.319426212481149,
+    "passed": true
+  },
+  "encodedAudioAgainstOriginal": {
+    "sourceSamples": 2936588,
+    "encodedSamples": 2937216,
+    "coveredSourceSamples": 2936588,
+    "complete": true,
+    "extraEncodedTailMs": 16.25,
+    "measuredOffsetSamples": 368,
+    "sampleRate": 16000,
+    "measuredOffsetMs": 23.0,
+    "correlationAfterAlignment": 0.9894112341246991,
+    "passed": true
+  },
+  "exportParity": [
+    {
+      "frame": 0,
+      "meanAbsoluteChannelDifference": 1.4686930941358025
+    },
+    {
+      "frame": 160,
+      "meanAbsoluteChannelDifference": 1.4683977944958848
+    },
+    {
+      "frame": 493,
+      "meanAbsoluteChannelDifference": 1.3918182548868312
+    },
+    {
+      "frame": 716,
+      "meanAbsoluteChannelDifference": 1.4268298289609054
+    },
+    {
+      "frame": 802,
+      "meanAbsoluteChannelDifference": 1.3941531635802469
+    },
+    {
+      "frame": 878,
+      "meanAbsoluteChannelDifference": 1.2431500771604937
+    },
+    {
+      "frame": 952,
+      "meanAbsoluteChannelDifference": 1.292993666409465
+    },
+    {
+      "frame": 1039,
+      "meanAbsoluteChannelDifference": 1.287495820473251
+    },
+    {
+      "frame": 1127,
+      "meanAbsoluteChannelDifference": 1.2661008230452675
+    },
+    {
+      "frame": 1210,
+      "meanAbsoluteChannelDifference": 1.3683396026234569
+    },
+    {
+      "frame": 1287,
+      "meanAbsoluteChannelDifference": 1.4282724086934155
+    },
+    {
+      "frame": 1370,
+      "meanAbsoluteChannelDifference": 1.4437977430555555
+    },
+    {
+      "frame": 1460,
+      "meanAbsoluteChannelDifference": 1.3492557227366255
+    },
+    {
+      "frame": 1546,
+      "meanAbsoluteChannelDifference": 1.4312628600823045
+    },
+    {
+      "frame": 1630,
+      "meanAbsoluteChannelDifference": 1.2556479873971194
+    },
+    {
+      "frame": 1714,
+      "meanAbsoluteChannelDifference": 1.3279949524176955
+    },
+    {
+      "frame": 1801,
+      "meanAbsoluteChannelDifference": 1.2450702481995886
+    },
+    {
+      "frame": 1884,
+      "meanAbsoluteChannelDifference": 1.3130306391460906
+    },
+    {
+      "frame": 1984,
+      "meanAbsoluteChannelDifference": 1.4687329603909465
+    },
+    {
+      "frame": 2194,
+      "meanAbsoluteChannelDifference": 1.2952657214506174
+    },
+    {
+      "frame": 2526,
+      "meanAbsoluteChannelDifference": 1.4502657214506174
+    },
+    {
+      "frame": 2748,
+      "meanAbsoluteChannelDifference": 1.4197354038065844
+    },
+    {
+      "frame": 2827,
+      "meanAbsoluteChannelDifference": 1.2338559349279836
+    },
+    {
+      "frame": 2907,
+      "meanAbsoluteChannelDifference": 1.5147403870884775
+    },
+    {
+      "frame": 2990,
+      "meanAbsoluteChannelDifference": 1.3639289158950618
+    },
+    {
+      "frame": 3074,
+      "meanAbsoluteChannelDifference": 1.329901138117284
+    },
+    {
+      "frame": 3155,
+      "meanAbsoluteChannelDifference": 1.2455148855452676
+    },
+    {
+      "frame": 3237,
+      "meanAbsoluteChannelDifference": 1.2851348701131686
+    },
+    {
+      "frame": 3323,
+      "meanAbsoluteChannelDifference": 1.2962127057613169
+    },
+    {
+      "frame": 3409,
+      "meanAbsoluteChannelDifference": 1.3423945473251029
+    },
+    {
+      "frame": 3493,
+      "meanAbsoluteChannelDifference": 1.2259355709876543
+    },
+    {
+      "frame": 3584,
+      "meanAbsoluteChannelDifference": 1.450306712962963
+    },
+    {
+      "frame": 3670,
+      "meanAbsoluteChannelDifference": 1.3928596000514404
+    },
+    {
+      "frame": 3747,
+      "meanAbsoluteChannelDifference": 1.2663583461934156
+    },
+    {
+      "frame": 3831,
+      "meanAbsoluteChannelDifference": 1.30649112654321
+    },
+    {
+      "frame": 3916,
+      "meanAbsoluteChannelDifference": 1.542154385288066
+    },
+    {
+      "frame": 4020,
+      "meanAbsoluteChannelDifference": 1.4632074652777778
+    },
+    {
+      "frame": 4232,
+      "meanAbsoluteChannelDifference": 1.3292920524691358
+    },
+    {
+      "frame": 4561,
+      "meanAbsoluteChannelDifference": 1.0588437178497943
+    },
+    {
+      "frame": 4773,
+      "meanAbsoluteChannelDifference": 1.4541812950102881
+    },
+    {
+      "frame": 4848,
+      "meanAbsoluteChannelDifference": 1.4707759452160494
+    },
+    {
+      "frame": 4933,
+      "meanAbsoluteChannelDifference": 1.4875617283950617
+    },
+    {
+      "frame": 5021,
+      "meanAbsoluteChannelDifference": 1.3670301247427983
+    },
+    {
+      "frame": 5104,
+      "meanAbsoluteChannelDifference": 1.3302777777777777
+    },
+    {
+      "frame": 5189,
+      "meanAbsoluteChannelDifference": 1.35279497813786
+    },
+    {
+      "frame": 5275,
+      "meanAbsoluteChannelDifference": 1.335469553755144
+    },
+    {
+      "frame": 5362,
+      "meanAbsoluteChannelDifference": 1.3913766718106997
+    },
+    {
+      "frame": 5427,
+      "meanAbsoluteChannelDifference": 1.375583526234568
+    },
+    {
+      "frame": 5481,
+      "meanAbsoluteChannelDifference": 0.9803737461419753
+    },
+    {
+      "frame": 5507,
+      "meanAbsoluteChannelDifference": 0.9667084619341564
+    }
+  ],
+  "exportParityPassed": true,
+  "warmRepresentativeFrames": [
+    {
+      "frame": 160,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 878,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 1210,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 1546,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 1884,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 2748,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 3074,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 3409,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 3747,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 4232,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 4933,
+      "redAtLeastBlueFraction": 1.0
+    },
+    {
+      "frame": 5275,
+      "redAtLeastBlueFraction": 1.0
+    }
+  ],
+  "warmPalettePassed": true,
+  "allMeasuredTechnicalChecksPassed": true
+}

@@ -6,6 +6,8 @@ import path from "node:path";
 
 const mode = process.argv[2] ?? "preview";
 const verifyOnly=process.argv.includes("--verify-only");
+const fromFull=process.argv.includes("--from-full");
+if(fromFull&&mode!=="full-preview")throw new Error("--from-full requires full-preview mode");
 if (!["preview", "full-preview", "full"].includes(mode)) throw new Error("Unknown render mode");
 const full = mode !== "preview";
 const scale = mode === "full-preview" ? .5 : 1;
@@ -23,7 +25,12 @@ if(mode==="full"){
   try { await access("out/remake/review/frame-manifest.json"); }
   catch { console.log(run(process.execPath,["scripts/review-remake.mjs"])); }
 }
-if(!verifyOnly){
+if(fromFull){
+  const source="out/remake/gou-zhi-qi-shi-warm-full.mp4";
+  await access(source); await access(source.replace(/\.mp4$/,".validation.json"));
+  run(path.resolve("node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe"),["-v","error","-y","-i",source,"-vf","scale=960:540","-c:v","libx264","-crf","23","-preset","fast","-c:a","copy","-pix_fmt","yuv420p","-colorspace","bt709","-color_primaries","bt709","-color_trc","bt709","-movflags","+faststart",partial]);
+}
+if(!verifyOnly&&!fromFull){
 const serveUrl = await bundle({entryPoint:path.resolve("src/index.ts"),enableCaching:true});
 const browser = await openBrowser("chrome",{browserExecutable:"C:/Program Files/Google/Chrome/Application/chrome.exe",logLevel:"error"});
 try {
