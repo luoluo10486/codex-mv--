@@ -53,6 +53,21 @@ const SoftEmbrace = ({ durationInFrames }: SceneProps) => {
   </WarmStage>;
 };
 
+const HaloContract = ({ durationInFrames }: SceneProps) => {
+  const { f, p } = useTime(durationInFrames);
+  const halo = ease((p - 0.15) / 0.85);
+  return <WarmStage theme="sunset"><WarmGlow x={960} y={530} r={500} opacity={0.5 + halo * 0.25} />
+    <path d="M530 730H1390L1290 850H630Z" fill="#fff0c5" opacity={0.65} />
+    <g transform={`translate(960 ${500 + halo * 115}) rotate(${halo * 14}) scale(${0.9 + halo * 0.25} ${1 - halo * 0.98})`}>
+      <path d="M-250-145H250V175H-250Z" fill="#fff4d8" stroke="#ddaa58" strokeWidth="12" />
+      <path d="M-210-92H210M-210-40H150M-210 10H185" stroke="#c47764" strokeWidth="14" opacity="0.7" />
+      <WarmStar x={0} y={76} r={22} color="#dba65a" />
+    </g>
+    <ellipse cx="960" cy="650" rx={260 + halo * 250} ry={95 + halo * 65} fill="none" stroke="#ffe9a9" strokeWidth={18 + halo * 18} opacity={halo} transform={`rotate(${Math.sin(f / 18) * 8} 960 650)`} />
+    <Couple x={960} y={775} s={0.98} gap={interpolate(halo, [0, 1], [150, 80])} embrace={0.25 + halo * 0.5} />
+  </WarmStage>;
+};
+
 const SantaRoute = ({ durationInFrames }: SceneProps) => {
   const { f, p } = useTime(durationInFrames);
   const route = ease(p);
@@ -122,4 +137,5 @@ export const actCScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-34": FireplaceWarmth,
   "lyric-35": LastSnow,
   "lyric-36": SoftEmbrace,
+  "lyric-37": HaloContract,
 };
