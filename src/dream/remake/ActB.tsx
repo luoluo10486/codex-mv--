@@ -159,7 +159,7 @@ const RingExchange = ({ durationInFrames }: SceneProps) => {
   return <BStage night><WarmGlow x={1090} y={635} r={680}/><BStars count={28}/>
     <path d="M0 1080L264 797L1770 1080Z" fill="#9f6565"/><path d="M170 1080L290 849L1665 1080Z" fill="#d8aa85"/>
     <defs><clipPath id="b-ring-crop"><rect y="260" width="1920" height="820"/></clipPath></defs><g clipPath="url(#b-ring-crop)">
-    <g transform="translate(990 640) rotate(-21)">
+    <g transform="translate(990 640) rotate(10)">
       <path d="M-980 50L-421-62L-313 114L-864 359Z" fill="url(#b-cloth)"/><path d="M-421-62L-352-83L-251 88L-313 114Z" fill="#ffe9c8"/>
       <path d="M-352-83L-220-137Q-188-149-153-129L-55-79L179-67Q218-60 207-35Q201-21 172-23L-8-30L191 6Q220 14 208 37Q201 52 177 45L-23 14L158 67Q187 77 175 100Q164 117 140 106L-53 54L78 104Q104 120 90 138Q75 152 49 140L-177 76Q-237 60-251 88Z" fill="url(#b-skin)"/>
       <g transform={`translate(${99+(1-p)*125} ${-49-(1-p)*100})`}>
