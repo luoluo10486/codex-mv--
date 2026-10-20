@@ -2,12 +2,310 @@
   "revision": 2,
   "status": "in_progress",
   "outputRoot": "out/remake-v2",
-  "characters": "in_progress",
-  "agent-a": "planned",
-  "agent-b": "planned",
-  "agent-c": "planned",
-  "integration": "planned",
-  "visualReview": "planned",
+  "characters": "verified",
+  "agent-a": "committed",
+  "agent-b": "committed",
+  "agent-c": "committed",
+  "integration": "verified",
+  "visualReview": "in_progress",
   "exports": "planned",
-  "blockers": []
+  "blockers": [],
+  "sourceCommit": "09c9464",
+  "updatedAt": "2026-10-20T03:28:04.081Z",
+  "commits": {
+    "shared": "50986b8",
+    "agent-a": "7dc2194",
+    "agent-b": "296e1b1",
+    "agent-c": "09c9464"
+  },
+  "scenes": [
+    {
+      "sceneId": "bridge-opening-room",
+      "owner": "root",
+      "status": "committed",
+      "commit": "50986b8"
+    },
+    {
+      "sceneId": "bridge-opening-letter",
+      "owner": "root",
+      "status": "committed",
+      "commit": "50986b8"
+    },
+    {
+      "sceneId": "lyric-01",
+      "owner": "agent-a",
+      "status": "committed",
+      "commit": "7dc2194"
+    },
+    {
+      "sceneId": "lyric-02",
+      "owner": "agent-a",
+      "status": "committed",
+      "commit": "7dc2194"
+    },
+    {
+      "sceneId": "lyric-03",
+      "owner": "agent-a",
+      "status": "committed",
+      "commit": "7dc2194"
+    },
+    {
+      "sceneId": "lyric-04",
+      "owner": "agent-a",
+      "status": "committed",
+      "commit": "7dc2194"
+    },
+    {
+      "sceneId": "lyric-05",
+      "owner": "agent-a",
+      "status": "committed",
+      "commit": "7dc2194"
+    },
+    {
+      "sceneId": "lyric-06",
+      "owner": "agent-a",
+      "status": "committed",
+      "commit": "7dc2194"
+    },
+    {
+      "sceneId": "lyric-07",
+      "owner": "agent-a",
+      "status": "committed",
+      "commit": "7dc2194"
+    },
+    {
+      "sceneId": "lyric-08",
+      "owner": "agent-a",
+      "status": "committed",
+      "commit": "7dc2194"
+    },
+    {
+      "sceneId": "lyric-09",
+      "owner": "agent-a",
+      "status": "committed",
+      "commit": "7dc2194"
+    },
+    {
+      "sceneId": "lyric-10",
+      "owner": "agent-a",
+      "status": "committed",
+      "commit": "7dc2194"
+    },
+    {
+      "sceneId": "lyric-11",
+      "owner": "agent-a",
+      "status": "committed",
+      "commit": "7dc2194"
+    },
+    {
+      "sceneId": "lyric-12",
+      "owner": "agent-a",
+      "status": "committed",
+      "commit": "7dc2194"
+    },
+    {
+      "sceneId": "lyric-13",
+      "owner": "agent-a",
+      "status": "committed",
+      "commit": "7dc2194"
+    },
+    {
+      "sceneId": "lyric-14",
+      "owner": "agent-a",
+      "status": "committed",
+      "commit": "7dc2194"
+    },
+    {
+      "sceneId": "lyric-15",
+      "owner": "agent-a",
+      "status": "committed",
+      "commit": "7dc2194"
+    },
+    {
+      "sceneId": "lyric-16",
+      "owner": "agent-a",
+      "status": "committed",
+      "commit": "7dc2194"
+    },
+    {
+      "sceneId": "bridge-santa-route",
+      "owner": "agent-c",
+      "status": "committed",
+      "commit": "09c9464"
+    },
+    {
+      "sceneId": "bridge-santa-worlds",
+      "owner": "agent-c",
+      "status": "committed",
+      "commit": "09c9464"
+    },
+    {
+      "sceneId": "lyric-17",
+      "owner": "agent-b",
+      "status": "committed",
+      "commit": "296e1b1"
+    },
+    {
+      "sceneId": "lyric-18",
+      "owner": "agent-b",
+      "status": "committed",
+      "commit": "296e1b1"
+    },
+    {
+      "sceneId": "lyric-19",
+      "owner": "agent-b",
+      "status": "committed",
+      "commit": "296e1b1"
+    },
+    {
+      "sceneId": "lyric-20",
+      "owner": "agent-b",
+      "status": "committed",
+      "commit": "296e1b1"
+    },
+    {
+      "sceneId": "lyric-21",
+      "owner": "agent-b",
+      "status": "committed",
+      "commit": "296e1b1"
+    },
+    {
+      "sceneId": "lyric-22",
+      "owner": "agent-b",
+      "status": "committed",
+      "commit": "296e1b1"
+    },
+    {
+      "sceneId": "lyric-23",
+      "owner": "agent-b",
+      "status": "committed",
+      "commit": "296e1b1"
+    },
+    {
+      "sceneId": "lyric-24",
+      "owner": "agent-b",
+      "status": "committed",
+      "commit": "296e1b1"
+    },
+    {
+      "sceneId": "lyric-25",
+      "owner": "agent-b",
+      "status": "committed",
+      "commit": "296e1b1"
+    },
+    {
+      "sceneId": "lyric-26",
+      "owner": "agent-b",
+      "status": "committed",
+      "commit": "296e1b1"
+    },
+    {
+      "sceneId": "lyric-27",
+      "owner": "agent-b",
+      "status": "committed",
+      "commit": "296e1b1"
+    },
+    {
+      "sceneId": "lyric-28",
+      "owner": "agent-b",
+      "status": "committed",
+      "commit": "296e1b1"
+    },
+    {
+      "sceneId": "lyric-29",
+      "owner": "agent-b",
+      "status": "committed",
+      "commit": "296e1b1"
+    },
+    {
+      "sceneId": "lyric-30",
+      "owner": "agent-b",
+      "status": "committed",
+      "commit": "296e1b1"
+    },
+    {
+      "sceneId": "lyric-31",
+      "owner": "agent-b",
+      "status": "committed",
+      "commit": "296e1b1"
+    },
+    {
+      "sceneId": "lyric-32",
+      "owner": "agent-b",
+      "status": "committed",
+      "commit": "296e1b1"
+    },
+    {
+      "sceneId": "bridge-map-fold",
+      "owner": "agent-c",
+      "status": "committed",
+      "commit": "09c9464"
+    },
+    {
+      "sceneId": "bridge-map-return",
+      "owner": "agent-c",
+      "status": "committed",
+      "commit": "09c9464"
+    },
+    {
+      "sceneId": "lyric-33",
+      "owner": "agent-c",
+      "status": "committed",
+      "commit": "09c9464"
+    },
+    {
+      "sceneId": "lyric-34",
+      "owner": "agent-c",
+      "status": "committed",
+      "commit": "09c9464"
+    },
+    {
+      "sceneId": "lyric-35",
+      "owner": "agent-c",
+      "status": "committed",
+      "commit": "09c9464"
+    },
+    {
+      "sceneId": "lyric-36",
+      "owner": "agent-c",
+      "status": "committed",
+      "commit": "09c9464"
+    },
+    {
+      "sceneId": "lyric-37",
+      "owner": "agent-c",
+      "status": "committed",
+      "commit": "09c9464"
+    },
+    {
+      "sceneId": "lyric-38",
+      "owner": "agent-c",
+      "status": "committed",
+      "commit": "09c9464"
+    },
+    {
+      "sceneId": "lyric-39",
+      "owner": "agent-c",
+      "status": "committed",
+      "commit": "09c9464"
+    },
+    {
+      "sceneId": "lyric-40",
+      "owner": "agent-c",
+      "status": "committed",
+      "commit": "09c9464"
+    },
+    {
+      "sceneId": "bridge-final-rise",
+      "owner": "agent-c",
+      "status": "committed",
+      "commit": "09c9464"
+    },
+    {
+      "sceneId": "bridge-final-star",
+      "owner": "agent-c",
+      "status": "committed",
+      "commit": "09c9464"
+    }
+  ]
 }
