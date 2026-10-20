@@ -5,6 +5,7 @@ import { spawnSync } from "node:child_process";
 import path from "node:path";
 
 const mode = process.argv[2] ?? "preview";
+const verifyOnly=process.argv.includes("--verify-only");
 if (!["preview", "full-preview", "full"].includes(mode)) throw new Error("Unknown render mode");
 const full = mode !== "preview";
 const scale = mode === "full-preview" ? .5 : 1;
@@ -22,6 +23,7 @@ if(mode==="full"){
   try { await access("out/remake/review/frame-manifest.json"); }
   catch { console.log(run(process.execPath,["scripts/review-remake.mjs"])); }
 }
+if(!verifyOnly){
 const serveUrl = await bundle({entryPoint:path.resolve("src/index.ts"),enableCaching:true});
 const browser = await openBrowser("chrome",{browserExecutable:"C:/Program Files/Google/Chrome/Application/chrome.exe",logLevel:"error"});
 try {
@@ -32,6 +34,7 @@ try {
     if(pct>=last+5){last=pct;console.log(`${mode}: ${pct}% (${p.renderedFrames}/${composition.durationInFrames} frames)`);}
   }});
 } finally {await browser.close({silent:true});}
+}
 const bin=path.resolve("node_modules/@remotion/compositor-win32-x64-msvc");
 const probe=JSON.parse(run(path.join(bin,"ffprobe.exe"),["-v","error","-show_streams","-show_format","-of","json",partial]));
 const video=probe.streams.find(s=>s.codec_type==="video");
@@ -41,7 +44,7 @@ if(mode==="full"){
   console.log(run(process.execPath,["scripts/verify-full-export.mjs",partial,"out/remake/review"]));
   console.log(run("python",["scripts/verify-full-metrics.py","out/remake/review"]));
 } else {
-  run(path.join(bin,"ffmpeg.exe"),["-v","error","-i",partial,"-f","null","-"]);
+  run(path.join(bin,"ffmpeg.exe"),["-v","error","-i",partial,"-c:v","rawvideo","-c:a","pcm_s16le","-f","null","-"]);
 }
 await writeFile(output.replace(/\.mp4$/,".validation.json"),JSON.stringify({mode,probe,verifiedAt:new Date().toISOString()},null,2));
 await rename(partial,output);
