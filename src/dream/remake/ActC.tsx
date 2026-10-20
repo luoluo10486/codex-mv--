@@ -39,6 +39,20 @@ const LastSnow = ({ durationInFrames }: SceneProps) => {
   </WarmStage>;
 };
 
+const SoftEmbrace = ({ durationInFrames }: SceneProps) => {
+  const { f, p } = useTime(durationInFrames);
+  const hold = ease(p);
+  return <WarmStage><path d="M0 650Q250 330 670 560T1250 400T1920 550V1080H0Z" fill="#e8a081" />
+    <WarmGlow x={950} y={620} r={410} opacity={0.7} />
+    <path d={`M420 630Q${730 - hold * 80} ${310 + hold * 65} 950 575Q1170 ${350 - hold * 40} 1510 640`} fill="none" stroke="#f6c28b" strokeWidth={145} opacity={0.7} strokeLinecap="round" />
+    <path d={`M360 680Q${740 - hold * 65} ${430 + hold * 55} 940 620Q1190 ${430 - hold * 30} 1550 678`} fill="none" stroke="#fff0ca" strokeWidth={34} opacity={0.55} strokeLinecap="round" />
+    <Couple x={960} y={745} s={1.06} gap={interpolate(hold, [0, 1], [120, 65])} embrace={hold} />
+    <path d={`M${750 - hold * 80} 730Q960 ${900 + Math.sin(f / 12) * 20} ${1170 + hold * 80} 730L${1150 + hold * 35} 790Q960 960 ${770 - hold * 35} 790Z`} fill="#fff0ca" opacity="0.9" />
+    <path d={`M${750 - hold * 80} 730Q960 ${900 + Math.sin(f / 12) * 20} ${1170 + hold * 80} 730`} fill="none" stroke="#f7dca8" strokeWidth="14" />
+    {Array.from({length: 8}, (_, i) => <WarmStar key={i} x={470 + i * 138 + Math.sin(f / 16 + i) * 16} y={215 + (i % 3) * 75} r={7 + i % 3} color="#ffe4a1" rotate={i * 23} />)}
+  </WarmStage>;
+};
+
 const SantaRoute = ({ durationInFrames }: SceneProps) => {
   const { f, p } = useTime(durationInFrames);
   const route = ease(p);
@@ -107,4 +121,5 @@ export const actCScenes: Record<string, ComponentType<SceneProps>> = {
   "lyric-33": ReturnRoom,
   "lyric-34": FireplaceWarmth,
   "lyric-35": LastSnow,
+  "lyric-36": SoftEmbrace,
 };
