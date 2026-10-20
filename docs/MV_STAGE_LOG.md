@@ -88,3 +88,12 @@
 - 浏览器从头以 1x 播放正式完整版，到 183.616 秒 `ended=true`，无媒体错误；结尾信件化星画面正常。30 秒预览也已完整播放通过。
 - 最终低清完整版由已验证正式 MP4 缩放为 960×540，保留 5508 帧与原编码音轨；元数据和全片解码通过。首轮审片视频另保留作为过程证据。
 - `MV_PROGRESS.json` 的 48 个场景均为 merged，正式、30 秒和最终低清导出均为 verified。
+
+## 阶段 6 · 交付归档完成
+
+- 阶段 5 验收和状态已提交为 `c2d36a4`，之后进入本阶段。
+- 最终交付索引、规格、校验摘要、Git 恢复点、SHA-256 和未解决问题记录在 `docs/MV_FINAL_REPORT.md`。
+- 机器验证报告已归档到 `docs/MV_VERIFICATION_REPORT.json`；最终审片报告为 `docs/MV_REVIEW_REPORT.md`。浏览器结束截图保存在 `out/remake/review/browser-playback-ended.png`。
+- 正式成片、30 秒预览、最终低清版及其验证 JSON 均保存在 `out/remake/`。该目录按仓库现有规则不进入 Git，必须与源码一同保留以保有本地媒体交付和审片证据。
+- 全片验收成功后，脚本已清理临时 RGB 与对照 WAV；没有遗留 partial MP4。逐场关键帧、接触表、首轮审片和代理 worktree 保留作恢复证据。
+- 本地播放器保留在 `http://127.0.0.1:3001`，Studio 为 `http://localhost:3000/GouZhiQiShiFull`。没有已知阻塞技术问题；用户审美反馈与现有歌词校准边界见最终报告。
