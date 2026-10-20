@@ -1,11 +1,13 @@
-import { STORY_OUTFIT } from "../StoryCharacters";
+import { STORY_OUTFIT, StoryCouple } from "../StoryCharacters";
+import { SharedSeasons } from "../SharedSeasons";
+import { SharedTenderness } from "../SharedTenderness";
+import { HeldHands } from "../HeldHands";
 import type { ComponentType } from "react";
 import {
-  WarmCloud,
-  WarmClock,
   WarmGlow,
   WarmLetter,
   WarmMoon,
+  WarmSantaRig,
   WarmSnow,
   WarmStar,
 } from "../WarmArt";
@@ -18,8 +20,8 @@ import {
   Ground,
   House,
   MiniWorld,
-  Person,
   Pine,
+  ReadingProps,
   Sprig,
   Stage,
   useMoment,
@@ -39,8 +41,8 @@ export const Letter = ({ durationInFrames }: SceneProps) => {
         fill="#d8c9c4"
         opacity="0.17"
       />
-      <Sprig x={380} y={890} s={1.05} />
-      <Sprig x={1520} y={900} s={1.1} flip />
+      <ReadingProps x={360} y={875} s={1.05}/>
+      <ReadingProps x={1570} y={880} s={1.05} ink/>
       <g transform={`translate(960 ${665 - e * 45}) rotate(${-5 + e * 4})`}>
         <g
           transform={`translate(0 ${-e * 110}) rotate(4)`}
@@ -91,8 +93,8 @@ export const Storybook = ({ durationInFrames }: SceneProps) => {
     <Stage>
       <WarmGlow x={960} y={667} r={590} />
       <path d="M0 906Q960 818 1920 906V1080H0Z" fill="#e7dcd1" />
-      <Sprig x={252} y={882} s={1.2} />
-      <Sprig x={1680} y={923} s={1.3} flip />
+      <ReadingProps x={245} y={875} s={1.1}/>
+      <ReadingProps x={1700} y={910} s={1.1} ink/>
       <Book x={960} y={790} s={1.45} open={opening} />
       <g opacity={opening} transform={`translate(0 ${80 * (1 - opening)})`}>
         <path
@@ -173,8 +175,8 @@ export const Miracle = ({ durationInFrames }: SceneProps) => {
           rotate={f + i * 12}
         />
       ))}
-      <Sprig x={310} y={974} s={1.3} />
-      <Sprig x={1650} y={967} s={1.2} flip />
+      <ReadingProps x={300} y={970} s={1.1}/>
+      <ReadingProps x={1660} y={960} s={1.1} ink/>
     </Stage>
   );
 };
@@ -183,6 +185,9 @@ export const MoonTown = ({ durationInFrames }: SceneProps) => {
   const { f, e } = useMoment(durationInFrames);
   return (
     <Stage night>
+      <defs><linearGradient id="moon-town-night" x2="0" y2="1"><stop stopColor="#50455f"/><stop offset=".58" stopColor="#8a7085"/><stop offset="1" stopColor="#d7a6a0"/></linearGradient></defs>
+      <rect width="1920" height="1080" fill="url(#moon-town-night)"/>
+      {Array.from({length:30},(_,i)=><WarmStar key={i} x={70+(i*293)%1770} y={90+(i*137)%360} r={2+i%3} color="#ffedc4"/>)}
       <WarmMoon x={1395 - e * 35} y={438} r={148} />
       <path
         d="M0 701Q380 553 730 678T1330 653T1920 712V1080H0Z"
@@ -199,6 +204,7 @@ export const MoonTown = ({ durationInFrames }: SceneProps) => {
         <Pine x={1495} y={864} s={0.65} />
       </g>
       <Ground snow />
+      <StoryCouple x={900} y={804} s={.68} gap={78}/>
       <path
         d="M880 1080Q1170 945 1010 826"
         fill="none"
@@ -222,180 +228,52 @@ export const MoonTown = ({ durationInFrames }: SceneProps) => {
 
 export const SantaDelivery = ({ durationInFrames }: SceneProps) => {
   const { f, p } = useMoment(durationInFrames);
-  const arrive = smooth(p / 0.56);
-  const drop = smooth((p - 0.44) / 0.37);
-  const sledX = 305 + arrive * 465;
-  const sledY = 580 + arrive * 75;
+  const arrive = smooth(p / 0.42);
+  const drop = smooth((p - 0.36) / 0.47);
+  const sledX = 425 + arrive * 255;
+  const sledY = 555 + arrive * 20;
+  const giftStartX = sledX + 60;
+  const giftStartY = sledY - 128;
+  const giftX = giftStartX + (1600 - giftStartX) * drop;
+  const giftY = giftStartY + (755 - giftStartY) * drop + Math.sin(drop * Math.PI) * 115;
   return (
     <Stage night>
-      <WarmMoon x={1510} y={414} r={114} />
-      <House x={1640} y={660} s={1.35} color="#dfcec9" />
-      <House x={272} y={736} s={0.64} color="#d6c7c5" />
-      <Pine x={1880} y={888} s={0.85} />
+      <defs>
+        <linearGradient id="santa-delivery-night" x1="0" y1="0" x2="0" y2="1">
+          <stop stopColor="#50455f" />
+          <stop offset="0.58" stopColor="#8a7085" />
+          <stop offset="1" stopColor="#d7a6a0" />
+        </linearGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#santa-delivery-night)" />
+      {Array.from({ length: 24 }, (_, i) => <WarmStar key={i} x={95 + (i * 317) % 1740} y={105 + (i * 113) % 310} r={2 + i % 3} color="#fff3d0" />)}
+      <WarmMoon x={1450} y={260} r={105} />
+      <path d="M0 773Q410 669 950 754T1920 720V1080H0Z" fill="#bda4b0" />
+      <House x={272} y={736} s={0.64} color="#b7a0ad" />
       <Pine x={1282} y={814} s={0.55} />
       <Ground snow />
-      <path
-        d="M0 963Q606 842 1124 933"
-        fill="none"
-        stroke="#e0d4cb"
-        strokeWidth="7"
-        opacity="0.4"
-      />
-      <g transform={`translate(${sledX} ${sledY})`}>
-        <path
-          d="M-465 114Q-350 134-237 114"
-          stroke="#ecdfd1"
-          strokeWidth="6"
-          strokeDasharray="18 16"
-          fill="none"
-          opacity="0.6"
-        />
-        <Gift x={-125} y={-69} s={0.46} />
-        <Gift x={-220} y={-54} s={0.37} rotate={-9} />
-        <path
-          d="M-299 111Q-197 171 38 132Q89 126 109 83"
-          stroke="url(#warm-gold)"
-          strokeWidth="17"
-          fill="none"
-          strokeLinecap="round"
-        />
-        <path
-          d="M-250 67L-231 122M22 64L35 132"
-          stroke="#e4d9c8"
-          strokeWidth="13"
-        />
-        <path
-          d="M-284-2Q-199-65-100-13H78L57 81Q-55 125-263 74Z"
-          fill="#dda2ae"
-        />
-        <path
-          d="M-280 0Q-175-44-88 0H78"
-          fill="none"
-          stroke="#efe4d2"
-          strokeWidth="13"
-        />
-        <path
-          d="M-234 44Q-86 94 46 42"
-          fill="none"
-          stroke="#e7dac9"
-          strokeWidth="7"
-        />
-        <WarmStar x={-153} y={42} r={19} color="#ebe1ce" />
-        <g transform="translate(-22 -87)">
-          <path
-            d="M-57 80L-66 137H-11L-9 84M19 84L19 137H72L61 80"
-            fill="#c1aeb0"
-          />
-          <path
-            d="M-70-3Q-102 60-59 107Q0 132 71 97Q96 51 63-4Z"
-            fill="#dfa5b2"
-          />
-          <path
-            d="M-62 91Q0 111 68 87"
-            stroke="#f5f0e4"
-            strokeWidth="17"
-            fill="none"
-          />
-          <path d="M-70 49H74" stroke="#c0aeb0" strokeWidth="18" />
-          <rect
-            x="-8"
-            y="38"
-            width="30"
-            height="24"
-            rx="3"
-            fill="none"
-            stroke="#eadeca"
-            strokeWidth="7"
-          />
-          <circle cy="-47" r="53" fill="#ebddd3" />
-          <path
-            d="M-48-32Q-76 6-34 38Q-17 56 0 65Q23 51 41 30Q75-3 47-34Q20-14 0-26Q-24-9-48-32Z"
-            fill="#f6f1e7"
-          />
-          <path
-            d="M-51-78Q-24-156 39-137L76-91L40-94L7-108L-14-74Z"
-            fill="#e4aeba"
-          />
-          <path
-            d="M-50-78Q-4-101 48-78"
-            stroke="#f6f1e7"
-            strokeWidth="20"
-            fill="none"
-            strokeLinecap="round"
-          />
-          <circle cx="77" cy="-91" r="17" fill="#f6f1e7" />
-          <circle cx="-16" cy="-53" r="4" fill="#57363b" />
-          <circle cx="18" cy="-53" r="4" fill="#57363b" />
-          <ellipse cy="-36" rx="13" ry="9" fill="#e6d1cd" />
-          <path
-            d="M-1-23Q-31-39-37-12Q-12 1 0-14Q13 1 39-12Q33-39-1-23"
-            fill="#f7f4ea"
-          />
-          <path
-            d={`M63 8Q112 ${-4 - drop * 20} ${140 + drop * 37} ${-21 + drop * 65}`}
-            stroke="#dec3c5"
-            strokeWidth="27"
-            fill="none"
-            strokeLinecap="round"
-          />
-          <circle
-            cx={140 + drop * 37}
-            cy={-21 + drop * 65}
-            r="17"
-            fill="#f5f0e4"
-          />
-          <path
-            d="M-65 14L-113-24"
-            stroke="#dec3c5"
-            strokeWidth="27"
-            strokeLinecap="round"
-          />
-        </g>
-        <path
-          d="M-125-108Q148-160 384-56"
-          stroke="#e4d9c8"
-          strokeWidth="4"
-          fill="none"
-        />
-        <g
-          transform={`translate(414 ${4 + (1 - arrive) * Math.sin(f / 3) * 9})`}
-        >
-          <ellipse cx="-3" cy="-28" rx="87" ry="41" fill="#cfc3be" />
-          <path d="M36-43L72-112L99-102L82-16Z" fill="#cfc3be" />
-          <path d="M70-113L105-131L134-113L109-92L82-98" fill="#d5c8c2" />
-          <path
-            d="M73-117L58-153L40-161M61-145L78-161M105-131L107-168L124-184M107-152L91-169"
-            fill="none"
-            stroke="#e4d8cc"
-            strokeWidth="8"
-            strokeLinecap="round"
-          />
-          <circle cx="130" cy="-113" r="8" fill="#dcc3c4" />
-          <circle cx="104" cy="-115" r="3.5" fill="#4d3030" />
-          <path
-            d={`M-54-1L${-72 + Math.sin(f / 4) * 13 * (1 - arrive)} 68L-99 72M-15 3L9 57L35 63M40-6L${68 - Math.sin(f / 4) * 13 * (1 - arrive)} 54L91 64`}
-            stroke="#ccbfbb"
-            strokeWidth="13"
-            fill="none"
-            strokeLinecap="round"
-          />
-          <path
-            d="M-81-48L-110-68"
-            stroke="#d1c5c0"
-            strokeWidth="16"
-            strokeLinecap="round"
-          />
-          <path d="M32-39L64-75" stroke="#d9bfc1" strokeWidth="19" />
-          <Bell x={57} y={-44} s={0.3} tilt={Math.sin(f / 4) * 15} />
-        </g>
+      <g transform="translate(1620 726)">
+        <path d="M-184 75V-174L0-300L190-174V75Z" fill="#d5b4b5" />
+        <path d="M-215-165L0-322L220-165" fill="none" stroke="#fff6e8" strokeWidth="24" strokeLinecap="round" />
+        <path d="M-165 69V-152H168V69" fill="#e7cbd0" />
+        <rect x="-55" y="-118" width="108" height="190" rx="13" fill="#986e7b" stroke="#f7e6d5" strokeWidth="10" />
+        <rect x="-32" y="-94" width="62" height="86" rx="8" fill="#ffe7aa" />
+        <path d="M-29-52H29M1-91V-11" stroke="#bb8e8d" strokeWidth="5" />
+        <circle cx="30" cy="28" r="5" fill="#f6d49b" />
+        <rect x="-145" y="-80" width="54" height="68" rx="8" fill="#ffe7aa" stroke="#f8e8d7" strokeWidth="8" />
+        <rect x="91" y="-80" width="54" height="68" rx="8" fill="#ffe7aa" stroke="#f8e8d7" strokeWidth="8" />
+        <path d="M-195 84H198V110H-195ZM-174 111H177V129H-174Z" fill="#e6c8b9" />
+        <path d="M-195 79H198" stroke="#fff9ef" strokeWidth="13" strokeLinecap="round" />
+        <path d="M-133-139Q0-105 135-139" fill="none" stroke="#b9c7a5" strokeWidth="12" />
+        {[-120,-60,0,60,120].map((x,i) => <circle key={x} cx={x} cy={-130 + (i % 2) * 9} r="7" fill={i % 2 ? "#ffe4a7" : "#e29cad"} />)}
+        <WarmGlow x={0} y={-32} r={205} opacity={0.42} />
       </g>
-      <Gift
-        x={sledX + 150 + drop * 636}
-        y={sledY - 105 + drop * 298 - Math.sin(drop * Math.PI) * 110}
-        s={0.49}
-        rotate={8 * (1 - drop)}
-      />
-      <Bell x={342} y={373} s={0.66} tilt={Math.sin(f / 7) * 10} />
+      <Pine x={1880} y={888} s={0.85} />
+      <WarmSantaRig x={sledX} y={sledY} t={f / 5} release={drop} />
+      <path d={`M${giftStartX} ${giftStartY}Q${1150} 900 1600 755`} fill="none" stroke="#fff0c9" strokeWidth="4" strokeDasharray="7 14" opacity={drop > 0 && drop < 1 ? 0.45 : 0} />
+      <Gift x={giftX} y={giftY} s={0.33} rotate={-6 * (1 - drop)} />
+      <WarmGlow x={1600} y={811} r={130} opacity={drop * 0.32} />
+      <Bell x={342} y={287} s={0.55} tilt={Math.sin(f / 7) * 10} />
       <WarmSnow count={44} seed={8} />
     </Stage>
   );
@@ -643,29 +521,7 @@ export const Approach = ({ durationInFrames }: SceneProps) => {
         strokeWidth="86"
         opacity="0.3"
       />
-      <Person
-        x={500 + close * 340}
-        y={728 + close * 74}
-        s={1.24 - close * 0.1}
-        variant={0}
-        walk={f / 8}
-      />
-      <Person
-        x={1420 - close * 340}
-        y={745 + close * 70}
-        s={1.24 - close * 0.1}
-        variant={1}
-        walk={f / 8 + 2}
-        face={-1}
-      />
-      <path
-        d={`M${589 + close * 340} ${665 + close * 75}Q960 ${570 + close * 22} ${1331 - close * 340} ${670 + close * 75}`}
-        fill="none"
-        stroke="#ede1d5"
-        strokeWidth="11"
-        strokeDasharray="15 15"
-        opacity="0.8"
-      />
+      <StoryCouple x={960} y={760+close*35} s={1.04} gap={105-close*30} walk={f/8}/>
       <WarmStar x={960} y={613} r={18} color="#f2eedb" rotate={f * 0.4} />
       <Dust f={f} count={10} />
     </Stage>
@@ -728,14 +584,7 @@ export const Fireplace = ({ durationInFrames }: SceneProps) => {
         d={`M708 410Q692 ${387 + Math.sin(f / 4) * 6} 708 379Q724 395 708 410M1212 410Q1196 388 1212 379Q1229 395 1212 410`}
         fill="#eee4cf"
       />
-      <Person x={510} y={804} s={1.04} variant={0} walk={0} />
-      <Person x={1410} y={804} s={1.04} variant={1} walk={0} face={-1} />
-      <path
-        d="M575 809Q960 962 1345 809"
-        stroke="#ece0d2"
-        strokeWidth="13"
-        fill="none"
-      />
+      <StoryCouple x={960} y={790} s={.95} gap={85}/>
       <WarmStar x={960} y={625} r={14 + e * 8} color="#f2eedb" rotate={f} />
     </Stage>
   );
@@ -774,27 +623,7 @@ export const Resilience = ({ durationInFrames }: SceneProps) => {
         strokeWidth="11"
         strokeLinecap="round"
       />
-      <Person
-        x={822 + Math.sin(f / 17) * 8}
-        y={739}
-        s={1.05}
-        variant={0}
-        walk={f / 15}
-      />
-      <Person
-        x={1095 + Math.sin(f / 15) * 8}
-        y={739}
-        s={1.05}
-        variant={1}
-        walk={f / 15 + 1}
-        face={-1}
-      />
-      <path
-        d="M900 698Q960 645 1025 699"
-        stroke="#ecded2"
-        strokeWidth="13"
-        fill="none"
-      />
+      <StoryCouple x={960} y={739} s={.98} gap={90} walk={f/15}/>
       <WarmStar
         x={960}
         y={459 - e * 25}
@@ -806,66 +635,7 @@ export const Resilience = ({ durationInFrames }: SceneProps) => {
   );
 };
 
-export const SoftCloth = ({ durationInFrames }: SceneProps) => {
-  const { f, e } = useMoment(durationInFrames);
-  return (
-    <Stage>
-      <WarmGlow x={960} y={593} r={530} />
-      <WarmCloud x={957} y={602 - e * 45} s={1.4} color="#f5f0e4" />
-      <WarmCloud
-        x={513}
-        y={432 + Math.sin(f / 20) * 9}
-        s={0.63}
-        color="#f0e5db"
-      />
-      <WarmCloud
-        x={1440}
-        y={402 + Math.sin(f / 22) * 11}
-        s={0.68}
-        color="#efe2db"
-      />
-      <path d="M185 907Q960 739 1734 907V1080H185Z" fill="#eadbd0" />
-      <path
-        d={`M440 781Q576 ${610 + Math.sin(f / 16) * 15} 767 724Q960 850 1153 724Q1362 ${610 - Math.sin(f / 16) * 15} 1480 781L1417 883Q1211 1027 960 868Q710 1027 503 883Z`}
-        fill="#e7d7d0"
-      />
-      <path
-        d="M445 788Q605 693 785 793Q960 912 1135 793Q1308 693 1473 788"
-        fill="none"
-        stroke="#f5efe2"
-        strokeWidth="8"
-        strokeDasharray="11 8"
-      />
-      <path
-        d="M596 779Q632 860 741 871M1183 871Q1311 862 1349 783"
-        fill="none"
-        stroke="#dbccc8"
-        strokeWidth="6"
-        opacity="0.5"
-      />
-      <Person x={850} y={776} s={0.9} variant={0} walk={0} />
-      <Person x={1070} y={776} s={0.9} variant={1} walk={0} face={-1} />
-      <path
-        d="M788 757Q960 833 1132 757L1120 838Q960 917 800 838Z"
-        fill="#efe6db"
-      />
-      <path
-        d="M806 796Q960 860 1114 796"
-        stroke="#e1d2cb"
-        strokeWidth="5"
-        fill="none"
-      />
-      <path
-        d="M806 809Q960 873 1114 809"
-        stroke="#f5f0e4"
-        strokeWidth="4"
-        strokeDasharray="5 9"
-        fill="none"
-      />
-      <WarmStar x={960} y={586} r={26 + e * 8} color="#f5f1e1" />
-    </Stage>
-  );
-};
+export const SoftCloth = ({ durationInFrames }: SceneProps) => <SharedTenderness durationInFrames={durationInFrames} />;
 
 export const Contract = ({ durationInFrames }: SceneProps) => {
   const { f, p } = useMoment(durationInFrames);
@@ -972,98 +742,7 @@ export const Contract = ({ durationInFrames }: SceneProps) => {
   );
 };
 
-export const Seasons = ({ durationInFrames }: SceneProps) => {
-  const { f, e } = useMoment(durationInFrames);
-  return (
-    <Stage>
-      <WarmGlow x={960} y={605} r={510} />
-      <WarmClock x={960} y={601} r={245} t={f / 20} />
-      <g transform={`translate(960 601) rotate(${e * 12 - 6})`}>
-        <path
-          d="M-257 0A257 257 0 0 1 0-257M0 257A257 257 0 0 0 257 0"
-          stroke="#d9c9c3"
-          strokeWidth="4"
-          fill="none"
-          strokeDasharray="4 10"
-        />
-      </g>
-      <g transform="translate(480 488)">
-        <path
-          d="M0 143Q24 15-27-77M12 62L83-26M9 22L-83-18"
-          fill="none"
-          stroke="#cfc3be"
-          strokeWidth="11"
-          strokeLinecap="round"
-        />
-        {[-78, -29, 40, 85, -12].map((x, i) => (
-          <g
-            key={x}
-            transform={`translate(${x} ${-35 + Math.sin(i * 5) * 40}) rotate(${f * 0.2 + i * 10})`}
-          >
-            <path
-              d="M0-25Q-28-46-34-16Q-66 8-29 25Q-9 59 10 25Q54 27 39-8Q32-43 0-25"
-              fill={i % 2 ? "#e6d2ce" : "#edddd7"}
-            />
-            <circle r="9" fill="#f1ead8" />
-          </g>
-        ))}
-      </g>
-      <g transform="translate(1435 474)">
-        <circle r="61" fill="#ebdfcd" />
-        <circle r="44" fill="#f1ead8" />
-        {Array.from({ length: 12 }, (_, i) => (
-          <path
-            key={i}
-            d="M0-82V-105"
-            stroke="#e3d5c5"
-            strokeWidth="9"
-            strokeLinecap="round"
-            transform={`rotate(${i * 30 + f * 0.12})`}
-          />
-        ))}
-        <path
-          d="M-156 137Q-78 81 0 137T156 137"
-          stroke="#dfcec6"
-          strokeWidth="17"
-          fill="none"
-        />
-      </g>
-      <g transform="translate(485 825)">
-        <path
-          d="M-4 99Q19 19-36-71M9 54L82-15M2 18L-71-17"
-          stroke="#cfc1bd"
-          strokeWidth="9"
-          fill="none"
-        />
-        {[-89, -39, 22, 83].map((x, i) => (
-          <path
-            key={x}
-            d="M0-51Q-49-23-15 23L0 51L17 22Q48-22 0-51"
-            fill={i % 2 ? "#d9c5c2" : "#e3d6c4"}
-            transform={`translate(${x} ${-5 + (i % 2) * 24 + Math.sin(f / 22 + i) * 6}) rotate(${i * 25 - 45}) scale(.7)`}
-          />
-        ))}
-      </g>
-      <g transform="translate(1435 828)">
-        <Pine x={0} y={104} s={0.64} />
-        {[-108, -72, 90, 128].map((x, i) => (
-          <g
-            key={x}
-            transform={`translate(${x} ${-24 + (i % 2) * 51}) rotate(${f * 0.2})`}
-          >
-            <path
-              d="M0-19V19M-17-10L17 10M-17 10L17-10"
-              stroke="#f7f2e7"
-              strokeWidth="5"
-            />
-          </g>
-        ))}
-      </g>
-      <WarmStar x={960} y={303} r={20} color="#f2eedb" rotate={f * 0.6} />
-      <Dust f={f} count={8} />
-    </Stage>
-  );
-};
+export const Seasons = ({ durationInFrames }: SceneProps) => <SharedSeasons durationInFrames={durationInFrames} />;
 
 export const Hands = ({ durationInFrames }: SceneProps) => {
   const { f, e } = useMoment(durationInFrames);
@@ -1071,62 +750,7 @@ export const Hands = ({ durationInFrames }: SceneProps) => {
     <Stage>
       <WarmGlow x={960} y={655} r={500} />
       <path d="M0 939Q960 832 1920 939V1080H0Z" fill="#e7dad2" />
-      <g transform={`translate(${960 - (1 - e) * 100} 733)`}>
-        <path d="M-1100-25L-264-38L-199 117L-1100 302Z" fill={STORY_OUTFIT.blouse} />
-        <path d="M-362-33L-272-39L-196 125L-294 145Z" fill="#efe5d9" />
-        {Array.from({ length: 7 }, (_, i) => (
-          <path
-            key={i}
-            d={`M${-351 + i * 12}-25l72 159`}
-            stroke="#e7dcd1"
-            strokeWidth="4"
-          />
-        ))}
-        <path
-          d="M-273-21L-191-58Q-129-104-74-77L64-34Q116-20 100 13Q85 40 45 26L-39 2L91 66Q128 85 108 112Q88 136 52 114L-68 60L39 126Q71 149 48 169Q29 189-4 165L-111 101L-29 167Q-5 188-26 207Q-47 225-75 199L-163 122L-230 105Z"
-          fill="url(#a-skin)"
-        />
-        <path
-          d="M-187-44Q-150-12-111 18"
-          stroke="#e0d0ca"
-          strokeWidth="5"
-          fill="none"
-        />
-      </g>
-      <g transform={`translate(${960 + (1 - e) * 100} 733)`}>
-        <path d="M1100 4L264-29L194 125L1100 302Z" fill={STORY_OUTFIT.blouse} />
-        <path d="M364-25L275-31L193 133L294 150Z" fill="#e7dcd0" />
-        {Array.from({ length: 7 }, (_, i) => (
-          <path
-            key={i}
-            d={`M${351 - i * 12}-18l-74 158`}
-            stroke="#e0d3ca"
-            strokeWidth="4"
-          />
-        ))}
-        <path
-          d="M272-14L191-69Q146-106 99-83L-40-30Q-72-19-61 6Q-48 28-17 17L68-10L-58 75Q-83 92-67 113Q-49 135-22 116L85 55L-12 134Q-37 157-18 178Q0 194 26 173L119 96L44 171Q22 196 46 213Q66 228 89 203L160 130L231 113Z"
-          fill="#f5d8c5"
-        />
-        <path
-          d="M68-10Q112 19 141 47"
-          fill="none"
-          stroke="#e0d0ca"
-          strokeWidth="5"
-        />
-        <path
-          d="M-28 80L-8 103"
-          stroke="#e1d4c3"
-          strokeWidth="13"
-          strokeLinecap="round"
-        />
-        <path
-          d="M-29 77L-8 99"
-          stroke="#f1ead7"
-          strokeWidth="6"
-          strokeLinecap="round"
-        />
-      </g>
+      <HeldHands x={960} y={707 + Math.sin(f / 18) * 3} s={1.34} gap={(1 - e) * 12} ring />
       <WarmStar x={960} y={483} r={27} color="#f2ebda" rotate={f * 0.3} />
       <Dust f={f} count={12} />
     </Stage>
@@ -1161,21 +785,7 @@ export const LongRoad = ({ durationInFrames }: SceneProps) => {
       />
       <Pine x={165} y={850} s={0.82} />
       <Pine x={1770} y={862} s={0.72} />
-      <Person
-        x={934 + Math.sin(f / 18) * 5}
-        y={782}
-        s={0.74}
-        variant={0}
-        walk={f / 15}
-      />
-      <Person
-        x={1009 + Math.sin(f / 18) * 5}
-        y={782}
-        s={0.74}
-        variant={1}
-        walk={f / 15 + 1}
-        face={-1}
-      />
+      <StoryCouple x={970 + Math.sin(f / 18) * 5} y={782} s={0.74} gap={78} walk={f / 15} back />
       <path
         d="M960 751Q960 691 960 643"
         stroke="#ebddd1"

@@ -9,6 +9,10 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 REVIEW = ROOT / (sys.argv[1] if len(sys.argv) > 1 else f"{os.environ.get('MV_OUTPUT_ROOT', 'out/remake')}/review")
 data = json.loads((REVIEW / "technical-validation.json").read_text(encoding="utf-8"))
+storyboard = json.loads((ROOT / "src/data/remake-storyboard.json").read_text(encoding="utf-8"))
+night_scenes = set(filter(None, os.environ.get("MV_NIGHT_SCENES", "").split(",")))
+def is_night(frame):
+    return any(shot["sceneId"] in night_scenes and shot["startFrame"] <= frame < shot["endFrame"] for shot in storyboard)
 pixels = np.fromfile(REVIEW / "frame-luma.rgb", dtype=np.uint8).reshape(-1, 9, 16, 3)
 means = pixels.astype(float).mean(axis=(1, 2, 3))
 spatial_contrast = pixels.astype(float).std(axis=(1, 2)).mean(axis=1)
@@ -69,16 +73,24 @@ for frame in data["exportFrames"][1:-1:4]:
     ratio = float((rgb[:, :, 0] >= rgb[:, :, 2]).mean())
     warm_frames.append({"frame": frame, "redAtLeastBlueFraction": ratio})
 pastel_frames = []
+night_frames = []
 for frame in data["exportFrames"]:
     rgb = np.asarray(Image.open(REVIEW / "export-frames" / f"frame-{frame:04d}.png").convert("RGB")).astype(float)
     luma = rgb @ np.array([.2126, .7152, .0722])
     saturation = (rgb.max(axis=2) - rgb.min(axis=2)) / np.maximum(1, rgb.max(axis=2))
-    pastel_frames.append({"frame": frame, "lightPixelFraction": float((luma > 180).mean()), "darkPixelFraction": float((luma < 100).mean()), "softColorFraction": float((saturation < .35).mean())})
+    if is_night(frame):
+        sky_luma = luma[:270]
+        night_frames.append({"frame": frame, "meanSkyLuma": float(sky_luma.mean()), "nightSkyFraction": float((sky_luma < 155).mean())})
+    else:
+        pastel_frames.append({"frame": frame, "lightPixelFraction": float((luma > 180).mean()), "darkPixelFraction": float((luma < 100).mean()), "softColorFraction": float((saturation < .35).mean())})
 pastel_revision = os.environ.get("MV_REQUIRE_PASTEL") == "1" or "remake-v2" in str(REVIEW)
 pastel_passed = all(item["lightPixelFraction"] > .55 and item["darkPixelFraction"] < .15 and item["softColorFraction"] > .65 for item in pastel_frames)
 # Natural blue water and sage foliage are intentional local environment colors.
 warm_passed = len(warm_frames) == 12 and (float(np.mean([item["redAtLeastBlueFraction"] for item in warm_frames])) > .65 if pastel_revision else all(item["redAtLeastBlueFraction"] > .75 for item in warm_frames))
+night_passed = len(night_frames) == len(night_scenes) and all(30 < item["meanSkyLuma"] < 155 and item["nightSkyFraction"] > .6 for item in night_frames)
 data.update({"fullVideoDecode": full_decode, "encodedAudioAgainstOriginal": audio, "exportParity": parity, "exportParityPassed": parity_passed, "warmRepresentativeFrames": warm_frames, "warmPalettePassed": warm_passed, "pastelFrameChecks": pastel_frames, "pastelPaletteRequired": pastel_revision, "pastelPalettePassed": pastel_passed, "allMeasuredTechnicalChecksPassed": bool(data["allProbeChecksPassed"] and full_decode["passed"] and audio["passed"] and parity_passed and warm_passed and (pastel_passed or not pastel_revision))})
+data.update({"nightSceneIds": sorted(night_scenes), "nightFrameChecks": night_frames, "nightPalettePassed": night_passed})
+data["allMeasuredTechnicalChecksPassed"] = data["allMeasuredTechnicalChecksPassed"] and night_passed
 (REVIEW / "technical-validation.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 print(json.dumps({"fullVideoDecode": full_decode, "audio": audio, "exportParity": parity}, indent=2))
 if data["allMeasuredTechnicalChecksPassed"]:

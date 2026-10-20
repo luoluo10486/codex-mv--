@@ -14,6 +14,7 @@ export type StoryPersonProps = {
   x?: number; y?: number; s?: number; girl?: boolean;
   walk?: number; lean?: number; arm?: number; face?: number;
   back?: boolean; turn?: number;
+  handLeft?: {x:number;y:number}; handRight?: {x:number;y:number};
 };
 
 // Crop the original vector faces, preserving the supplied hair, eyes and glasses.
@@ -29,7 +30,7 @@ export const StoryPortrait = ({ girl = false, back = false }: { girl?: boolean; 
   {vectors.boy.map((path,i)=><path key={i} d={path.d} fill={path.fill} transform={path.transform} fillRule="nonzero"/>)}
 </svg>;
 
-export const StoryPerson = ({ x = 0, y = 0, s = 1, girl = false, walk = 0, lean = 0, arm = 0, face = 1, back = false, turn = 0 }: StoryPersonProps) => {
+export const StoryPerson = ({ x = 0, y = 0, s = 1, girl = false, walk = 0, lean = 0, arm = 0, face = 1, back = false, turn = 0, handLeft, handRight }: StoryPersonProps) => {
   const stride = Math.sin(walk) * 14;
   const handY = 30 - arm * 95;
   const sleeve = STORY_OUTFIT.blouse;
@@ -63,12 +64,34 @@ export const StoryPerson = ({ x = 0, y = 0, s = 1, girl = false, walk = 0, lean 
       {girl ? <path d="M0-52L-15-59L-14-44L0-49L14-44L15-59ZM-3-48L-9-32L0-37L9-32L3-48Z" fill="#c98b9f"/> : <path d="M-5-55H5L8-47L3-43L7-18L0-10L-7-18L-3-43L-8-47Z" fill="#c98b9f"/>}
       <path d="M22-20L30-20V-10Q26-5 22-10Z" fill={girl ? "#fff4df" : "#efd0d8"} stroke={girl ? STORY_OUTFIT.roseEdge : STORY_OUTFIT.knitEdge} strokeWidth="1"/>
     </>}
-    <path d="M-44-48Q-55-21-61 12M44-48Q56-19 61 12" stroke={edge} strokeWidth="30" strokeLinecap="round" fill="none"/>
-    <path d="M-44-48Q-55-21-61 12M44-48Q56-19 61 12" stroke={sleeve} strokeWidth="25" strokeLinecap="round" fill="none"/>
-    <path d="M-70 7L-52 12M52 12L70 7" stroke="#ead9ce" strokeWidth="8" strokeLinecap="round" fill="none"/>
-    <path d={`M-61 8Q-71 ${17-arm*30} -70 ${handY}M61 8Q71 ${17-arm*30} 70 ${handY}`} stroke="#ffcdaa" strokeWidth="18" strokeLinecap="round" fill="none"/>
-    <circle cx="-70" cy={handY} r="11" fill="#ffcdaa"/>
-    <circle cx="70" cy={handY} r="11" fill="#ffcdaa"/>
+    {([-1,1] as const).map(side => {
+      const target = (side === -1 ? handLeft : handRight) ?? {x:side*70,y:handY};
+      const wrist = {x:target.x-side*6,y:target.y-9};
+      const elbow = {x:side*63+(target.x-side*70)*.4,y:-12+(target.y-30)*.4};
+      const d = `M${side*44}-48Q${elbow.x} ${elbow.y} ${wrist.x} ${wrist.y}`;
+      return <g key={side} data-story-arm={side}>
+        <path d={d} stroke={edge} strokeWidth="29" strokeLinecap="round" fill="none"/>
+        <path d={d} stroke={sleeve} strokeWidth="25" strokeLinecap="round" fill="none"/>
+        <path d={`M${wrist.x} ${wrist.y}L${target.x} ${target.y}`} stroke="#ffcdaa" strokeWidth="15" strokeLinecap="round"/>
+        <ellipse cx={target.x} cy={target.y} rx="10" ry="12" transform={`rotate(${side*18} ${target.x} ${target.y})`} fill="#ffcdaa" stroke="#e4b896" strokeWidth="1.2"/>
+      </g>;
+    })}
     <g transform={`translate(${turn * 5} 0)`}><StoryPortrait girl={girl} back={back}/></g>
+  </g>;
+};
+
+export const StoryCouple = ({x=0,y=0,s=1,gap=78,walk=0,embrace=0,back=false}:{x?:number;y?:number;s?:number;gap?:number;walk?:number;embrace?:number;back?:boolean}) => {
+  const joined = gap <= 110;
+  const bob = Math.sin(walk)*1.4;
+  const handY = 35-embrace*30;
+  const reach = Math.max(0,Math.min(1,(130-gap)/20));
+  const hand = {x:70+(gap-75)*reach,y:30+(handY-30)*reach};
+  return <g transform={`translate(${x} ${y}) scale(${s})`} data-story-couple={joined ? "holding" : "approaching"}>
+    <StoryPerson x={-gap} y={bob} girl walk={walk} back={back} handRight={hand}/>
+    <StoryPerson x={gap} y={bob} face={-1} walk={-walk} back={back} handRight={hand}/>
+    {joined && <g transform={`translate(0 ${handY+bob})`}>
+      <path d="M-9-7Q-1-12 6-5L10 3Q6 10-1 8L-10 2Z" fill="#ffd2b2" stroke="#dfb18e" strokeWidth="1.3"/>
+      <path d="M-5-3L2 3M-1-6L6 0" stroke="#dfb18e" strokeWidth="1.2" strokeLinecap="round"/>
+    </g>}
   </g>;
 };

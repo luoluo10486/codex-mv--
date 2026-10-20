@@ -1,7 +1,9 @@
 import type { ComponentType } from "react";
-import { STORY_OUTFIT } from "../StoryCharacters";
+import { SharedSeasons } from "../SharedSeasons";
+import { SharedSensitivity, SharedTenderness } from "../SharedTenderness";
+import { STORY_OUTFIT, StoryCouple } from "../StoryCharacters";
 import { useCurrentFrame } from "remotion";
-import { WarmCloud, WarmGlow, WarmStar, WarmWorld, WarmClock } from "../WarmArt";
+import { WarmCloud, WarmGlow, WarmStar, WarmWorld } from "../WarmArt";
 import { mix } from "../palette";
 import { BStage, BStars, BMountains, BPerson, BHome, BFlower, BHands } from "./ActBArt";
 import type { SceneProps } from "./types";
@@ -88,7 +90,7 @@ const WorldHeart = ({ durationInFrames }: SceneProps) => {
   return <BStage night><WarmGlow x={960} y={650} r={630}/><BStars count={66}/>
     {Array.from({length:10},(_,i)=>{const a=i*Math.PI/5; const r=600-p*190;const x=960+Math.cos(a)*r;const y=650+Math.sin(a)*r*.48;return <g key={i}><path d={`M${x} ${y}Q960 ${430+i*39} 960 670`} fill="none" stroke="#f1ebe2" strokeWidth="3" opacity=".45"/><WarmWorld x={x} y={y} s={.2+i%3*.045} t={t}/></g>;})}
     <g transform={`translate(960 650) scale(${.86+p*.14})`} filter="url(#warm-shadow)"><path d="M0 225C-95 156-300 7-224-133C-166-242-42-206 0-127C52-215 181-239 235-120C301 26 102 173 0 225Z" fill="url(#b-gold)"/><path d="M-164-112C-123-177-57-142-28-84" fill="none" stroke="#f7f5ed" strokeWidth="17" strokeLinecap="round" opacity=".65"/><path d="M-185 12Q-56-66 38 8T194-13M-108 123Q0 58 116 102" fill="none" stroke="#e8d8db" strokeWidth="6" opacity=".45"/><WarmStar x={40} y={-10} r={43} color="#f6f4ec" rotate={t*10}/></g>
-    <g transform={`translate(960 ${970+Math.sin(t)*.7})`}><BPerson x={-28} y={0} s={.62} red/><BPerson x={28} y={0} s={.62}/><path d="M-2 13Q0 23 2 13" stroke="#f1cfbe" strokeWidth="7" fill="none" strokeLinecap="round"/></g>
+    <StoryCouple x={960} y={970+Math.sin(t)*.7} s={.38} gap={75}/>
   </BStage>;
 };
 
@@ -132,28 +134,9 @@ const Ordinary = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
-const SoftGarden = ({ durationInFrames }: SceneProps) => {
-  const { t } = useBeat(durationInFrames);
-  return <BStage><WarmGlow x={970} y={620} r={690}/><path d="M0 894Q473 755 963 876T1920 873V1080H0Z" fill="#dfe7d7"/>
-    <path d="M0 1024Q482 870 960 1018T1920 1003V1080H0Z" fill="#e9c5d2"/>
-    <g transform={`translate(960 ${665+Math.sin(t)*4})`}><path d="M-540 290Q-650 20-382-80Q-239-210-54-109Q0-330 175-178Q432-221 481-40Q732 36 596 286Q389 412 0 342Q-405 424-540 290Z" fill="#f8dfe8" opacity=".88" filter="url(#warm-shadow)"/><path d="M-484 229Q-296 77-123 226T264 221Q416 146 565 249" fill="none" stroke="#f7f4ee" strokeWidth="28" opacity=".42"/>
-      <BPerson x={-52} y={160} s={.72} red/><BPerson x={65} y={160} s={.72}/><path d="M-21 173Q7 188 34 173" stroke="#d9e4d0" strokeWidth="20" strokeLinecap="round"/>
-    </g>
-    {[{x:130,y:919,s:.53,r:-17},{x:370,y:850,s:.45,r:16},{x:1525,y:890,s:.63,r:-7},{x:1798,y:847,s:.48,r:21}].map((v,i)=><BFlower key={i} x={v.x} y={v.y} s={v.s} rotation={v.r} pale={i%2===0}/>)}
-    <path d="M163 1023Q310 920 475 1020M1438 1025Q1615 904 1798 1007" fill="none" stroke="#f3ebe6" strokeWidth="18" strokeLinecap="round"/>
-  </BStage>;
-};
+const SoftGarden = ({ durationInFrames }: SceneProps) => <SharedTenderness durationInFrames={durationInFrames} reprise={1} />;
 
-const Sensitive = ({ durationInFrames }: SceneProps) => {
-  const { p, t } = useBeat(durationInFrames);
-  const tremor = Math.sin(t*7) * (2+p*7);
-  return <BStage><WarmGlow x={960} y={590} r={640}/><path d="M0 930Q420 786 960 902T1920 918V1080H0Z" fill="#e4e9dc"/>
-    <g transform={`translate(${960+tremor} ${563+tremor})`}><path d="M0-239C-105-125-153-45-132 63C-111 170-34 267 0 292C36 265 112 165 132 62C151-46 106-126 0-239Z" fill="url(#b-glass)" stroke="#f7f4ee" strokeWidth="8"/><path d="M0-198C-65-117-94-44-84 42C-74 116-29 188 0 217C31 181 75 109 84 39C94-44 67-119 0-198Z" fill="#f4ece7" opacity=".27"/><path d="M-34-87Q2-130 40-87L19 61Q3 95-16 61Z" fill="#f8f6ef" opacity=".64"/><ellipse cx="-17" cy="-84" rx="8" ry="20" fill="#f9f9f3" opacity=".75"/></g>
-    <g transform={`translate(${670-tremor*2} ${810+tremor}) rotate(-12)`}><BFlower x={0} y={0} s={1.13} pale/><path d="M-3 121Q-77 71-119 5" stroke="#e8dde0" strokeWidth="6" fill="none"/></g>
-    <g transform={`translate(${1270+tremor*2} ${815-tremor}) rotate(19)`}><BFlower x={0} y={0} s={.88} pale/><path d="M3 122Q75 69 127 1" stroke="#e8dde0" strokeWidth="6" fill="none"/></g>
-    {Array.from({length:7},(_,i)=><path key={i} d={`M${790+i*56} ${340+(i%3)*33}q${24+tremor} ${-40+i*4} ${48} 0`} stroke="#f7f5ee" strokeWidth="4" fill="none" opacity=".6"/>)}
-  </BStage>;
-};
+const Sensitive = ({ durationInFrames }: SceneProps) => <SharedSensitivity durationInFrames={durationInFrames} />;
 
 const RingExchange = ({ durationInFrames }: SceneProps) => {
   const { p, t } = useBeat(durationInFrames);
@@ -175,31 +158,16 @@ const RingExchange = ({ durationInFrames }: SceneProps) => {
   </BStage>;
 };
 
-const SeasonClock = ({ durationInFrames }: SceneProps) => {
-  const { p, t } = useBeat(durationInFrames);
-  return <BStage><WarmGlow x={960} y={645} r={650}/>
-    {[0,1,2,3].map((season)=><g key={season} transform={`translate(${[355,1565,355,1565][season]} ${season<2?515:873})`} opacity={.7+.3*Math.sin(p*Math.PI+season)} filter="url(#warm-shadow)">
-      <path d="M-217 131V-106Q0-215 217-106V131Z" fill="#d4b4c3"/><path d="M-196 110V-94Q0-188 196-94V110Z" fill={["#f4ede7","#f1eae1","#ede4de","#f1ece8"][season]}/>
-      <circle cx="115" cy="-60" r="38" fill="#f6f4eb"/>
-      <path d="M-195 76Q0-7 195 76V110H-195Z" fill={["#d4e0ca","#c9d8bd","#f1d3b5","#f7f4ee"][season]}/>
-      <path d="M-81 93V-85M-81-24L-128-60M-81 15L-27-42" stroke="#bda9ac" strokeWidth="10" strokeLinecap="round"/>
-      {season===0 ? Array.from({length:8},(_,i)=><BFlower key={i} x={-144+(i*37)%165} y={-70+(i%3)*30} s={.19} pale={i%2===0}/>) : null}
-      {season===1 ? <><ellipse cx="-107" cy="-77" rx="70" ry="41" fill="#c9d8bd"/><ellipse cx="-48" cy="-46" rx="68" ry="45" fill="#d9e4d0"/></> : null}
-      {season===2 ? Array.from({length:9},(_,i)=><ellipse key={i} cx={-150+(i*51)%280} cy={-84+(i*31)%170} rx="12" ry="24" fill={i%2?"#e8d9dc":"#f0e6de"} transform={`rotate(${i*27})`}/>) : null}
-      {season===3 ? Array.from({length:16},(_,i)=><circle key={i} cx={-177+(i*61)%350} cy={-109+(i*43)%195} r={3+i%3} fill="#f8f6f0"/>) : null}
-      <path d="M0-155V111M-196 17H196" stroke="#f4eee7" strokeWidth="11"/>
-    </g>)}
-    <g transform="translate(960 680)" filter="url(#warm-shadow)"><circle r="240" fill="#ecdbdf"/><circle r="220" fill="#f7f4ed"/><WarmClock r={201} t={t*5}/><circle r="223" fill="none" stroke="#f4e6bc" strokeWidth="8"/><path d="M-138 250H138L106 291H-104Z" fill="#e9dade"/><WarmStar x={0} y={-270} r={20} color="#f3eee5"/></g>
-  </BStage>;
-};
+const SeasonClock = ({ durationInFrames }: SceneProps) => <SharedSeasons durationInFrames={durationInFrames} reprise={1} />;
 
 const HeldWide = ({ durationInFrames }: SceneProps) => {
-  const { p } = useBeat(durationInFrames);
+  const f = useCurrentFrame();
+  const p = f / Math.max(1,durationInFrames-1);
   const zoom = 1.45 - p * .6;
   return <BStage><WarmGlow x={960} y={490} r={650}/><BMountains y={725} shift={-p*20}/><circle cx={1500} cy={350} r={90} fill="#f5f2ea" opacity=".7"/>
     <path d="M0 822Q435 724 960 820T1920 806V1080H0Z" fill="#e8dcdf"/><path d="M0 966Q465 848 960 947T1920 947V1080H0Z" fill="#e6b8c6"/>
-    <g transform={`translate(960 810) scale(${zoom})`} opacity={Math.min(1,p*2.6)}><BPerson x={-65} y={-12} s={.9} red/><BPerson x={65} y={-12} s={.9}/><path d="M-27 4Q0 23 27 4" fill="none" stroke="#f4ede7" strokeWidth="17" strokeLinecap="round"/><WarmStar x={0} y={-39} r={11} color="#f5f1e9"/></g>
-    <g opacity={Math.max(0,1-p*2.6)}><BHands y={650} s={1.3-p*.5} ring/></g>
+    <g opacity={Math.max(0,Math.min(1,(p-.35)*3))}><StoryCouple x={960} y={790} s={zoom*.65} gap={82}/><WarmStar x={960} y={735} r={11} color="#f5f1e9"/></g>
+    <g opacity={Math.max(0,Math.min(1,(.6-p)*4))}><BHands y={650} s={1.3-p*.5} ring/></g>
     {Array.from({length:8},(_,i)=><path key={i} d={`M${250+i*185} 910Q${318+i*185} ${826-(i%2)*20} ${386+i*185} 910`} fill="none" stroke="#f3ece5" strokeWidth="7" opacity=".6"/>)}
     <path d="M960 700Q930 760 961 834" fill="none" stroke="#f6f4ec" strokeWidth="4" opacity=".7"/>
     <BStars count={24} y={250} height={430}/>
@@ -211,7 +179,7 @@ const DawnRoad = ({ durationInFrames }: SceneProps) => {
   return <BStage><rect width="1920" height="1080" fill="url(#warm-sunset)"/><WarmGlow x={1500} y={465} r={560}/><circle cx={1500} cy={465} r={105+p*14} fill="#f5f3ea"/>
     <BMountains y={735} shift={-p*38}/><path d="M0 839Q480 734 960 837T1920 831V1080H0Z" fill="#e6b8c6"/>
     <path d="M652 1080Q741 907 1107 836Q1383 787 1500 657Q1433 827 1150 892Q1033 934 1117 1080Z" fill="#f3ede6"/><path d="M841 1080Q876 929 1140 866Q1410 803 1500 657Q1420 827 1152 882Q945 949 972 1080Z" fill="#f6f4ec" opacity=".68"/>
-    <g transform={`translate(${1042+p*165} ${849-p*53}) scale(${1-p*.2})`}><BPerson x={-57} y={0} s={.66} red back/><BPerson x={57} y={0} s={.66} back/><path d="M-29 12Q0 28 29 12" stroke="#f3ece6" strokeWidth="13" fill="none" strokeLinecap="round"/><WarmStar x={0} y={-28} r={8} color="#f7edda"/></g>
+    <StoryCouple x={1042+p*165} y={849-p*53} s={.5-p*.1} gap={78} back walk={t*3}/>
     <path d="M0 1035Q700 942 960 1004T1920 1030" stroke="#f1e8e1" strokeWidth="8" fill="none" opacity=".6"/>
     {Array.from({length:20},(_,i)=><WarmStar key={i} x={(i*233+80)%1920} y={270+(i*89)%380} r={2+i%3} color="#f6f4ec" rotate={t*4+i*17}/>)}
     <path d="M1500 478Q1590 420 1661 478" stroke="#f6f4ec" strokeWidth="5" fill="none" opacity=".55"/>

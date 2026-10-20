@@ -286,6 +286,29 @@ export const Book = ({
   </g>
 );
 
+export const ReadingProps = ({x,y,s=1,ink=false}:{x:number;y:number;s?:number;ink?:boolean}) => <g transform={`translate(${x} ${y}) scale(${s})`}>
+  <ellipse cy="20" rx="133" ry="22" fill="#d9c7be" opacity=".23"/>
+  {ink ? <>
+    <path d="M-116-5L95-12L110 13L-105 20Z" fill="#d5aab7" stroke="#b98f9c" strokeWidth="3"/>
+    <path d="M-110-25L84-31L95-12L-116-5Z" fill="#fff5e7" stroke="#cfb9a7" strokeWidth="3"/>
+    <path d="M-116-36L86-42L84-31L-110-25Z" fill="#e7bd9d"/>
+    <path d="M-65-19L61-23M-64-12L61-16" stroke="#d9c5b1" strokeWidth="2"/>
+    <path d="M12-38L18-107H74L80-40Q49-27 12-38Z" fill="#e5c3c8" stroke="#bd9aa2" strokeWidth="3"/>
+    <path d="M35-106L57-210L69-208L48-104" fill="#d4ae80" stroke="#b18c6b" strokeWidth="2"/>
+    <path d="M60-210L64-230L69-208Z" fill="#775d57"/>
+    <path d="M26-103L10-190L22-192L39-104" fill="#dca7b8"/>
+    <path d="M10-190L12-208L22-192Z" fill="#775d57"/>
+  </> : <>
+    <ellipse cx="-7" cy="0" rx="110" ry="24" fill="#ead5c8" stroke="#d2b8a6" strokeWidth="3"/>
+    <path d="M-79-111H63L53-21Q-8 19-69-21Z" fill="#fff7e9" stroke="#cdb4a2" strokeWidth="4"/>
+    <path d="M63-88Q122-102 113-56Q106-21 58-34" fill="none" stroke="#cdb4a2" strokeWidth="12"/>
+    <path d="M63-88Q122-102 113-56Q106-21 58-34" fill="none" stroke="#fff7e9" strokeWidth="6"/>
+    <ellipse cx="-8" cy="-111" rx="71" ry="18" fill="#d9ad7f" stroke="#cdb4a2" strokeWidth="4"/>
+    <path d="M-44-109Q-6-121 32-109" fill="none" stroke="#f5d5a6" strokeWidth="3"/>
+    <path d="M-35-145Q-59-168-29-197M12-149Q35-176 11-202" fill="none" stroke="#e6cfc4" strokeWidth="6" strokeLinecap="round"/>
+  </>}
+</g>;
+
 export const Gift = ({
   x,
   y,

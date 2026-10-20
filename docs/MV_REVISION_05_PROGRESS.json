@@ -1,0 +1,30 @@
+{
+  "revision": 5,
+  "status": "in_progress",
+  "outputRoot": "out/remake-v5",
+  "scope": ["hand-anatomy", "moon-and-christmas-night", "gift-delivery", "shared-seasons", "tenderness-and-sensitivity", "reading-props"],
+  "owners": {
+    "root": "fullbody arms, book props, moonlight, integration and validation",
+    "hand_closeups": "HeldHands and closeup sequences",
+    "santa_fix": "Santa rig, gift route and Christmas night",
+    "narrative_fix": "shared seasons and contextual tenderness"
+  },
+  "implementation": "verified",
+  "visualReview": "verified_stills",
+  "exports": "in_progress",
+  "checkpoint": "revision-05 integrated source and still review",
+  "checks": {"lint": "passed", "build": "passed", "storyboard": "48 scenes / 40 cues / 5508 frames", "interactionFrames": 95, "integratedFrames": 231},
+  "evidence": ["out/remake-v5/interactions/manifest.json", "out/remake-v5/review/frame-manifest.json", "out/remake-v5/narrative/manifest.json", "docs/handoffs/revision-05-hands.md", "docs/handoffs/revision-05-santa.md", "docs/handoffs/revision-05-narrative.md"],
+  "nightScenes": ["lyric-04", "lyric-05", "bridge-santa-route"],
+  "blockers": [],
+  "resume": [
+    "$env:MV_OUTPUT_ROOT = 'out/remake-v5'",
+    "$env:MV_REQUIRE_PASTEL = '1'",
+    "$env:MV_NIGHT_SCENES = 'lyric-04,lyric-05,bridge-santa-route'",
+    "node scripts/review-interactions.mjs",
+    "node scripts/review-remake.mjs",
+    "node scripts/render-remake.mjs full",
+    "node scripts/render-remake.mjs preview",
+    "node scripts/render-remake.mjs full-preview --from-full"
+  ]
+}

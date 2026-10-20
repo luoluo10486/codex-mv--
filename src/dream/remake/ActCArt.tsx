@@ -1,6 +1,6 @@
 import { useCurrentFrame } from "remotion";
 import { WarmGift, WarmGlow, WarmLetter, WarmMoon, WarmStar } from "../WarmArt";
-import { StoryPerson } from "../StoryCharacters";
+import { StoryPerson, StoryCouple } from "../StoryCharacters";
 
 export const C = { cream: "#fffaf4", gold: "#ead7a0", peach: "#f8dfe8", coral: "#e6b8c6", red: "#dca7b8", wine: "#bfa6b1", ink: "#bc9fa5" };
 
@@ -52,16 +52,7 @@ export const Room = ({ fire = 1 }: { fire?: number }) => {
 export const Person = ({ x, y, second = false, lean = 0, walk = 0, arm = 0 }: { x: number; y: number; second?: boolean; lean?: number; walk?: number; arm?: number }) => <StoryPerson x={x} y={y} girl={!second} lean={lean} walk={walk} arm={arm} face={second ? -1 : 1} />;
 
 export const Couple = ({ x = 960, y = 740, s = 1, gap = 75, walk = 0, embrace = 0 }: { x?: number; y?: number; s?: number; gap?: number; walk?: number; embrace?: number }) => {
-  const angle = embrace * 8 * Math.PI / 180;
-  const handY = 30 - embrace * 95;
-  const reach = 70 * Math.cos(angle) - handY * Math.sin(angle);
-  const joinedY = 70 * Math.sin(angle) + handY * Math.cos(angle) - Math.abs(walk) * 4;
-  return <g transform={`translate(${x} ${y}) scale(${s})`}>
-  <ellipse cy="181" rx="210" ry="25" fill="#bfa6b1" opacity="0.16" />
-  <Person x={-gap} y={Math.abs(walk) * -4} lean={embrace * 8} walk={walk} arm={embrace} />
-  <Person x={gap} y={Math.abs(walk) * -4} second lean={embrace * -8} walk={-walk} arm={embrace} />
-  <path d={`M${-gap + reach} ${joinedY}Q0 ${joinedY + 19 + embrace * 20} ${gap - reach} ${joinedY}`} stroke="#ffcdaa" strokeWidth="18" fill="none" strokeLinecap="round" />
-</g>;
+  return <StoryCouple x={x} y={y} s={s} gap={gap} walk={walk} embrace={embrace}/>;
 };
 
 export const Hillscape = ({ shift = 0, snow = false }: { shift?: number; snow?: boolean }) => <g>

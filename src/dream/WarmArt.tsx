@@ -1,7 +1,7 @@
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { createContext, useContext, type ReactNode } from "react";
 import { D } from "./palette";
-import { StoryPerson } from "./StoryCharacters";
+import { StoryCouple } from "./StoryCharacters";
 
 const clamp = (n: number) => Math.max(0, Math.min(1, n));
 const SharedDefinitions = createContext(false);
@@ -190,26 +190,74 @@ export const WarmSleigh = ({ x = 0, y = 0, s = 1, t = 0 }: { x?: number; y?: num
   </g>
 );
 
-export const WarmSanta = ({ x = 0, y = 0, s = 1 }: { x?: number; y?: number; s?: number }) => (
+export const WarmSanta = ({ x = 0, y = 0, s = 1, release = 0 }: { x?: number; y?: number; s?: number; release?: number }) => (
   <g transform={`translate(${x} ${y}) scale(${s})`} filter="url(#warm-shadow)">
-    <path d="M-88 54Q-124 136 0 154Q124 136 88 54Z" fill="#c94e5b" />
-    <circle cy="-12" r="61" fill="#f7c19b" />
-    <path d="M-64-14Q-44-82 0-76Q50-82 67-14Q25-35 0-25Q-30-37-64-14Z" fill="#fff4d9" />
-    <path d="M-52-67Q-13-154 59-101L29-72Z" fill="#c94e5b" />
-    <circle cx="57" cy="-102" r="17" fill="#fff3ce" />
-    <path d="M-64 0Q-100 22-77 63Q-49 89-18 58M64 0Q100 22 77 63Q49 89 18 58" fill="none" stroke="#fff4d9" strokeWidth="20" strokeLinecap="round" />
-    <circle cx="-21" cy="-19" r="6" fill="#4d3030" />
-    <circle cx="21" cy="-19" r="6" fill="#4d3030" />
-    <path d="M-32 20Q0 45 32 20" fill="none" stroke="#c94e5b" strokeWidth="6" strokeLinecap="round" />
-    <path d="M-112 83Q0 134 112 83" fill="none" stroke="#ddaA58" strokeWidth="13" strokeLinecap="round" />
+    <path d="M-53 86L-47 148L8 150L24 102M17 91L51 140L99 139L66 79" fill="#bc8792" />
+    <path d="M-48 138L8 139L24 159H-47ZM53 130L96 128L116 151H63Z" fill="#967881" />
+    <path d="M-61-12Q-91 23-74 87Q0 124 76 89Q98 32 56-13Z" fill="#dd899e" />
+    <path d="M-72 82Q0 107 76 82" stroke="#fff8ec" strokeWidth="16" fill="none" />
+    <path d="M-75 61Q0 77 78 58" stroke="#a97d86" strokeWidth="13" fill="none" />
+    <rect x="-10" y="57" width="27" height="21" rx="3" fill="#f2d6a2" />
+    <rect x="-3" y="62" width="13" height="10" rx="1" fill="#a97d86" />
+    <path d="M-51 3Q-70 24-45 40L63 34" fill="none" stroke="#dd899e" strokeWidth="28" strokeLinecap="round" />
+    <path d="M51 1Q88 13 117-31" fill="none" stroke="#dd899e" strokeWidth="28" strokeLinecap="round" />
+    <path d="M49 35L64 33M108-25L119-34" stroke="#fff8ec" strokeWidth="19" strokeLinecap="round" />
+    <ellipse cx="73" cy="31" rx="17" ry="13" fill="#fff8ec" transform="rotate(-8 73 31)" />
+    <g transform={`rotate(${release * 12} 117 -31)`}>
+      <path d="M111-37Q116-51 129-46L139-40Q148-32 140-22L124-18Q111-19 111-37Z" fill="#fff8ec" />
+      <path d="M118-28L127-32" stroke="#e4cfd1" strokeWidth="2.5" strokeLinecap="round" />
+    </g>
+    <circle cy="-49" r="48" fill="#f3c9ad" />
+    <path d="M-43-49Q-67-10-41 20Q-26 34 0 46Q26 34 42 16Q64-14 44-49Q24-30 0-38Q-24-29-43-49Z" fill="#fff8ec" />
+    <path d="M-45-83Q-30-151 23-139Q58-129 71-94L39-100Q20-113-3-104L-20-79Z" fill="#dd899e" />
+    <path d="M-44-81Q0-97 45-80" stroke="#fff8ec" strokeWidth="18" fill="none" strokeLinecap="round" />
+    <circle cx="71" cy="-93" r="15" fill="#fff8ec" />
+    <circle cx="-16" cy="-53" r="4" fill="#65464b" />
+    <circle cx="18" cy="-53" r="4" fill="#65464b" />
+    <ellipse cx="1" cy="-37" rx="11" ry="8" fill="#e8b4ab" />
+    <path d="M1-25Q-23-40-32-18Q-13-4 1-16Q15-4 35-18Q25-41 1-25Z" fill="#fffdf4" />
+    <path d="M-8-7Q1-2 11-8" fill="none" stroke="#cf8d96" strokeWidth="3" strokeLinecap="round" />
   </g>
 );
 
+// The foreground sleigh rail deliberately masks Santa's seated legs.
+export const WarmSantaRig = ({ x = 0, y = 0, s = 1, t = 0, release = 0 }: { x?: number; y?: number; s?: number; t?: number; release?: number }) => {
+  const stride = Math.sin(t) * 13;
+  return <g transform={`translate(${x} ${y}) scale(${s})`}>
+    <path d="M-420 93Q-325 111-235 93" fill="none" stroke="#ead9c7" strokeWidth="5" strokeDasharray="16 15" />
+    <path d="M-246-12Q-260-90-223-119L-207-99Q-153-132-124-99L-110-13Z" fill="#d9bfaf" />
+    <path d="M-225-109Q-196-96-161-112" fill="none" stroke="#bb9395" strokeWidth="7" />
+    <WarmGift x={-191} y={-57} s={0.3} />
+    <WarmGift x={-110} y={-45} s={0.26} />
+    <WarmSanta x={-50} y={-100} s={0.85} release={release} />
+    <path d="M12-73Q177-24 405-164M17-69Q193-13 418-153" fill="none" stroke="#bb8b89" strokeWidth="4" strokeLinecap="round" />
+    <g transform="translate(365 -145)">
+      <path d={`M-56 13L${-75 + stride} 69L-94 71M-21 20L-5 66L17 73M40 10L${68-stride} 61L89 65`} fill="none" stroke="#c4a591" strokeWidth="12" strokeLinecap="round" />
+      <ellipse cx="-6" cy="-18" rx="83" ry="40" fill="#d8b9a2" />
+      <path d="M33-30L62-98L89-94L80-5Z" fill="#d8b9a2" />
+      <path d="M62-99L96-117L128-101L112-82L77-84Z" fill="#e4c8b2" />
+      <path d="M67-101L55-138L35-149M57-128L76-145M96-115L101-153L120-171M101-138L87-156" fill="none" stroke="#bc9f91" strokeWidth="7" strokeLinecap="round" />
+      <path d="M78-101L65-123L88-115" fill="#d8b9a2" />
+      <circle cx="100" cy="-102" r="3.7" fill="#65464b" />
+      <circle cx="127" cy="-100" r="8" fill="#d895a4" />
+      <path d="M-77-32L-105-49" stroke="#d8b9a2" strokeWidth="14" strokeLinecap="round" />
+      <path d="M21-50L47-2M59-77L81-67" stroke="#c9778f" strokeWidth="11" />
+      <path d="M17-31Q43-17 60-17" fill="none" stroke="#c9778f" strokeWidth="6" />
+      <circle cx="49" cy="-12" r="11" fill="#efd196" stroke="#d5b479" strokeWidth="3" />
+      <path d="M42-7H56M49-12V-4" stroke="#b79261" strokeWidth="2" />
+    </g>
+    <path d="M-270 64Q-202 125 25 93Q103 83 132 24" fill="none" stroke="#d8b57f" strokeWidth="15" strokeLinecap="round" />
+    <path d="M-229 20L-213 83M42 19L60 82" stroke="#d8b57f" strokeWidth="11" />
+    <path d="M-265-49Q-231-16-179-24H56Q96-23 114-62L104 19Q70 67-82 64Q-206 63-254 16Z" fill="#dc98ac" stroke="#fff3df" strokeWidth="6" />
+    <path d="M-254-43Q-223-13-176-18H58Q99-18 114-62" fill="none" stroke="#fff3df" strokeWidth="11" strokeLinecap="round" />
+    <path d="M-222 21Q-85 66 65 22" fill="none" stroke="#f2d6a2" strokeWidth="6" />
+    <WarmStar x={-126} y={20} r={14} color="#fff4d8" />
+  </g>;
+};
+
 export const WarmCouple = ({ x = 0, y = 0, s = 1, t = 0, hold = 0 }: { x?: number; y?: number; s?: number; t?: number; hold?: number }) => (
   <g transform={`translate(${x} ${y}) scale(${s})`}>
-    <StoryPerson x={-77} y={Math.sin(t)*2} girl walk={t}/>
-    <StoryPerson x={77} y={Math.sin(t+.7)*2} walk={-t}/>
-    <path d="M-7 30Q0 43 7 30" fill="none" stroke="#ffcdaa" strokeWidth="17" strokeLinecap="round"/>
+    <StoryCouple gap={77} walk={t}/>
     {hold ? <circle cx="0" cy="32" r="7" fill="#e6c68b" /> : null}
   </g>
 );
