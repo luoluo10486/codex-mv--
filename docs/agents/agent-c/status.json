@@ -1,0 +1,130 @@
+{
+  "owner": "agent-c",
+  "branch": "codex/mv-agent-c-scenes",
+  "state": "committed",
+  "mergeState": "pending_root_integration",
+  "codeCommit": "d4f8a61b464af254a82c7345629b905f47b69891",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "scenes": [
+    {
+      "sceneId": "bridge-santa-route",
+      "durationInFrames": 312,
+      "state": "committed",
+      "commit": "1a7c24c3853f8ddc7a5274b9ea3a1f3068a58798",
+      "checkpointLint": "passed"
+    },
+    {
+      "sceneId": "bridge-santa-worlds",
+      "durationInFrames": 352,
+      "state": "committed",
+      "commit": "64865c9e49df7529d0b26020a051fb2fea595c28",
+      "checkpointLint": "passed"
+    },
+    {
+      "sceneId": "bridge-map-fold",
+      "durationInFrames": 316,
+      "state": "committed",
+      "commit": "c993f8f2ff367067f7dc1caf69f584fc4bae9a60",
+      "checkpointLint": "passed"
+    },
+    {
+      "sceneId": "bridge-map-return",
+      "durationInFrames": 342,
+      "state": "committed",
+      "commit": "db95c106d6f40be9fcd607210f2da724e322b10d",
+      "checkpointLint": "passed"
+    },
+    {
+      "sceneId": "lyric-33",
+      "durationInFrames": 83,
+      "state": "committed",
+      "commit": "ea60031a1c2690416e9636e7bad79e357efbb423",
+      "checkpointLint": "passed"
+    },
+    {
+      "sceneId": "lyric-34",
+      "durationInFrames": 66,
+      "state": "committed",
+      "commit": "bfd82cfedd83a56a6c599da7720f4dc89c0f66b1",
+      "checkpointLint": "passed"
+    },
+    {
+      "sceneId": "lyric-35",
+      "durationInFrames": 104,
+      "state": "committed",
+      "commit": "62b6fb462681a9f02ff4b1d02e1a47ee1d4b67d7",
+      "checkpointLint": "passed"
+    },
+    {
+      "sceneId": "lyric-36",
+      "durationInFrames": 72,
+      "state": "committed",
+      "commit": "c10b24a8c6c887eca0aa8e7f5c15524dcdfb91c9",
+      "checkpointLint": "passed"
+    },
+    {
+      "sceneId": "lyric-37",
+      "durationInFrames": 94,
+      "state": "committed",
+      "commit": "c5e3e5517ef7008f191c8db86e4586c3bb5bd534",
+      "checkpointLint": "passed"
+    },
+    {
+      "sceneId": "lyric-38",
+      "durationInFrames": 76,
+      "state": "committed",
+      "commit": "4950fe6b69946b41617abafc0a16c4ba3879688a",
+      "checkpointLint": "passed"
+    },
+    {
+      "sceneId": "lyric-39",
+      "durationInFrames": 97,
+      "state": "committed",
+      "commit": "9c08a111924c07dd5d6dbd43825adbd09c7dc490",
+      "checkpointLint": "passed"
+    },
+    {
+      "sceneId": "lyric-40",
+      "durationInFrames": 76,
+      "state": "committed",
+      "commit": "7baa45eb4fedf38980a3e823bc74d5d914481cab",
+      "checkpointLint": "passed"
+    },
+    {
+      "sceneId": "bridge-final-rise",
+      "durationInFrames": 54,
+      "state": "committed",
+      "commit": "76157ce6e4dd9d5061116cdfb648f6083ef208b3",
+      "checkpointLint": "passed"
+    },
+    {
+      "sceneId": "bridge-final-star",
+      "durationInFrames": 54,
+      "state": "committed",
+      "commit": "d4f8a61b464af254a82c7345629b905f47b69891",
+      "checkpointLint": "passed"
+    }
+  ],
+  "renderedSceneCount": 14,
+  "verifiedSceneCount": 14,
+  "motionSampleCount": 56,
+  "lintAndTypeScript": "passed",
+  "outputDirectory": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-c",
+  "evidence": [
+    "frame-manifest.json",
+    "motion-samples.json",
+    "motion-contact-sheet.jpg",
+    "pixel-motion-check.json"
+  ],
+  "sharedRendererContactStep": "failed: bundled ffmpeg lacks drawtext and xstack; System.Drawing contact sheet inspected",
+  "fullVideoAndPlayback": "root integration pending",
+  "backupRef": "codex/mv-agent-c-backup-9389075",
+  "backupCommit": "93890753b0ea98ce40b7d7d5eb3787adaaa13bf7",
+  "sharedArtCommit": "38ff797a2604bdcd4dcaf669cb2fa580929c1a25",
+  "sourceIdenticalToBackup": true,
+  "renderVerificationSource": "93890753b0ea98ce40b7d7d5eb3787adaaa13bf7"
+}
