@@ -1,0 +1,30 @@
+{
+  "owner": "agent-b",
+  "branch": "codex/mv-agent-b",
+  "entry": "src/dream/remake/entry-b.tsx",
+  "registry": "actBScenes",
+  "checks": { "lint": true, "typescript": true, "build": true, "startMainEndRendered": true, "contactSheetsInspected": true, "audioPlayback": false, "integratedCaptions": false },
+  "evidenceRoot": "D:/develop/github-repositity/codex-mv/film/out/remake/agent-b",
+  "evidenceManifest": "motion-samples.json",
+  "sceneStatus": [
+    { "sceneId": "lyric-17", "planned": true, "in_progress": true, "rendered": true, "verified": true, "committed": true, "merged": false, "commit": "32cc163" },
+    { "sceneId": "lyric-18", "planned": true, "in_progress": true, "rendered": true, "verified": true, "committed": true, "merged": false, "commit": "dfb91f1" },
+    { "sceneId": "lyric-19", "planned": true, "in_progress": true, "rendered": true, "verified": true, "committed": true, "merged": false, "commit": "ea474fb" },
+    { "sceneId": "lyric-20", "planned": true, "in_progress": true, "rendered": true, "verified": true, "committed": true, "merged": false, "commit": "1c74f10" },
+    { "sceneId": "lyric-21", "planned": true, "in_progress": true, "rendered": true, "verified": true, "committed": true, "merged": false, "commit": "126e9f8" },
+    { "sceneId": "lyric-22", "planned": true, "in_progress": true, "rendered": true, "verified": true, "committed": true, "merged": false, "commit": "a7425c2" },
+    { "sceneId": "lyric-23", "planned": true, "in_progress": true, "rendered": true, "verified": true, "committed": true, "merged": false, "commit": "a1b26ee" },
+    { "sceneId": "lyric-24", "planned": true, "in_progress": true, "rendered": true, "verified": true, "committed": true, "merged": false, "commit": "5cdac92" },
+    { "sceneId": "lyric-25", "planned": true, "in_progress": true, "rendered": true, "verified": true, "committed": true, "merged": false, "commit": "03e69c7" },
+    { "sceneId": "lyric-26", "planned": true, "in_progress": true, "rendered": true, "verified": true, "committed": true, "merged": false, "commit": "b2d12c2" },
+    { "sceneId": "lyric-27", "planned": true, "in_progress": true, "rendered": true, "verified": true, "committed": true, "merged": false, "commit": "ee6206e" },
+    { "sceneId": "lyric-28", "planned": true, "in_progress": true, "rendered": true, "verified": true, "committed": true, "merged": false, "commit": "114937b" },
+    { "sceneId": "lyric-29", "planned": true, "in_progress": true, "rendered": true, "verified": true, "committed": true, "merged": false, "commit": "65c997e" },
+    { "sceneId": "lyric-30", "planned": true, "in_progress": true, "rendered": true, "verified": true, "committed": true, "merged": false, "commit": "1751113" },
+    { "sceneId": "lyric-31", "planned": true, "in_progress": true, "rendered": true, "verified": true, "committed": true, "merged": false, "commit": "73a038e" },
+    { "sceneId": "lyric-32", "planned": true, "in_progress": true, "rendered": true, "verified": true, "committed": true, "merged": false, "commit": "259997d" }
+  ],
+  "followupCommits": ["f43f1cf", "d21389d"],
+  "nextEntry": "bridge-map-fold",
+  "knownIssues": ["Root must verify integrated captions and full audio/video playback."]
+}
