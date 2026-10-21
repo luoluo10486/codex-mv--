@@ -1,0 +1,32 @@
+{
+  "revision": 6,
+  "status": "in_progress",
+  "outputRoot": "out/remake-v6",
+  "scope": ["holding-hands", "map-letter-interlude", "full-film-visual-review"],
+  "sourceBaseline": "abb3e7b",
+  "implementation": "verified",
+  "visualReview": "verified",
+  "exports": "planned",
+  "verifiedIssues": [
+    {"id": "final-holding-framing", "sceneId": "lyric-39", "evidence": "out/remake-v6/interactions/contact-6.png", "status": "verified"},
+    {"id": "map-route-overlap", "sceneId": "bridge-map-fold", "evidence": "out/remake-v6/interactions/contact-5.png", "status": "verified"},
+    {"id": "hand-layering", "sceneId": "shared-characters", "evidence": "out/remake-v6/interactions/contact-3.png", "status": "verified"}
+  ],
+  "checks": {
+    "lint": "passed",
+    "build": "passed",
+    "storyboard": "48 scenes, 40 cues, 5508 frames passed",
+    "integratedFrames": 231,
+    "interactionFrames": 160,
+    "interactionScenes": 32,
+    "visualEvidence": ["out/remake-v6/review", "out/remake-v6/interactions"]
+  },
+  "blockers": [],
+  "resume": [
+    "Read this file, git status and the revision 06 handoff reports",
+    "Implementation and integrated visual checks complete; preserve current source",
+    "Set MV_OUTPUT_ROOT=out/remake-v6, MV_REQUIRE_PASTEL=1, MV_NIGHT_SCENES=lyric-04,lyric-05,bridge-santa-route",
+    "Render full, preview and full-preview --from-full; verify and record browser playback"
+  ],
+  "updatedAt": "2026-10-21T00:00:00+08:00"
+}

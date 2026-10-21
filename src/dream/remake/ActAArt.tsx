@@ -253,38 +253,26 @@ export const Book = ({
   y?: number;
   s?: number;
   open?: number;
-}) => (
-  <g transform={`translate(${x} ${y}) scale(${s})`} filter="url(#warm-shadow)">
-    <path
-      d="M-420 58Q-198 9 0 67Q195 9 420 58L439 89Q220 48 0 103Q-220 48-439 89Z"
-      fill="#cdbabb"
-    />
-    <path
-      d="M-407-104Q-195-174 0-87Q195-174 407-104V55Q200 1 0 69Q-200 1-407 55Z"
-      fill="#e5d9cd"
-    />
-    <g transform={`scale(${0.07 + open * 0.93} 1)`}>
-      <path
-        d="M-412-126Q-195-197 0-101V56Q-199-19-412 36Z"
-        fill="url(#a-page)"
-      />
-      <path d="M412-126Q195-197 0-101V56Q199-19 412 36Z" fill="url(#a-page)" />
-      <path d="M0-101V56" stroke="#d9cdc4" strokeWidth="7" />
-      {[0, 1, 2, 3].map((i) => (
-        <path
-          key={i}
-          d={`M-365 ${-79 + i * 26}Q-220 ${-119 + i * 26} -65 ${-66 + i * 26}M65 ${-66 + i * 26}Q220 ${-119 + i * 26} 365 ${-79 + i * 26}`}
-          stroke="#dbcec8"
-          strokeWidth="3"
-          opacity="0.5"
-          fill="none"
-        />
-      ))}
+}) => {
+  const opening = Math.max(0,Math.min(1,open));
+  const cover = Math.cos((1-opening)*Math.PI);
+  return <g transform={`translate(${x} ${y}) scale(${s}) translate(${-206*(1-opening)} 0)`} filter="url(#warm-shadow)">
+    <path d="M0-109Q195-189 425-118V81Q220 48 0 103Z" fill="#cdbabb" />
+    <path d="M0-101Q195-197 412-126V56Q199-19 0 56Z" fill="url(#a-page)" />
+    {[0,1,2,3].map(i=><path key={i} d={`M65 ${-66+i*26}Q220 ${-119+i*26} 365 ${-79+i*26}`} stroke="#dbcec8" strokeWidth="3" opacity=".5" fill="none" />)}
+    <g transform={`scale(${cover} 1)`}>
+      <path d="M-425-118Q-195-189 0-109V103Q-220 48-425 81Z" fill={cover < 0 ? "#e3b5c4" : "#cdbabb"} stroke="#c9a3b0" strokeWidth="3" />
+      <g opacity={Math.max(0,cover)}>
+        <path d="M-412-126Q-195-197 0-101V56Q-199-19-412 36Z" fill="url(#a-page)" />
+        {[0,1,2,3].map(i=><path key={i} d={`M-365 ${-79+i*26}Q-220 ${-119+i*26} -65 ${-66+i*26}`} stroke="#dbcec8" strokeWidth="3" opacity=".5" fill="none" />)}
+      </g>
+      <g opacity={Math.max(0,-cover)}><path d="M-365-100Q-205-151-55-91V35Q-210-7-365 24Z" stroke="#f7e6d7" strokeWidth="3" fill="none" /><WarmStar x={-210} y={-56} r={25} color="#fff2d2" /></g>
     </g>
+    <path d="M0-101V84" stroke="#c9a3b0" strokeWidth="7" />
     <path d="M20 74L71 172L95 125L142 130L99 59Z" fill="#dfa5b2" />
     <path d="M27 81L76 145" stroke="#eedfcf" strokeWidth="3" />
-  </g>
-);
+  </g>;
+};
 
 export const ReadingProps = ({x,y,s=1,ink=false}:{x:number;y:number;s?:number;ink?:boolean}) => <g transform={`translate(${x} ${y}) scale(${s})`}>
   <ellipse cy="20" rx="133" ry="22" fill="#d9c7be" opacity=".23"/>

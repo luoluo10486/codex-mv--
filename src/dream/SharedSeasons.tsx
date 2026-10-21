@@ -46,11 +46,18 @@ export const SharedSeasons = ({ durationInFrames, reprise = 0 }: { durationInFra
       {season===0 && Array.from({length:12},(_,i)=><ellipse key={i} cx={160+(i*139+f*.5)%1530} cy={410+(i*93+f*1.2)%540} rx="7" ry="12" fill="#f5ccd7" transform={`rotate(${i*23} ${160+(i*139+f*.5)%1530} ${410+(i*93+f*1.2)%540})`} />)}
       {season===3 && Array.from({length:35},(_,i)=><circle key={i} cx={(i*173+f*.6)%1920} cy={(i*83+f*2.4)%970} r={3+i%3} fill="#fffdf9" />)}
     </g>)}
-    <StoryCouple x={980} y={747} s={1.05 + reprise*.045} gap={78} embrace={.25 + reprise*.1} />
-    <g opacity={reveal[3]}>
-      <path d="M852 660Q935 697 1069 664" fill="none" stroke="#f1c1ce" strokeWidth="20" strokeLinecap="round" />
-      <path d="M880 670L869 725L894 731L909 677M1044 674L1054 715L1078 710L1066 670" fill="#f1c1ce" />
-      <path d="M867 702L897 711M1052 697L1075 691" stroke="#fff7ef" strokeWidth="4" />
+    <g transform={`translate(980 747) scale(${1.05 + reprise*.045})`}>
+      <g opacity={reveal[3]} fill="none" stroke="#dba5b8" strokeLinecap="round">
+        <path d="M-99-72Q-108-92-79-94Q-49-94-54-73M55-73Q49-94 79-94Q108-92 99-72" strokeWidth="15" />
+        <path d="M-72-76Q0-34 72-76" strokeWidth="14" />
+      </g>
+      <StoryCouple gap={78} embrace={.25 + reprise*.1} />
+      <g opacity={reveal[3]}>
+        <path d="M-98-72Q-78-60-56-73M56-73Q78-60 99-72" fill="none" stroke="#f1c1ce" strokeWidth="16" strokeLinecap="round" />
+        <path d="M-83-66L-91-23L-73-19L-63-64M77-65L85-25L104-29L94-68" fill="#f1c1ce" />
+        <path d="M-87-35L-69-31M83-39L101-42" stroke="#fff7ef" strokeWidth="3.5" />
+        <path d="M-95-69Q-78-63-60-70M60-70Q78-63 96-69" fill="none" stroke="#f9dae3" strokeWidth="3" strokeLinecap="round" />
+      </g>
     </g>
   </WarmStage>;
 };

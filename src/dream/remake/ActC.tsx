@@ -1,4 +1,3 @@
-import { HeldHands } from "../HeldHands";
 import { SharedSeasons } from "../SharedSeasons";
 import { SharedTenderness } from "../SharedTenderness";
 import type { ComponentType } from "react";
@@ -38,12 +37,13 @@ const LastSnow = ({ durationInFrames }: SceneProps) => {
     {Array.from({ length: 34 }, (_, i) => <circle key={i} cx={(i * 271 + f * (2 + i % 3)) % 2040 - 50} cy={(i * 83 + f * 5) % 760 + 90} r={3 + i % 4} fill="#fffaf4" opacity={0.44} />)}
     <path d="M420 740Q820 636 1190 747" fill="none" stroke="#f3dce2" strokeWidth="30" opacity="0.55" />
     <g transform={`translate(${shelter * 25} 0)`}>
-      <path d="M1054 456V747Q1054 773 1038 773Q1023 773 1023 757" stroke="#bd9c91" strokeWidth="7" fill="none" strokeLinecap="round" />
+      <path d="M1054 456V710Q1054 728 1038 728Q1023 728 1023 715" stroke="#bd9c91" strokeWidth="7" fill="none" strokeLinecap="round" />
       <path d="M790 481Q866 350 1054 350Q1240 350 1318 481Q1252 452 1186 481Q1120 452 1054 481Q988 452 922 481Q856 452 790 481Z" fill="#f4d8df" stroke="#d5b0be" strokeWidth="4" />
       <path d="M1054 350Q970 387 922 481M1054 350V481M1054 350Q1138 387 1186 481" stroke="#dfbdc8" strokeWidth="3" fill="none" />
       <path d="M1054 341V351" stroke="#bd9c91" strokeWidth="7" strokeLinecap="round" />
     </g>
-    <Couple x={900 + shelter * 25} y={720} s={0.96} gap={90} walk={Math.sin(f / 6) * 0.35} />
+    <Couple x={900 + shelter * 25} y={720} s={0.96} gap={90} boyHandLeft={{x:-70,y:-30}} />
+    <path d={`M${1050+shelter*25} 689h8m-8 5h8`} stroke="#dfa98a" strokeWidth="2" strokeLinecap="round" />
   </WarmStage>;
 };
 
@@ -70,14 +70,11 @@ const HandsPullback = ({ durationInFrames }: SceneProps) => {
   const { p } = useTime(durationInFrames);
   const wide = ease(p);
   const scale = interpolate(wide, [0, 1], [1.8, 0.72]);
-  const revealPeople = interpolate(wide, [.67, .87], [0, 1], {extrapolateLeft:"clamp",extrapolateRight:"clamp"});
   return <WarmStage theme="dawn"><WarmGlow x={960} y={580} r={440} opacity={0.55} />
-    <defs><clipPath id="c-hands-safe"><rect x="0" y="270" width="1920" height="810" /></clipPath></defs>
     <path d="M0 900Q430 720 960 910T1920 840V1080H0Z" fill="#fce2d8" />
-    <g clipPath="url(#c-hands-safe)">
-      <g opacity={revealPeople}><Couple x={960} y={735} s={1.16} gap={95} embrace={0.1} /></g>
-      <g opacity={1-revealPeople}><HeldHands x={960} y={650 + wide * 75} s={scale} ring /></g>
-    </g>
+    <path d="M170 910Q540 760 820 848T1320 840T1760 910" fill="none" stroke="#fff4e2" strokeWidth="20" opacity=".72" />
+    <Couple x={960} y={735 + wide * 33} s={scale * .72} gap={78} walk={Math.sin(p * Math.PI * 2) * .7} />
+    <circle cx="960" cy={790 + wide * 20} r={44 - wide * 18} fill="none" stroke="#e6c68b" strokeWidth="6" opacity={.35 - wide*.18}/>
     <SprigC x={160} y={1080} />
   </WarmStage>;
 };
@@ -127,22 +124,45 @@ const GiftWorlds = ({ durationInFrames }: SceneProps) => {
 
 const MapFold = ({ durationInFrames }: SceneProps) => {
   const { f, p } = useTime(durationInFrames);
-  const fold = ease(p / 0.72);
-  const close = ease((p - 0.5) / 0.5);
-  const spread = 1 - fold * 0.92;
-  return <WarmStage><WarmGlow x={960} y={530} r={470} opacity={0.4} />
-    <path d="M0 1050Q300 780 600 1020T1230 980T1920 1000V1080H0Z" fill="#e1e7d8" />
-    <g transform={`translate(960 ${555 - close * 60}) rotate(${Math.sin(f / 22) * 2 + close * 4}) scale(${1 - close * 0.35} ${1 - close * 0.65})`}>
-      <g transform={`scale(${spread} 1)`}>
-      {[0,1,2].map(i => <path key={i} d={`M${-650 + i * 430} -270Q${-470 + i * 420} ${-400 + fold * 240} ${-220 + i * 430} -270V270Q${-450 + i * 410} ${390 - fold * 260} ${-650 + i * 430} 270Z`} fill={["#fce2d8","#fff4ce","#f8dfe8"][i]} stroke="#d6b1b8" strokeWidth="8" />)}
-      <path d="M-575 50Q-250-220 40 45T590-45" fill="none" stroke="#dca7b8" strokeWidth="14" strokeDasharray="22 18" />
-      <path d="M-460 180L-250-80L-20 180L200-140L480 180" fill="none" stroke="#e6b8c6" strokeWidth="38" />
-      <WarmStar x={320} y={-70} r={18} color="#fff4ce" />
-      </g>
-      <path d={`M-${215 + (1 - fold) * 430} -270L-215 -270V270L-${215 + (1 - fold) * 430} 270Z`} fill="#fce2d8" opacity={fold * 0.65} />
-      <path d={`M${215 + (1 - fold) * 430} -270L215 -270V270L${215 + (1 - fold) * 430} 270Z`} fill="#f8dfe8" opacity={fold * 0.65} />
+  const journey = ease(p / .44);
+  const leftFold = ease((p - .45) / .25);
+  const rightFold = ease((p - .57) / .23);
+  const seal = ease((p - .79) / .18);
+  const route = "M-540 151Q-391 30-240 126T80 140T535 114";
+  const travelerX = interpolate(journey, [0,.4,.7,1], [-485,-170,145,460]);
+  const travelerY = interpolate(journey, [0,.4,.7,1], [84,67,93,62]);
+  // Each side turns around its paper crease and lands on the center panel.
+  const mapPanel = (side: number) => <>
+    <rect x={side * 420 - 210} y="-240" width="420" height="480" fill={side === 0 ? "#fff4d7" : side < 0 ? "#fae3d8" : "#fae4e9"} stroke="#d3acaf" strokeWidth="4" />
+    <g clipPath={`url(#map-panel-${side + 1})`}>
+      <path d="M-630 110Q-370-45-150 100T260 110T630 50V240H-630Z" fill="#e4e4cc" />
+      <path d="M-650 205Q-360 92-190 180T200 190T650 155" fill="none" stroke="#c1dce0" strokeWidth="42" />
+      <path d="M-650 201Q-360 88-190 176T200 186T650 151" fill="none" stroke="#e6f3ee" strokeWidth="7" />
+      <path d="M-590 12L-495-143L-380 12ZM-442 27L-338-108L-238 27Z" fill="#dfb6bd" />
+      <path d="M-529-88L-495-143L-452-84L-477-94L-495-78L-511-99ZM-372-64L-338-108L-305-64L-328-72L-343-54Z" fill="#fffaf0" />
+      <House x={420} y={55} s={.46} /><House x={520} y={72} s={.32} />
+      <path d="M-56 19V-139H-19V19M-74 22H-1M-58-139L-19-139L-38-176Z" fill="#d5b5a3" stroke="#bb968f" strokeWidth="4" />
+      <path d="M-18-150Q26-169 60-142L58-110Q16-130-18-112Z" fill="#e8b8c8" />
+      <path d={route} fill="none" stroke="#fffaf0" strokeWidth="16" />
+      <path d={route} fill="none" stroke="#d4ad71" strokeWidth="6" strokeDasharray="12 12" />
+      {[-510,-40,475].map((x,i)=><g key={x} transform={`translate(${x} ${i===1?135:120})`}><circle r="13" fill="#fff6dc" stroke="#d4ad71" strokeWidth="4" /><circle r="4" fill="#d4ad71" /></g>)}
+      <Couple x={travelerX} y={travelerY} s={.33} gap={78} walk={f / 12} />
     </g>
-    <g transform={`translate(960 ${555 + (1 - close) * 180}) rotate(${close * 4}) scale(${0.15 + close * 0.95})`}><WarmLetter open={1 - close} /></g>
+  </>;
+  return <WarmStage theme="sunset"><WarmGlow x={960} y={520} r={640} opacity={.5} />
+    <defs>{[-1,0,1].map(side=><clipPath key={side} id={`map-panel-${side+1}`}><rect x={side*420-210} y="-238" width="420" height="476" /></clipPath>)}</defs>
+    <path d="M0 1000Q320 820 640 960T1260 950T1920 1000V1080H0Z" fill="#e5e5d4" />
+    <ellipse cx="960" cy="847" rx={590-seal*360} ry="35" fill="#d6bac0" opacity=".18" />
+    <g opacity={1-seal} transform={`translate(960 ${553-seal*34}) rotate(${-3+seal*7}) scale(${1-seal*.28})`}>
+      {mapPanel(0)}
+      <g transform={`translate(-210 0) scale(${Math.cos(leftFold*Math.PI)} 1) translate(210 0)`}>{mapPanel(-1)}</g>
+      <g transform={`translate(210 0) scale(${Math.cos(rightFold*Math.PI)} 1) translate(-210 0)`}>{mapPanel(1)}</g>
+      <path d="M-210-240V240M210-240V240" stroke="#cba79c" strokeWidth="3" strokeDasharray="9 10" opacity={.6*(1-rightFold)} />
+    </g>
+    <g opacity={seal} transform={`translate(960 ${550-seal*40}) rotate(${seal*4}) scale(${.72+seal*.48})`}>
+      <WarmLetter open={.7*(1-seal)} /><WarmGlow x={0} y={0} r={280} opacity={.4} />
+    </g>
+    <WarmStar x={960} y={230-seal*20} r={15+seal*17} color="#fff4ce" rotate={f*.4} />
   </WarmStage>;
 };
 
@@ -150,13 +170,13 @@ const MapReturn = ({ durationInFrames }: SceneProps) => {
   const { f, p } = useTime(durationInFrames);
   const route = ease(p);
   const part = route < 0.5 ? route * 2 : (route - 0.5) * 2;
-  const x = route < 0.5 ? cubic(part, 120,380,680,940) : cubic(part,940,1200,1450,1850);
-  const y = route < 0.5 ? cubic(part,760,230,900,530) : cubic(part,530,160,320,690);
-  return <WarmStage theme="night"><WarmMoon x={1550} y={195} r={100} /><WarmGlow x={420} y={430} r={330} opacity={0.45} />
-    <path d="M120 760C380 230 680 900 940 530S1450 320 1850 690" fill="none" stroke="#fff4ce" strokeWidth="20" strokeDasharray="30 24" strokeDashoffset={-route * 900} />
+  const x = route < 0.5 ? cubic(part,960,820,680,940) : cubic(part,940,1200,1450,1850);
+  const y = route < 0.5 ? cubic(part,510,350,430,530) : cubic(part,530,160,320,690);
+  return <WarmStage theme="sunset"><WarmMoon x={1550} y={195} r={100} /><WarmGlow x={420} y={430} r={330} opacity={0.45} />
+    <path d="M960 510C820 350 680 430 940 530S1450 320 1850 690" fill="none" stroke="#fff4ce" strokeWidth="12" strokeDasharray="18 18" strokeDashoffset={-route * 900} />
     <path d="M0 810Q410 610 830 800T1920 740V1080H0Z" fill="#e6b8c6" />
     {[{x:210,y:710,s:0.52},{x:760,y:675,s:0.38},{x:1400,y:590,s:0.45}].map((h,i)=><House key={i} x={h.x} y={h.y} s={h.s}/>) }
-    <g transform={`translate(${x} ${y}) rotate(${Math.sin(f / 16) * 8})`}><WarmLetter s={0.56} open={0.25} /><WarmGlow x={0} y={0} r={190} opacity={0.52} /></g>
+    <g transform={`translate(${x} ${y}) rotate(${4+Math.sin(f / 16)*8})`}><WarmLetter s={1.2-.64*ease(p/.3)} open={.25*ease(p/.3)} /><WarmGlow x={0} y={0} r={190} opacity={0.52} /></g>
     <WarmStar x={1820} y={300} r={12} color="#fffaf4" />
   </WarmStage>;
 };
@@ -165,7 +185,7 @@ const FinalRise = ({ durationInFrames }: SceneProps) => {
   const { f, p } = useTime(durationInFrames);
   const rise = ease(p);
   return <WarmStage theme="dawn"><Hillscape shift={140} /><path d="M450 1080Q800 880 1260 610H1290Q1140 800 1470 1080Z" fill="#fffaf4" opacity="0.74" /><WarmGlow x={1450} y={330} r={500} opacity={0.5} /><circle cx="1450" cy="330" r="130" fill="#fff4ce" /><Couple x={1010} y={746} s={0.78} gap={76} walk={Math.sin(f / 5) * 0.5} />
-    <g transform={`translate(${960 + Math.sin(f / 12) * 12} ${830 - rise * 500}) rotate(${rise * 12}) scale(${0.5 + rise * 0.28})`}><WarmLetter open={0.4} /><WarmGlow x={0} y={0} r={240} opacity={0.65} /></g>
+    <g transform={`translate(${1390-ease((rise-.55)/.45)*430} ${820-ease(rise/.55)*390+ease((rise-.55)/.45)*20}) rotate(${-8+rise*8}) scale(${.5+rise*.06})`}><WarmLetter open={.4*(1-rise)} /><WarmGlow x={0} y={0} r={240} opacity={0.65} /></g>
   </WarmStage>;
 };
 
@@ -175,7 +195,7 @@ const FinalStar = ({ durationInFrames }: SceneProps) => {
   return <WarmStage theme="night"><WarmGlow x={960} y={470} r={600} opacity={0.38 + star * 0.38} />
     <path d="M0 830Q480 680 950 810T1920 730V1080H0Z" fill="#e9c5d2" />
     <WarmMoon x={1500} y={220} r={90} /><WarmStar x={960} y={450} r={interpolate(star, [0,1], [18, 86])} color="#fff4ce" rotate={f * 0.4} />
-    <g transform={`translate(960 ${480 - star * 30}) rotate(${star * 20}) scale(${1 - star * 0.45} ${1 - star * 0.98})`}><WarmLetter s={0.56} open={0.5 * (1 - star)} /></g>
+    <g transform={`translate(960 450) rotate(${star * 20}) scale(${1 - star * 0.45} ${1 - star * 0.98})`}><WarmLetter s={0.56} /></g>
     {Array.from({length: 18}, (_, i) => <WarmStar key={i} x={220 + ((i * 257) % 1500)} y={170 + ((i * 131) % 570)} r={3 + i % 3} color="#fff4ce" rotate={i * 17} />)}
   </WarmStage>;
 };

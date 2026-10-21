@@ -1,7 +1,6 @@
 import { STORY_OUTFIT, StoryCouple } from "../StoryCharacters";
 import { SharedSeasons } from "../SharedSeasons";
 import { SharedTenderness } from "../SharedTenderness";
-import { HeldHands } from "../HeldHands";
 import type { ComponentType } from "react";
 import {
   WarmGlow,
@@ -273,7 +272,6 @@ export const SantaDelivery = ({ durationInFrames }: SceneProps) => {
       <path d={`M${giftStartX} ${giftStartY}Q${1150} 900 1600 755`} fill="none" stroke="#fff0c9" strokeWidth="4" strokeDasharray="7 14" opacity={drop > 0 && drop < 1 ? 0.45 : 0} />
       <Gift x={giftX} y={giftY} s={0.33} rotate={-6 * (1 - drop)} />
       <WarmGlow x={1600} y={811} r={130} opacity={drop * 0.32} />
-      <Bell x={342} y={287} s={0.55} tilt={Math.sin(f / 7) * 10} />
       <WarmSnow count={44} seed={8} />
     </Stage>
   );
@@ -345,6 +343,7 @@ export const LadleWorld = ({ durationInFrames }: SceneProps) => {
   const water = smooth((p - 0.28) / 0.22);
   const ladleY = 500 + dip * 260 - lift * 300;
   const angle = -19 + dip * 8 + lift * 8;
+  const submerged = smooth((dip - 0.55) / 0.45) * (1 - smooth(lift / 0.45));
   return (
     <Stage>
       <WarmGlow x={990} y={627} r={520} opacity={0.35} />
@@ -462,30 +461,30 @@ export const LadleWorld = ({ durationInFrames }: SceneProps) => {
           stroke="#e6c7aa"
           strokeWidth="12"
         />
-        {[0, 1, 2].map((i) => {
-          const falling = smooth((p - 0.56 - i * 0.07) / 0.23);
-          const visible = p > 0.56 + i * 0.07 && falling < 1;
-          return (
-            <g
-              key={i}
-              transform={`translate(${-275 + i * 28} ${113 + falling * 190}) scale(${0.85 - falling * 0.2})`}
-              opacity={visible ? 0.94 : 0}
-            >
-              <path
-                d="M0-24C-8-9-18 2-18 14A18 18 0 0 0 18 14C18 2 8-9 0-24Z"
-                fill="#a9d3e2"
-              />
-              <path
-                d="M-7 7Q-11 16-4 20"
-                stroke="#fffaf4"
-                strokeWidth="5"
-                fill="none"
-                strokeLinecap="round"
-              />
-            </g>
-          );
-        })}
       </g>
+      <defs>
+        <clipPath id="a-ladle-submerged"><ellipse cx="-105" cy="10" rx="278" ry="158" transform={`translate(1080 ${ladleY}) rotate(${angle}) scale(.9)`} /></clipPath>
+        <clipPath id="a-ladle-waterline"><path d="M733 799Q990 766 1243 799L1243 936H733Z" /></clipPath>
+      </defs>
+      <g opacity={submerged} clipPath="url(#a-ladle-submerged)">
+        <g clipPath="url(#a-ladle-waterline)">
+          <rect x="733" y="770" width="510" height="166" fill="#d6edf2" />
+          <path d="M0 839Q377 715 753 825T1375 817T1920 850V1080H0Z" fill="#bcdde8" opacity=".55" />
+        </g>
+        <path d="M733 799Q990 766 1243 799" fill="none" stroke="#fffaf4" strokeWidth="8" strokeLinecap="round" />
+        <path d="M770 821Q990 796 1210 821" fill="none" stroke="#a7d1de" strokeWidth="5" opacity=".75" />
+      </g>
+      {[0, 1, 2].map((i) => {
+        const start = 0.48 + i * 0.065;
+        const falling = smooth((p - start) / 0.25);
+        const visible = p > start && falling < 1 && lift > 0.32;
+        const lipX = 1080 + .9 * (-275 * Math.cos(angle * Math.PI / 180) - 113 * Math.sin(angle * Math.PI / 180));
+        const lipY = ladleY + .9 * (-275 * Math.sin(angle * Math.PI / 180) + 113 * Math.cos(angle * Math.PI / 180));
+        return <g key={i} transform={`translate(${lipX + i * 15} ${lipY + falling * (797 - lipY)}) scale(${.82 - falling * .22})`} opacity={visible ? .94 * (1 - smooth((falling - .85) / .15)) : 0}>
+          <path d="M0-24C-8-9-18 2-18 14A18 18 0 0 0 18 14C18 2 8-9 0-24Z" fill="#a9d3e2" />
+          <path d="M-7 7Q-11 16-4 20" stroke="#fffaf4" strokeWidth="5" fill="none" strokeLinecap="round" />
+        </g>;
+      })}
       <path d="M0 1004Q210 921 390 996L484 1080H0Z" fill="#fce2d8" />
       <path d="M1536 1080Q1664 911 1920 958V1080Z" fill="#f8dfe8" />
       <Sprig x={1790} y={1080} s={0.85} flip />
@@ -521,8 +520,8 @@ export const Approach = ({ durationInFrames }: SceneProps) => {
         strokeWidth="86"
         opacity="0.3"
       />
-      <StoryCouple x={960} y={760+close*35} s={1.04} gap={105-close*30} walk={f/8}/>
-      <WarmStar x={960} y={613} r={18} color="#f2eedb" rotate={f * 0.4} />
+      <StoryCouple x={960} y={795} s={1.04} gap={260-close*182} walk={Math.min(f, durationInFrames * .65)/8}/>
+      <WarmStar x={960} y={465} r={18} color="#f2eedb" rotate={f * 0.4} />
       <Dust f={f} count={10} />
     </Stage>
   );
@@ -584,8 +583,8 @@ export const Fireplace = ({ durationInFrames }: SceneProps) => {
         d={`M708 410Q692 ${387 + Math.sin(f / 4) * 6} 708 379Q724 395 708 410M1212 410Q1196 388 1212 379Q1229 395 1212 410`}
         fill="#eee4cf"
       />
-      <StoryCouple x={960} y={790} s={.95} gap={85}/>
-      <WarmStar x={960} y={625} r={14 + e * 8} color="#f2eedb" rotate={f} />
+      <WarmStar x={1500} y={625} r={14 + e * 8} color="#f2eedb" rotate={f} />
+      <StoryCouple x={425} y={790} s={.95} gap={85}/>
     </Stage>
   );
 };
@@ -606,31 +605,13 @@ export const Resilience = ({ durationInFrames }: SceneProps) => {
         opacity="0.86"
       />
       <path d="M0 930Q562 797 976 919T1920 897V1080H0Z" fill="#eadfd2" />
-      <path
-        d="M630 636Q960 283 1290 636Q1230 602 1168 636Q1102 605 1036 636Q960 603 884 636Q814 604 748 636Q688 605 630 636Z"
-        fill="#dac5c4"
-      />
-      <path
-        d="M960 459Q825 480 748 636M960 459Q1090 480 1168 636"
-        stroke="#e5d4cc"
-        strokeWidth="5"
-        fill="none"
-      />
-      <path
-        d="M960 459V835Q960 875 1000 849"
-        fill="none"
-        stroke="#e8dccb"
-        strokeWidth="11"
-        strokeLinecap="round"
-      />
-      <StoryCouple x={960} y={739} s={.98} gap={90} walk={f/15}/>
-      <WarmStar
-        x={960}
-        y={459 - e * 25}
-        r={14}
-        color="#f1e9d7"
-        rotate={f * 0.3}
-      />
+      <g transform="translate(900 790) scale(.98)">
+        <path d="M-200-260Q160-590 520-260Q462-288 400-260Q340-290 280-260Q220-290 160-260Q100-290 40-260Q-20-290-80-260Q-140-290-200-260Z" fill="#dac5c4" />
+        <path d="M160-425Q20-400-80-260M160-425Q310-400 400-260" stroke="#e5d4cc" strokeWidth="5" fill="none" />
+        <path d="M160-425V-15Q160 8 185-5" fill="none" stroke="#e8dccb" strokeWidth="10" strokeLinecap="round" />
+        <StoryCouple gap={90} boyHandLeft={{x:-70,y:-35}} />
+        <WarmStar x={160} y={-438 - e * 8} r={14} color="#f1e9d7" rotate={f * .3} />
+      </g>
     </Stage>
   );
 };
@@ -700,10 +681,10 @@ export const Contract = ({ durationInFrames }: SceneProps) => {
           stroke="#e0cfca"
           strokeWidth="5"
         />
-        <path d="M900-22L263-37L196 97L900 198Z" fill={STORY_OUTFIT.blouse} />
-        <path d="M329-42L263-45L184 105L266 120Z" fill="#eadfd1" />
       </g>
       <g transform={`translate(${ringX} 656)`}>
+        <path d={`M${1860-ringX}-8L179-4L155 97L${1860-ringX} 212Z`} fill={STORY_OUTFIT.blouse} />
+        <path d="M185-10L219 0L196 105L158 99Z" fill="#eadfd1" />
         <ellipse
           rx="17"
           ry="31"
@@ -748,10 +729,14 @@ export const Hands = ({ durationInFrames }: SceneProps) => {
   const { f, e } = useMoment(durationInFrames);
   return (
     <Stage>
-      <WarmGlow x={960} y={655} r={500} />
+      <WarmGlow x={960} y={655} r={520} />
       <path d="M0 939Q960 832 1920 939V1080H0Z" fill="#e7dad2" />
-      <HeldHands x={960} y={707 + Math.sin(f / 18) * 3} s={1.34} gap={(1 - e) * 12} ring />
-      <WarmStar x={960} y={483} r={27} color="#f2ebda" rotate={f * 0.3} />
+      <path d="M220 900Q500 720 780 842T1290 824T1710 900" fill="none" stroke="#f5eee3" strokeWidth="22" opacity=".7" />
+      <g transform={`translate(960 ${770 + Math.sin(f / 18) * 3}) scale(${1.18 + e * .12})`}>
+        <StoryCouple gap={78} walk={f / 18} />
+      </g>
+      <circle cx="960" cy="805" r={42 + e * 18} fill="none" stroke="#f0c98c" strokeWidth="5" opacity={0.22 + e * .2} />
+      <WarmStar x={960} y={485} r={27} color="#f2ebda" rotate={f * 0.3} />
       <Dust f={f} count={12} />
     </Stage>
   );

@@ -51,8 +51,8 @@ export const Room = ({ fire = 1 }: { fire?: number }) => {
 
 export const Person = ({ x, y, second = false, lean = 0, walk = 0, arm = 0 }: { x: number; y: number; second?: boolean; lean?: number; walk?: number; arm?: number }) => <StoryPerson x={x} y={y} girl={!second} lean={lean} walk={walk} arm={arm} face={second ? -1 : 1} />;
 
-export const Couple = ({ x = 960, y = 740, s = 1, gap = 75, walk = 0, embrace = 0 }: { x?: number; y?: number; s?: number; gap?: number; walk?: number; embrace?: number }) => {
-  return <StoryCouple x={x} y={y} s={s} gap={gap} walk={walk} embrace={embrace}/>;
+export const Couple = ({ x = 960, y = 740, s = 1, gap = 75, walk = 0, embrace = 0, boyHandLeft }: { x?: number; y?: number; s?: number; gap?: number; walk?: number; embrace?: number; boyHandLeft?: {x:number;y:number} }) => {
+  return <StoryCouple x={x} y={y} s={s} gap={gap} walk={walk} embrace={embrace} boyHandLeft={boyHandLeft}/>;
 };
 
 export const Hillscape = ({ shift = 0, snow = false }: { shift?: number; snow?: boolean }) => <g>

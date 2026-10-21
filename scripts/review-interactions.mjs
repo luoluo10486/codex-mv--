@@ -6,7 +6,7 @@ import sharp from "sharp";
 
 const root = `${process.env.MV_OUTPUT_ROOT ?? "out/remake-v5"}/interactions`;
 const storyboard = JSON.parse(await readFile("src/data/remake-storyboard.json", "utf8"));
-const ids = ["lyric-02","lyric-04","lyric-05","lyric-09","lyric-11","lyric-12","lyric-14","lyric-15","bridge-santa-route","lyric-22","lyric-27","lyric-28","lyric-30","lyric-31","lyric-33","lyric-35","lyric-36","lyric-38","lyric-39"];
+const ids = ["lyric-02","lyric-04","lyric-05","lyric-08","lyric-09","lyric-10","lyric-11","lyric-12","lyric-13","lyric-14","lyric-15","bridge-santa-route","lyric-17","lyric-20","lyric-21","lyric-22","lyric-25","lyric-26","lyric-27","lyric-28","lyric-29","lyric-30","lyric-31","bridge-map-fold","bridge-map-return","lyric-33","lyric-35","lyric-36","lyric-38","lyric-39","bridge-final-rise","bridge-final-star"];
 const items = ids.flatMap(id => {
   const shot = storyboard.find(item=>item.sceneId===id);
   return [.08,.32,.55,.8,.96].map(p=>({sceneId:id,p,frame:shot.startFrame+Math.floor((shot.endFrame-shot.startFrame-1)*p)}));

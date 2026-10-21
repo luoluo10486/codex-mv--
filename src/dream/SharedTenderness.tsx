@@ -31,10 +31,22 @@ const CampusShelter = ({ interior = false }: { interior?: boolean }) => interior
   <path d="M544 810H1385M544 781H1385" stroke="#e4cdbc" strokeWidth="20" strokeLinecap="round" />
 </>;
 
-const TenderPair = ({ relax, gap, tremble = 0 }: { relax: number; gap: number; tremble?: number }) => <g transform="translate(960 724)">
-  <StoryPerson x={-gap+tremble} girl lean={relax*7} handRight={{x:39,y:-23+relax*24}} />
-  <StoryPerson x={gap} face={-1} handRight={{x:70+(gap*2-114)*relax,y:30-relax*75}} />
-</g>;
+const TenderPair = ({ relax, gap, tremble = 0 }: { relax: number; gap: number; tremble?: number }) => {
+  const girlX = -gap + tremble + relax * 6;
+  const shoulder = { x: girlX - 43, y: -45 };
+  const hand = {
+    x: 70 + (gap - shoulder.x - 70) * relax,
+    y: 30 + (shoulder.y - 30) * relax,
+  };
+  return <g transform="translate(960 724)">
+    <StoryPerson x={gap} face={-1} headLean={relax*2} handRight={hand} backArm={1} hideHand={1} />
+    <StoryPerson x={girlX} girl headLean={relax*7} handRight={{x:65-relax*22,y:30-relax*2}} />
+    <g transform={`translate(${gap-hand.x} ${hand.y}) rotate(${-18+relax*32})`}>
+      <path d="M-7-10Q-13-6-10 3L-7 11Q-3 16 2 12L7 7Q11 3 8-3L5-9Q0-14-7-10Z" fill="#ffd2b2" stroke="#dfb18e" strokeWidth="1.2" />
+      <path d="M-5 0L1 3M-5 4L0 7M-1-7L3-5" fill="none" stroke="#dfb18e" strokeWidth="1.1" strokeLinecap="round" />
+    </g>
+  </g>;
+};
 
 export const SharedTenderness = ({ durationInFrames, reprise = 0 }: { durationInFrames: number; reprise?: number }) => {
   const f = useCurrentFrame();

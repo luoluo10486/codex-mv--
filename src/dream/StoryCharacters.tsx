@@ -13,8 +13,10 @@ export const STORY_OUTFIT = {
 export type StoryPersonProps = {
   x?: number; y?: number; s?: number; girl?: boolean;
   walk?: number; lean?: number; arm?: number; face?: number;
-  back?: boolean; turn?: number;
+  back?: boolean; turn?: number; headLean?: number;
   handLeft?: {x:number;y:number}; handRight?: {x:number;y:number};
+  hideHand?: -1 | 1;
+  backArm?: -1 | 1;
 };
 
 // Crop the original vector faces, preserving the supplied hair, eyes and glasses.
@@ -30,12 +32,25 @@ export const StoryPortrait = ({ girl = false, back = false }: { girl?: boolean; 
   {vectors.boy.map((path,i)=><path key={i} d={path.d} fill={path.fill} transform={path.transform} fillRule="nonzero"/>)}
 </svg>;
 
-export const StoryPerson = ({ x = 0, y = 0, s = 1, girl = false, walk = 0, lean = 0, arm = 0, face = 1, back = false, turn = 0, handLeft, handRight }: StoryPersonProps) => {
+export const StoryPerson = ({ x = 0, y = 0, s = 1, girl = false, walk = 0, lean = 0, arm = 0, face = 1, back = false, turn = 0, headLean = 0, handLeft, handRight, hideHand, backArm }: StoryPersonProps) => {
   const stride = Math.sin(walk) * 14;
   const handY = 30 - arm * 95;
   const sleeve = STORY_OUTFIT.blouse;
   const edge = "#dbc9bf";
+  const renderArm = (side: -1 | 1) => {
+    const target = (side === -1 ? handLeft : handRight) ?? {x:side*70,y:handY};
+    const wrist = {x:target.x-side*6,y:target.y-(hideHand === side ? 15 : 9)};
+    const elbow = {x:side*63+(target.x-side*70)*.4,y:-12+(target.y-30)*.4};
+    const d = `M${side*44}-48Q${elbow.x} ${elbow.y} ${wrist.x} ${wrist.y}`;
+    return <g key={side} data-story-arm={side}>
+      <path d={d} stroke={edge} strokeWidth="29" strokeLinecap="round" fill="none"/>
+      <path d={d} stroke={sleeve} strokeWidth="25" strokeLinecap="round" fill="none"/>
+      <path d={`M${wrist.x} ${wrist.y}L${target.x} ${target.y}`} stroke="#ffcdaa" strokeWidth="15" strokeLinecap="round"/>
+      {hideHand !== side && <ellipse cx={target.x} cy={target.y} rx="10" ry="12" transform={`rotate(${side*18} ${target.x} ${target.y})`} fill="#ffcdaa" stroke="#e4b896" strokeWidth="1.2"/>}
+    </g>;
+  };
   return <g data-story-character={girl ? "girl" : "boy"} transform={`translate(${x} ${y}) rotate(${lean}) scale(${s * face} ${s})`}>
+    {backArm && renderArm(backArm)}
     <ellipse cy="181" rx="62" ry="10" fill="#b6a1a2" opacity=".16"/>
     <path d={`M-24 74L${-26 + stride} 168M24 74L${26 - stride} 168`} stroke={girl ? "#f5dfd5" : STORY_OUTFIT.trousers} strokeWidth={girl ? 20 : 26} strokeLinecap="round"/>
     {!girl && <path d={`M${-37 + stride} 154l23 0M${14 - stride} 154h23`} stroke="#c7b29f" strokeWidth="5" fill="none"/>}
@@ -64,34 +79,26 @@ export const StoryPerson = ({ x = 0, y = 0, s = 1, girl = false, walk = 0, lean 
       {girl ? <path d="M0-52L-15-59L-14-44L0-49L14-44L15-59ZM-3-48L-9-32L0-37L9-32L3-48Z" fill="#c98b9f"/> : <path d="M-5-55H5L8-47L3-43L7-18L0-10L-7-18L-3-43L-8-47Z" fill="#c98b9f"/>}
       <path d="M22-20L30-20V-10Q26-5 22-10Z" fill={girl ? "#fff4df" : "#efd0d8"} stroke={girl ? STORY_OUTFIT.roseEdge : STORY_OUTFIT.knitEdge} strokeWidth="1"/>
     </>}
-    {([-1,1] as const).map(side => {
-      const target = (side === -1 ? handLeft : handRight) ?? {x:side*70,y:handY};
-      const wrist = {x:target.x-side*6,y:target.y-9};
-      const elbow = {x:side*63+(target.x-side*70)*.4,y:-12+(target.y-30)*.4};
-      const d = `M${side*44}-48Q${elbow.x} ${elbow.y} ${wrist.x} ${wrist.y}`;
-      return <g key={side} data-story-arm={side}>
-        <path d={d} stroke={edge} strokeWidth="29" strokeLinecap="round" fill="none"/>
-        <path d={d} stroke={sleeve} strokeWidth="25" strokeLinecap="round" fill="none"/>
-        <path d={`M${wrist.x} ${wrist.y}L${target.x} ${target.y}`} stroke="#ffcdaa" strokeWidth="15" strokeLinecap="round"/>
-        <ellipse cx={target.x} cy={target.y} rx="10" ry="12" transform={`rotate(${side*18} ${target.x} ${target.y})`} fill="#ffcdaa" stroke="#e4b896" strokeWidth="1.2"/>
-      </g>;
-    })}
-    <g transform={`translate(${turn * 5} 0)`}><StoryPortrait girl={girl} back={back}/></g>
+    {([-1,1] as const).filter(side => side !== backArm).map(renderArm)}
+    <g transform={`translate(${turn * 5} 0) rotate(${headLean} 0 -80)`}><StoryPortrait girl={girl} back={back}/></g>
   </g>;
 };
 
-export const StoryCouple = ({x=0,y=0,s=1,gap=78,walk=0,embrace=0,back=false}:{x?:number;y?:number;s?:number;gap?:number;walk?:number;embrace?:number;back?:boolean}) => {
+const HoldingHands = ({ y = 35 }: { y?: number }) => <g transform={`translate(0 ${y})`} data-story-hold="interlocked">
+  <path d="M-18-13L-6-16L-1-7L10-1Q15 3 11 8Q8 12 3 9L-8 4Q-15 2-17-5Z" fill="#ffc6a1" stroke="#d9a787" strokeWidth="1.3" strokeLinejoin="round" />
+  <path d="M6-16L18-13L17-4Q16 2 11 7L2 14Q-2 17-5 13Q-7 10-3 7L3 2L-3 5Q-8 6-9 2Q-10-1-5-4L1-7Z" fill="#ffd7b7" stroke="#d9a787" strokeWidth="1.3" strokeLinejoin="round" />
+  <path d="M4 7L9 3M0 11L5 7M-7-2L-2 0" stroke="#d9a787" strokeWidth="1.1" strokeLinecap="round" fill="none" />
+</g>;
+
+export const StoryCouple = ({x=0,y=0,s=1,gap=78,walk=0,embrace=0,back=false,boyHandLeft}:{x?:number;y?:number;s?:number;gap?:number;walk?:number;embrace?:number;back?:boolean;boyHandLeft?:{x:number;y:number}}) => {
   const joined = gap <= 110;
   const bob = Math.sin(walk)*1.4;
-  const handY = 35-embrace*30;
+  const handY = 38-embrace*22;
   const reach = Math.max(0,Math.min(1,(130-gap)/20));
-  const hand = {x:70+(gap-75)*reach,y:30+(handY-30)*reach};
+  const hand = {x:joined ? gap-9 : 70+(gap-79)*reach,y:30+(handY-30)*reach};
   return <g transform={`translate(${x} ${y}) scale(${s})`} data-story-couple={joined ? "holding" : "approaching"}>
-    <StoryPerson x={-gap} y={bob} girl walk={walk} back={back} handRight={hand}/>
-    <StoryPerson x={gap} y={bob} face={-1} walk={-walk} back={back} handRight={hand}/>
-    {joined && <g transform={`translate(0 ${handY+bob})`}>
-      <path d="M-9-7Q-1-12 6-5L10 3Q6 10-1 8L-10 2Z" fill="#ffd2b2" stroke="#dfb18e" strokeWidth="1.3"/>
-      <path d="M-5-3L2 3M-1-6L6 0" stroke="#dfb18e" strokeWidth="1.2" strokeLinecap="round"/>
-    </g>}
+    <StoryPerson x={-gap} y={bob} girl walk={walk} back={back} handRight={hand} hideHand={joined ? 1 : undefined}/>
+    <StoryPerson x={gap} y={bob} face={-1} walk={-walk} back={back} handRight={hand} handLeft={boyHandLeft} hideHand={joined ? 1 : undefined}/>
+    {joined && <HoldingHands y={handY+bob} />}
   </g>;
 };
