@@ -1,0 +1,1286 @@
+{
+  "revision": 6,
+  "sourceCommit": "9a73242",
+  "generatedAt": "2026-10-21T04:13:39.515Z",
+  "checks": {
+    "lint": "passed",
+    "build": "passed",
+    "storyboard": "48 scenes, 40 cues, 5508 frames"
+  },
+  "review": {
+    "integratedFrames": 231,
+    "interactionFrames": 160,
+    "interactionScenes": 32
+  },
+  "exports": {
+    "full": {
+      "file": "out/remake-v6/gou-zhi-qi-shi-warm-full.mp4",
+      "bytes": 32318988,
+      "sha256": "0e50bc07d15a158f0fa3a65f5aad5e7f0633640ae250e72b3f6c53fdd9764fbb",
+      "validation": {
+        "mode": "full",
+        "probe": {
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "h264",
+              "codec_long_name": "unknown",
+              "profile": "100",
+              "codec_type": "video",
+              "codec_tag_string": "avc1",
+              "codec_tag": "0x31637661",
+              "width": 1920,
+              "height": 1080,
+              "coded_width": 1920,
+              "coded_height": 1080,
+              "closed_captions": 0,
+              "film_grain": 0,
+              "has_b_frames": 2,
+              "pix_fmt": "yuv420p",
+              "level": 40,
+              "color_range": "tv",
+              "color_space": "bt709",
+              "color_transfer": "bt709",
+              "color_primaries": "bt709",
+              "chroma_location": "left",
+              "field_order": "progressive",
+              "refs": 1,
+              "is_avc": "true",
+              "nal_length_size": "4",
+              "id": "0x1",
+              "r_frame_rate": "30/1",
+              "avg_frame_rate": "30/1",
+              "time_base": "1/90000",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 16524000,
+              "duration": "183.600000",
+              "bit_rate": "1081913",
+              "bits_per_raw_sample": "8",
+              "nb_frames": "5508",
+              "extradata_size": 50,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "VideoHandler",
+                "vendor_id": "[0][0][0][0]"
+              }
+            },
+            {
+              "index": 1,
+              "codec_name": "aac",
+              "codec_long_name": "unknown",
+              "profile": "1",
+              "codec_type": "audio",
+              "codec_tag_string": "mp4a",
+              "codec_tag": "0x6134706d",
+              "sample_fmt": "fltp",
+              "sample_rate": "48000",
+              "channels": 2,
+              "channel_layout": "stereo",
+              "bits_per_sample": 0,
+              "initial_padding": 0,
+              "id": "0x2",
+              "r_frame_rate": "0/0",
+              "avg_frame_rate": "0/0",
+              "time_base": "1/48000",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 8813568,
+              "duration": "183.616000",
+              "bit_rate": "317375",
+              "nb_frames": "8609",
+              "extradata_size": 2,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "SoundHandler",
+                "vendor_id": "[0][0][0][0]"
+              }
+            }
+          ],
+          "format": {
+            "filename": "out/remake-v6/gou-zhi-qi-shi-warm-full.partial.mp4",
+            "nb_streams": 2,
+            "nb_programs": 0,
+            "nb_stream_groups": 0,
+            "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+            "start_time": "0.000000",
+            "duration": "183.616000",
+            "size": "32318988",
+            "bit_rate": "1408112",
+            "probe_score": 100,
+            "tags": {
+              "major_brand": "isom",
+              "minor_version": "512",
+              "compatible_brands": "isomiso2avc1mp41",
+              "encoder": "Lavf61.7.100",
+              "comment": "Made with Remotion 4.0.536"
+            }
+          }
+        },
+        "verifiedAt": "2026-10-21T04:07:25.488Z"
+      }
+    },
+    "preview": {
+      "file": "out/remake-v6/gou-zhi-qi-shi-warm-preview.mp4",
+      "bytes": 4405574,
+      "sha256": "ce6b36cd60ab8522e4ba157c0ed0892a892e261e2e86b657f03b0410d9b7cd45",
+      "validation": {
+        "mode": "preview",
+        "probe": {
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "h264",
+              "codec_long_name": "unknown",
+              "profile": "100",
+              "codec_type": "video",
+              "codec_tag_string": "avc1",
+              "codec_tag": "0x31637661",
+              "width": 1920,
+              "height": 1080,
+              "coded_width": 1920,
+              "coded_height": 1080,
+              "closed_captions": 0,
+              "film_grain": 0,
+              "has_b_frames": 2,
+              "pix_fmt": "yuv420p",
+              "level": 40,
+              "color_range": "tv",
+              "color_space": "bt709",
+              "color_transfer": "bt709",
+              "color_primaries": "bt709",
+              "chroma_location": "left",
+              "field_order": "progressive",
+              "refs": 1,
+              "is_avc": "true",
+              "nal_length_size": "4",
+              "id": "0x1",
+              "r_frame_rate": "30/1",
+              "avg_frame_rate": "30/1",
+              "time_base": "1/90000",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 2700000,
+              "duration": "30.000000",
+              "bit_rate": "847637",
+              "bits_per_raw_sample": "8",
+              "nb_frames": "900",
+              "extradata_size": 50,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "VideoHandler",
+                "vendor_id": "[0][0][0][0]"
+              }
+            },
+            {
+              "index": 1,
+              "codec_name": "aac",
+              "codec_long_name": "unknown",
+              "profile": "1",
+              "codec_type": "audio",
+              "codec_tag_string": "mp4a",
+              "codec_tag": "0x6134706d",
+              "sample_fmt": "fltp",
+              "sample_rate": "48000",
+              "channels": 2,
+              "channel_layout": "stereo",
+              "bits_per_sample": 0,
+              "initial_padding": 0,
+              "id": "0x2",
+              "r_frame_rate": "0/0",
+              "avg_frame_rate": "0/0",
+              "time_base": "1/48000",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 1440768,
+              "duration": "30.016000",
+              "bit_rate": "317375",
+              "nb_frames": "1409",
+              "extradata_size": 2,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "SoundHandler",
+                "vendor_id": "[0][0][0][0]"
+              }
+            }
+          ],
+          "format": {
+            "filename": "out/remake-v6/gou-zhi-qi-shi-warm-preview.partial.mp4",
+            "nb_streams": 2,
+            "nb_programs": 0,
+            "nb_stream_groups": 0,
+            "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+            "start_time": "0.000000",
+            "duration": "30.016000",
+            "size": "4405574",
+            "bit_rate": "1174193",
+            "probe_score": 100,
+            "tags": {
+              "major_brand": "isom",
+              "minor_version": "512",
+              "compatible_brands": "isomiso2avc1mp41",
+              "encoder": "Lavf61.7.100",
+              "comment": "Made with Remotion 4.0.536"
+            }
+          }
+        },
+        "verifiedAt": "2026-10-21T04:03:55.098Z"
+      }
+    },
+    "full-preview": {
+      "file": "out/remake-v6/gou-zhi-qi-shi-warm-full-preview.mp4",
+      "bytes": 11844081,
+      "sha256": "dd1aea0d13814d791f3c433e4308630cb54a8f56028fb3da9d9f6f06af455968",
+      "validation": {
+        "mode": "full-preview",
+        "probe": {
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "h264",
+              "codec_long_name": "unknown",
+              "profile": "100",
+              "codec_type": "video",
+              "codec_tag_string": "avc1",
+              "codec_tag": "0x31637661",
+              "width": 960,
+              "height": 540,
+              "coded_width": 960,
+              "coded_height": 540,
+              "closed_captions": 0,
+              "film_grain": 0,
+              "has_b_frames": 2,
+              "pix_fmt": "yuv420p",
+              "level": 31,
+              "color_range": "tv",
+              "color_space": "bt709",
+              "color_transfer": "bt709",
+              "color_primaries": "bt709",
+              "chroma_location": "left",
+              "field_order": "progressive",
+              "refs": 1,
+              "is_avc": "true",
+              "nal_length_size": "4",
+              "id": "0x1",
+              "r_frame_rate": "30/1",
+              "avg_frame_rate": "30/1",
+              "time_base": "1/15360",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 2820096,
+              "duration": "183.600000",
+              "bit_rate": "189763",
+              "bits_per_raw_sample": "8",
+              "nb_frames": "5508",
+              "extradata_size": 50,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "VideoHandler",
+                "vendor_id": "[0][0][0][0]",
+                "encoder": "Lavc61.19.100 libx264"
+              }
+            },
+            {
+              "index": 1,
+              "codec_name": "aac",
+              "codec_long_name": "unknown",
+              "profile": "1",
+              "codec_type": "audio",
+              "codec_tag_string": "mp4a",
+              "codec_tag": "0x6134706d",
+              "sample_fmt": "fltp",
+              "sample_rate": "48000",
+              "channels": 2,
+              "channel_layout": "stereo",
+              "bits_per_sample": 0,
+              "initial_padding": 0,
+              "id": "0x2",
+              "r_frame_rate": "0/0",
+              "avg_frame_rate": "0/0",
+              "time_base": "1/48000",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 8813568,
+              "duration": "183.616000",
+              "bit_rate": "317375",
+              "nb_frames": "8609",
+              "extradata_size": 2,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "SoundHandler",
+                "vendor_id": "[0][0][0][0]"
+              }
+            }
+          ],
+          "format": {
+            "filename": "out/remake-v6/gou-zhi-qi-shi-warm-full-preview.partial.mp4",
+            "nb_streams": 2,
+            "nb_programs": 0,
+            "nb_stream_groups": 0,
+            "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+            "start_time": "0.000000",
+            "duration": "183.616000",
+            "size": "11844081",
+            "bit_rate": "516036",
+            "probe_score": 100,
+            "tags": {
+              "major_brand": "isom",
+              "minor_version": "512",
+              "compatible_brands": "isomiso2avc1mp41",
+              "encoder": "Lavf61.7.100",
+              "comment": "Made with Remotion 4.0.536"
+            }
+          }
+        },
+        "verifiedAt": "2026-10-21T04:09:39.807Z"
+      }
+    }
+  },
+  "technical": {
+    "checks": {
+      "width": true,
+      "height": true,
+      "frameRate": true,
+      "frameCount": true,
+      "videoDuration": true,
+      "containerDuration": true,
+      "h264": true,
+      "aac": true,
+      "audioDuration": true,
+      "pixelFormat": true,
+      "colorSpace": true,
+      "colorPrimaries": true,
+      "colorTransfer": true,
+      "colorRange": true
+    },
+    "allProbeChecksPassed": true,
+    "probe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "unknown",
+          "profile": "100",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "closed_captions": 0,
+          "film_grain": 0,
+          "has_b_frames": 2,
+          "pix_fmt": "yuv420p",
+          "level": 40,
+          "color_range": "tv",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709",
+          "chroma_location": "left",
+          "field_order": "progressive",
+          "refs": 1,
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 16524000,
+          "duration": "183.600000",
+          "bit_rate": "1081913",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "5508",
+          "extradata_size": 50,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "vendor_id": "[0][0][0][0]"
+          }
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_long_name": "unknown",
+          "profile": "1",
+          "codec_type": "audio",
+          "codec_tag_string": "mp4a",
+          "codec_tag": "0x6134706d",
+          "sample_fmt": "fltp",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "initial_padding": 0,
+          "id": "0x2",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/48000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 8813568,
+          "duration": "183.616000",
+          "bit_rate": "317375",
+          "nb_frames": "8609",
+          "extradata_size": 2,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "SoundHandler",
+            "vendor_id": "[0][0][0][0]"
+          }
+        }
+      ],
+      "format": {
+        "filename": "out/remake-v6/gou-zhi-qi-shi-warm-full.partial.mp4",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "start_time": "0.000000",
+        "duration": "183.616000",
+        "size": "32318988",
+        "bit_rate": "1408112",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf61.7.100",
+          "comment": "Made with Remotion 4.0.536"
+        }
+      }
+    },
+    "exportFrames": [
+      0,
+      160,
+      493,
+      716,
+      802,
+      878,
+      952,
+      1039,
+      1127,
+      1210,
+      1287,
+      1370,
+      1460,
+      1546,
+      1630,
+      1714,
+      1801,
+      1884,
+      1984,
+      2194,
+      2526,
+      2748,
+      2827,
+      2907,
+      2990,
+      3074,
+      3155,
+      3237,
+      3323,
+      3409,
+      3493,
+      3584,
+      3670,
+      3747,
+      3831,
+      3916,
+      4020,
+      4232,
+      4561,
+      4773,
+      4848,
+      4933,
+      5021,
+      5104,
+      5189,
+      5275,
+      5362,
+      5427,
+      5481,
+      5507
+    ],
+    "fullVideoDecode": {
+      "decodedFrameCount": 5508,
+      "expectedFrameCount": 5508,
+      "minMeanRGB": 137.47222222222223,
+      "maxMeanRGB": 238.45833333333334,
+      "blackFrames": [],
+      "uniformBlankFrames": [],
+      "minSpatialContrast": 6.955702631754743,
+      "passed": true
+    },
+    "encodedAudioAgainstOriginal": {
+      "sourceSamples": 2936588,
+      "encodedSamples": 2937216,
+      "coveredSourceSamples": 2936588,
+      "complete": true,
+      "extraEncodedTailMs": 16.25,
+      "measuredOffsetSamples": 368,
+      "sampleRate": 16000,
+      "measuredOffsetMs": 23,
+      "correlationAfterAlignment": 0.9894112341246991,
+      "passed": true
+    },
+    "exportParity": [
+      {
+        "frame": 0,
+        "meanAbsoluteChannelDifference": 1.5488242669753087
+      },
+      {
+        "frame": 160,
+        "meanAbsoluteChannelDifference": 1.5565139531893004
+      },
+      {
+        "frame": 493,
+        "meanAbsoluteChannelDifference": 1.1869042566872428
+      },
+      {
+        "frame": 716,
+        "meanAbsoluteChannelDifference": 1.3258664480452675
+      },
+      {
+        "frame": 802,
+        "meanAbsoluteChannelDifference": 1.2255433384773662
+      },
+      {
+        "frame": 878,
+        "meanAbsoluteChannelDifference": 1.2390602494855967
+      },
+      {
+        "frame": 952,
+        "meanAbsoluteChannelDifference": 1.4495418595679013
+      },
+      {
+        "frame": 1039,
+        "meanAbsoluteChannelDifference": 1.5056557034465021
+      },
+      {
+        "frame": 1127,
+        "meanAbsoluteChannelDifference": 1.294456500771605
+      },
+      {
+        "frame": 1210,
+        "meanAbsoluteChannelDifference": 1.189516300154321
+      },
+      {
+        "frame": 1287,
+        "meanAbsoluteChannelDifference": 1.3394542502572016
+      },
+      {
+        "frame": 1370,
+        "meanAbsoluteChannelDifference": 1.2617637602880658
+      },
+      {
+        "frame": 1460,
+        "meanAbsoluteChannelDifference": 1.1840256880144033
+      },
+      {
+        "frame": 1546,
+        "meanAbsoluteChannelDifference": 1.1235776748971193
+      },
+      {
+        "frame": 1630,
+        "meanAbsoluteChannelDifference": 1.3380181005658436
+      },
+      {
+        "frame": 1714,
+        "meanAbsoluteChannelDifference": 1.2205254951131688
+      },
+      {
+        "frame": 1801,
+        "meanAbsoluteChannelDifference": 1.4928522055041151
+      },
+      {
+        "frame": 1884,
+        "meanAbsoluteChannelDifference": 1.2589429012345679
+      },
+      {
+        "frame": 1984,
+        "meanAbsoluteChannelDifference": 1.0942758166152264
+      },
+      {
+        "frame": 2194,
+        "meanAbsoluteChannelDifference": 1.3765255272633745
+      },
+      {
+        "frame": 2526,
+        "meanAbsoluteChannelDifference": 1.30405574845679
+      },
+      {
+        "frame": 2748,
+        "meanAbsoluteChannelDifference": 1.2653851594650205
+      },
+      {
+        "frame": 2827,
+        "meanAbsoluteChannelDifference": 1.2202554333847737
+      },
+      {
+        "frame": 2907,
+        "meanAbsoluteChannelDifference": 1.3496855709876543
+      },
+      {
+        "frame": 2990,
+        "meanAbsoluteChannelDifference": 1.3125401877572016
+      },
+      {
+        "frame": 3074,
+        "meanAbsoluteChannelDifference": 1.3013192836934155
+      },
+      {
+        "frame": 3155,
+        "meanAbsoluteChannelDifference": 1.299339313271605
+      },
+      {
+        "frame": 3237,
+        "meanAbsoluteChannelDifference": 1.2908903999485597
+      },
+      {
+        "frame": 3323,
+        "meanAbsoluteChannelDifference": 1.271905864197531
+      },
+      {
+        "frame": 3409,
+        "meanAbsoluteChannelDifference": 1.2924554719650205
+      },
+      {
+        "frame": 3493,
+        "meanAbsoluteChannelDifference": 1.2008108281893004
+      },
+      {
+        "frame": 3584,
+        "meanAbsoluteChannelDifference": 1.3554520318930041
+      },
+      {
+        "frame": 3670,
+        "meanAbsoluteChannelDifference": 1.3529899691358025
+      },
+      {
+        "frame": 3747,
+        "meanAbsoluteChannelDifference": 1.1222251157407408
+      },
+      {
+        "frame": 3831,
+        "meanAbsoluteChannelDifference": 1.1014970743312757
+      },
+      {
+        "frame": 3916,
+        "meanAbsoluteChannelDifference": 1.3344499099794238
+      },
+      {
+        "frame": 4020,
+        "meanAbsoluteChannelDifference": 1.2090657150205761
+      },
+      {
+        "frame": 4232,
+        "meanAbsoluteChannelDifference": 1.1727898341049383
+      },
+      {
+        "frame": 4561,
+        "meanAbsoluteChannelDifference": 1.2130140817901234
+      },
+      {
+        "frame": 4773,
+        "meanAbsoluteChannelDifference": 1.5317492926954732
+      },
+      {
+        "frame": 4848,
+        "meanAbsoluteChannelDifference": 1.5381381815843622
+      },
+      {
+        "frame": 4933,
+        "meanAbsoluteChannelDifference": 1.2834694894547325
+      },
+      {
+        "frame": 5021,
+        "meanAbsoluteChannelDifference": 1.5545568094135802
+      },
+      {
+        "frame": 5104,
+        "meanAbsoluteChannelDifference": 1.269220357510288
+      },
+      {
+        "frame": 5189,
+        "meanAbsoluteChannelDifference": 1.498786490483539
+      },
+      {
+        "frame": 5275,
+        "meanAbsoluteChannelDifference": 1.3529361175411523
+      },
+      {
+        "frame": 5362,
+        "meanAbsoluteChannelDifference": 1.4117807998971192
+      },
+      {
+        "frame": 5427,
+        "meanAbsoluteChannelDifference": 1.2716293724279835
+      },
+      {
+        "frame": 5481,
+        "meanAbsoluteChannelDifference": 1.1897985789609054
+      },
+      {
+        "frame": 5507,
+        "meanAbsoluteChannelDifference": 1.1995715985082305
+      }
+    ],
+    "exportParityPassed": true,
+    "warmRepresentativeFrames": [
+      {
+        "frame": 160,
+        "redAtLeastBlueFraction": 1
+      },
+      {
+        "frame": 878,
+        "redAtLeastBlueFraction": 1
+      },
+      {
+        "frame": 1210,
+        "redAtLeastBlueFraction": 1
+      },
+      {
+        "frame": 1546,
+        "redAtLeastBlueFraction": 0.9989385609567901
+      },
+      {
+        "frame": 1884,
+        "redAtLeastBlueFraction": 0.9982007137345679
+      },
+      {
+        "frame": 2748,
+        "redAtLeastBlueFraction": 0.7764742476851851
+      },
+      {
+        "frame": 3074,
+        "redAtLeastBlueFraction": 0.9992505787037037
+      },
+      {
+        "frame": 3409,
+        "redAtLeastBlueFraction": 0.9991174768518518
+      },
+      {
+        "frame": 3747,
+        "redAtLeastBlueFraction": 1
+      },
+      {
+        "frame": 4232,
+        "redAtLeastBlueFraction": 0.975132137345679
+      },
+      {
+        "frame": 4933,
+        "redAtLeastBlueFraction": 0.9985624035493827
+      },
+      {
+        "frame": 5275,
+        "redAtLeastBlueFraction": 0.9995278742283951
+      }
+    ],
+    "warmPalettePassed": true,
+    "pastelFrameChecks": [
+      {
+        "frame": 0,
+        "lightPixelFraction": 0.9815224729938271,
+        "darkPixelFraction": 0.006646412037037037,
+        "softColorFraction": 0.982842399691358
+      },
+      {
+        "frame": 160,
+        "lightPixelFraction": 0.9815769675925926,
+        "darkPixelFraction": 0.006669077932098765,
+        "softColorFraction": 0.9826355131172839
+      },
+      {
+        "frame": 493,
+        "lightPixelFraction": 0.9905338541666666,
+        "darkPixelFraction": 0.0000024112654320987654,
+        "softColorFraction": 0.9652970679012346
+      },
+      {
+        "frame": 716,
+        "lightPixelFraction": 0.9793701774691358,
+        "darkPixelFraction": 0.006869695216049383,
+        "softColorFraction": 0.9810074266975308
+      },
+      {
+        "frame": 802,
+        "lightPixelFraction": 0.982334587191358,
+        "darkPixelFraction": 0.003575906635802469,
+        "softColorFraction": 0.9915596064814814
+      },
+      {
+        "frame": 878,
+        "lightPixelFraction": 0.9728342013888889,
+        "darkPixelFraction": 0.006546103395061728,
+        "softColorFraction": 0.9880922067901234
+      },
+      {
+        "frame": 1127,
+        "lightPixelFraction": 0.9857175925925926,
+        "darkPixelFraction": 0.0038478973765432097,
+        "softColorFraction": 0.9947453703703704
+      },
+      {
+        "frame": 1210,
+        "lightPixelFraction": 0.9915137924382716,
+        "darkPixelFraction": 0.005822723765432099,
+        "softColorFraction": 0.9880936535493827
+      },
+      {
+        "frame": 1287,
+        "lightPixelFraction": 0.9885373263888889,
+        "darkPixelFraction": 0.002712673611111111,
+        "softColorFraction": 0.9978742283950617
+      },
+      {
+        "frame": 1370,
+        "lightPixelFraction": 0.9766174768518519,
+        "darkPixelFraction": 0.014229359567901235,
+        "softColorFraction": 0.986520061728395
+      },
+      {
+        "frame": 1460,
+        "lightPixelFraction": 0.9849773341049383,
+        "darkPixelFraction": 0.011171875,
+        "softColorFraction": 0.9855454282407408
+      },
+      {
+        "frame": 1546,
+        "lightPixelFraction": 0.9809760802469136,
+        "darkPixelFraction": 0.014087094907407408,
+        "softColorFraction": 0.9747212577160493
+      },
+      {
+        "frame": 1630,
+        "lightPixelFraction": 0.9755946180555556,
+        "darkPixelFraction": 0.013579282407407408,
+        "softColorFraction": 0.993443287037037
+      },
+      {
+        "frame": 1714,
+        "lightPixelFraction": 0.9899175347222222,
+        "darkPixelFraction": 0.0069145447530864195,
+        "softColorFraction": 0.9945973186728395
+      },
+      {
+        "frame": 1801,
+        "lightPixelFraction": 0.9756737075617284,
+        "darkPixelFraction": 0.011830632716049382,
+        "softColorFraction": 0.9304272762345679
+      },
+      {
+        "frame": 1884,
+        "lightPixelFraction": 0.9747391010802469,
+        "darkPixelFraction": 0.01931905864197531,
+        "softColorFraction": 0.9903882137345679
+      },
+      {
+        "frame": 1984,
+        "lightPixelFraction": 0.9873779899691358,
+        "darkPixelFraction": 0.010107542438271605,
+        "softColorFraction": 0.9783757716049383
+      },
+      {
+        "frame": 2526,
+        "lightPixelFraction": 0.9961733217592592,
+        "darkPixelFraction": 0,
+        "softColorFraction": 0.9949430941358025
+      },
+      {
+        "frame": 2748,
+        "lightPixelFraction": 0.978392650462963,
+        "darkPixelFraction": 0.007456114969135803,
+        "softColorFraction": 0.9910180362654321
+      },
+      {
+        "frame": 2827,
+        "lightPixelFraction": 0.9921624228395062,
+        "darkPixelFraction": 0.004221161265432098,
+        "softColorFraction": 0.9929740547839506
+      },
+      {
+        "frame": 2907,
+        "lightPixelFraction": 0.983365162037037,
+        "darkPixelFraction": 0.007770543981481482,
+        "softColorFraction": 0.9921040702160494
+      },
+      {
+        "frame": 2990,
+        "lightPixelFraction": 0.9859085648148148,
+        "darkPixelFraction": 0.00740210262345679,
+        "softColorFraction": 0.9927228009259259
+      },
+      {
+        "frame": 3074,
+        "lightPixelFraction": 0.9811048418209877,
+        "darkPixelFraction": 0.014429494598765432,
+        "softColorFraction": 0.9934538966049383
+      },
+      {
+        "frame": 3155,
+        "lightPixelFraction": 0.9789240933641975,
+        "darkPixelFraction": 0.01642023533950617,
+        "softColorFraction": 0.9926499807098765
+      },
+      {
+        "frame": 3237,
+        "lightPixelFraction": 0.9907146990740741,
+        "darkPixelFraction": 0.006739969135802469,
+        "softColorFraction": 0.9901335841049382
+      },
+      {
+        "frame": 3323,
+        "lightPixelFraction": 0.992671199845679,
+        "darkPixelFraction": 0.004144965277777778,
+        "softColorFraction": 0.997058738425926
+      },
+      {
+        "frame": 3409,
+        "lightPixelFraction": 0.983521412037037,
+        "darkPixelFraction": 0.012201485339506173,
+        "softColorFraction": 0.9884129050925926
+      },
+      {
+        "frame": 3493,
+        "lightPixelFraction": 0.9930140817901234,
+        "darkPixelFraction": 0.004938753858024691,
+        "softColorFraction": 0.9953346836419753
+      },
+      {
+        "frame": 3584,
+        "lightPixelFraction": 0.9702261766975309,
+        "darkPixelFraction": 0.01732108410493827,
+        "softColorFraction": 0.9860001929012345
+      },
+      {
+        "frame": 3670,
+        "lightPixelFraction": 0.973500675154321,
+        "darkPixelFraction": 0.015128279320987655,
+        "softColorFraction": 0.9899836033950618
+      },
+      {
+        "frame": 3747,
+        "lightPixelFraction": 0.9905454282407408,
+        "darkPixelFraction": 0.006917438271604938,
+        "softColorFraction": 0.9946296296296296
+      },
+      {
+        "frame": 3831,
+        "lightPixelFraction": 0.9748273533950618,
+        "darkPixelFraction": 0.012568479938271605,
+        "softColorFraction": 0.930522762345679
+      },
+      {
+        "frame": 3916,
+        "lightPixelFraction": 0.9807682291666666,
+        "darkPixelFraction": 0.01464988425925926,
+        "softColorFraction": 0.9917264660493827
+      },
+      {
+        "frame": 4020,
+        "lightPixelFraction": 0.992554012345679,
+        "darkPixelFraction": 0.005669849537037037,
+        "softColorFraction": 0.9952907986111111
+      },
+      {
+        "frame": 4232,
+        "lightPixelFraction": 0.9957489390432098,
+        "darkPixelFraction": 0.0008111496913580247,
+        "softColorFraction": 0.9983516589506173
+      },
+      {
+        "frame": 4561,
+        "lightPixelFraction": 0.9989154128086419,
+        "darkPixelFraction": 0,
+        "softColorFraction": 0.9875183256172839
+      },
+      {
+        "frame": 4773,
+        "lightPixelFraction": 0.9719545717592593,
+        "darkPixelFraction": 0.013298611111111112,
+        "softColorFraction": 0.9776210455246913
+      },
+      {
+        "frame": 4848,
+        "lightPixelFraction": 0.9706534529320988,
+        "darkPixelFraction": 0.012108892746913581,
+        "softColorFraction": 0.9720924961419753
+      },
+      {
+        "frame": 4933,
+        "lightPixelFraction": 0.9803163580246913,
+        "darkPixelFraction": 0.013799672067901234,
+        "softColorFraction": 0.9734717399691358
+      },
+      {
+        "frame": 5021,
+        "lightPixelFraction": 0.978458236882716,
+        "darkPixelFraction": 0.0162548225308642,
+        "softColorFraction": 0.9931172839506173
+      },
+      {
+        "frame": 5104,
+        "lightPixelFraction": 0.9810411844135802,
+        "darkPixelFraction": 0.01427613811728395,
+        "softColorFraction": 0.9914626736111111
+      },
+      {
+        "frame": 5189,
+        "lightPixelFraction": 0.9736829668209876,
+        "darkPixelFraction": 0.013369984567901234,
+        "softColorFraction": 0.9299836033950617
+      },
+      {
+        "frame": 5275,
+        "lightPixelFraction": 0.9834350887345679,
+        "darkPixelFraction": 0.012624903549382716,
+        "softColorFraction": 0.9924213927469135
+      },
+      {
+        "frame": 5362,
+        "lightPixelFraction": 0.9871590470679013,
+        "darkPixelFraction": 0.009663387345679012,
+        "softColorFraction": 0.9929581404320987
+      },
+      {
+        "frame": 5427,
+        "lightPixelFraction": 0.9929788773148148,
+        "darkPixelFraction": 0.004661458333333333,
+        "softColorFraction": 0.9971677276234568
+      },
+      {
+        "frame": 5481,
+        "lightPixelFraction": 0.9994328703703703,
+        "darkPixelFraction": 0.0000014467592592592592,
+        "softColorFraction": 0.9901697530864197
+      },
+      {
+        "frame": 5507,
+        "lightPixelFraction": 0.9999932484567902,
+        "darkPixelFraction": 0,
+        "softColorFraction": 0.990757137345679
+      }
+    ],
+    "pastelPaletteRequired": true,
+    "pastelPalettePassed": true,
+    "allMeasuredTechnicalChecksPassed": true,
+    "nightSceneIds": [
+      "bridge-santa-route",
+      "lyric-04",
+      "lyric-05"
+    ],
+    "nightFrameChecks": [
+      {
+        "frame": 952,
+        "meanSkyLuma": 91.32327187191358,
+        "nightSkyFraction": 0.9657696759259259
+      },
+      {
+        "frame": 1039,
+        "meanSkyLuma": 97.97686598572531,
+        "nightSkyFraction": 0.9174884259259259
+      },
+      {
+        "frame": 2194,
+        "meanSkyLuma": 98.37717780131173,
+        "nightSkyFraction": 0.9217824074074074
+      }
+    ],
+    "nightPalettePassed": true
+  },
+  "browser": {
+    "status": "verified",
+    "url": "http://127.0.0.1:3001/",
+    "preview": {
+      "rate": 1,
+      "ended": true,
+      "currentTime": 30.016,
+      "error": null
+    },
+    "full": {
+      "rate": 1,
+      "startedAt": 0.177031,
+      "currentTime": 183.616,
+      "duration": 183.616,
+      "ended": true,
+      "paused": true,
+      "error": null,
+      "observedDuringPlayback": [
+        98.822372,
+        177.277033
+      ],
+      "source": "http://127.0.0.1:3001/gou-zhi-qi-shi-warm-full.mp4"
+    }
+  }
+}

@@ -1,17 +1,37 @@
 {
   "revision": 6,
-  "status": "in_progress",
+  "status": "complete",
   "outputRoot": "out/remake-v6",
-  "scope": ["holding-hands", "map-letter-interlude", "full-film-visual-review"],
+  "scope": [
+    "holding-hands",
+    "map-letter-interlude",
+    "full-film-visual-review"
+  ],
   "sourceBaseline": "abb3e7b",
   "implementation": "verified",
   "visualReview": "verified",
-  "exports": "rendering_full",
+  "exports": "verified",
+  "browserPlayback": "verified_1x_full_and_preview",
   "sourceCommit": "9a73242",
   "verifiedIssues": [
-    {"id": "final-holding-framing", "sceneId": "lyric-39", "evidence": "out/remake-v6/interactions/contact-6.png", "status": "verified"},
-    {"id": "map-route-overlap", "sceneId": "bridge-map-fold", "evidence": "out/remake-v6/interactions/contact-5.png", "status": "verified"},
-    {"id": "hand-layering", "sceneId": "shared-characters", "evidence": "out/remake-v6/interactions/contact-3.png", "status": "verified"}
+    {
+      "id": "final-holding-framing",
+      "sceneId": "lyric-39",
+      "evidence": "out/remake-v6/interactions/contact-6.png",
+      "status": "verified"
+    },
+    {
+      "id": "map-route-overlap",
+      "sceneId": "bridge-map-fold",
+      "evidence": "out/remake-v6/interactions/contact-5.png",
+      "status": "verified"
+    },
+    {
+      "id": "hand-layering",
+      "sceneId": "shared-characters",
+      "evidence": "out/remake-v6/interactions/contact-3.png",
+      "status": "verified"
+    }
   ],
   "checks": {
     "lint": "passed",
@@ -20,14 +40,421 @@
     "integratedFrames": 231,
     "interactionFrames": 160,
     "interactionScenes": 32,
-    "visualEvidence": ["out/remake-v6/review", "out/remake-v6/interactions"]
+    "visualEvidence": [
+      "out/remake-v6/review",
+      "out/remake-v6/interactions"
+    ]
   },
   "blockers": [],
   "resume": [
-    "Read this file, git status and the revision 06 handoff reports",
-    "Implementation and integrated visual checks complete; preserve current source",
-    "Set MV_OUTPUT_ROOT=out/remake-v6, MV_REQUIRE_PASTEL=1, MV_NIGHT_SCENES=lyric-04,lyric-05,bridge-santa-route",
-    "Render full, preview and full-preview --from-full; verify and record browser playback"
+    "Revision 06 complete; read MV_REVISION_06_REPORT.md and MV_REVISION_06_VERIFICATION.json before further changes",
+    "Existing verified media must be preserved; use a new revision directory for further renders"
   ],
-  "updatedAt": "2026-10-21T00:00:00+08:00"
+  "updatedAt": "2026-10-21T04:13:39.515Z",
+  "sceneCounts": {
+    "merged": 48
+  },
+  "scenes": [
+    {
+      "sceneId": "bridge-opening-room",
+      "owner": "root",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-0160.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "bridge-opening-letter",
+      "owner": "root",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-0493.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-01",
+      "owner": "agent-a",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-0716.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-02",
+      "owner": "agent-a",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-0802.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-03",
+      "owner": "agent-a",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-0878.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-04",
+      "owner": "agent-a",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-0952.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-05",
+      "owner": "agent-a",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-1039.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-06",
+      "owner": "agent-a",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-1127.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-07",
+      "owner": "agent-a",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-1210.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-08",
+      "owner": "agent-a",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-1287.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-09",
+      "owner": "agent-a",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-1370.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-10",
+      "owner": "agent-a",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-1460.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-11",
+      "owner": "agent-a",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-1546.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-12",
+      "owner": "agent-a",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-1630.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-13",
+      "owner": "agent-a",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-1714.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-14",
+      "owner": "agent-a",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-1801.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-15",
+      "owner": "agent-a",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-1884.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-16",
+      "owner": "agent-a",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-1984.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "bridge-santa-route",
+      "owner": "agent-c",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-2194.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "bridge-santa-worlds",
+      "owner": "agent-c",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-2526.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-17",
+      "owner": "agent-b",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-2748.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-18",
+      "owner": "agent-b",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-2827.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-19",
+      "owner": "agent-b",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-2907.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-20",
+      "owner": "agent-b",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-2990.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-21",
+      "owner": "agent-b",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-3074.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-22",
+      "owner": "agent-b",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-3155.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-23",
+      "owner": "agent-b",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-3237.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-24",
+      "owner": "agent-b",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-3323.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-25",
+      "owner": "agent-b",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-3409.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-26",
+      "owner": "agent-b",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-3493.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-27",
+      "owner": "agent-b",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-3584.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-28",
+      "owner": "agent-b",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-3670.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-29",
+      "owner": "agent-b",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-3747.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-30",
+      "owner": "agent-b",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-3831.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-31",
+      "owner": "agent-b",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-3916.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-32",
+      "owner": "agent-b",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-4020.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "bridge-map-fold",
+      "owner": "agent-c",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-4232.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "bridge-map-return",
+      "owner": "agent-c",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-4561.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-33",
+      "owner": "agent-c",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-4773.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-34",
+      "owner": "agent-c",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-4848.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-35",
+      "owner": "agent-c",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-4933.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-36",
+      "owner": "agent-c",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-5021.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-37",
+      "owner": "agent-c",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-5104.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-38",
+      "owner": "agent-c",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-5189.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-39",
+      "owner": "agent-c",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-5275.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "lyric-40",
+      "owner": "agent-c",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-5362.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "bridge-final-rise",
+      "owner": "agent-c",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-5427.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    },
+    {
+      "sceneId": "bridge-final-star",
+      "owner": "agent-c",
+      "status": "merged",
+      "sourceCommit": "9a73242",
+      "reviewFrame": "out/remake-v6/review/frames/frame-5481.png",
+      "updatedAt": "2026-10-21T04:13:39.515Z"
+    }
+  ],
+  "exportFiles": {
+    "full": {
+      "status": "verified",
+      "file": "out/remake-v6/gou-zhi-qi-shi-warm-full.mp4",
+      "sha256": "0e50bc07d15a158f0fa3a65f5aad5e7f0633640ae250e72b3f6c53fdd9764fbb"
+    },
+    "preview": {
+      "status": "verified",
+      "file": "out/remake-v6/gou-zhi-qi-shi-warm-preview.mp4",
+      "sha256": "ce6b36cd60ab8522e4ba157c0ed0892a892e261e2e86b657f03b0410d9b7cd45"
+    },
+    "full-preview": {
+      "status": "verified",
+      "file": "out/remake-v6/gou-zhi-qi-shi-warm-full-preview.mp4",
+      "sha256": "dd1aea0d13814d791f3c433e4308630cb54a8f56028fb3da9d9f6f06af455968"
+    }
+  }
 }
