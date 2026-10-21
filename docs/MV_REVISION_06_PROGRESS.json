@@ -6,7 +6,8 @@
   "sourceBaseline": "abb3e7b",
   "implementation": "verified",
   "visualReview": "verified",
-  "exports": "planned",
+  "exports": "rendering_full",
+  "sourceCommit": "9a73242",
   "verifiedIssues": [
     {"id": "final-holding-framing", "sceneId": "lyric-39", "evidence": "out/remake-v6/interactions/contact-6.png", "status": "verified"},
     {"id": "map-route-overlap", "sceneId": "bridge-map-fold", "evidence": "out/remake-v6/interactions/contact-5.png", "status": "verified"},
